@@ -103,3 +103,10 @@ Artefactos ejecutados: 34; aceptados: 34; indisponibles: 2. La comparación no v
 ## Sensibilidad del aplicador · 16 octubre 2026
 
 Auditoría posterior, sin nuevas llamadas a modelos: los dos P06 indisponibles de Gemini tenían espacios iniciales en old que impedían la coincidencia literal. Quitando exclusivamente ese prefijo en copias, sin editar new, la nota plana pasa 12/12; sin memoria falla por sintaxis antes de ejecutar pruebas. La repetición conserva hashes y desenlaces. La diferencia estricta DXP 6/6 frente a nota 5/6 incluye por tanto un fallo de aplicabilidad, no una ventaja funcional demostrada. Las puntuaciones originales permanecen intactas; DXP sigue no validado y se añaden cero ensayos confirmatorios. [Método y reproducción](EVALUATOR_SENSITIVITY.md) · [Evidencia](evaluator-sensitivity-evidence.zip).
+
+
+## Publicación del repositorio DXP en GitHub · 17 octubre 2026 (Europe/Madrid)
+
+Se creó https://github.com/Milothik/domain-experience-protocol a partir de 707 archivos de la edición pública revisada, sin importar el historial privado. DCE se conecta como submódulo fijado a 81426cceecc631b488422c96f7ee46c751c02136. Se corrigió la entrada de compilación del runner y se añadió comprobación de revisión real; las nuevas capturas se guardan separadas de las históricas.
+
+DXP pasó 71/71 pruebas, también desde un clon recursivo limpio; DCE pasó 41/41. El recorrido integrado verificó productor, consumidor bajo aprobación y recuperación de fallo de continuidad sin repetir generación. La primera CI pública terminó correctamente: https://github.com/Milothik/domain-experience-protocol/actions/runs/38978503216. Son comprobaciones de ingeniería, sin inferencia comercial ni validación de transferencia entre modelos. La procedencia de importación se conserva en docs/import-provenance.json y las decisiones en docs/ARCHITECTURE.md.

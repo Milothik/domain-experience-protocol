@@ -6174,6 +6174,222 @@
           "causalClaim": false
         }
       }
+    },
+    {
+      "commitId": "sha256:7636671b65dc656030fa6b1b32763a1a07e23c95722d2962554613d5e79bb896",
+      "schemaVersion": "0.1",
+      "parents": [],
+      "timestamp": "2026-10-16T22:51:18.270Z",
+      "message": "Publish DXP as a reproducible GitHub repository connected to DCE",
+      "operation": "commit",
+      "target": null,
+      "experience": {
+        "schemaVersion": "0.1",
+        "experienceId": "exp:work:github-repository",
+        "title": "Publish DXP as a reproducible GitHub repository connected to DCE",
+        "domain": "software",
+        "goal": "Create Milothik/domain-experience-protocol with the approved public DXP code and a pinned DCE dependency.",
+        "actor": {
+          "agentId": "codex:dxp-build",
+          "runtime": "ChatGPT Work / project execution",
+          "model": "not-attested",
+          "identityStatus": "declared"
+        },
+        "scope": {
+          "provider": "Codex",
+          "environment": "DXP-site-project",
+          "apiVersion": "atlas-0.2",
+          "plan": "project-build"
+        },
+        "constraints": [
+          "Observed project work; not a controlled model experiment.",
+          "Reported reasons are concise public decision summaries."
+        ],
+        "trace": [
+          {
+            "step": 1,
+            "observation": "Existing public kit contains the working kernel, CLI, UI, worker and reviewed evidence. DCE is a separate repository pinned by the adapter. The integration runner imports web/index.js although DCE builds dist/index.js.",
+            "alternatives": [
+              "Publish all original workspace history",
+              "Import only approved release paths and pin DCE"
+            ],
+            "selected": "Import the reviewed public file mapping into an independent checkout and connect DCE through a pinned submodule.",
+            "rationaleSummary": "Make intended outcome and source use reviewable.",
+            "action": "Verify the imported project, fix the DCE build entry point, document architecture limits and add CI.",
+            "result": "Pending observation",
+            "uncertainty": "GitHub creation, remote push and clean-clone checks remain unobserved.",
+            "pivot": false,
+            "evidenceRefs": [
+              "ev:start"
+            ]
+          }
+        ],
+        "outcome": {
+          "status": "incomplete",
+          "summary": "Task opened; result not yet observed."
+        },
+        "lessons": [
+          {
+            "subject": "github-repository",
+            "predicate": "expected-result",
+            "value": "not-preregistered",
+            "claim": "No prospective prediction recorded.",
+            "type": "hypothesis",
+            "scope": {
+              "provider": "Codex",
+              "environment": "DXP-site-project",
+              "apiVersion": "atlas-0.2",
+              "plan": "project-build"
+            },
+            "evidenceRefs": [
+              "ev:start"
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev:start",
+            "label": "Task declaration",
+            "kind": "declared",
+            "content": "{\"taskId\":\"github-repository\",\"title\":\"Publish DXP as a reproducible GitHub repository connected to DCE\",\"goal\":\"Create Milothik/domain-experience-protocol with the approved public DXP code and a pinned DCE dependency.\",\"observation\":\"Existing public kit contains the working kernel, CLI, UI, worker and reviewed evidence. DCE is a separate repository pinned by the adapter. The integration runner imports web/index.js although DCE builds dist/index.js.\",\"alternatives\":[\"Publish all original workspace history\",\"Import only approved release paths and pin DCE\"],\"selected\":\"Import the reviewed public file mapping into an independent checkout and connect DCE through a pinned submodule.\",\"action\":\"Verify the imported project, fix the DCE build entry point, document architecture limits and add CI.\",\"uncertainty\":\"GitHub creation, remote push and clean-clone checks remain unobserved.\",\"usedExperienceCommits\":[]}"
+          }
+        ],
+        "validity": "active",
+        "classification": "shareable",
+        "demo": false,
+        "projectTask": {
+          "taskId": "github-repository",
+          "recordingMode": "prospective",
+          "openedAt": "2026-10-16T22:51:18.267Z",
+          "completedAt": null,
+          "hypothesisRefs": [],
+          "usedExperienceCommits": [],
+          "prediction": null,
+          "control": null
+        }
+      }
+    },
+    {
+      "commitId": "sha256:d95141e76c1c5c68c34b1bc2a00d437038faa353075ca27a37524c044d798520",
+      "schemaVersion": "0.1",
+      "parents": [
+        "sha256:7636671b65dc656030fa6b1b32763a1a07e23c95722d2962554613d5e79bb896"
+      ],
+      "timestamp": "2026-10-16T22:55:37.295Z",
+      "message": "Observed task result",
+      "operation": "commit",
+      "target": null,
+      "experience": {
+        "schemaVersion": "0.1",
+        "experienceId": "exp:work:github-repository",
+        "title": "Publish DXP as a reproducible GitHub repository connected to DCE",
+        "domain": "software",
+        "goal": "Create Milothik/domain-experience-protocol with the approved public DXP code and a pinned DCE dependency.",
+        "actor": {
+          "agentId": "codex:dxp-build",
+          "runtime": "ChatGPT Work / project execution",
+          "model": "not-attested",
+          "identityStatus": "declared"
+        },
+        "scope": {
+          "provider": "Codex",
+          "environment": "DXP-site-project",
+          "apiVersion": "atlas-0.2",
+          "plan": "project-build"
+        },
+        "constraints": [
+          "Observed project work; not a controlled model experiment.",
+          "Reported reasons are concise public decision summaries."
+        ],
+        "trace": [
+          {
+            "step": 1,
+            "observation": "Existing public kit contains the working kernel, CLI, UI, worker and reviewed evidence. DCE is a separate repository pinned by the adapter. The integration runner imports web/index.js although DCE builds dist/index.js.",
+            "alternatives": [
+              "Publish all original workspace history",
+              "Import only approved release paths and pin DCE"
+            ],
+            "selected": "Import the reviewed public file mapping into an independent checkout and connect DCE through a pinned submodule.",
+            "rationaleSummary": "Make intended outcome and source use reviewable.",
+            "action": "Verify the imported project, fix the DCE build entry point, document architecture limits and add CI.",
+            "result": "Pending observation",
+            "uncertainty": "GitHub creation, remote push and clean-clone checks remain unobserved.",
+            "pivot": false,
+            "evidenceRefs": [
+              "ev:start"
+            ]
+          },
+          {
+            "step": 2,
+            "observation": "Existing public kit contains the working kernel, CLI, UI, worker and reviewed evidence. DCE is a separate repository pinned by the adapter. The integration runner imports web/index.js although DCE builds dist/index.js.",
+            "alternatives": [
+              "Publish all original workspace history",
+              "Import only approved release paths and pin DCE"
+            ],
+            "selected": "Record the observed outcome",
+            "rationaleSummary": "Evaluate the task expectation against available evidence.",
+            "action": "Imported only approved public paths, preserved exact bytes across Git checkouts, tested DXP and DCE, ran the integrated producer/consumer/failure scenario and verified the remote repository.",
+            "result": "Created public Milothik/domain-experience-protocol and pushed the reviewed DXP release, pinned DCE submodule, corrected integration runner, documentation and CI. Initial GitHub CI succeeded; a fresh recursive clone passed all 71 DXP tests.",
+            "uncertainty": "This validates engineering compatibility on the pinned revision. It does not establish production scale, identity attestation or cross-model scientific utility.",
+            "pivot": false,
+            "evidenceRefs": [
+              "ev:result:1"
+            ]
+          }
+        ],
+        "outcome": {
+          "status": "success",
+          "summary": "Created public Milothik/domain-experience-protocol and pushed the reviewed DXP release, pinned DCE submodule, corrected integration runner, documentation and CI. Initial GitHub CI succeeded; a fresh recursive clone passed all 71 DXP tests."
+        },
+        "lessons": [
+          {
+            "subject": "github-repository",
+            "predicate": "project-observation",
+            "value": "Created public Milothik/domain-experience-protocol and pushed the reviewed DXP release, pinned DCE submodule, corrected integration runner, documentation and CI. Initial GitHub CI succeeded; a fresh recursive clone passed all 71 DXP tests.",
+            "claim": "A pinned DCE Git submodule, actual checkout revision checks and a real engine roundtrip make the software relationship reproducible. Preserve archived byte hashes and write rerun artifacts separately.",
+            "type": "observation",
+            "scope": {
+              "provider": "Codex",
+              "environment": "DXP-site-project",
+              "apiVersion": "atlas-0.2",
+              "plan": "project-build"
+            },
+            "evidenceRefs": [
+              "ev:result:1"
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev:start",
+            "label": "Task declaration",
+            "kind": "declared",
+            "content": "{\"taskId\":\"github-repository\",\"title\":\"Publish DXP as a reproducible GitHub repository connected to DCE\",\"goal\":\"Create Milothik/domain-experience-protocol with the approved public DXP code and a pinned DCE dependency.\",\"observation\":\"Existing public kit contains the working kernel, CLI, UI, worker and reviewed evidence. DCE is a separate repository pinned by the adapter. The integration runner imports web/index.js although DCE builds dist/index.js.\",\"alternatives\":[\"Publish all original workspace history\",\"Import only approved release paths and pin DCE\"],\"selected\":\"Import the reviewed public file mapping into an independent checkout and connect DCE through a pinned submodule.\",\"action\":\"Verify the imported project, fix the DCE build entry point, document architecture limits and add CI.\",\"uncertainty\":\"GitHub creation, remote push and clean-clone checks remain unobserved.\",\"usedExperienceCommits\":[]}"
+          },
+          {
+            "id": "ev:result:1",
+            "label": "Observed task result",
+            "kind": "observed",
+            "content": "{\"repository\":\"https://github.com/Milothik/domain-experience-protocol\",\"publishedCommit\":\"4e1bdd6be72f19a8deef675f4bd3e81d01999193\",\"ci\":{\"url\":\"https://github.com/Milothik/domain-experience-protocol/actions/runs/38978503216\",\"conclusion\":\"success\"},\"dxp\":{\"passed\":71,\"failed\":0,\"cleanClonePassed\":71},\"dce\":{\"revision\":\"81426cceecc631b488422c96f7ee46c751c02136\",\"passed\":41,\"failed\":0},\"roundtrip\":{\"executedAt\":\"2026-10-16T22:53:27.278Z\",\"source\":{\"repository\":\"https://github.com/Milothik/domain-context-engine\",\"revision\":\"81426cceecc631b488422c96f7ee46c751c02136\",\"version\":\"0.2.0\"},\"engine\":\"real DCE run()\",\"fixture\":\"public synthetic WeirdWay example\",\"modelCalls\":0,\"producer\":{\"task\":\"page-2\",\"contextSchema\":\"2.0\",\"selectedEntities\":3,\"commit\":\"sha256:8ffab14af2041c0c219b2fe8e069a2c41986507002ed7dc0792b89fa2bffc4c8\"},\"consumer\":{\"task\":\"page-2-with-dxp\",\"importedExperienceEntities\":1,\"requiresExplicitReview\":true,\"contextContainsDxp\":true},\"failure\":{\"type\":\"StateCommitError\",\"generationCalls\":1,\"outputPreserved\":true,\"automaticRetry\":false},\"repository\":{\"commits\":3,\"hashesVerified\":true},\"limits\":[\"Offline preview provider; no real image or language-model generation.\",\"Synthetic source data; not actual WeirdWay canon.\",\"Integration test, not an experiment proving improved task performance.\",\"Review policy in this fixture is deterministic; no claim of independent verification.\"]},\"publicImportFiles\":707,\"secretPatternMatches\":0,\"localUserPathMatches\":0}"
+          }
+        ],
+        "validity": "active",
+        "classification": "shareable",
+        "demo": false,
+        "projectTask": {
+          "taskId": "github-repository",
+          "recordingMode": "prospective",
+          "openedAt": "2026-10-16T22:51:18.267Z",
+          "completedAt": "2026-10-16T22:55:37.292Z",
+          "hypothesisRefs": [],
+          "usedExperienceCommits": [],
+          "prediction": null,
+          "control": null,
+          "resultClass": "engineering-observation",
+          "verdict": "not-a-scientific-test",
+          "causalClaim": false
+        }
+      }
     }
   ],
   "refs": {
@@ -6206,6 +6422,7 @@
     "work/mcp-read-20261016": "sha256:9291aee5ffdf3f7f68d1927e4d430ebbced6780e646f57bf5fc6ba4544cf22b5",
     "work/governance-20261016": "sha256:fbdf32524ad366776ac64cfd387c4a7ba3bd8acacbd4e344287d9c096fe32dc1",
     "work/model-route-20261016": "sha256:a6f91eb85798b189100b360acda9e13689ef338d3aac90f08020808687a895f6",
-    "work/mcp-budget-20261016": "sha256:45cf53a2cb89819013f9077a0d47eb3ea1899b387819e077f784c0971007bd9f"
+    "work/mcp-budget-20261016": "sha256:45cf53a2cb89819013f9077a0d47eb3ea1899b387819e077f784c0971007bd9f",
+    "work/github-repository": "sha256:d95141e76c1c5c68c34b1bc2a00d437038faa353075ca27a37524c044d798520"
   }
 }

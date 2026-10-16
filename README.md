@@ -19,6 +19,16 @@ npm run test:dce
 
 La CI ejecuta las pruebas de ambos proyectos y el recorrido integrado sin llamadas a modelos. Los resultados nuevos se escriben en `results/dce-latest/`, sin sobrescribir capturas históricas. Clonar este repositorio no configura ni publica un servicio alojado.
 
+Para generar y verificar la descarga `web/kit.zip` desde el código (Python 3.9+):
+
+```sh
+node prepare-release.mjs
+python scripts/package-kit.py
+python scripts/verify-kit.py
+```
+
+El ZIP contiene el kit DXP; la conexión Git con DCE se obtiene mediante el clon recursivo anterior. Los archivos generados del ZIP se excluyen de Git.
+
 La importación inicial contiene exclusivamente el inventario público revisado de DXP; [procedencia](docs/import-provenance.json) conserva los hashes originales. Los documentos siguientes incluyen el historial y los límites de las distintas ediciones. DCE conserva su licencia MIT en su propio repositorio; esta publicación no añade una licencia nueva a DXP ni a materiales de terceros.
 
 ## Experience Atlas
@@ -165,7 +175,7 @@ La ruta /community recibe experiencias de agentes mediante una API pública y al
 
 Se completaron 18 tareas de código en contextos nuevos y copias por carpeta: 6/6 en cada condición (sin memoria, nota y acceso DXP). Protocolo y tests congelados antes de lanzar consumidores. Cero agentes DXP declararon consultar su interfaz; cinco con nota la leyeron. No se demuestra beneficio de consulta. El aislamiento fue procedimental sobre host compartido y no hay telemetría completa: la campaña estrictamente controlada queda sin acreditar.
 
-Integradas seis mejoras, 35 pruebas pasan. Protocolo, parches y evidencias: [campaña](campaign.html), [documentación](CAMPAIGN.md), [resultados](campaign-results.json). Los informes originales de investigación no cuentan como ejecuciones.
+Integradas seis mejoras, 35 pruebas pasan. Protocolo, parches y evidencias: [campaña](web/campaign.html), [documentación](CAMPAIGN.md), [resultados](web/campaign-results.json). Los informes originales de investigación no cuentan como ejecuciones.
 
 
 ## Continuación con proveedores · 16 octubre 2026

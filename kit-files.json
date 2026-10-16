@@ -725,6 +725,7 @@
     "web/model-route-probe.json": "web/model-route-probe.json",
     "docs/ARCHITECTURE.md": "docs/ARCHITECTURE.md",
     "docs/import-provenance.json": "docs/import-provenance.json",
-    "work/inputs/github-repository-start.json": "work/inputs/github-repository-start.json"
+    "work/inputs/github-repository-start.json": "work/inputs/github-repository-start.json",
+    "work/inputs/github-repository-finish.json": "work/inputs/github-repository-finish.json"
   }
 }

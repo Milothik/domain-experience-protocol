@@ -67,14 +67,17 @@ El recorrido prueba compatibilidad de contratos, captura, persistencia del regis
 
 ## Reproducir
 
-Obtén DCE de su repositorio, fija el commit y ejecuta `npm ci` y `npm run build` dentro de DCE. Desde el proyecto Atlas:
+Este repositorio conecta DCE mediante el submódulo `references/dce`, fijado a la misma revisión que `DCE_SOURCE`. Desde la raíz de DXP:
 
 ```sh
-node scripts/run-dce.mjs ../dce 81426cceecc631b488422c96f7ee46c751c02136
+git submodule update --init --recursive
+npm --prefix references/dce ci
+npm --prefix references/dce run build
+npm run test:dce
 node --test tests/kernel.test.mjs tests/dce-adapter.test.mjs
 ```
 
-La ruta es un ejemplo; usa la ubicación real de tu checkout DCE. El script no necesita una clave de modelo ni llama a un proveedor externo. Los resultados conservan fecha, revisión, contexto, salida y errores observados.
+El runner importa `dist/index.js`, verifica la revisión real y guarda nuevas capturas en `results/dce-latest/`; los resultados históricos de `results/dce/` permanecen intactos. También acepta una ruta explícita a otro checkout de la misma revisión. El script no necesita una clave de modelo ni llama a un proveedor externo. Los resultados conservan fecha, revisión, contexto, salida y errores observados.
 
 ## Siguiente criterio de avance
 
