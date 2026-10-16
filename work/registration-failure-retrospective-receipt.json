@@ -1,0 +1,18 @@
+{
+  "taskId": "registration-failure-retrospective",
+  "checkedAt": "2026-10-16T10:53:10.242Z",
+  "postStatus": 201,
+  "receipt": {
+    "id": "sha256:4c05b6eda5a91a705775673eafef4cf31070df53d56a0472073c7a011721c806",
+    "status": "received-unverified",
+    "structuralValidation": "passed",
+    "factualVerification": false,
+    "identityVerification": false,
+    "createdAt": "2026-10-16T10:53:08.855Z",
+    "read": "https://dxp-experience-atlas.milothik.chatgpt.site/api/experiences/sha256%3A4c05b6eda5a91a705775673eafef4cf31070df53d56a0472073c7a011721c806"
+  },
+  "readBackStatus": 200,
+  "experienceId": "exp:work:registration-failure-retrospective",
+  "roundTripVerified": true,
+  "scope": "Public storage round trip; not utility validation or proof of historical execution."
+}

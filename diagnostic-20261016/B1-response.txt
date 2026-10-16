@@ -1,0 +1,60 @@
+Gemini ha dicho
+
+{
+"solutions": [
+{
+"taskId": "P01",
+"edits": [
+{
+"old": "  const ids=[...new Set(Object.values(repo.refs))];\r\n  const candidates=ids.map(id=>getCommit(repo,id)).filter(c=>c.experience.validity==='active'&&c.experience.domain=domain&&!c.experience.demo);",
+"new": "  const ids=[...new Set(Object.values(repo.refs))];\r\n  const headCommits=ids.map(id=>getCommit(repo,id));\r\n  const quarantinedExpIds=new Set(headCommits.filter(c=>c.experience.validity='quarantined').map(c=>c.experience.experienceId));\r\n  const candidates=headCommits.filter(c=>c.experience.validity==='active'&&!quarantinedExpIds.has(c.experience.experienceId)&&c.experience.domain=domain&&!c.experience.demo);"
+}
+]
+},
+{
+"taskId": "P02",
+"edits": [
+{
+"old": "  const fields=['title','goal','scope','constraints','trace','outcome','lessons','evidence','validity','actor','classification'];",
+"new": "  const fields=['title','goal','scope','constraints','trace','outcome','lessons','evidence','validity','actor','classification','demo','domain','experienceId'];"
+}
+]
+},
+{
+"taskId": "P03",
+"edits": [
+{
+"old": "  if(request.method='GET'){\r\n   const id=p.split('/')[3]?decodeURIComponent(p.split('/')[3]):null;if(id){const row=await env.DB.prepare('SELECT * FROM contributions WHERE id=?').bind(id).first();return row?response({...row,payload:JSON.parse(row.payload)}):response({error:'Not found'},404);}",
+"new": "  if(request.method==='GET'){\r\n   let id=null;if(p.split('/')[3]){try{id=decodeURIComponent(p.split('/')[3]);}catch{return response({error:'Invalid identifier encoding'},400);}}if(id){const row=await env.DB.prepare('SELECT * FROM contributions WHERE id=?').bind(id).first();return row?response({...row,payload:JSON.parse(row.payload)}):response({error:'Not found'},404);}"
+}
+]
+},
+{
+"taskId": "P04",
+"edits": [
+{
+"old": " if(/^\/api\/experiences(?:\/[^/]+)?/.test(p)||p==='/api/experiments'){\r\n  if(!env.DB)return response({error:'Durable database binding unavailable'},503);",
+"new": " if(/^\\/api\\/experiences(?:\\/[^/]+)?/.test(p)\vert{}\vert{}p==='/api/experiments'){\r\n  if(/^\/api\/experiences\/[^/]+/.test(p)&&request.method==='POST')return new Response(JSON.stringify({error:'Method not allowed'}),{status:405,headers:{...headers,'Content-Type':'application/json','Allow':'GET, HEAD'}});\r\n  if(!env.DB)return response({error:'Durable database binding unavailable'},503);"
+}
+]
+},
+{
+"taskId": "P05",
+"edits": [
+{
+"old": "const refName = s => typeof s==='string' && /^[A-Za-z0-9][A-Za-z0-9._/-]{0,79}/.test(s)&&!['proto','constructor','prototype'].includes(s);",
+"new": "const refName = s => typeof s==='string' && /^[A-Za-z0-9][A-Za-z0-9._/-]{0,79}$/.test(s)&&!['proto','constructor','prototype'].includes(s)&&s.split('/').every(seg=>seg!''&&seg!'.'&&seg!'..');"
+}
+]
+},
+{
+"taskId": "P06",
+"edits": [
+{
+"old": "if(p='/api/evaluation'){let reports=[],contributors=[];if(env.DB){const rs=await env.DB.prepare('SELECT actor,payload FROM contributions WHERE kind=? ORDER BY created_at DESC LIMIT 500').bind('experiment').all();reports=rs.results.map(x=>JSON.parse(x.payload));const cs=await env.DB.prepare('SELECT actor,payload FROM contributions WHERE kind=? ORDER BY created_at DESC LIMIT 500').bind('experience').all();contributors=[...new Set(cs.results.map(x=>x.actor))];}const positive=reports.filter(x=>x.dxpSuccess>x.baselineSuccess).length;const nonpositive=reports.length-positive;const signal=!reports.length?'insufficient-received-evidence':positive&&nonpositive?'mixed-unverified-report-signals':positive?'positive-unverified-report-signal':'no-positive-signal-in-received-reports';return response({pilot:PILOT,campaign:CAMPAIGN,live:{experimentReports:reports.length,declaredContributorIds:contributors.length,attestedModelFamilies:0,positiveReports:positive,nonpositiveReports:nonpositive,reportedTaskCount:reports.reduce((n,x)=>n+x.sampleSize,0),signal},hypotheses:[{id:'transfer-utility',status:signal,evidence:'Reports are arithmetically checked; execution, independence and utility remain unverified.'},{id:'versioning-utility',status:'access-comparison-tied-actual-dxp-consultation-not-observed;git-control-untested'},{id:'public-verification',status:'structural-checks-only; no factual-certification'}],decision:'Current evidence does not justify a positive general utility claim or a general rejection of DXP.'});}",
+"new": "if(p==='/api/evaluation'){let reports=[],contributors=[];if(env.DB){const rs=await env.DB.prepare('SELECT actor,payload FROM contributions WHERE kind=? ORDER BY created_at DESC LIMIT 500').bind('experiment').all();reports=rs.results.map(x=>JSON.parse(x.payload));const cs=await env.DB.prepare('SELECT actor,payload FROM contributions WHERE kind=? ORDER BY created_at DESC LIMIT 500').bind('experience').all();contributors=[...new Set(cs.results.map(x=>x.actor))];}const illustrativeReports=reports.filter(x=>x.demo=true||x.executionClass='illustrative').length;const activeReports=reports.filter(x=>!(x.demo=true||x.executionClass='illustrative'));const positive=activeReports.filter(x=>x.dxpSuccess>x.baselineSuccess).length;const nonpositive=activeReports.length-positive;const signal=!activeReports.length?'insufficient-received-evidence':positive&&nonpositive?'mixed-unverified-report-signals':positive?'positive-unverified-report-signal':'no-positive-signal-in-received-reports';return response({pilot:PILOT,campaign:CAMPAIGN,live:{experimentReports:activeReports.length,illustrativeReports,declaredContributorIds:contributors.length,attestedModelFamilies:0,positiveReports:positive,nonpositiveReports:nonpositive,reportedTaskCount:activeReports.reduce((n,x)=>n+x.sampleSize,0),signal},hypotheses:[{id:'transfer-utility',status:signal,evidence:'Reports are arithmetically checked; execution, independence and utility remain unverified.'},{id:'versioning-utility',status:'access-comparison-tied-actual-dxp-consultation-not-observed;git-control-untested'},{id:'public-verification',status:'structural-checks-only; no factual-certification'}],decision:'Current evidence does not justify a positive general utility claim or a general rejection of DXP.'});}"
+}
+]
+}
+]
+}

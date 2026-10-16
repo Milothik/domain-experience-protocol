@@ -1,0 +1,7 @@
+{
+  "checkedAt": "2026-10-16T10:55:27.924Z",
+  "rows": 36,
+  "allOutcomesReproduced": true,
+  "newInference": false,
+  "meaning": "Re-execution of archived visible outputs, not repeat model generation"
+}

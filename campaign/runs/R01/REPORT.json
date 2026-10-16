@@ -1,0 +1,39 @@
+{
+  "run": "R01",
+  "task": "T2",
+  "target": "web/core.mjs",
+  "summary": "Added maxLessons validation and deterministic lexical ordering before limiting eligible context lessons. Omitted maxLessons preserves existing ordering and filtering.",
+  "observedActions": [
+    "Read AGENTS.md and TASK.json in assigned directory.",
+    "Read web/core.mjs and acceptance.mjs.",
+    "Edited only the target source file with apply_patch.",
+    "Ran node acceptance.mjs; its build step generated worker output.",
+    "Wrote REPORT.json."
+  ],
+  "commands": [
+    "Get-Content AGENTS.md; Get-Content TASK.json",
+    "Get-Content web/core.mjs; Get-Content acceptance.mjs",
+    "node acceptance.mjs"
+  ],
+  "errors": [],
+  "corrections": [],
+  "acceptanceAttempts": [
+    {
+      "command": "node acceptance.mjs",
+      "exitCode": 0,
+      "tests": 12,
+      "passed": 12,
+      "failed": 0
+    }
+  ],
+  "toolCalls": {
+    "functionsExec": 4,
+    "execCommand": 4,
+    "applyPatch": 1
+  },
+  "memoryUsed": false,
+  "outsideDirectoryAccess": false,
+  "limitations": [
+    "Validation relied on the prescribed acceptance suite; no additional tests were executed."
+  ]
+}

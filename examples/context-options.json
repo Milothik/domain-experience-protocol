@@ -1,0 +1,9 @@
+{
+  "domain": "software",
+  "scope": {
+    "provider": "North",
+    "plan": "basic",
+    "apiVersion": "v1",
+    "environment": "sandbox"
+  }
+}

@@ -1,0 +1,118 @@
+TAP version 13
+# Subtest: seed corpus is valid with complete evidence references and immutable hashes
+ok 1 - seed corpus is valid with complete evidence references and immutable hashes
+  ---
+  duration_ms: 36.0895
+  type: 'test'
+  ...
+# Subtest: canonical object key order does not change identity; array order does
+ok 2 - canonical object key order does not change identity; array order does
+  ---
+  duration_ms: 3.018
+  type: 'test'
+  ...
+# Subtest: an experience edit changes hash and tampering is rejected
+ok 3 - an experience edit changes hash and tampering is rejected
+  ---
+  duration_ms: 11.3146
+  type: 'test'
+  ...
+# Subtest: branch and commit preserve their input repository and parent snapshots
+ok 4 - branch and commit preserve their input repository and parent snapshots
+  ---
+  duration_ms: 19.6694
+  type: 'test'
+  ...
+# Subtest: stale branch updates and cross-experience ancestry are rejected
+ok 5 - stale branch updates and cross-experience ancestry are rejected
+  ---
+  duration_ms: 9.4608
+  type: 'test'
+  ...
+# Subtest: typed conflicts distinguish plan mismatch, version drift and same-scope disagreement
+ok 6 - typed conflicts distinguish plan mismatch, version drift and same-scope disagreement
+  ---
+  duration_ms: 11.9758
+  type: 'test'
+  ...
+# Subtest: conditional merge preserves each scope and both parents, does not claim execution success
+ok 7 - conditional merge preserves each scope and both parents, does not claim execution success
+  ---
+  duration_ms: 16.9166
+  type: 'test'
+  ...
+# Subtest: same-scope incompatible lessons remain disputed instead of being averaged
+ok 8 - same-scope incompatible lessons remain disputed instead of being averaged
+  ---
+  duration_ms: 16.1958
+  type: 'test'
+  ...
+# Subtest: evidence collisions are remapped without corrupting lesson references
+ok 9 - evidence collisions are remapped without corrupting lesson references
+  ---
+  duration_ms: 15.2885
+  type: 'test'
+  ...
+# Subtest: revert adds a new head, retains descendants and matches ancestral snapshot
+ok 10 - revert adds a new head, retains descendants and matches ancestral snapshot
+  ---
+  duration_ms: 13.8714
+  type: 'test'
+  ...
+# Subtest: revert to a sibling or unrelated experience is rejected
+ok 11 - revert to a sibling or unrelated experience is rejected
+  ---
+  duration_ms: 7.1865
+  type: 'test'
+  ...
+# Subtest: dangling ancestry, duplicate commits and prototype ref names are rejected
+ok 12 - dangling ancestry, duplicate commits and prototype ref names are rejected
+  ---
+  duration_ms: 12.3421
+  type: 'test'
+  ...
+# Subtest: missing evidence and malformed scope cannot be committed
+ok 13 - missing evidence and malformed scope cannot be committed
+  ---
+  duration_ms: 7.5195
+  type: 'test'
+  ...
+# Subtest: context packet excludes all demo records; includes only scoped non-demo heads and requires review
+ok 14 - context packet excludes all demo records; includes only scoped non-demo heads and requires review
+  ---
+  duration_ms: 10.9271
+  type: 'test'
+  ...
+# Subtest: synthetic benchmark is exactly reproducible including every task
+ok 15 - synthetic benchmark is exactly reproducible including every task
+  ---
+  duration_ms: 9.1977
+  type: 'test'
+  ...
+# Subtest: unknown scope produces abstention, counted as unresolved rather than success
+ok 16 - unknown scope produces abstention, counted as unresolved rather than success
+  ---
+  duration_ms: 1.0951
+  type: 'test'
+  ...
+# Subtest: benchmark oracle selector obeys scope and rejects the declared untrusted record
+ok 17 - benchmark oracle selector obeys scope and rejects the declared untrusted record
+  ---
+  duration_ms: 1.3405
+  type: 'test'
+  ...
+# Subtest: real source review preserves the initially unresolved claim and primary-source correction
+ok 18 - real source review preserves the initially unresolved claim and primary-source correction
+  ---
+  duration_ms: 11.3604
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 230.4132

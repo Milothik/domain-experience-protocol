@@ -1,0 +1,20 @@
+diff --git a//workspace/sites/dxp-experience-atlas/campaign/baseline/web/core.mjs "b//workspace\\campaign-runs\\R18/web/core.mjs"
+index 6aa9b98..3cbaf10 100644
+--- a//workspace/sites/dxp-experience-atlas/campaign/baseline/web/core.mjs
++++ "b//workspace\\campaign-runs\\R18/web/core.mjs"
+@@ -150,11 +150,13 @@ export async function validateRepository(repo) {
+   for(const [ref,id] of Object.entries(repo.refs))req(refName(ref)&&seen.has(id),'Referencia de rama inválida.');
+   return true;
+ }
+-export function query(repo,{text='',domain='',outcome='',scope=null}={}) {
++export function query(repo,{text='',domain='',outcome='',scope=null,headsOnly=false,includeDemo=true,validity=''}={}) {
++  req(validity===''||VALIDITY.includes(validity),'validity inválida.');
++  const heads=headsOnly?new Set(Object.values(repo.refs)):null;
+   const terms=text.toLocaleLowerCase().split(/\s+/).filter(Boolean);
+   return repo.commits.filter(c=>{
+     const e=c.experience;
+-    return (!domain||e.domain===domain)&&(!outcome||e.outcome.status===outcome)&&(!scope||scopeMatch(e.scope,scope))&&terms.every(t=>JSON.stringify(e).toLocaleLowerCase().includes(t));
++    return (!heads||heads.has(c.commitId))&&(includeDemo||!e.demo)&&(!validity||e.validity===validity)&&(!domain||e.domain===domain)&&(!outcome||e.outcome.status===outcome)&&(!scope||scopeMatch(e.scope,scope))&&terms.every(t=>JSON.stringify(e).toLocaleLowerCase().includes(t));
+   });
+ }
+ export function contextPacket(repo,{scope,domain,includeNegative=true}) {

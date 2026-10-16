@@ -1,0 +1,104 @@
+{
+  "id": "dxp-participation-01",
+  "version": "0.1",
+  "title": "Contribute real tasks to DXP",
+  "baseline": {
+    "url": "https://dxp-experience-atlas.milothik.chatgpt.site/participation-baseline.zip",
+    "sourceCommit": "a5485fe793f93a857d265f4a2394017cb96b8466",
+    "sha256": "sha256:4934a3f6cc97e070821a614774ed9cfbca9c537f6f4f414d0327c9d72d8a3986",
+    "hashKind": "source-file-manifest; see protocol.initialFiles",
+    "archiveSha256": "sha256:90f69afe1fbeaff51d7891329c3c9a978f3c0ca1b61a9b3973edcc3856cdcf87"
+  },
+  "snapshot": {
+    "id": "dxp-participation-snapshot-01",
+    "sha256": "sha256:3853324bf2115f9bd3969e8ab66d69ab86485a60253caa3664199d046900902c"
+  },
+  "budget": {
+    "wallSeconds": 900,
+    "toolCalls": 30,
+    "acceptanceAttempts": 3,
+    "enforcement": "Participant-declared policy; hosted endpoint cannot enforce local solver budgets."
+  },
+  "tasks": [
+    {
+      "id": "P01",
+      "title": "Cuarentena coherente entre alias",
+      "description": "Una revisión en cuarentena puede coexistir con un alias antiguo activo. Excluir del contexto todas las revisiones de una experiencia cuando cualquiera de sus cabeceras actuales esté en cuarentena. Una cuarentena que ya no sea cabecera no debe bloquear una restauración.",
+      "target": "web/core.mjs",
+      "successCriteria": [
+        "Un alias antiguo no elude la cuarentena actual de la misma experienceId.",
+        "Otras experiencias conservan sus lecciones.",
+        "Revertir todas las cabeceras a una revisión activa permite recuperación.",
+        "No se modifica el repositorio."
+      ],
+      "acceptanceCommand": "node acceptance-P01.mjs",
+      "acceptanceSha256": "sha256:6046942c2bff9733f4ac9f9be253fe7ecd0df28ce7ab8e58e8adb2b2691c726f"
+    },
+    {
+      "id": "P02",
+      "title": "Diff fiel de metadatos",
+      "description": "El comparador debe mostrar también cambios en demo, domain y experienceId como cambios de campo, sin alterar el cálculo existente de conflictos ni mutar sus entradas.",
+      "target": "web/core.mjs",
+      "successCriteria": [
+        "Los tres campos aparecen cuando cambian.",
+        "Campos sin cambios no generan diferencias.",
+        "La comparación existente por ámbito continúa funcionando."
+      ],
+      "acceptanceCommand": "node acceptance-P02.mjs",
+      "acceptanceSha256": "sha256:faa53f3d809e76e863e2168fb52aca27ea5899e271f625d21704663c5324c263"
+    },
+    {
+      "id": "P03",
+      "title": "URL malformada es error de cliente",
+      "description": "GET /api/experiences/%ZZ y secuencias UTF-8 percent-encoded inválidas deben devolver 400 JSON en lugar de un error de almacenamiento 503. No escribir ni consumir cuota.",
+      "target": "worker/index.js",
+      "successCriteria": [
+        "Escape inválido devuelve 400.",
+        "Secuencia UTF-8 inválida devuelve 400.",
+        "Un ID válido inexistente sigue devolviendo 404.",
+        "Ninguna escritura en los casos de lectura."
+      ],
+      "acceptanceCommand": "node acceptance-P03.mjs",
+      "acceptanceSha256": "sha256:5ab4ba856542089e4c9c0963b6e74e9a073b224edfc95faf7f715ab4ccb72402"
+    },
+    {
+      "id": "P04",
+      "title": "Método correcto para recibos individuales",
+      "description": "Una URL /api/experiences/:id es de lectura. POST debe responder 405 con Allow: GET, HEAD sin insertar una experiencia ni consumir cuota; la colección debe seguir admitiendo POST.",
+      "target": "worker/index.js",
+      "successCriteria": [
+        "POST a recibo individual devuelve 405 y Allow correcto.",
+        "No guarda datos ni consume cuota.",
+        "POST a la colección conserva su comportamiento."
+      ],
+      "acceptanceCommand": "node acceptance-P04.mjs",
+      "acceptanceSha256": "sha256:bc73b5ce643431787e4b79f1549a36a8038b097c3f3bb9e6cf722d6db6943bce"
+    },
+    {
+      "id": "P05",
+      "title": "Nombres de rama interoperables",
+      "description": "Rechazar nombres de rama con segmentos vacíos, \".\" o \"..\". Mantener nombres existentes como work/task-1. La misma regla debe aplicarse en commit(), branch() y validateRepository(). No se afirma compatibilidad total con Git.",
+      "target": "web/core.mjs",
+      "successCriteria": [
+        "Rechaza work//a, work/../a, work/., work/ y work/./a.",
+        "Acepta work/task-1.",
+        "Las tres operaciones aplican la misma regla."
+      ],
+      "acceptanceCommand": "node acceptance-P05.mjs",
+      "acceptanceSha256": "sha256:ac786026663a65db4f4296770109dfede82908bdb7d4c53372a31004482136e8"
+    },
+    {
+      "id": "P06",
+      "title": "Separar ilustraciones de informes de ejecución",
+      "description": "En /api/evaluation, los informes con demo:true o executionClass:\"illustrative\" deben contarse aparte en live.illustrativeReports y excluirse de experimentReports, reportedTaskCount, positiveReports y nonpositiveReports. Conservar los informes en el registro.",
+      "target": "worker/index.js",
+      "successCriteria": [
+        "Los informes ilustrativos se conservan pero no cambian la señal de ejecución.",
+        "Los informes sin esa marca mantienen semántica anterior.",
+        "Se publica la cuenta aparte illustrativeReports."
+      ],
+      "acceptanceCommand": "node acceptance-P06.mjs",
+      "acceptanceSha256": "sha256:cbf7b44cb034a8f142a9369e2fc44f7c8dc9398c9d39b298eec16e57a6f2809a"
+    }
+  ]
+}

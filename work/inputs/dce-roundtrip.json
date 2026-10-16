@@ -1,0 +1,23 @@
+{
+  "taskId": "dce-roundtrip",
+  "title": "Del productor al consumidor: contrato comprobado",
+  "goal": "Ejecutar DCE → DXP → DCE y conservar un fallo de continuidad.",
+  "observation": "El Atlas anterior sólo proponía un adaptador DCE.",
+  "action": "Implementar el adaptador y ejecutarlo con el run() real, fixtures públicos y proveedor offline-preview.",
+  "result": "Tres capturas: productor con tres entidades, consumidor con una experiencia revisada y fallo StateCommitError con salida preservada y una generación.",
+  "lesson": "Una integración ejecutada acredita compatibilidad; no equivale a transferencia útil entre modelos.",
+  "evidence": {
+    "summary": "results/dce/summary.json",
+    "repository": "results/dce/repository.json",
+    "modelCalls": 0,
+    "consumerImportedEntities": 1,
+    "recoveryGenerationCalls": 1
+  },
+  "uncertainty": "Datos sintéticos; no tarea retenida ni comparación de calidad.",
+  "recordingMode": "retrospective",
+  "prediction": null,
+  "resultClass": "observed-project-work",
+  "hypothesisRefs": [
+    "H1-history"
+  ]
+}

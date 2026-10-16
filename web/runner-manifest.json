@@ -1,0 +1,187 @@
+{
+  "id": "dxp-local-development-pilot-01",
+  "frozenAt": "2026-10-16T05:31:56.486639+00:00",
+  "class": "developmental-not-confirmatory",
+  "purpose": "Verify real model execution, input segregation, material injection, artifact evaluation and telemetry; known diagnostic tasks, not held-out transfer.",
+  "scoredForWeeklyConfirmatoryDecision": false,
+  "taskCount": 2,
+  "allocatedRuns": 16,
+  "producerAttribution": "Recorded project coordinator work; model identity not attested. Not a verified cross-provider producer-consumer experiment.",
+  "models": [
+    {
+      "id": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "family": "qwen2",
+      "revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+      "filename": "qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+      "local": "qwen.gguf",
+      "sha256": "sha256:cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046",
+      "bytes": 1117320768
+    },
+    {
+      "id": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "family": "smollm2",
+      "revision": "2d4a76a30b4af41ecd395c35725ac11688d4cfe4",
+      "filename": "smollm2-1.7b-instruct-q4_k_m.gguf",
+      "local": "smol.gguf",
+      "sha256": "sha256:decd2598bc2c8ed08c19adc3c8fdd461ee19ed5708679d1c54ef54a5a30d4f33",
+      "bytes": 1055609536
+    }
+  ],
+  "runtime": {
+    "python": "3.12.14",
+    "llamaCppPython": "0.3.36",
+    "quickjs": "1.19.4"
+  },
+  "settings": {
+    "n_ctx": 4096,
+    "n_threads": 6,
+    "n_batch": 256,
+    "n_gpu_layers": 0,
+    "max_tokens": 384,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "seed": 16102026,
+    "maxAttempts": 1,
+    "tools": "No agent shell or filesystem; candidate pure function runs inside restricted QuickJS context."
+  },
+  "materialFactualPayloadSha256": "sha256:82a7e0d7003594d4e1640a7580c8f51db4859d513db1aa6d0b8a0ed4ab302432",
+  "materialHashes": {
+    "none": "sha256:54c31302b74cda8637ebcd86131853d7fc319079b50acf52be02e8d2c8e86d26",
+    "note": "sha256:336e0a94d73f12fec17eb48149ee56d6b6e3e130147a4e9205849efd05b0e0a6",
+    "git": "sha256:0825b79619118b9ee0fb5a1e770fae4ee7bbdd3327d51801587a337f90445161",
+    "dxp": "sha256:6db9b1cb9d35b01fe957b4701dce1a69cd7c2525a28ebd12585709744b5d784a"
+  },
+  "tasksSha256": "sha256:912fa0125592335ba747a9e0533811de1d9b174eff12b4a1ab0c2c672ec2ec69",
+  "capsuleSha256": "sha256:27e7cf62621f284ee3f0a12e703c5a2b0dc83450124c204dd52f1d2b5f794318",
+  "runnerSha256": "sha256:8685a3374ae9c3e7608f0a2c7408bfff6a6a389266c986bee2534be180bb6f45",
+  "allocations": [
+    {
+      "runId": "LOCAL-DEV-14",
+      "taskId": "DEV-C",
+      "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "family": "smollm2",
+      "arm": "note"
+    },
+    {
+      "runId": "LOCAL-DEV-09",
+      "taskId": "DEV-C",
+      "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "family": "qwen2",
+      "arm": "none"
+    },
+    {
+      "runId": "LOCAL-DEV-11",
+      "taskId": "DEV-C",
+      "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "family": "qwen2",
+      "arm": "git"
+    },
+    {
+      "runId": "LOCAL-DEV-02",
+      "taskId": "DEV-Q",
+      "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "family": "qwen2",
+      "arm": "note"
+    },
+    {
+      "runId": "LOCAL-DEV-10",
+      "taskId": "DEV-C",
+      "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "family": "qwen2",
+      "arm": "note"
+    },
+    {
+      "runId": "LOCAL-DEV-07",
+      "taskId": "DEV-Q",
+      "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "family": "smollm2",
+      "arm": "git"
+    },
+    {
+      "runId": "LOCAL-DEV-15",
+      "taskId": "DEV-C",
+      "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "family": "smollm2",
+      "arm": "git"
+    },
+    {
+      "runId": "LOCAL-DEV-08",
+      "taskId": "DEV-Q",
+      "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "family": "smollm2",
+      "arm": "dxp"
+    },
+    {
+      "runId": "LOCAL-DEV-06",
+      "taskId": "DEV-Q",
+      "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "family": "smollm2",
+      "arm": "note"
+    },
+    {
+      "runId": "LOCAL-DEV-16",
+      "taskId": "DEV-C",
+      "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "family": "smollm2",
+      "arm": "dxp"
+    },
+    {
+      "runId": "LOCAL-DEV-03",
+      "taskId": "DEV-Q",
+      "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "family": "qwen2",
+      "arm": "git"
+    },
+    {
+      "runId": "LOCAL-DEV-01",
+      "taskId": "DEV-Q",
+      "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "family": "qwen2",
+      "arm": "none"
+    },
+    {
+      "runId": "LOCAL-DEV-04",
+      "taskId": "DEV-Q",
+      "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "family": "qwen2",
+      "arm": "dxp"
+    },
+    {
+      "runId": "LOCAL-DEV-05",
+      "taskId": "DEV-Q",
+      "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "family": "smollm2",
+      "arm": "none"
+    },
+    {
+      "runId": "LOCAL-DEV-12",
+      "taskId": "DEV-C",
+      "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "family": "qwen2",
+      "arm": "dxp"
+    },
+    {
+      "runId": "LOCAL-DEV-13",
+      "taskId": "DEV-C",
+      "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "family": "smollm2",
+      "arm": "none"
+    }
+  ],
+  "metrics": [
+    "all allocated runs including failures",
+    "exact evaluator acceptance",
+    "input/output/total model tokens",
+    "inference and evaluation wall time",
+    "material bytes and prompt SHA-256",
+    "separate setup/load overhead"
+  ],
+  "limits": [
+    "Two small quantized open models, no frontier-provider comparison.",
+    "Known diagnostic cases do not test held-out method transfer.",
+    "Same material is injected in three formats; no actual Git/DXP operation or retrieval advantage is tested.",
+    "No inference from delivery to comprehension.",
+    "No OS namespace isolation; the evaluated code has no host I/O bridges.",
+    "No significance or equivalence claim from this small development pilot."
+  ]
+}

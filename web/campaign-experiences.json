@@ -1,0 +1,129 @@
+{
+  "format": "dxp-atlas-repository",
+  "version": "0.1",
+  "commits": [
+    {
+      "commitId": "sha256:480333d0802b465d2b1000ad6113a5b60ff3d6368356e84c33a4659be1a674ca",
+      "schemaVersion": "0.1",
+      "parents": [],
+      "timestamp": "2026-10-15T07:50:23.119Z",
+      "message": "Frozen real observation",
+      "operation": "commit",
+      "target": null,
+      "experience": {
+        "schemaVersion": "0.1",
+        "experienceId": "exp:work:campaign-producer-20261015",
+        "title": "Preparar comprobaciones portables y corregir rutas de admisión",
+        "domain": "software",
+        "goal": "Resolver dos problemas observados antes de congelar experiencias para tareas nuevas.",
+        "actor": {
+          "agentId": "codex:dxp-build",
+          "runtime": "ChatGPT Work / project execution",
+          "model": "not-attested",
+          "identityStatus": "declared"
+        },
+        "scope": {
+          "provider": "Codex",
+          "environment": "DXP-site-project",
+          "apiVersion": "atlas-0.2",
+          "plan": "project-build"
+        },
+        "constraints": [
+          "Observed project work; not a controlled model experiment.",
+          "Reported reasons are concise public decision summaries."
+        ],
+        "trace": [
+          {
+            "step": 1,
+            "observation": "node --test falla con spawn EPERM; el worker admite prefijos arbitrarios de /api/experiences.",
+            "alternatives": [
+              "Proceed without recorded context",
+              "Use scoped prior experiences"
+            ],
+            "selected": "Record a falsifiable task expectation",
+            "rationaleSummary": "Make intended outcome and source use reviewable.",
+            "action": "Plan the task and its check before execution.",
+            "result": "Pending observation",
+            "uncertainty": "Outcome not yet observed.",
+            "pivot": false,
+            "evidenceRefs": [
+              "ev:start"
+            ]
+          },
+          {
+            "step": 2,
+            "observation": "node --test falla con spawn EPERM; el worker admite prefijos arbitrarios de /api/experiences.",
+            "alternatives": [
+              "Proceed without recorded context",
+              "Use scoped prior experiences"
+            ],
+            "selected": "Record the observed outcome",
+            "rationaleSummary": "Evaluate the task expectation against available evidence.",
+            "action": "Se ejecutaron las suites directamente, se añadió scripts/test-all.mjs y tests/routing.test.mjs, y se restringieron las rutas de admisión en worker/index.js.",
+            "result": "29 pruebas pasan con un lanzador en el mismo proceso que reconstruye primero el worker; rutas con prefijos y sufijos no admitidos devuelven 404.",
+            "uncertainty": "Observaciones de ingeniería del entorno Windows actual; no indican beneficio de memoria para agentes posteriores.",
+            "pivot": false,
+            "evidenceRefs": [
+              "ev:result:1"
+            ]
+          }
+        ],
+        "outcome": {
+          "status": "success",
+          "summary": "29 pruebas pasan con un lanzador en el mismo proceso que reconstruye primero el worker; rutas con prefijos y sufijos no admitidos devuelven 404."
+        },
+        "lessons": [
+          {
+            "subject": "campaign-producer-20261015",
+            "predicate": "project-observation",
+            "value": "29 pruebas pasan con un lanzador en el mismo proceso que reconstruye primero el worker; rutas con prefijos y sufijos no admitidos devuelven 404.",
+            "claim": "En este entorno node --test falla al crear procesos; importar las suites directamente funciona. Las pruebas de API consumen dist/server/index.js: reconstruir antes evita probar código antiguo. Las rutas de admisión deben identificar recursos completos.",
+            "type": "observation",
+            "scope": {
+              "provider": "Codex",
+              "environment": "DXP-site-project",
+              "apiVersion": "atlas-0.2",
+              "plan": "project-build"
+            },
+            "evidenceRefs": [
+              "ev:result:1"
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev:start",
+            "label": "Task declaration",
+            "kind": "declared",
+            "content": "{\"taskId\":\"campaign-producer-20261015\",\"title\":\"Preparar comprobaciones portables y corregir rutas de admisión\",\"goal\":\"Resolver dos problemas observados antes de congelar experiencias para tareas nuevas.\",\"observation\":\"node --test falla con spawn EPERM; el worker admite prefijos arbitrarios de /api/experiences.\",\"prediction\":\"Un lanzador sin subprocesos y rutas explícitas permitirán verificar el código y rechazar recursos inexistentes.\",\"control\":\"Pruebas existentes y pruebas de rutas desconocidas; trabajo de ingeniería, no comparación de agentes.\"}"
+          },
+          {
+            "id": "ev:result:1",
+            "label": "Observed task result",
+            "kind": "observed",
+            "content": "{\"before\":{\"command\":\"node --test tests/kernel.test.mjs tests/dce-adapter.test.mjs tests/public-api.test.mjs\",\"error\":\"spawn EPERM\",\"failedFiles\":3},\"after\":{\"command\":\"node scripts/test-all.mjs\",\"passed\":29,\"failed\":0},\"source\":\"1dd5a3251dce3a2214c2f7c7e427974d749a889f\"}"
+          }
+        ],
+        "validity": "active",
+        "classification": "shareable",
+        "demo": false,
+        "projectTask": {
+          "taskId": "campaign-producer-20261015",
+          "recordingMode": "prospective",
+          "openedAt": "2026-10-15T07:45:59.192Z",
+          "completedAt": "2026-10-15T07:46:39.304Z",
+          "hypothesisRefs": [],
+          "usedExperienceCommits": [],
+          "prediction": "Un lanzador sin subprocesos y rutas explícitas permitirán verificar el código y rechazar recursos inexistentes.",
+          "control": "Pruebas existentes y pruebas de rutas desconocidas; trabajo de ingeniería, no comparación de agentes.",
+          "resultClass": "engineering-observation",
+          "verdict": "not-a-scientific-test",
+          "causalClaim": false
+        }
+      }
+    }
+  ],
+  "refs": {
+    "producer": "sha256:480333d0802b465d2b1000ad6113a5b60ff3d6368356e84c33a4659be1a674ca"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "taskId": "campaign-publication-20261015",
+  "status": "success",
+  "result": "Seis mejoras integradas; 35 pruebas pasan. Página, protocolo, evidencia depurada y API de evaluación preparados para publicación; la recepción durable se comprobará después del despliegue.",
+  "action": "Integración posterior a la evaluación; cuerpos de aceptación congelados conservados; informe público con empate y ausencia de consultas DXP. Revisión visual local y empaquetado con redacción de rutas locales.",
+  "lesson": "Separar evaluación y selección de parches permite mejorar el producto sin convertir los cambios integrados en evidencia de utilidad de la memoria.",
+  "evidence": {
+    "integration": "campaign/integration-result.json",
+    "tests": {
+      "command": "node scripts/test-all.mjs",
+      "passed": 35,
+      "failed": 0
+    },
+    "page": "/campaign.html",
+    "archive": "/campaign-evidence.zip",
+    "liveVerification": "Pending deployment; not claimed here"
+  },
+  "uncertainty": "Este registro de preparación no confirma aún el despliegue ni una nueva escritura en la base pública."
+}

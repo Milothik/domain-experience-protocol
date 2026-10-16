@@ -1,0 +1,18 @@
+{
+  "taskId": "mcp-read-20261016",
+  "result": "Version 14 published successfully with has_mcp=true. Plugin provisioned and installation reported already installed. Native tools are absent from this session. Direct endpoint requests, including a Sites dispatch token, returned 401; authenticated end-to-end use is not verified. Clean kit passes 68/68 tests.",
+  "status": "partial",
+  "evidence": {
+    "sourceCommit": "892de387fe08af73db6293fba5cb3a40346d36c3",
+    "version": 14,
+    "deployment": "appgdep_6ad28d0933488191942189459b5c517a",
+    "status": "succeeded",
+    "hasMcp": true,
+    "liveChecks": "work/mcp-live-check.json",
+    "nativeToolVerified": false,
+    "confirmatoryTrialsAdded": 0
+  },
+  "lesson": "Provisioning, installation, authentication and successful native tool invocation are separate states. A published MCP server does not prove the current conversation can use it.",
+  "uncertainty": "A fresh conversation may expose installed tools. No authenticated end-to-end read or causal memory utility has been established.",
+  "resultClass": "publication-verified-connection-pending"
+}

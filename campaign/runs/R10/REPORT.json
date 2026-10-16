@@ -1,0 +1,37 @@
+{
+  "taskId": "T3",
+  "run": "R10",
+  "status": "passed",
+  "summary": "contextPacket excludes hypotheses by default and accepts includeHypotheses=true while preserving the existing eligibility and scope filters.",
+  "observedActions": [
+    "Read assigned AGENTS.md and TASK.json.",
+    "Read web/core.mjs and NOTE.md.",
+    "Edited only web/core.mjs to add includeHypotheses=false and its lesson filter.",
+    "Ran node acceptance.mjs: exit code 0; 12 tests passed, 0 failed.",
+    "Wrote REPORT.json."
+  ],
+  "commands": [
+    "Get-Content -Raw AGENTS.md; Get-Content -Raw TASK.json",
+    "Get-Content -Raw web/core.mjs; Get-Content -Raw NOTE.md",
+    "node acceptance.mjs"
+  ],
+  "errors": [],
+  "corrections": [],
+  "acceptanceAttempts": 1,
+  "toolCalls": {
+    "functionsExec": 4,
+    "execCommand": 3,
+    "applyPatch": 2,
+    "totalNestedToolCalls": 5
+  },
+  "memoryUsed": {
+    "read": true,
+    "source": "NOTE.md",
+    "applied": false,
+    "explanation": "The note concerns portable checks and routing; this change required only the existing contextPacket predicates and prescribed acceptance command."
+  },
+  "accessOutsideAssignedDirectory": false,
+  "limitations": [
+    "Validation is limited to the prescribed acceptance suite; no additional tests or external services were used."
+  ]
+}

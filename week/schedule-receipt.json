@@ -1,0 +1,11 @@
+{
+  "automation_id": "Automation_8d152accb54c819184dd9cc8188151ad",
+  "title": "Validar o refutar DXP esta semana",
+  "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Europe/Madrid:20261017T060000\nRRULE:FREQ=DAILY;COUNT=7\nEND:VEVENT",
+  "timezone": "Europe/Madrid",
+  "is_enabled": true,
+  "saved_at": "2026-10-16T05:14:19.996448+00:00",
+  "last_run_time": null,
+  "next_run_time": null,
+  "meaning": "Schedule saved and enabled; no occurrence has executed yet."
+}

@@ -1,0 +1,5208 @@
+{
+  "format": "dxp-toy-benchmark",
+  "version": "0.1",
+  "seed": 17,
+  "count": 120,
+  "shift": true,
+  "poison": true,
+  "unknown": false,
+  "kind": "deterministic synthetic policy comparison; no LLM",
+  "policies": {
+    "none": "fixed concurrency 16",
+    "raw": "last matching provider record",
+    "flat": "last global record",
+    "dxp": "exact provider+plan+version, trusted=true; abstain when unknown"
+  },
+  "totals": {
+    "none": {
+      "success": 0,
+      "failures": 120,
+      "calls": 966,
+      "quarantined": 0,
+      "abstentions": 0
+    },
+    "raw": {
+      "success": 30,
+      "failures": 90,
+      "calls": 878,
+      "quarantined": 0,
+      "abstentions": 0
+    },
+    "flat": {
+      "success": 0,
+      "failures": 120,
+      "calls": 340,
+      "quarantined": 0,
+      "abstentions": 0
+    },
+    "dxp": {
+      "success": 120,
+      "failures": 0,
+      "calls": 2016,
+      "quarantined": 29,
+      "abstentions": 0
+    }
+  },
+  "rows": [
+    {
+      "id": 1,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 85
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 22,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 2,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 43
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 22,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 3,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 46
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 4,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 4,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 37
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 4,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 5,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 64
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 16,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 6,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 50
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 5,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 7,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 25
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 7,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 8,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 55
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 19,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 19,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 9,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 65
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 33,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 10,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 77
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 39,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 11,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 28
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 14,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 12,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 57
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 19,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 19,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 13,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 82
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 21,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 14,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 72
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 18,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 15,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 70
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 18,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 16,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 72
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 36,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 17,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 74
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 7,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 18,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 44
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 4,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 19,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 31
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 8,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 20,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 24
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 12,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 21,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 36
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 3,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 22,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 42
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 11,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 23,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 31
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 16,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 24,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 23
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 8,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 8,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 25,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 62
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 31,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 26,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 82
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 41,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 27,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 78
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 26,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 26,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 28,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 68
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 6,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 29,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 26
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 9,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 9,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 30,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 56
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 14,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 31,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 47
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 12,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 32,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 27
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 7,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 33,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 57
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 19,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 19,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 34,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 75
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 7,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 35,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 62
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 31,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 36,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 70
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 35,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 37,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 68
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 34,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 38,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 63
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 21,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 21,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 39,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 86
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 29,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 29,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 40,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 99
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 14,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 25,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 41,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 87
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 29,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 29,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 42,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 29
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 3,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 43,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 69
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 6,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 44,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 29
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 8,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 45,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 27
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 14,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 46,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 71
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 18,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 47,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 32
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 3,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 48,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 33
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 9,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 49,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 30
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 3,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 50,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 25
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 9,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 9,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 51,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 64
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 22,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 22,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 52,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 26
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 3,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 53,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 94
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 8,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 54,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 30
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 15,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 55,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 93
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 31,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 31,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 56,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 86
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 22,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 57,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 97
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 14,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 9,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 58,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 32
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 16,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 59,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 56
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 14,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 60,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 28
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 3,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 61,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 78
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 7,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 62,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 40
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 14,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 14,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 63,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 80
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 7,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 64,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 68
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 23,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 23,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 65,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 34
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 17,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 66,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 32
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 16,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 67,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 22
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 6,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 68,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 94
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 24,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 69,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 47
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 16,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 16,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 70,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 71
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 18,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 71,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 58
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 5,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 72,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 20
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 10,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 73,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 92
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 31,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 31,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 74,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 58
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 20,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 20,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 75,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 74
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 37,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 76,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 22
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 11,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 77,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 95
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 48,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 78,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 94
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 24,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 79,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 27
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 7,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 80,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 24
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 12,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 81,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 69
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 6,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 82,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 88
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 22,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 83,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 63
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 16,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 84,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 28
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 3,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 85,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 24
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 6,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 86,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 43
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 4,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 87,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 89
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 30,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 30,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 88,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 86
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 22,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 89,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 34
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 12,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 12,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 90,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 82
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 41,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 91,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 62
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 16,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 92,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 79
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 20,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 93,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 74
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 7,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 94,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 20
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 10,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 95,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 51
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 26,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 96,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 23
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 6,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 97,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 96
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 48,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 98,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 34
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 12,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 12,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 99,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 55
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 19,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 19,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 100,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 93
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 31,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 31,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 101,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 42
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 4,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 102,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 98
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 14,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 25,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 103,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 74
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 10,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 25,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 25,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 104,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 63
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 21,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 21,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 105,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 85
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 29,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 29,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 106,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 92
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 31,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 31,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 107,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 99
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 14,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 25,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 108,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 62
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 16,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 109,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 4,
+        "trusted": true,
+        "requests": 92
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 4
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 4,
+          "success": true,
+          "calls": 23,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 110,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 51
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 8,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 26,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 111,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 32
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 11,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 11,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 112,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 97
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 14,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 9,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 113,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 39
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 20,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 114,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 45
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 15,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 15,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 115,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 88
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 8,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 116,
+      "task": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v2",
+        "cap": 2,
+        "trusted": true,
+        "requests": 23
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 2
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 2,
+          "success": true,
+          "calls": 12,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 117,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 39
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 4,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 118,
+      "task": {
+        "provider": "North",
+        "plan": "pro",
+        "apiVersion": "v1",
+        "cap": 12,
+        "trusted": true,
+        "requests": 35
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 64,
+        "flat": 64,
+        "dxp": 12
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 12,
+          "success": true,
+          "calls": 3,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 119,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 82
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 12,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 28,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 4,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 28,
+          "abstain": false
+        }
+      }
+    },
+    {
+      "id": 120,
+      "task": {
+        "provider": "South",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "cap": 3,
+        "trusted": true,
+        "requests": 39
+      },
+      "decisions": {
+        "none": 16,
+        "raw": 3,
+        "flat": 64,
+        "dxp": 3
+      },
+      "results": {
+        "none": {
+          "concurrency": 16,
+          "success": false,
+          "calls": 6,
+          "abstain": false
+        },
+        "raw": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 13,
+          "abstain": false
+        },
+        "flat": {
+          "concurrency": 64,
+          "success": false,
+          "calls": 2,
+          "abstain": false
+        },
+        "dxp": {
+          "concurrency": 3,
+          "success": true,
+          "calls": 13,
+          "abstain": false
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "id": "governance-comparison-20261016",
+  "class": "deterministic-engineering-not-agent-utility",
+  "capturedAt": "2026-10-16T20:55:11.450Z",
+  "sourceExperienceCommit": "sha256:2b4450d9e0b61106aa350274b28164ca4f0accf2dedff941c66703de9bcc448a",
+  "sourceKernelSha256": "08438373705620ca7aae33e1cef18cc2cfa3d6795fbec2080b36f6836745f520",
+  "currentKernelSha256": "08438373705620ca7aae33e1cef18cc2cfa3d6795fbec2080b36f6836745f520",
+  "policy": {
+    "domain": "software",
+    "scope": {
+      "provider": "Codex",
+      "environment": "DXP-site-project",
+      "apiVersion": "atlas-0.2",
+      "plan": "project-build"
+    },
+    "classification": "shareable",
+    "excludeConflicts": true
+  },
+  "rows": [
+    {
+      "id": "valid-record",
+      "expected": [
+        "A"
+      ],
+      "before": [
+        "A"
+      ],
+      "repaired": [
+        "A"
+      ],
+      "flat": [
+        "A"
+      ],
+      "beforePass": true,
+      "repairedPass": true,
+      "flatPass": true,
+      "immutable": true
+    },
+    {
+      "id": "local-record",
+      "expected": [],
+      "before": [
+        "A"
+      ],
+      "repaired": [
+        "A"
+      ],
+      "flat": [],
+      "beforePass": false,
+      "repairedPass": false,
+      "flatPass": true,
+      "immutable": true
+    },
+    {
+      "id": "mixed-private-public",
+      "expected": [
+        "A"
+      ],
+      "before": [
+        "A",
+        "PRIVATE"
+      ],
+      "repaired": [
+        "A",
+        "PRIVATE"
+      ],
+      "flat": [
+        "A"
+      ],
+      "beforePass": false,
+      "repairedPass": false,
+      "flatPass": true,
+      "immutable": true
+    },
+    {
+      "id": "cross-head-contradiction",
+      "expected": [],
+      "before": [
+        "A",
+        "B"
+      ],
+      "repaired": [
+        "A",
+        "B"
+      ],
+      "flat": [],
+      "beforePass": false,
+      "repairedPass": false,
+      "flatPass": true,
+      "immutable": true
+    },
+    {
+      "id": "conflict-before-truncation",
+      "expected": [],
+      "before": [
+        "B"
+      ],
+      "repaired": [
+        "B"
+      ],
+      "flat": [],
+      "beforePass": false,
+      "repairedPass": false,
+      "flatPass": true,
+      "immutable": true
+    },
+    {
+      "id": "other-scope",
+      "expected": [
+        "A"
+      ],
+      "before": [
+        "A"
+      ],
+      "repaired": [
+        "A"
+      ],
+      "flat": [
+        "A"
+      ],
+      "beforePass": true,
+      "repairedPass": true,
+      "flatPass": true,
+      "immutable": true
+    },
+    {
+      "id": "negative-evidence-retained",
+      "expected": [
+        "A",
+        "FAILED"
+      ],
+      "before": [
+        "A",
+        "FAILED"
+      ],
+      "repaired": [
+        "A",
+        "FAILED"
+      ],
+      "flat": [
+        "A",
+        "FAILED"
+      ],
+      "beforePass": true,
+      "repairedPass": true,
+      "flatPass": true,
+      "immutable": true
+    },
+    {
+      "id": "quarantine-alias",
+      "expected": [],
+      "before": [],
+      "repaired": [],
+      "flat": [],
+      "beforePass": true,
+      "repairedPass": true,
+      "flatPass": true,
+      "immutable": true
+    },
+    {
+      "id": "explicit-restoration",
+      "expected": [
+        "A"
+      ],
+      "before": [
+        "A"
+      ],
+      "repaired": [
+        "A"
+      ],
+      "flat": [
+        "A"
+      ],
+      "beforePass": true,
+      "repairedPass": true,
+      "flatPass": true,
+      "immutable": true
+    },
+    {
+      "id": "superseded",
+      "expected": [],
+      "before": [],
+      "repaired": [],
+      "flat": [],
+      "beforePass": true,
+      "repairedPass": true,
+      "flatPass": true,
+      "immutable": true
+    },
+    {
+      "id": "hypothesis-default",
+      "expected": [],
+      "before": [],
+      "repaired": [],
+      "flat": [],
+      "beforePass": true,
+      "repairedPass": true,
+      "flatPass": true,
+      "immutable": true
+    },
+    {
+      "id": "already-disputed",
+      "expected": [],
+      "before": [],
+      "repaired": [],
+      "flat": [],
+      "beforePass": true,
+      "repairedPass": true,
+      "flatPass": true,
+      "immutable": true
+    }
+  ],
+  "summary": {
+    "cases": 12,
+    "beforePassed": 8,
+    "repairedPassed": 8,
+    "flatPassed": 12,
+    "modelTrials": 0
+  },
+  "limits": [
+    "Constructed policy cases derived from one observed project record; not independent task clusters.",
+    "Flat and DXP share rules and facts, so a tie shows these selection rules do not require versioned history.",
+    "No factual, identity, expiry or universal security guarantee.",
+    "Original day0 audit and historical baselines are preserved."
+  ]
+}

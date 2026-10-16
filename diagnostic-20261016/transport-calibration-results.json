@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "provider": "gemini",
+      "observedAt": "2026-10-16T10:58:00.580Z",
+      "parsed": true,
+      "allStringsEqual": true,
+      "extraction": "Visible fenced code pre.textContent",
+      "scope": "One exact echo fixture; no utility or raw inference attestation"
+    },
+    {
+      "provider": "grok",
+      "observedAt": "2026-10-16T10:58:00.605Z",
+      "parsed": true,
+      "allStringsEqual": true,
+      "extraction": "Visible fenced code pre.textContent",
+      "scope": "One exact echo fixture; no utility or raw inference attestation"
+    }
+  ],
+  "allPassed": true,
+  "utilityExecutionsAdded": 0,
+  "priorResultsRewritten": false
+}

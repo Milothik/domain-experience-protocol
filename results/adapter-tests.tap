@@ -1,0 +1,142 @@
+TAP version 13
+# Subtest: capture preserves observed data without serializing provider configuration
+ok 1 - capture preserves observed data without serializing provider configuration
+  ---
+  duration_ms: 2.8159
+  type: 'test'
+  ...
+# Subtest: failed generation is captured once with no inferred successful output
+ok 2 - failed generation is captured once with no inferred successful output
+  ---
+  duration_ms: 0.7191
+  type: 'test'
+  ...
+# Subtest: unreviewed imports are empty; reviewed imports are data and never mandatory constraints
+ok 3 - unreviewed imports are empty; reviewed imports are data and never mandatory constraints
+  ---
+  duration_ms: 19.7309
+  type: 'test'
+  ...
+# Subtest: modified evidence fails integrity before any entity import
+ok 4 - modified evidence fails integrity before any entity import
+  ---
+  duration_ms: 2.6476
+  type: 'test'
+  ...
+# Subtest: seed corpus is valid with complete evidence references and immutable hashes
+ok 5 - seed corpus is valid with complete evidence references and immutable hashes
+  ---
+  duration_ms: 26.4131
+  type: 'test'
+  ...
+# Subtest: canonical object key order does not change identity; array order does
+ok 6 - canonical object key order does not change identity; array order does
+  ---
+  duration_ms: 1.8438
+  type: 'test'
+  ...
+# Subtest: an experience edit changes hash and tampering is rejected
+ok 7 - an experience edit changes hash and tampering is rejected
+  ---
+  duration_ms: 7.9272
+  type: 'test'
+  ...
+# Subtest: branch and commit preserve their input repository and parent snapshots
+ok 8 - branch and commit preserve their input repository and parent snapshots
+  ---
+  duration_ms: 9.4501
+  type: 'test'
+  ...
+# Subtest: stale branch updates and cross-experience ancestry are rejected
+ok 9 - stale branch updates and cross-experience ancestry are rejected
+  ---
+  duration_ms: 4.6635
+  type: 'test'
+  ...
+# Subtest: typed conflicts distinguish plan mismatch, version drift and same-scope disagreement
+ok 10 - typed conflicts distinguish plan mismatch, version drift and same-scope disagreement
+  ---
+  duration_ms: 5.6173
+  type: 'test'
+  ...
+# Subtest: conditional merge preserves each scope and both parents, does not claim execution success
+ok 11 - conditional merge preserves each scope and both parents, does not claim execution success
+  ---
+  duration_ms: 8.3924
+  type: 'test'
+  ...
+# Subtest: same-scope incompatible lessons remain disputed instead of being averaged
+ok 12 - same-scope incompatible lessons remain disputed instead of being averaged
+  ---
+  duration_ms: 9.8318
+  type: 'test'
+  ...
+# Subtest: evidence collisions are remapped without corrupting lesson references
+ok 13 - evidence collisions are remapped without corrupting lesson references
+  ---
+  duration_ms: 8.4373
+  type: 'test'
+  ...
+# Subtest: revert adds a new head, retains descendants and matches ancestral snapshot
+ok 14 - revert adds a new head, retains descendants and matches ancestral snapshot
+  ---
+  duration_ms: 9.6326
+  type: 'test'
+  ...
+# Subtest: revert to a sibling or unrelated experience is rejected
+ok 15 - revert to a sibling or unrelated experience is rejected
+  ---
+  duration_ms: 3.6199
+  type: 'test'
+  ...
+# Subtest: dangling ancestry, duplicate commits and prototype ref names are rejected
+ok 16 - dangling ancestry, duplicate commits and prototype ref names are rejected
+  ---
+  duration_ms: 8.1103
+  type: 'test'
+  ...
+# Subtest: missing evidence and malformed scope cannot be committed
+ok 17 - missing evidence and malformed scope cannot be committed
+  ---
+  duration_ms: 3.915
+  type: 'test'
+  ...
+# Subtest: context packet excludes all demo records; includes only scoped non-demo heads and requires review
+ok 18 - context packet excludes all demo records; includes only scoped non-demo heads and requires review
+  ---
+  duration_ms: 5.658
+  type: 'test'
+  ...
+# Subtest: synthetic benchmark is exactly reproducible including every task
+ok 19 - synthetic benchmark is exactly reproducible including every task
+  ---
+  duration_ms: 6.2773
+  type: 'test'
+  ...
+# Subtest: unknown scope produces abstention, counted as unresolved rather than success
+ok 20 - unknown scope produces abstention, counted as unresolved rather than success
+  ---
+  duration_ms: 0.9632
+  type: 'test'
+  ...
+# Subtest: benchmark oracle selector obeys scope and rejects the declared untrusted record
+ok 21 - benchmark oracle selector obeys scope and rejects the declared untrusted record
+  ---
+  duration_ms: 0.7543
+  type: 'test'
+  ...
+# Subtest: real source review preserves the initially unresolved claim and primary-source correction
+ok 22 - real source review preserves the initially unresolved claim and primary-source correction
+  ---
+  duration_ms: 5.9153
+  type: 'test'
+  ...
+1..22
+# tests 22
+# suites 0
+# pass 22
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 405.7915

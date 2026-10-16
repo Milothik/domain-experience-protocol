@@ -1,0 +1,178 @@
+TAP version 13
+# Subtest: capture preserves observed data without serializing provider configuration
+ok 1 - capture preserves observed data without serializing provider configuration
+  ---
+  duration_ms: 2.8414
+  type: 'test'
+  ...
+# Subtest: failed generation is captured once with no inferred successful output
+ok 2 - failed generation is captured once with no inferred successful output
+  ---
+  duration_ms: 0.5979
+  type: 'test'
+  ...
+# Subtest: unreviewed imports are empty; reviewed imports are data and never mandatory constraints
+ok 3 - unreviewed imports are empty; reviewed imports are data and never mandatory constraints
+  ---
+  duration_ms: 16.6664
+  type: 'test'
+  ...
+# Subtest: modified evidence fails integrity before any entity import
+ok 4 - modified evidence fails integrity before any entity import
+  ---
+  duration_ms: 3.5674
+  type: 'test'
+  ...
+# Subtest: empty supplied run cannot be recorded as a successful observed execution
+ok 5 - empty supplied run cannot be recorded as a successful observed execution
+  ---
+  duration_ms: 0.6023
+  type: 'test'
+  ...
+# Subtest: seed corpus is valid with complete evidence references and immutable hashes
+ok 6 - seed corpus is valid with complete evidence references and immutable hashes
+  ---
+  duration_ms: 24.6476
+  type: 'test'
+  ...
+# Subtest: canonical object key order does not change identity; array order does
+ok 7 - canonical object key order does not change identity; array order does
+  ---
+  duration_ms: 1.7253
+  type: 'test'
+  ...
+# Subtest: an experience edit changes hash and tampering is rejected
+ok 8 - an experience edit changes hash and tampering is rejected
+  ---
+  duration_ms: 8.0803
+  type: 'test'
+  ...
+# Subtest: branch and commit preserve their input repository and parent snapshots
+ok 9 - branch and commit preserve their input repository and parent snapshots
+  ---
+  duration_ms: 9.4071
+  type: 'test'
+  ...
+# Subtest: stale branch updates and cross-experience ancestry are rejected
+ok 10 - stale branch updates and cross-experience ancestry are rejected
+  ---
+  duration_ms: 4.9764
+  type: 'test'
+  ...
+# Subtest: typed conflicts distinguish plan mismatch, version drift and same-scope disagreement
+ok 11 - typed conflicts distinguish plan mismatch, version drift and same-scope disagreement
+  ---
+  duration_ms: 4.9796
+  type: 'test'
+  ...
+# Subtest: conditional merge preserves each scope and both parents, does not claim execution success
+ok 12 - conditional merge preserves each scope and both parents, does not claim execution success
+  ---
+  duration_ms: 8.5354
+  type: 'test'
+  ...
+# Subtest: same-scope incompatible lessons remain disputed instead of being averaged
+ok 13 - same-scope incompatible lessons remain disputed instead of being averaged
+  ---
+  duration_ms: 11.4516
+  type: 'test'
+  ...
+# Subtest: evidence collisions are remapped without corrupting lesson references
+ok 14 - evidence collisions are remapped without corrupting lesson references
+  ---
+  duration_ms: 8.6074
+  type: 'test'
+  ...
+# Subtest: revert adds a new head, retains descendants and matches ancestral snapshot
+ok 15 - revert adds a new head, retains descendants and matches ancestral snapshot
+  ---
+  duration_ms: 8.5275
+  type: 'test'
+  ...
+# Subtest: revert to a sibling or unrelated experience is rejected
+ok 16 - revert to a sibling or unrelated experience is rejected
+  ---
+  duration_ms: 3.4275
+  type: 'test'
+  ...
+# Subtest: dangling ancestry, duplicate commits and prototype ref names are rejected
+ok 17 - dangling ancestry, duplicate commits and prototype ref names are rejected
+  ---
+  duration_ms: 6.1937
+  type: 'test'
+  ...
+# Subtest: missing evidence and malformed scope cannot be committed
+ok 18 - missing evidence and malformed scope cannot be committed
+  ---
+  duration_ms: 3.4781
+  type: 'test'
+  ...
+# Subtest: context packet excludes all demo records; includes only scoped non-demo heads and requires review
+ok 19 - context packet excludes all demo records; includes only scoped non-demo heads and requires review
+  ---
+  duration_ms: 5.5923
+  type: 'test'
+  ...
+# Subtest: synthetic benchmark is exactly reproducible including every task
+ok 20 - synthetic benchmark is exactly reproducible including every task
+  ---
+  duration_ms: 5.8554
+  type: 'test'
+  ...
+# Subtest: unknown scope produces abstention, counted as unresolved rather than success
+ok 21 - unknown scope produces abstention, counted as unresolved rather than success
+  ---
+  duration_ms: 0.7135
+  type: 'test'
+  ...
+# Subtest: benchmark oracle selector obeys scope and rejects the declared untrusted record
+ok 22 - benchmark oracle selector obeys scope and rejects the declared untrusted record
+  ---
+  duration_ms: 1.1965
+  type: 'test'
+  ...
+# Subtest: real source review preserves the initially unresolved claim and primary-source correction
+ok 23 - real source review preserves the initially unresolved claim and primary-source correction
+  ---
+  duration_ms: 5.2556
+  type: 'test'
+  ...
+# Subtest: shareable contribution persists, round-trips and duplicate does not create another row
+ok 24 - shareable contribution persists, round-trips and duplicate does not create another row
+  ---
+  duration_ms: 43.3383
+  type: 'test'
+  ...
+# Subtest: local records, malformed bodies and oversized payloads are rejected before persistence
+ok 25 - local records, malformed bodies and oversized payloads are rejected before persistence
+  ---
+  duration_ms: 3.8705
+  type: 'test'
+  ...
+# Subtest: experiment arithmetic is computed but never promoted to scientific verification
+ok 26 - experiment arithmetic is computed but never promoted to scientific verification
+  ---
+  duration_ms: 3.7089
+  type: 'test'
+  ...
+# Subtest: discovery and negative pilot evaluation are readable without DB or account
+ok 27 - discovery and negative pilot evaluation are readable without DB or account
+  ---
+  duration_ms: 1.4515
+  type: 'test'
+  ...
+# Subtest: live evaluation changes with received reports while preserving unverified status
+ok 28 - live evaluation changes with received reports while preserving unverified status
+  ---
+  duration_ms: 3.9431
+  type: 'test'
+  ...
+1..28
+# tests 28
+# suites 0
+# pass 28
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 248.2699

@@ -1,0 +1,24 @@
+{
+  "taskId": "test-environment",
+  "title": "Separar un fallo del entorno de un fallo del código",
+  "goal": "Verificar DXP y DCE.",
+  "observation": "El test runner aislado devolvió spawn EPERM al lanzar subprocesos en una superficie de ejecución.",
+  "action": "Ejecutar las mismas pruebas desde el entorno disponible de Node y conservar las salidas TAP.",
+  "result": "22/22 pruebas DXP y 41/41 pruebas DCE superadas; el fallo inicial era de lanzamiento del runner.",
+  "lesson": "Un runner que no puede arrancar no demuestra un defecto del código. Conservar el error de entorno y la ejecución comprobada por separado.",
+  "evidence": {
+    "initialError": "spawn EPERM",
+    "dxpTap": "results/adapter-tests.tap",
+    "dceTap": "results/dce-tests.tap",
+    "dxpPassed": 22,
+    "dcePassed": 41
+  },
+  "pivot": true,
+  "uncertainty": "Los tests cubren invariantes y contratos, no utilidad entre modelos.",
+  "recordingMode": "retrospective",
+  "prediction": null,
+  "resultClass": "observed-project-work",
+  "hypothesisRefs": [
+    "H1-history"
+  ]
+}

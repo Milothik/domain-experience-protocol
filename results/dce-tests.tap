@@ -1,0 +1,264 @@
+
+> domain-context-engine@0.2.0 test
+> npm run build && node --test tests/*.test.mjs
+
+
+> domain-context-engine@0.2.0 build
+> node scripts/sync-schemas.mjs && tsc
+
+TAP version 13
+# Subtest: relevance, rejection, constraints, provenance and scoped continuity
+ok 1 - relevance, rejection, constraints, provenance and scoped continuity
+  ---
+  duration_ms: 83.0323
+  type: 'test'
+  ...
+# Subtest: deterministic reproducibility
+ok 2 - deterministic reproducibility
+  ---
+  duration_ms: 20.3012
+  type: 'test'
+  ...
+# Subtest: provider replacement keeps contract and traces rejected context
+ok 3 - provider replacement keeps contract and traces rejected context
+  ---
+  duration_ms: 6.7355
+  type: 'test'
+  ...
+# Subtest: human includes, excludes, locks, rules and requirements win
+ok 4 - human includes, excludes, locks, rules and requirements win
+  ---
+  duration_ms: 8.2827
+  type: 'test'
+  ...
+# Subtest: conflicting overrides fail before generation
+ok 5 - conflicting overrides fail before generation
+  ---
+  duration_ms: 5.1183
+  type: 'test'
+  ...
+# Subtest: schema rejects invalid compiler output
+ok 6 - schema rejects invalid compiler output
+  ---
+  duration_ms: 5.9096
+  type: 'test'
+  ...
+# Subtest: unknown decisions fail closed
+ok 7 - unknown decisions fail closed
+  ---
+  duration_ms: 6.2684
+  type: 'test'
+  ...
+# Subtest: failure never commits state; validated updates do
+ok 8 - failure never commits state; validated updates do
+  ---
+  duration_ms: 11.5454
+  type: 'test'
+  ...
+# Subtest: optimistic state versions prevent lost writes
+ok 9 - optimistic state versions prevent lost writes
+  ---
+  duration_ms: 0.7546
+  type: 'test'
+  ...
+# Subtest: context overflow fails rather than truncating constraints
+ok 10 - context overflow fails rather than truncating constraints
+  ---
+  duration_ms: 5.4773
+  type: 'test'
+  ...
+# Subtest: second domain runs same engine
+ok 11 - second domain runs same engine
+  ---
+  duration_ms: 6.119
+  type: 'test'
+  ...
+# Subtest: independent gold covers three domains and detects missing constraints/facts/state
+ok 12 - independent gold covers three domains and detects missing constraints/facts/state
+  ---
+  duration_ms: 85.8458
+  type: 'test'
+  ...
+# Subtest: output rubric checks facts and ignores missing model evaluation rather than fabricating it
+ok 13 - output rubric checks facts and ignores missing model evaluation rather than fabricating it
+  ---
+  duration_ms: 1.2694
+  type: 'test'
+  ...
+# Subtest: live runner performs all four arms over local HTTP and records actual failures in quality
+ok 14 - live runner performs all four arms over local HTTP and records actual failures in quality
+  ---
+  duration_ms: 853.5143
+  type: 'test'
+  ...
+# Subtest: material effects do not leak through unrelated downstream links
+ok 15 - material effects do not leak through unrelated downstream links
+  ---
+  duration_ms: 8.6938
+  type: 'test'
+  ...
+# Subtest: unapproved relationship effects cannot force deterministic selection
+ok 16 - unapproved relationship effects cannot force deterministic selection
+  ---
+  duration_ms: 1.9518
+  type: 'test'
+  ...
+# Subtest: custom compiler cannot drop a selected task entity while keeping a valid envelope
+ok 17 - custom compiler cannot drop a selected task entity while keeping a valid envelope
+  ---
+  duration_ms: 15.1761
+  type: 'test'
+  ...
+# Subtest: non-finite, cyclic and non-JSON provider values fail at core boundary
+ok 18 - non-finite, cyclic and non-JSON provider values fail at core boundary
+  ---
+  duration_ms: 0.6565
+  type: 'test'
+  ...
+# Subtest: state merges fields, nested patches and multiple updates for one entity
+ok 19 - state merges fields, nested patches and multiple updates for one entity
+  ---
+  duration_ms: 3.0322
+  type: 'test'
+  ...
+# Subtest: invalid state update is atomic
+ok 20 - invalid state update is atomic
+  ---
+  duration_ms: 0.7569
+  type: 'test'
+  ...
+# Subtest: typed two-hop retrieval ranks and bounds cyclic graph
+ok 21 - typed two-hop retrieval ranks and bounds cyclic graph
+  ---
+  duration_ms: 30.1426
+  type: 'test'
+  ...
+# Subtest: candidate cap cannot lose required seeds
+ok 22 - candidate cap cannot lose required seeds
+  ---
+  duration_ms: 0.9216
+  type: 'test'
+  ...
+# Subtest: core validates context with statelessProject and custom compiler
+ok 23 - core validates context with statelessProject and custom compiler
+  ---
+  duration_ms: 5.0737
+  type: 'test'
+  ...
+# Subtest: core catches mandatory constraint loss from a schema-valid compiler
+ok 24 - core catches mandatory constraint loss from a schema-valid compiler
+  ---
+  duration_ms: 5.7347
+  type: 'test'
+  ...
+# Subtest: core validates material effects element types
+ok 25 - core validates material effects element types
+  ---
+  duration_ms: 5.3805
+  type: 'test'
+  ...
+# Subtest: uncertain claims and generated continuity are not silently canon
+ok 26 - uncertain claims and generated continuity are not silently canon
+  ---
+  duration_ms: 12.0479
+  type: 'test'
+  ...
+# Subtest: human lock supplies its own provenance without promoting other fields
+ok 27 - human lock supplies its own provenance without promoting other fields
+  ---
+  duration_ms: 5.7493
+  type: 'test'
+  ...
+# Subtest: unapproved hard rules require review rather than disappearing
+ok 28 - unapproved hard rules require review rather than disappearing
+  ---
+  duration_ms: 4.3689
+  type: 'test'
+  ...
+# Subtest: constraint conflicts fail and priority retains origins
+ok 29 - constraint conflicts fail and priority retains origins
+  ---
+  duration_ms: 9.1266
+  type: 'test'
+  ...
+# Subtest: budget pruning uses confidence and effects while keeping mandatory context
+ok 30 - budget pruning uses confidence and effects while keeping mandatory context
+  ---
+  duration_ms: 3.5767
+  type: 'test'
+  ...
+# Subtest: JSON schema files agree with exported runtime validators
+ok 31 - JSON schema files agree with exported runtime validators
+  ---
+  duration_ms: 3.3986
+  type: 'test'
+  ...
+# Subtest: LLM provider executes real HTTP transport, scopes state and validates reply
+ok 32 - LLM provider executes real HTTP transport, scopes state and validates reply
+  ---
+  duration_ms: 89.7336
+  type: 'test'
+  ...
+# Subtest: LLM rejects malformed or incomplete decisions and does not fall back
+ok 33 - LLM rejects malformed or incomplete decisions and does not fall back
+  ---
+  duration_ms: 13.5179
+  type: 'test'
+  ...
+# Subtest: LLM timeout, request cap, truncation and HTTP failure fail closed
+ok 34 - LLM timeout, request cap, truncation and HTTP failure fail closed
+  ---
+  duration_ms: 41.1862
+  type: 'test'
+  ...
+# Subtest: LLM response budget is enforced
+ok 35 - LLM response budget is enforced
+  ---
+  duration_ms: 0.857
+  type: 'test'
+  ...
+# Subtest: reviewed scalar state replacement does not inherit generated field status
+ok 36 - reviewed scalar state replacement does not inherit generated field status
+  ---
+  duration_ms: 0.4885
+  type: 'test'
+  ...
+# Subtest: custom compiler cannot mutate selected canon to bypass constraint preservation
+ok 37 - custom compiler cannot mutate selected canon to bypass constraint preservation
+  ---
+  duration_ms: 3.8251
+  type: 'test'
+  ...
+# Subtest: commit conflict preserves validated output for recovery
+ok 38 - commit conflict preserves validated output for recovery
+  ---
+  duration_ms: 3.4628
+  type: 'test'
+  ...
+# Subtest: domain validation hooks cannot mutate generated context
+ok 39 - domain validation hooks cannot mutate generated context
+  ---
+  duration_ms: 2.8608
+  type: 'test'
+  ...
+# Subtest: custom compiler cannot discard human include/lock overrides
+ok 40 - custom compiler cannot discard human include/lock overrides
+  ---
+  duration_ms: 3.4354
+  type: 'test'
+  ...
+# Subtest: derived state cannot update irrelevant entities
+ok 41 - derived state cannot update irrelevant entities
+  ---
+  duration_ms: 4.8247
+  type: 'test'
+  ...
+1..41
+# tests 41
+# suites 0
+# pass 41
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1125.0011

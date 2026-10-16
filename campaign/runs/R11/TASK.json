@@ -1,0 +1,6 @@
+{
+  "id": "T2",
+  "target": "web/core.mjs",
+  "title": "Presupuesto de contexto reproducible",
+  "requirement": "Extend contextPacket options with maxLessons. Omission preserves current behavior and ordering. Supplied maxLessons must be an integer in 1..1000, otherwise throw. When supplied, sort eligible lessons by commitId, subject, predicate, claim using string lexical comparisons, then return the first maxLessons. Preserve scope filtering and no mutation."
+}

@@ -1,0 +1,21 @@
+{
+  "taskId": "campaign-producer-20261015",
+  "status": "success",
+  "result": "29 pruebas pasan con un lanzador en el mismo proceso que reconstruye primero el worker; rutas con prefijos y sufijos no admitidos devuelven 404.",
+  "action": "Se ejecutaron las suites directamente, se añadió scripts/test-all.mjs y tests/routing.test.mjs, y se restringieron las rutas de admisión en worker/index.js.",
+  "lesson": "En este entorno node --test falla al crear procesos; importar las suites directamente funciona. Las pruebas de API consumen dist/server/index.js: reconstruir antes evita probar código antiguo. Las rutas de admisión deben identificar recursos completos.",
+  "evidence": {
+    "before": {
+      "command": "node --test tests/kernel.test.mjs tests/dce-adapter.test.mjs tests/public-api.test.mjs",
+      "error": "spawn EPERM",
+      "failedFiles": 3
+    },
+    "after": {
+      "command": "node scripts/test-all.mjs",
+      "passed": 29,
+      "failed": 0
+    },
+    "source": "1dd5a3251dce3a2214c2f7c7e427974d749a889f"
+  },
+  "uncertainty": "Observaciones de ingeniería del entorno Windows actual; no indican beneficio de memoria para agentes posteriores."
+}

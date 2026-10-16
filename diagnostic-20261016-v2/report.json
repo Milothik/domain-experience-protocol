@@ -1,0 +1,156 @@
+{
+  "id": "diagnostic-20261016-v2",
+  "updatedAt": "2026-10-16T11:10:18.076Z",
+  "verdict": "not-validated",
+  "claim": "No incremental DXP utility established. Do not adopt on presumed benefit.",
+  "confirmatory": false,
+  "confirmatoryExecutionsAdded": 0,
+  "plannedBatches": 6,
+  "capturedBatches": 6,
+  "allocatedTaskArtifacts": 36,
+  "evaluatedArtifacts": 34,
+  "acceptedArtifacts": 34,
+  "unavailableArtifacts": 2,
+  "pendingArtifacts": 0,
+  "batches": [
+    {
+      "id": "B1",
+      "provider": "gemini",
+      "condition": "dxp",
+      "allocated": 6,
+      "artifactsEvaluated": 6,
+      "accepted": 6,
+      "unavailable": 0,
+      "pending": 0,
+      "assertionFailures": 0,
+      "responseCaptured": true
+    },
+    {
+      "id": "B2",
+      "provider": "grok",
+      "condition": "note",
+      "allocated": 6,
+      "artifactsEvaluated": 6,
+      "accepted": 6,
+      "unavailable": 0,
+      "pending": 0,
+      "assertionFailures": 0,
+      "responseCaptured": true
+    },
+    {
+      "id": "B3",
+      "provider": "gemini",
+      "condition": "none",
+      "allocated": 6,
+      "artifactsEvaluated": 5,
+      "accepted": 5,
+      "unavailable": 1,
+      "pending": 0,
+      "assertionFailures": 0,
+      "responseCaptured": true
+    },
+    {
+      "id": "B4",
+      "provider": "grok",
+      "condition": "dxp",
+      "allocated": 6,
+      "artifactsEvaluated": 6,
+      "accepted": 6,
+      "unavailable": 0,
+      "pending": 0,
+      "assertionFailures": 0,
+      "responseCaptured": true
+    },
+    {
+      "id": "B5",
+      "provider": "gemini",
+      "condition": "note",
+      "allocated": 6,
+      "artifactsEvaluated": 5,
+      "accepted": 5,
+      "unavailable": 1,
+      "pending": 0,
+      "assertionFailures": 0,
+      "responseCaptured": true
+    },
+    {
+      "id": "B6",
+      "provider": "grok",
+      "condition": "none",
+      "allocated": 6,
+      "artifactsEvaluated": 6,
+      "accepted": 6,
+      "unavailable": 0,
+      "pending": 0,
+      "assertionFailures": 0,
+      "responseCaptured": true
+    }
+  ],
+  "informationParity": {
+    "prepared": true,
+    "editorInputExact": true,
+    "checkedBatches": 6,
+    "meaning": "Exact serialized input in the editor before submission; no proof of provider-side use or comprehension.",
+    "independentProviderUI": true,
+    "backendVersionsAttested": false
+  },
+  "interpretation": "Public development tasks, six correlated tasks per fresh conversation, one batch per provider/arm. Exact prepared-input checks and fenced-code capture repair the observed v1 transport defect. No held-out validation, significant/equivalent benefit, interactive DXP/Git operation utility, or backend weight attestation follows from this diagnostic.",
+  "engineering": {
+    "baselineRegressionPassed": 60,
+    "newDefectsReproduced": 5,
+    "defectsFixed": 5,
+    "regressionPassed": 65,
+    "regressionFailed": 0
+  },
+  "limitations": [
+    "P01-P06 publicly disclosed; not held out",
+    "Provider identities observed through UI; weights and backend versions unattested",
+    "No claim that browser private mode removes every provider-side personalization influence",
+    "Six tasks in one batch; no task-level independent inference or confidence interval",
+    "Costs/tokens unavailable; elapsed observation includes browser latency",
+    "Presentation diagnostic only; cannot establish versioning operation utility or replace 384-run weekly matrix",
+    "Same known tasks reused after transport diagnosis; new contexts do not establish no provider-side caching or personalization.",
+    "v1 archived independently; v2 is an explicit development protocol revision, not a repaired historical score.",
+    "Fenced code is captured from visible DOM, not raw API telemetry.",
+    "Historical protocol checks permit only Windows CRLF-to-LF normalization; task acceptance matches frozen diagnostic bytes."
+  ],
+  "evidence": {
+    "manifest": "/diagnostic-manifest.json",
+    "details": "/diagnostic-results.json",
+    "download": "/diagnostic-evidence.zip",
+    "audit": "/CONTINUATION_AUDIT.md"
+  },
+  "transportVersion": 2,
+  "inputChecks": [
+    {
+      "batch": "B1",
+      "inputExact": true
+    },
+    {
+      "batch": "B2",
+      "inputExact": true
+    },
+    {
+      "batch": "B3",
+      "inputExact": true
+    },
+    {
+      "batch": "B4",
+      "inputExact": true
+    },
+    {
+      "batch": "B5",
+      "inputExact": true
+    },
+    {
+      "batch": "B6",
+      "inputExact": true
+    }
+  ],
+  "previousDiagnostic": {
+    "id": "diagnostic-20261016",
+    "results": "/diagnostic-v1-results.json",
+    "captureProblemsPreserved": true
+  },
+  "evaluationCountSemantics": "The historical fields assertionsPassed/assertionsFailed count TAP test cases, not individual assert calls. Accepted artifacts require all test cases to pass."
+}

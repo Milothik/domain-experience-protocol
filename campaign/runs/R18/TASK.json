@@ -1,0 +1,6 @@
+{
+  "id": "T1",
+  "target": "web/core.mjs",
+  "title": "Filtros de consulta de historial",
+  "requirement": "Extend query(repo, options) with headsOnly=false, includeDemo=true, validity='' (one VALIDITY value or empty). headsOnly returns only unique current ref heads; includeDemo=false excludes demo experiences; validity filters by exact value. Preserve all existing filters and defaults, preserve repository. Invalid validity must throw."
+}

@@ -1,0 +1,8 @@
+{
+  "taskId": "campaign-publication-20261015",
+  "title": "Publicar la comparación real y sus límites",
+  "goal": "Dar acceso al protocolo congelado, parches, pruebas y resultado de las 18 ejecuciones; integrar los cambios comprobados y verificar recepción externa.",
+  "observation": "Las 18 evaluaciones independientes pasan. Ninguno de los seis agentes DXP declara haber consultado la interfaz; cinco de seis agentes con nota declaran leerla.",
+  "prediction": "La publicación mostrará empate sin afirmar beneficio causal de consulta ni de versionado; las seis mejoras combinadas pasarán pruebas y el registro conservará una experiencia real.",
+  "control": "Resultados de los tres grupos, criterios congelados y verificación posterior de integración y endpoints."
+}

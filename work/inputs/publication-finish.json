@@ -1,0 +1,18 @@
+{
+  "taskId": "publication",
+  "status": "success",
+  "result": "Versión2 desplegada con éxito y acceso público; endpoints de lectura HTTP200 e ingreso POST201 comprobados.",
+  "lesson": "La compatibilidad Git se reutilizó, pero hubo un fallo nuevo de empaquetado. Se corrigió separadamente y se conservó el primer resultado negativo.",
+  "pivot": true,
+  "evidence": {
+    "deploymentId": "appgdep_6ad0080421008191ac2fa89a8e8361e9",
+    "version": 2,
+    "url": "https://dxp-experience-atlas.milothik.chatgpt.site",
+    "sourceCommit": "b51589859286f82cd6e07b0ce056c96734d1e974",
+    "publicAccess": true,
+    "readHTTP": 200,
+    "writeHTTP": 201
+  },
+  "uncertainty": "Success validates deployment and storage; visual browser QA remains unavailable.",
+  "verdict": "initial-prediction-partially-refuted;recovery-observed"
+}

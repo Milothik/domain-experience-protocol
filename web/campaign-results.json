@@ -1,0 +1,307 @@
+{
+  "id": "dxp-real-build-20261015",
+  "evaluatedAt": "2026-10-15T07:56:20.123Z",
+  "kind": "real-agent-code-comparison-with-procedural-isolation",
+  "strictControlledCampaignComplete": false,
+  "strictCompletionReason": "Per-agent filesystem sandbox and independent access audit unavailable; exact solve time and tool telemetry not exposed. Do not count this as 18 sealed experimental runs.",
+  "realCodingRuns": 18,
+  "taskCount": 6,
+  "passedRuns": 18,
+  "conditions": [
+    {
+      "condition": "none",
+      "successes": 6,
+      "tasks": 6,
+      "declaredMemoryReads": 0,
+      "declaredAcceptanceAttempts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "tokens": null,
+      "cost": null,
+      "solveWallTimeMs": null,
+      "toolUse": "Self-reported only; see per-run REPORT.json. Different reporting shapes prevent a defensible aggregate."
+    },
+    {
+      "condition": "note",
+      "successes": 6,
+      "tasks": 6,
+      "declaredMemoryReads": 5,
+      "declaredAcceptanceAttempts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "tokens": null,
+      "cost": null,
+      "solveWallTimeMs": null,
+      "toolUse": "Self-reported only; see per-run REPORT.json. Different reporting shapes prevent a defensible aggregate."
+    },
+    {
+      "condition": "dxp",
+      "successes": 6,
+      "tasks": 6,
+      "declaredMemoryReads": 0,
+      "declaredAcceptanceAttempts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "tokens": null,
+      "cost": null,
+      "solveWallTimeMs": null,
+      "toolUse": "Self-reported only; see per-run REPORT.json. Different reporting shapes prevent a defensible aggregate."
+    }
+  ],
+  "runs": [
+    {
+      "runId": "R01",
+      "taskId": "T2",
+      "condition": "note",
+      "passed": true,
+      "immutablePassed": true,
+      "declaredMemoryRead": false,
+      "reportModifiedAt": "2026-10-15T07:51:29.267Z",
+      "acceptanceTestCount": 12,
+      "failedTestCount": 0
+    },
+    {
+      "runId": "R02",
+      "taskId": "T4",
+      "condition": "note",
+      "passed": true,
+      "immutablePassed": true,
+      "declaredMemoryRead": true,
+      "reportModifiedAt": "2026-10-15T07:51:34.946Z",
+      "acceptanceTestCount": 12,
+      "failedTestCount": 0
+    },
+    {
+      "runId": "R03",
+      "taskId": "T4",
+      "condition": "dxp",
+      "passed": true,
+      "immutablePassed": true,
+      "declaredMemoryRead": false,
+      "reportModifiedAt": "2026-10-15T07:51:35.480Z",
+      "acceptanceTestCount": 12,
+      "failedTestCount": 0
+    },
+    {
+      "runId": "R04",
+      "taskId": "T1",
+      "condition": "dxp",
+      "passed": true,
+      "immutablePassed": true,
+      "declaredMemoryRead": false,
+      "reportModifiedAt": "2026-10-15T07:51:42.195Z",
+      "acceptanceTestCount": 12,
+      "failedTestCount": 0
+    },
+    {
+      "runId": "R05",
+      "taskId": "T5",
+      "condition": "dxp",
+      "passed": true,
+      "immutablePassed": true,
+      "declaredMemoryRead": false,
+      "reportModifiedAt": "2026-10-15T07:51:53.968Z",
+      "acceptanceTestCount": 12,
+      "failedTestCount": 0
+    },
+    {
+      "runId": "R06",
+      "taskId": "T3",
+      "condition": "none",
+      "passed": true,
+      "immutablePassed": true,
+      "declaredMemoryRead": false,
+      "reportModifiedAt": "2026-10-15T07:51:52.633Z",
+      "acceptanceTestCount": 12,
+      "failedTestCount": 0
+    },
+    {
+      "runId": "R07",
+      "taskId": "T3",
+      "condition": "dxp",
+      "passed": true,
+      "immutablePassed": true,
+      "declaredMemoryRead": false,
+      "reportModifiedAt": "2026-10-15T07:52:23.145Z",
+      "acceptanceTestCount": 12,
+      "failedTestCount": 0
+    },
+    {
+      "runId": "R08",
+      "taskId": "T5",
+      "condition": "note",
+      "passed": true,
+      "immutablePassed": true,
+      "declaredMemoryRead": true,
+      "reportModifiedAt": "2026-10-15T07:52:48.197Z",
+      "acceptanceTestCount": 12,
+      "failedTestCount": 0
+    },
+    {
+      "runId": "R09",
+      "taskId": "T6",
+      "condition": "note",
+      "passed": true,
+      "immutablePassed": true,
+      "declaredMemoryRead": true,
+      "reportModifiedAt": "2026-10-15T07:52:34.748Z",
+      "acceptanceTestCount": 12,
+      "failedTestCount": 0
+    },
+    {
+      "runId": "R10",
+      "taskId": "T3",
+      "condition": "note",
+      "passed": true,
+      "immutablePassed": true,
+      "declaredMemoryRead": true,
+      "reportModifiedAt": "2026-10-15T07:52:44.609Z",
+      "acceptanceTestCount": 12,
+      "failedTestCount": 0
+    },
+    {
+      "runId": "R11",
+      "taskId": "T2",
+      "condition": "none",
+      "passed": true,
+      "immutablePassed": true,
+      "declaredMemoryRead": false,
+      "reportModifiedAt": "2026-10-15T07:52:59.371Z",
+      "acceptanceTestCount": 12,
+      "failedTestCount": 0
+    },
+    {
+      "runId": "R12",
+      "taskId": "T2",
+      "condition": "dxp",
+      "passed": true,
+      "immutablePassed": true,
+      "declaredMemoryRead": false,
+      "reportModifiedAt": "2026-10-15T07:53:00.447Z",
+      "acceptanceTestCount": 12,
+      "failedTestCount": 0
+    },
+    {
+      "runId": "R13",
+      "taskId": "T6",
+      "condition": "dxp",
+      "passed": true,
+      "immutablePassed": true,
+      "declaredMemoryRead": false,
+      "reportModifiedAt": "2026-10-15T07:53:48.154Z",
+      "acceptanceTestCount": 12,
+      "failedTestCount": 0
+    },
+    {
+      "runId": "R14",
+      "taskId": "T1",
+      "condition": "note",
+      "passed": true,
+      "immutablePassed": true,
+      "declaredMemoryRead": true,
+      "reportModifiedAt": "2026-10-15T07:53:55.852Z",
+      "acceptanceTestCount": 12,
+      "failedTestCount": 0
+    },
+    {
+      "runId": "R15",
+      "taskId": "T4",
+      "condition": "none",
+      "passed": true,
+      "immutablePassed": true,
+      "declaredMemoryRead": false,
+      "reportModifiedAt": "2026-10-15T07:53:52.376Z",
+      "acceptanceTestCount": 12,
+      "failedTestCount": 0
+    },
+    {
+      "runId": "R16",
+      "taskId": "T5",
+      "condition": "none",
+      "passed": true,
+      "immutablePassed": true,
+      "declaredMemoryRead": false,
+      "reportModifiedAt": "2026-10-15T07:54:09.327Z",
+      "acceptanceTestCount": 12,
+      "failedTestCount": 0
+    },
+    {
+      "runId": "R17",
+      "taskId": "T6",
+      "condition": "none",
+      "passed": true,
+      "immutablePassed": true,
+      "declaredMemoryRead": false,
+      "reportModifiedAt": "2026-10-15T07:54:12.339Z",
+      "acceptanceTestCount": 12,
+      "failedTestCount": 0
+    },
+    {
+      "runId": "R18",
+      "taskId": "T1",
+      "condition": "none",
+      "passed": true,
+      "immutablePassed": true,
+      "declaredMemoryRead": false,
+      "reportModifiedAt": "2026-10-15T07:54:13.309Z",
+      "acceptanceTestCount": 12,
+      "failedTestCount": 0
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "claim": "Consultar experiencias mejora la resolución de tareas nuevas",
+      "verdict": "open-not-demonstrated",
+      "reason": "6/6 in all groups; no DXP consumer consulted the interface. Assignment/access was tested, actual DXP consultation benefit was not."
+    },
+    {
+      "id": "H2",
+      "claim": "DXP aporta más que una nota equivalente",
+      "verdict": "no-observed-advantage-in-access-condition",
+      "reason": "Same 6/6; 0/6 DXP queries, 5/6 notes read by declaration. Cannot infer equivalence of used representations."
+    },
+    {
+      "id": "H3",
+      "claim": "DXP conserva experiencias verificables y reutilizables",
+      "verdict": "engineering-feasibility-observed",
+      "reason": "Real work captured, hash validation and frozen archive work; factual truth and general performance are not established."
+    },
+    {
+      "id": "H4",
+      "claim": "DXP reduce tiempo o coste",
+      "verdict": "unmeasured",
+      "reason": "No authoritative solve-time/token/cost/tool telemetry."
+    }
+  ],
+  "limitations": [
+    "Six small tasks with explicit contracts and visible acceptance tests: ceiling effect.",
+    "One frozen real experience combines two producer fixes; limited coverage and task relevance.",
+    "Consultation optional: no DXP interface was used. Note contains all fields of the same commit; representation differs.",
+    "Same inherited model by configuration; backend identity/revision unexposed. No cross-model claim.",
+    "Separate conversation contexts and directories; shared host, no per-agent filesystem enforcement or full access audit. No reported outside access; this is a declaration, not proof.",
+    "No reliable complete solver timing/tool/token/cost telemetry; reports preserved as declarations.",
+    "Database acceptance uses a double. Live checks are separate engineering evidence.",
+    "No repeated seeds, blinded evaluator, statistical inference, or independent causal value of versioning measured.",
+    "Common instructions already prescribed the portable acceptance runner, making part of the producer experience redundant. This design did not force useful retrieval."
+  ],
+  "protocolSha256": "75ed7aa5125dbaa45c3c43679668894022213f8ce6b4a5b16a341d4a3cbac7d4\n",
+  "baselineHash": "3919ae3c04f36853528f110e2d94bec400ba8b1b52b63337122d870ec08ca0d2",
+  "sourceCommit": "1dd5a3251dce3a2214c2f7c7e427974d749a889f",
+  "seed": 3049001143
+}

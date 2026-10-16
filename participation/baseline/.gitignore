@@ -1,0 +1,5 @@
+.dxp-session.json
+*session*.json
+memory-material.json
+result.json
+dist/

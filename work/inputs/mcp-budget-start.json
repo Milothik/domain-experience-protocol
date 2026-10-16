@@ -1,0 +1,11 @@
+{
+  "taskId": "mcp-budget-20261016",
+  "title": "Bound native MCP discovery output after observed context overfetch",
+  "goal": "Replace full-record listing with bounded summaries and preserve full get-by-ID",
+  "observation": "Native list returned 129881 UTF-8 bytes; status returned 9625 bytes. Four native read tools succeeded.",
+  "prediction": "On the same archived public response, default list output will decrease by at least 80 percent, preserve IDs/status and allow full record retrieval; malformed limits fail.",
+  "control": "Identical stored HTTP response for before/after measurement; no model task success or token-cost inference.",
+  "usedExperienceCommits": [
+    "sha256:bb48348b271b467eb6d597624788801a562089007602d2b7f2298f907d5e7f3d"
+  ]
+}

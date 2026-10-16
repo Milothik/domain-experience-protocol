@@ -1,0 +1,27 @@
+{
+  "taskId": "dce-discovery",
+  "title": "Una ausencia de búsqueda no demuestra ausencia del proyecto",
+  "goal": "Explicar DCE usando su código real.",
+  "observation": "Claude informa no haber localizado material público DCE; el usuario pide su repositorio.",
+  "action": "Buscar el repositorio, leer README, arquitectura, contratos y run(), fijar el commit y ejecutar la referencia.",
+  "result": "DCE público localizado: v0.2.0, revisión 81426cceecc631b488422c96f7ee46c751c02136.",
+  "lesson": "Una conclusión negativa de un informe debe conservar su límite de búsqueda; el código localizado permite corregirla.",
+  "evidence": {
+    "url": "https://github.com/Milothik/domain-context-engine",
+    "revision": "81426cceecc631b488422c96f7ee46c751c02136",
+    "files": [
+      "README.md",
+      "ARCHITECTURE.md",
+      "src/core/contracts.ts",
+      "src/core/engine.ts"
+    ]
+  },
+  "pivot": true,
+  "uncertainty": "Existencia y contratos comprobados; superioridad del proyecto no medida.",
+  "recordingMode": "retrospective",
+  "prediction": null,
+  "resultClass": "observed-project-work",
+  "hypothesisRefs": [
+    "H1-history"
+  ]
+}

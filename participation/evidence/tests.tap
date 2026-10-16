@@ -1,0 +1,311 @@
+{"workerBytes":3324354,"embeddedAssets":46,"durableBinding":"DB"}
+TAP version 13
+# Subtest: seed corpus is valid with complete evidence references and immutable hashes
+ok 1 - seed corpus is valid with complete evidence references and immutable hashes
+  ---
+  duration_ms: 22.1362
+  type: 'test'
+  ...
+# Subtest: canonical object key order does not change identity; array order does
+ok 2 - canonical object key order does not change identity; array order does
+  ---
+  duration_ms: 1.8581
+  type: 'test'
+  ...
+# Subtest: an experience edit changes hash and tampering is rejected
+ok 3 - an experience edit changes hash and tampering is rejected
+  ---
+  duration_ms: 5.1336
+  type: 'test'
+  ...
+# Subtest: branch and commit preserve their input repository and parent snapshots
+ok 4 - branch and commit preserve their input repository and parent snapshots
+  ---
+  duration_ms: 8.8355
+  type: 'test'
+  ...
+# Subtest: stale branch updates and cross-experience ancestry are rejected
+ok 5 - stale branch updates and cross-experience ancestry are rejected
+  ---
+  duration_ms: 4.758
+  type: 'test'
+  ...
+# Subtest: typed conflicts distinguish plan mismatch, version drift and same-scope disagreement
+ok 6 - typed conflicts distinguish plan mismatch, version drift and same-scope disagreement
+  ---
+  duration_ms: 4.8163
+  type: 'test'
+  ...
+# Subtest: conditional merge preserves each scope and both parents, does not claim execution success
+ok 7 - conditional merge preserves each scope and both parents, does not claim execution success
+  ---
+  duration_ms: 8.1494
+  type: 'test'
+  ...
+# Subtest: same-scope incompatible lessons remain disputed instead of being averaged
+ok 8 - same-scope incompatible lessons remain disputed instead of being averaged
+  ---
+  duration_ms: 9.6062
+  type: 'test'
+  ...
+# Subtest: evidence collisions are remapped without corrupting lesson references
+ok 9 - evidence collisions are remapped without corrupting lesson references
+  ---
+  duration_ms: 9.2435
+  type: 'test'
+  ...
+# Subtest: revert adds a new head, retains descendants and matches ancestral snapshot
+ok 10 - revert adds a new head, retains descendants and matches ancestral snapshot
+  ---
+  duration_ms: 10.0825
+  type: 'test'
+  ...
+# Subtest: revert to a sibling or unrelated experience is rejected
+ok 11 - revert to a sibling or unrelated experience is rejected
+  ---
+  duration_ms: 5.6841
+  type: 'test'
+  ...
+# Subtest: dangling ancestry, duplicate commits and prototype ref names are rejected
+ok 12 - dangling ancestry, duplicate commits and prototype ref names are rejected
+  ---
+  duration_ms: 40.5265
+  type: 'test'
+  ...
+# Subtest: missing evidence and malformed scope cannot be committed
+ok 13 - missing evidence and malformed scope cannot be committed
+  ---
+  duration_ms: 8.5938
+  type: 'test'
+  ...
+# Subtest: context packet excludes all demo records; includes only scoped non-demo heads and requires review
+ok 14 - context packet excludes all demo records; includes only scoped non-demo heads and requires review
+  ---
+  duration_ms: 4.0472
+  type: 'test'
+  ...
+# Subtest: synthetic benchmark is exactly reproducible including every task
+ok 15 - synthetic benchmark is exactly reproducible including every task
+  ---
+  duration_ms: 3.9623
+  type: 'test'
+  ...
+# Subtest: unknown scope produces abstention, counted as unresolved rather than success
+ok 16 - unknown scope produces abstention, counted as unresolved rather than success
+  ---
+  duration_ms: 0.6271
+  type: 'test'
+  ...
+# Subtest: benchmark oracle selector obeys scope and rejects the declared untrusted record
+ok 17 - benchmark oracle selector obeys scope and rejects the declared untrusted record
+  ---
+  duration_ms: 0.7776
+  type: 'test'
+  ...
+# Subtest: real source review preserves the initially unresolved claim and primary-source correction
+ok 18 - real source review preserves the initially unresolved claim and primary-source correction
+  ---
+  duration_ms: 8.011
+  type: 'test'
+  ...
+# Subtest: capture preserves observed data without serializing provider configuration
+ok 19 - capture preserves observed data without serializing provider configuration
+  ---
+  duration_ms: 1.4613
+  type: 'test'
+  ...
+# Subtest: failed generation is captured once with no inferred successful output
+ok 20 - failed generation is captured once with no inferred successful output
+  ---
+  duration_ms: 0.3717
+  type: 'test'
+  ...
+# Subtest: unreviewed imports are empty; reviewed imports are data and never mandatory constraints
+ok 21 - unreviewed imports are empty; reviewed imports are data and never mandatory constraints
+  ---
+  duration_ms: 2.8235
+  type: 'test'
+  ...
+# Subtest: modified evidence fails integrity before any entity import
+ok 22 - modified evidence fails integrity before any entity import
+  ---
+  duration_ms: 1.8649
+  type: 'test'
+  ...
+# Subtest: empty supplied run cannot be recorded as a successful observed execution
+ok 23 - empty supplied run cannot be recorded as a successful observed execution
+  ---
+  duration_ms: 0.622
+  type: 'test'
+  ...
+# Subtest: shareable contribution persists, round-trips and duplicate does not create another row
+ok 24 - shareable contribution persists, round-trips and duplicate does not create another row
+  ---
+  duration_ms: 49.4835
+  type: 'test'
+  ...
+# Subtest: local records, malformed bodies and oversized payloads are rejected before persistence
+ok 25 - local records, malformed bodies and oversized payloads are rejected before persistence
+  ---
+  duration_ms: 3.7785
+  type: 'test'
+  ...
+# Subtest: experiment arithmetic is computed but never promoted to scientific verification
+ok 26 - experiment arithmetic is computed but never promoted to scientific verification
+  ---
+  duration_ms: 2.3033
+  type: 'test'
+  ...
+# Subtest: discovery and negative pilot evaluation are readable without DB or account
+ok 27 - discovery and negative pilot evaluation are readable without DB or account
+  ---
+  duration_ms: 1.3712
+  type: 'test'
+  ...
+# Subtest: live evaluation changes with received reports while preserving unverified status
+ok 28 - live evaluation changes with received reports while preserving unverified status
+  ---
+  duration_ms: 4.1976
+  type: 'test'
+  ...
+# Subtest: unknown experience prefixes and nested suffixes are not intake routes
+ok 29 - unknown experience prefixes and nested suffixes are not intake routes
+  ---
+  duration_ms: 1.1771
+  type: 'test'
+  ...
+# Subtest: T1 query scope, heads, demos, validity and immutability
+ok 30 - T1 query scope, heads, demos, validity and immutability
+  ---
+  duration_ms: 4.3869
+  type: 'test'
+  ...
+# Subtest: T2 bounded deterministic context
+ok 31 - T2 bounded deterministic context
+  ---
+  duration_ms: 2.943
+  type: 'test'
+  ...
+# Subtest: T3 operational evidence eligibility
+ok 32 - T3 operational evidence eligibility
+  ---
+  duration_ms: 1.7448
+  type: 'test'
+  ...
+# Subtest: T4 filters public GET without side effects
+ok 33 - T4 filters public GET without side effects
+  ---
+  duration_ms: 2.7363
+  type: 'test'
+  ...
+# Subtest: T5 HEAD metadata and no body
+ok 34 - T5 HEAD metadata and no body
+  ---
+  duration_ms: 14.7642
+  type: 'test'
+  ...
+# Subtest: T6 note-controlled experiment arithmetic
+ok 35 - T6 note-controlled experiment arithmetic
+  ---
+  duration_ms: 11.2639
+  type: 'test'
+  ...
+# Subtest: run allocation uses the catalog, random condition and only persists a token hash
+ok 36 - run allocation uses the catalog, random condition and only persists a token hash
+  ---
+  duration_ms: 5.0675
+  type: 'test'
+  ...
+# Subtest: material and result submission require the run bearer; run records cannot be read as results
+ok 37 - material and result submission require the run bearer; run records cannot be read as results
+  ---
+  duration_ms: 3.1551
+  type: 'test'
+  ...
+# Subtest: results require material delivery and the matching receipt; repeat delivery is idempotent
+ok 38 - results require material delivery and the matching receipt; repeat delivery is idempotent
+  ---
+  duration_ms: 3.7135
+  type: 'test'
+  ...
+# Subtest: received result whitelists data, preserves declared failure and cannot spoof verification; duplicates deduplicate
+ok 39 - received result whitelists data, preserves declared failure and cannot spoof verification; duplicates deduplicate
+  ---
+  duration_ms: 3.9078
+  type: 'test'
+  ...
+# Subtest: each assigned condition serves only its frozen material, never public contributions
+ok 40 - each assigned condition serves only its frozen material, never public contributions
+  ---
+  duration_ms: 3.0541
+  type: 'test'
+  ...
+# Subtest: catalog discovery, CORS, HEAD and route methods follow the contract without HEAD delivery events
+ok 41 - catalog discovery, CORS, HEAD and route methods follow the contract without HEAD delivery events
+  ---
+  duration_ms: 2.2642
+  type: 'test'
+  ...
+# Subtest: invalid run bodies and denied quota never persist a run
+ok 42 - invalid run bodies and denied quota never persist a run
+  ---
+  duration_ms: 1.9995
+  type: 'test'
+  ...
+# Subtest: result validation enforces bounds, types, evidence and finite nonnegative metrics
+ok 43 - result validation enforces bounds, types, evidence and finite nonnegative metrics
+  ---
+  duration_ms: 6.847
+  type: 'test'
+  ...
+# Subtest: storage failures have generic JSON responses and catalog remains readable without storage
+ok 44 - storage failures have generic JSON responses and catalog remains readable without storage
+  ---
+  duration_ms: 2.0342
+  type: 'test'
+  ...
+# Subtest: purpose and preregistered budget are server metadata; bearer expires after 24 hours
+ok 45 - purpose and preregistered budget are server metadata; bearer expires after 24 hours
+  ---
+  duration_ms: 4.1346
+  type: 'test'
+  ...
+# Subtest: material UTF-8 receipt is independently reproducible; another run receipt is refused
+ok 46 - material UTF-8 receipt is independently reproducible; another run receipt is refused
+  ---
+  duration_ms: 3.4768
+  type: 'test'
+  ...
+# Subtest: new submissions spend quota while duplicates do not; denominators count unique submitted runs
+ok 47 - new submissions spend quota while duplicates do not; denominators count unique submitted runs
+  ---
+  duration_ms: 30.375
+  type: 'test'
+  ...
+# Subtest: published participation assets and catalog match the frozen source and archive
+ok 48 - published participation assets and catalog match the frozen source and archive
+  ---
+  duration_ms: 25.3621
+  type: 'test'
+  ...
+# Subtest: compiled participation routes bind all source hashes and hide internal run records
+ok 49 - compiled participation routes bind all source hashes and hide internal run records
+  ---
+  duration_ms: 8.5815
+  type: 'test'
+  ...
+# Subtest: compiled HEAD material creates no delivery event
+ok 50 - compiled HEAD material creates no delivery event
+  ---
+  duration_ms: 1.6404
+  type: 'test'
+  ...
+1..50
+# tests 50
+# suites 0
+# pass 50
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 382.0394

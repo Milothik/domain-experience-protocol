@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "0.1",
+  "experienceId": "exp:replace-before-use",
+  "title": "Ejemplo de formato: sustituir por tu experiencia",
+  "domain": "software",
+  "goal": "Reducir la espera de un lote de solicitudes.",
+  "actor": {
+    "agentId": "replace-author",
+    "runtime": "manual",
+    "identityStatus": "declared"
+  },
+  "scope": {
+    "provider": "North",
+    "plan": "basic",
+    "apiVersion": "v1",
+    "environment": "sandbox"
+  },
+  "constraints": [
+    "Caso ilustrativo; no ejecutar sobre sistemas reales."
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "observation": "Las solicitudes son independientes.",
+      "alternatives": [
+        "Secuencial",
+        "20 workers"
+      ],
+      "selected": "20 workers",
+      "rationaleSummary": "Independencia de datos; el límite del servicio aún no se comprobó.",
+      "action": "Enviar un lote concurrente.",
+      "result": "HTTP 429 en la API simulada.",
+      "uncertainty": "Declarada, sin calibrar",
+      "pivot": false,
+      "evidenceRefs": [
+        "ev:429"
+      ]
+    },
+    {
+      "step": 2,
+      "observation": "El servicio limita la concurrencia.",
+      "alternatives": [
+        "Reintentar 20",
+        "Limitar a 4"
+      ],
+      "selected": "Limitar a 4",
+      "rationaleSummary": "La respuesta 429 motiva revisar el supuesto de capacidad.",
+      "action": "Repetir con cuatro workers.",
+      "result": "Lote completo sin 429.",
+      "uncertainty": "Límite válido solo en este entorno.",
+      "pivot": true,
+      "evidenceRefs": [
+        "ev:4"
+      ]
+    }
+  ],
+  "outcome": {
+    "status": "success",
+    "summary": "Cuatro workers completan el lote en la API simulada."
+  },
+  "lessons": [
+    {
+      "subject": "api-requests",
+      "predicate": "concurrency",
+      "value": 4,
+      "claim": "En North/basic v1, usar como máximo cuatro workers.",
+      "type": "observation",
+      "scope": {
+        "provider": "North",
+        "plan": "basic",
+        "apiVersion": "v1",
+        "environment": "sandbox"
+      },
+      "evidenceRefs": [
+        "ev:4"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev:429",
+      "label": "Respuesta sintética 429",
+      "content": "{\"workers\":20,\"limit\":4,\"status\":429}",
+      "kind": "illustrative"
+    },
+    {
+      "id": "ev:4",
+      "label": "Lote completado",
+      "content": "{\"workers\":4,\"status\":200,\"completed\":48}",
+      "kind": "illustrative"
+    }
+  ],
+  "validity": "active",
+  "demo": true,
+  "classification": "shareable"
+}

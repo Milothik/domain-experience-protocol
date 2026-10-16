@@ -1,0 +1,5993 @@
+{
+  "object": "list",
+  "data": [
+    {
+      "id": "claude-opus-4-8",
+      "object": "model",
+      "type": "model",
+      "created": 1779926400,
+      "created_at": "2026-05-28T00:00:00Z",
+      "owned_by": "anthropic",
+      "name": "Claude Opus 4.8",
+      "display_name": "Claude Opus 4.8",
+      "canonical_slug": "claude-opus-4-8",
+      "context_length": 1000000,
+      "max_input_tokens": 1000000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000005",
+        "completion": "0.000025",
+        "input_cache_read": "0.0000005",
+        "input_cache_write": "0.00000625"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1000000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "mandatory": false,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2026-01",
+      "capabilities": null,
+      "line": "opus",
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "anthropic",
+      "dialects": [
+        "chat_completions",
+        "anthropic_messages"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "claude-opus",
+      "release_date": "2026-05-28",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "claude-opus-4-7",
+      "object": "model",
+      "type": "model",
+      "created": 1776297600,
+      "created_at": "2026-04-16T00:00:00Z",
+      "owned_by": "anthropic",
+      "name": "Claude Opus 4.7",
+      "display_name": "Claude Opus 4.7",
+      "canonical_slug": "claude-opus-4-7",
+      "context_length": 1000000,
+      "max_input_tokens": 1000000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000005",
+        "completion": "0.000025",
+        "input_cache_read": "0.0000005",
+        "input_cache_write": "0.00000625"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1000000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "mandatory": false,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2026-01-31",
+      "capabilities": null,
+      "line": "opus",
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "anthropic",
+      "dialects": [
+        "chat_completions",
+        "anthropic_messages"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "claude-opus",
+      "release_date": "2026-04-16",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "claude-opus-4-6",
+      "object": "model",
+      "type": "model",
+      "created": 1770249600,
+      "created_at": "2026-02-05T00:00:00Z",
+      "owned_by": "anthropic",
+      "name": "Claude Opus 4.6",
+      "display_name": "Claude Opus 4.6",
+      "canonical_slug": "claude-opus-4-6",
+      "context_length": 1000000,
+      "max_input_tokens": 1000000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000005",
+        "completion": "0.000025",
+        "input_cache_read": "0.0000005",
+        "input_cache_write": "0.00000625"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1000000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [],
+        "mandatory": false,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024,
+          "max": 127999
+        }
+      ],
+      "knowledge_cutoff": "2025-05-31",
+      "capabilities": null,
+      "line": "opus",
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "anthropic",
+      "dialects": [
+        "chat_completions",
+        "anthropic_messages"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "claude-opus",
+      "release_date": "2026-02-05",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "claude-opus-4-5",
+      "object": "model",
+      "type": "model",
+      "created": 1763942400,
+      "created_at": "2025-11-24T00:00:00Z",
+      "owned_by": "anthropic",
+      "name": "Claude Opus 4.5",
+      "display_name": "Claude Opus 4.5",
+      "canonical_slug": "claude-opus-4-5",
+      "context_length": 200000,
+      "max_input_tokens": 200000,
+      "max_tokens": 64000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000005",
+        "completion": "0.000025",
+        "input_cache_read": "0.0000005",
+        "input_cache_write": "0.00000625"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 200000,
+        "max_completion_tokens": 64000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [],
+        "mandatory": false,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024,
+          "max": 63999
+        }
+      ],
+      "knowledge_cutoff": "2025-05",
+      "capabilities": null,
+      "line": "opus",
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "anthropic",
+      "dialects": [
+        "chat_completions",
+        "anthropic_messages"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "claude-opus",
+      "release_date": "2025-11-24",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "claude-opus-5",
+      "object": "model",
+      "type": "model",
+      "created": 1784851200,
+      "created_at": "2026-07-24T00:00:00Z",
+      "owned_by": "anthropic",
+      "name": "Claude Opus 5",
+      "display_name": "Claude Opus 5",
+      "canonical_slug": "claude-opus-5",
+      "context_length": 1000000,
+      "max_input_tokens": 1000000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000005",
+        "completion": "0.000025",
+        "input_cache_read": "0.0000005",
+        "input_cache_write": "0.00000625"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1000000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "mandatory": false,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2026-05",
+      "capabilities": null,
+      "line": "opus",
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "anthropic",
+      "dialects": [
+        "chat_completions",
+        "anthropic_messages"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "claude-opus",
+      "release_date": "2026-07-24",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "claude-opus-5-5",
+      "object": "model",
+      "type": "model",
+      "created": 1790035200,
+      "created_at": "2026-09-22T00:00:00Z",
+      "owned_by": "anthropic",
+      "name": "Claude Opus 5.5",
+      "display_name": "Claude Opus 5.5",
+      "canonical_slug": "claude-opus-5-5",
+      "context_length": 1000000,
+      "max_input_tokens": 1000000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000004",
+        "completion": "0.00002",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.000005"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1000000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2026-06",
+      "capabilities": null,
+      "line": "opus",
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "anthropic",
+      "dialects": [
+        "chat_completions",
+        "anthropic_messages"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "claude-opus",
+      "release_date": "2026-09-22",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": false,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "claude-opus-4-1",
+      "object": "model",
+      "type": "model",
+      "created": 1754352000,
+      "created_at": "2025-08-05T00:00:00Z",
+      "owned_by": "anthropic",
+      "name": "Claude Opus 4.1",
+      "display_name": "Claude Opus 4.1",
+      "canonical_slug": "claude-opus-4-1",
+      "context_length": 200000,
+      "max_input_tokens": 200000,
+      "max_tokens": 32000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000015",
+        "completion": "0.000075",
+        "input_cache_read": "0.0000015",
+        "input_cache_write": "0.00001875"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 200000,
+        "max_completion_tokens": 32000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [],
+        "mandatory": false,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024,
+          "max": 31999
+        }
+      ],
+      "knowledge_cutoff": "2025-03-31",
+      "capabilities": null,
+      "line": "opus",
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "anthropic",
+      "dialects": [
+        "chat_completions",
+        "anthropic_messages"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "claude-opus",
+      "release_date": "2025-08-05",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "claude-fable-5",
+      "object": "model",
+      "type": "model",
+      "created": 1780963200,
+      "created_at": "2026-06-09T00:00:00Z",
+      "owned_by": "anthropic",
+      "name": "Claude Fable 5",
+      "display_name": "Claude Fable 5",
+      "canonical_slug": "claude-fable-5",
+      "context_length": 1000000,
+      "max_input_tokens": 1000000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00001",
+        "completion": "0.00005",
+        "input_cache_read": "0.000001",
+        "input_cache_write": "0.0000125"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1000000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2026-01-31",
+      "capabilities": null,
+      "line": "fable",
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "anthropic",
+      "dialects": [
+        "chat_completions",
+        "anthropic_messages"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "claude-fable",
+      "release_date": "2026-06-09",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "claude-fable-5-1",
+      "object": "model",
+      "type": "model",
+      "created": 1788220800,
+      "created_at": "2026-09-01T00:00:00Z",
+      "owned_by": "anthropic",
+      "name": "Claude Fable 5.1",
+      "display_name": "Claude Fable 5.1",
+      "canonical_slug": "claude-fable-5-1",
+      "context_length": 1000000,
+      "max_input_tokens": 1000000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00001",
+        "completion": "0.00005",
+        "input_cache_read": "0.00000025",
+        "input_cache_write": "0.0000125"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1000000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2026-06",
+      "capabilities": null,
+      "line": "fable",
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "anthropic",
+      "dialects": [
+        "chat_completions",
+        "anthropic_messages"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "claude-fable",
+      "release_date": "2026-09-01",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": false,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "claude-sonnet-5",
+      "object": "model",
+      "type": "model",
+      "created": 1782777600,
+      "created_at": "2026-06-30T00:00:00Z",
+      "owned_by": "anthropic",
+      "name": "Claude Sonnet 5",
+      "display_name": "Claude Sonnet 5",
+      "canonical_slug": "claude-sonnet-5",
+      "context_length": 1000000,
+      "max_input_tokens": 1000000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.0000025"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1000000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "mandatory": false,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2026-01-31",
+      "capabilities": null,
+      "line": "sonnet",
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "anthropic",
+      "dialects": [
+        "chat_completions",
+        "anthropic_messages"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "claude-sonnet",
+      "release_date": "2026-06-30",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "object": "model",
+      "type": "model",
+      "created": 1790553600,
+      "created_at": "2026-09-28T00:00:00Z",
+      "owned_by": "anthropic",
+      "name": "Claude Sonnet 5.5",
+      "display_name": "Claude Sonnet 5.5",
+      "canonical_slug": "claude-sonnet-5-5",
+      "context_length": 1000000,
+      "max_input_tokens": 1000000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.0000025"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1000000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "mandatory": false,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": "sonnet",
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "anthropic",
+      "dialects": [
+        "chat_completions",
+        "anthropic_messages"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "claude-sonnet",
+      "release_date": "2026-09-28",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "claude-sonnet-4-6",
+      "object": "model",
+      "type": "model",
+      "created": 1771286400,
+      "created_at": "2026-02-17T00:00:00Z",
+      "owned_by": "anthropic",
+      "name": "Claude Sonnet 4.6",
+      "display_name": "Claude Sonnet 4.6",
+      "canonical_slug": "claude-sonnet-4-6",
+      "context_length": 1000000,
+      "max_input_tokens": 1000000,
+      "max_tokens": 64000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000003",
+        "completion": "0.000015",
+        "input_cache_read": "0.0000003",
+        "input_cache_write": "0.00000375"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1000000,
+        "max_completion_tokens": 64000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [],
+        "mandatory": false,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024,
+          "max": 63999
+        }
+      ],
+      "knowledge_cutoff": "2025-08-31",
+      "capabilities": null,
+      "line": "sonnet",
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "anthropic",
+      "dialects": [
+        "chat_completions",
+        "anthropic_messages"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "claude-sonnet",
+      "release_date": "2026-02-17",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "claude-sonnet-4-5",
+      "object": "model",
+      "type": "model",
+      "created": 1759104000,
+      "created_at": "2025-09-29T00:00:00Z",
+      "owned_by": "anthropic",
+      "name": "Claude Sonnet 4.5",
+      "display_name": "Claude Sonnet 4.5",
+      "canonical_slug": "claude-sonnet-4-5",
+      "context_length": 200000,
+      "max_input_tokens": 200000,
+      "max_tokens": 64000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000003",
+        "completion": "0.000015",
+        "input_cache_read": "0.0000003",
+        "input_cache_write": "0.00000375"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 200000,
+        "max_completion_tokens": 64000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [],
+        "mandatory": false,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024,
+          "max": 63999
+        }
+      ],
+      "knowledge_cutoff": "2025-07-31",
+      "capabilities": null,
+      "line": "sonnet",
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "anthropic",
+      "dialects": [
+        "chat_completions",
+        "anthropic_messages"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "claude-sonnet",
+      "release_date": "2025-09-29",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "claude-haiku-4-5",
+      "object": "model",
+      "type": "model",
+      "created": 1760486400,
+      "created_at": "2025-10-15T00:00:00Z",
+      "owned_by": "anthropic",
+      "name": "Claude Haiku 4.5",
+      "display_name": "Claude Haiku 4.5",
+      "canonical_slug": "claude-haiku-4-5",
+      "context_length": 200000,
+      "max_input_tokens": 200000,
+      "max_tokens": 64000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000001",
+        "completion": "0.000005",
+        "input_cache_read": "0.0000001",
+        "input_cache_write": "0.00000125"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 200000,
+        "max_completion_tokens": 64000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [],
+        "mandatory": false,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024,
+          "max": 63999
+        }
+      ],
+      "knowledge_cutoff": "2025-02-28",
+      "capabilities": null,
+      "line": "haiku",
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "anthropic",
+      "dialects": [
+        "chat_completions",
+        "anthropic_messages"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "claude-haiku",
+      "release_date": "2025-10-15",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "claude-haiku-5-5",
+      "object": "model",
+      "type": "model",
+      "created": 1791331200,
+      "created_at": "2026-10-07T00:00:00Z",
+      "owned_by": "anthropic",
+      "name": "Claude Haiku 5.5",
+      "display_name": "Claude Haiku 5.5",
+      "canonical_slug": "claude-haiku-5-5",
+      "context_length": 200000,
+      "max_input_tokens": 200000,
+      "max_tokens": 64000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000001",
+        "completion": "0.0000005",
+        "input_cache_read": "0.00000001",
+        "input_cache_write": "0.000000125",
+        "overrides": [
+          {
+            "min_prompt_tokens": 100000,
+            "prompt": "0.0000005",
+            "completion": "0.0000025",
+            "input_cache_read": "0.00000005",
+            "input_cache_write": "0.000000625"
+          }
+        ]
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 200000,
+        "max_completion_tokens": 64000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [],
+        "mandatory": false,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024,
+          "max": 63999
+        }
+      ],
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": "haiku",
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "anthropic",
+      "dialects": [
+        "chat_completions",
+        "anthropic_messages"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "claude-haiku",
+      "release_date": "2026-10-07",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gemini-3-1-flash-lite",
+      "object": "model",
+      "type": "model",
+      "created": 1772496000,
+      "created_at": "2026-03-03T00:00:00Z",
+      "owned_by": "google",
+      "name": "Gemini 3.1 Flash Lite",
+      "display_name": "Gemini 3.1 Flash Lite",
+      "canonical_slug": "gemini-3-1-flash-lite",
+      "context_length": 1048576,
+      "max_input_tokens": 1048576,
+      "max_tokens": 65536,
+      "architecture": {
+        "modality": "text+image+video+audio+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Gemini",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000025",
+        "completion": "0.0000015",
+        "input_cache_read": "0.000000025"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1048576,
+        "max_completion_tokens": 65536
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2025-01",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "google",
+      "dialects": [
+        "chat_completions",
+        "gemini_generate_content"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gemini-flash-lite",
+      "release_date": "2026-03-03",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gemini-3-1-pro",
+      "object": "model",
+      "type": "model",
+      "created": 1771459200,
+      "created_at": "2026-02-19T00:00:00Z",
+      "owned_by": "google",
+      "name": "Gemini 3.1 Pro",
+      "display_name": "Gemini 3.1 Pro",
+      "canonical_slug": "gemini-3-1-pro",
+      "context_length": 1048576,
+      "max_input_tokens": 1048576,
+      "max_tokens": 65536,
+      "architecture": {
+        "modality": "text+image+video+audio+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Gemini",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.000012",
+        "input_cache_read": "0.0000002",
+        "overrides": [
+          {
+            "min_prompt_tokens": 200000,
+            "prompt": "0.000004",
+            "completion": "0.000018",
+            "input_cache_read": "0.0000004"
+          }
+        ]
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1048576,
+        "max_completion_tokens": 65536
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2025-01",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "google",
+      "dialects": [
+        "chat_completions",
+        "gemini_generate_content"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gemini-pro",
+      "release_date": "2026-02-19",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gemini-3-5-flash",
+      "object": "model",
+      "type": "model",
+      "created": 1779148800,
+      "created_at": "2026-05-19T00:00:00Z",
+      "owned_by": "google",
+      "name": "Gemini 3.5 Flash",
+      "display_name": "Gemini 3.5 Flash",
+      "canonical_slug": "gemini-3-5-flash",
+      "context_length": 1048576,
+      "max_input_tokens": 1048576,
+      "max_tokens": 65536,
+      "architecture": {
+        "modality": "text+image+video+audio+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Gemini",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000015",
+        "completion": "0.000009",
+        "input_cache_read": "0.00000015"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1048576,
+        "max_completion_tokens": 65536
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2025-01",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "google",
+      "dialects": [
+        "chat_completions",
+        "gemini_generate_content"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gemini-flash",
+      "release_date": "2026-05-19",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gemini-3-flash",
+      "object": "model",
+      "type": "model",
+      "created": 1765929600,
+      "created_at": "2025-12-17T00:00:00Z",
+      "owned_by": "google",
+      "name": "Gemini 3 Flash",
+      "display_name": "Gemini 3 Flash",
+      "canonical_slug": "gemini-3-flash",
+      "context_length": 1048576,
+      "max_input_tokens": 1048576,
+      "max_tokens": 65536,
+      "architecture": {
+        "modality": "text+image+video+audio+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Gemini",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000005",
+        "completion": "0.000003",
+        "input_cache_read": "0.00000005"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1048576,
+        "max_completion_tokens": 65536
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2025-01",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "google",
+      "dialects": [
+        "chat_completions",
+        "gemini_generate_content"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gemini-flash",
+      "release_date": "2025-12-17",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gemini-3-6-flash",
+      "object": "model",
+      "type": "model",
+      "created": 1784592000,
+      "created_at": "2026-07-21T00:00:00Z",
+      "owned_by": "google",
+      "name": "Gemini 3.6 Flash",
+      "display_name": "Gemini 3.6 Flash",
+      "canonical_slug": "gemini-3-6-flash",
+      "context_length": 1048576,
+      "max_input_tokens": 1048576,
+      "max_tokens": 65536,
+      "architecture": {
+        "modality": "text+image+video+audio+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Gemini",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000015",
+        "completion": "0.0000075",
+        "input_cache_read": "0.00000015"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1048576,
+        "max_completion_tokens": 65536
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2026-03",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "google",
+      "dialects": [
+        "chat_completions",
+        "gemini_generate_content"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gemini-flash",
+      "release_date": "2026-07-21",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gemini-3-7-flash",
+      "object": "model",
+      "type": "model",
+      "created": 1786579200,
+      "created_at": "2026-08-13T00:00:00Z",
+      "owned_by": "google",
+      "name": "Gemini 3.7 Flash",
+      "display_name": "Gemini 3.7 Flash",
+      "canonical_slug": "gemini-3-7-flash",
+      "context_length": 1048576,
+      "max_input_tokens": 1048576,
+      "max_tokens": 65536,
+      "architecture": {
+        "modality": "text+image+video+audio+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Gemini",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000015",
+        "completion": "0.0000075",
+        "input_cache_read": "0.00000015"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1048576,
+        "max_completion_tokens": 65536
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "google",
+      "dialects": [
+        "chat_completions",
+        "gemini_generate_content"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gemini-flash",
+      "release_date": "2026-08-13",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gemini-3-8-flash",
+      "object": "model",
+      "type": "model",
+      "created": 1788307200,
+      "created_at": "2026-09-02T00:00:00Z",
+      "owned_by": "google",
+      "name": "Gemini 3.8 Flash",
+      "display_name": "Gemini 3.8 Flash",
+      "canonical_slug": "gemini-3-8-flash",
+      "context_length": 1048576,
+      "max_input_tokens": 1048576,
+      "max_tokens": 65536,
+      "architecture": {
+        "modality": "text+image+video+audio+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Gemini",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000015",
+        "completion": "0.0000075",
+        "input_cache_read": "0.00000015"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1048576,
+        "max_completion_tokens": 65536
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "google",
+      "dialects": [
+        "chat_completions",
+        "gemini_generate_content"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gemini-flash",
+      "release_date": "2026-09-02",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gemini-3-5-flash-lite",
+      "object": "model",
+      "type": "model",
+      "created": 1784592000,
+      "created_at": "2026-07-21T00:00:00Z",
+      "owned_by": "google",
+      "name": "Gemini 3.5 Flash Lite",
+      "display_name": "Gemini 3.5 Flash Lite",
+      "canonical_slug": "gemini-3-5-flash-lite",
+      "context_length": 1048576,
+      "max_input_tokens": 1048576,
+      "max_tokens": 65536,
+      "architecture": {
+        "modality": "text+image+video+audio+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Gemini",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000003",
+        "completion": "0.0000025",
+        "input_cache_read": "0.00000003"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1048576,
+        "max_completion_tokens": 65536
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2026-03",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "google",
+      "dialects": [
+        "chat_completions",
+        "gemini_generate_content"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gemini-flash-lite",
+      "release_date": "2026-07-21",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gemma-3-12b",
+      "object": "model",
+      "type": "model",
+      "created": 1741824000,
+      "created_at": "2025-03-13T00:00:00Z",
+      "owned_by": "google",
+      "name": "Gemma 3 12B",
+      "display_name": "Gemma 3 12B",
+      "canonical_slug": "gemma-3-12b",
+      "context_length": 131072,
+      "max_input_tokens": 131072,
+      "max_tokens": 8192,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Gemini",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.0000005"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 131072,
+        "max_completion_tokens": 8192
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "max_tokens",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": null,
+      "reasoning_options": null,
+      "knowledge_cutoff": "2024-08-31",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "google",
+      "dialects": [
+        "chat_completions"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gemma",
+      "release_date": "2025-03-13",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": false,
+        "temperature": true,
+        "open_weights": true,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-5",
+      "object": "model",
+      "type": "model",
+      "created": 1754524800,
+      "created_at": "2025-08-07T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT-5",
+      "display_name": "GPT-5",
+      "canonical_slug": "gpt-5",
+      "context_length": 400000,
+      "max_input_tokens": 272000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image->text+image",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text",
+          "image"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000125",
+        "completion": "0.00001",
+        "input_cache_read": "0.000000125"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 400000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2024-09-30",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "openai",
+      "dialects": [
+        "chat_completions",
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt",
+      "release_date": "2025-08-07",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": true,
+        "embeddings": false,
+        "web_search": true,
+        "image_generation": true,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-5-1",
+      "object": "model",
+      "type": "model",
+      "created": 1762992000,
+      "created_at": "2025-11-13T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT-5.1",
+      "display_name": "GPT-5.1",
+      "canonical_slug": "gpt-5-1",
+      "context_length": 400000,
+      "max_input_tokens": 272000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image->text+image",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text",
+          "image"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000125",
+        "completion": "0.00001",
+        "input_cache_read": "0.000000125"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 400000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2024-09-30",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "openai",
+      "dialects": [
+        "chat_completions",
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt",
+      "release_date": "2025-11-13",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": true,
+        "embeddings": false,
+        "web_search": true,
+        "image_generation": true,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-5-2",
+      "object": "model",
+      "type": "model",
+      "created": 1765411200,
+      "created_at": "2025-12-11T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT-5.2",
+      "display_name": "GPT-5.2",
+      "canonical_slug": "gpt-5-2",
+      "context_length": 400000,
+      "max_input_tokens": 272000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image->text+image",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text",
+          "image"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000175",
+        "completion": "0.000014",
+        "input_cache_read": "0.000000175"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 400000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2025-08-31",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "openai",
+      "dialects": [
+        "chat_completions",
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt",
+      "release_date": "2025-12-11",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": true,
+        "embeddings": false,
+        "web_search": true,
+        "image_generation": true,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-5-3-codex",
+      "object": "model",
+      "type": "model",
+      "created": 1770249600,
+      "created_at": "2026-02-05T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT-5.3 Codex",
+      "display_name": "GPT-5.3 Codex",
+      "canonical_slug": "gpt-5-3-codex",
+      "context_length": 400000,
+      "max_input_tokens": 272000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text+image",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text",
+          "image"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000175",
+        "completion": "0.000014",
+        "input_cache_read": "0.000000175"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 400000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2025-08-31",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "openai",
+      "dialects": [
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt-codex",
+      "release_date": "2026-02-05",
+      "model_type": "language",
+      "features": {
+        "chat": false,
+        "responses": true,
+        "embeddings": false,
+        "web_search": true,
+        "image_generation": true,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-5-4",
+      "object": "model",
+      "type": "model",
+      "created": 1772668800,
+      "created_at": "2026-03-05T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT-5.4",
+      "display_name": "GPT-5.4",
+      "canonical_slug": "gpt-5-4",
+      "context_length": 1050000,
+      "max_input_tokens": 922000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text+image",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text",
+          "image"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000025",
+        "completion": "0.000015",
+        "input_cache_read": "0.00000025",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000005",
+            "completion": "0.0000225",
+            "input_cache_read": "0.0000005"
+          }
+        ]
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1050000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2025-08-31",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "openai",
+      "dialects": [
+        "chat_completions",
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt",
+      "release_date": "2026-03-05",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": true,
+        "embeddings": false,
+        "web_search": true,
+        "image_generation": true,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-5-4-mini",
+      "object": "model",
+      "type": "model",
+      "created": 1773705600,
+      "created_at": "2026-03-17T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT-5.4 Mini",
+      "display_name": "GPT-5.4 Mini",
+      "canonical_slug": "gpt-5-4-mini",
+      "context_length": 400000,
+      "max_input_tokens": 272000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image->text+image",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text",
+          "image"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000075",
+        "completion": "0.0000045",
+        "input_cache_read": "0.000000075"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 400000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2025-08-31",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "openai",
+      "dialects": [
+        "chat_completions",
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt-mini",
+      "release_date": "2026-03-17",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": true,
+        "embeddings": false,
+        "web_search": true,
+        "image_generation": true,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-5-4-nano",
+      "object": "model",
+      "type": "model",
+      "created": 1773705600,
+      "created_at": "2026-03-17T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT-5.4 Nano",
+      "display_name": "GPT-5.4 Nano",
+      "canonical_slug": "gpt-5-4-nano",
+      "context_length": 400000,
+      "max_input_tokens": 272000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image->text+image",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text",
+          "image"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000002",
+        "completion": "0.00000125",
+        "input_cache_read": "0.00000002"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 400000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2025-08-31",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "openai",
+      "dialects": [
+        "chat_completions",
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt-nano",
+      "release_date": "2026-03-17",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": true,
+        "embeddings": false,
+        "web_search": true,
+        "image_generation": true,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-5-mini",
+      "object": "model",
+      "type": "model",
+      "created": 1754524800,
+      "created_at": "2025-08-07T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT-5 Mini",
+      "display_name": "GPT-5 Mini",
+      "canonical_slug": "gpt-5-mini",
+      "context_length": 400000,
+      "max_input_tokens": 272000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image->text+image",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text",
+          "image"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000025",
+        "completion": "0.000002",
+        "input_cache_read": "0.000000025"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 400000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2024-05-30",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "openai",
+      "dialects": [
+        "chat_completions",
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt-mini",
+      "release_date": "2025-08-07",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": true,
+        "embeddings": false,
+        "web_search": true,
+        "image_generation": true,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-5-nano",
+      "object": "model",
+      "type": "model",
+      "created": 1754524800,
+      "created_at": "2025-08-07T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT-5 Nano",
+      "display_name": "GPT-5 Nano",
+      "canonical_slug": "gpt-5-nano",
+      "context_length": 400000,
+      "max_input_tokens": 272000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image->text+image",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text",
+          "image"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000005",
+        "completion": "0.0000004",
+        "input_cache_read": "0.00000001"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 400000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2024-05-30",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "openai",
+      "dialects": [
+        "chat_completions",
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt-nano",
+      "release_date": "2025-08-07",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": true,
+        "embeddings": false,
+        "web_search": true,
+        "image_generation": true,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-5-5",
+      "object": "model",
+      "type": "model",
+      "created": 1776902400,
+      "created_at": "2026-04-23T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT-5.5",
+      "display_name": "GPT-5.5",
+      "canonical_slug": "gpt-5-5",
+      "context_length": 1050000,
+      "max_input_tokens": 922000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text+image",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text",
+          "image"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000005",
+        "completion": "0.00003",
+        "input_cache_read": "0.0000005",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.00001",
+            "completion": "0.000045",
+            "input_cache_read": "0.000001"
+          }
+        ]
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1050000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2025-12-01",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "openai",
+      "dialects": [
+        "chat_completions",
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt",
+      "release_date": "2026-04-23",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": true,
+        "embeddings": false,
+        "web_search": true,
+        "image_generation": true,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-5-5-pro",
+      "object": "model",
+      "type": "model",
+      "created": 1776902400,
+      "created_at": "2026-04-23T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT-5.5 Pro",
+      "display_name": "GPT-5.5 Pro",
+      "canonical_slug": "gpt-5-5-pro",
+      "context_length": 1050000,
+      "max_input_tokens": 922000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text+image",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text",
+          "image"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00003",
+        "completion": "0.00018",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.00006",
+            "completion": "0.00027"
+          }
+        ]
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1050000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "medium",
+          "high",
+          "xhigh"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2025-12-01",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "openai",
+      "dialects": [
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt-pro",
+      "release_date": "2026-04-23",
+      "model_type": "language",
+      "features": {
+        "chat": false,
+        "responses": true,
+        "embeddings": false,
+        "web_search": true,
+        "image_generation": true,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-5-6-sol",
+      "object": "model",
+      "type": "model",
+      "created": 1783555200,
+      "created_at": "2026-07-09T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT-5.6 Sol",
+      "display_name": "GPT-5.6 Sol",
+      "canonical_slug": "gpt-5-6-sol",
+      "context_length": 1050000,
+      "max_input_tokens": 922000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text+image",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text",
+          "image"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000005",
+        "completion": "0.00003",
+        "input_cache_read": "0.0000005",
+        "input_cache_write": "0.00000625",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.00001",
+            "completion": "0.000045",
+            "input_cache_read": "0.000001",
+            "input_cache_write": "0.0000125"
+          }
+        ]
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1050000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2026-02-16",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "openai",
+      "dialects": [
+        "chat_completions",
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt-sol",
+      "release_date": "2026-07-09",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": true,
+        "embeddings": false,
+        "web_search": true,
+        "image_generation": true,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-5-6-terra",
+      "object": "model",
+      "type": "model",
+      "created": 1783555200,
+      "created_at": "2026-07-09T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT-5.6 Terra",
+      "display_name": "GPT-5.6 Terra",
+      "canonical_slug": "gpt-5-6-terra",
+      "context_length": 1050000,
+      "max_input_tokens": 922000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text+image",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text",
+          "image"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.000012",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.0000025",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000004",
+            "completion": "0.000018",
+            "input_cache_read": "0.0000004",
+            "input_cache_write": "0.000005"
+          }
+        ]
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1050000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2026-02-16",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "openai",
+      "dialects": [
+        "chat_completions",
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt-terra",
+      "release_date": "2026-07-09",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": true,
+        "embeddings": false,
+        "web_search": true,
+        "image_generation": true,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-5-6-luna",
+      "object": "model",
+      "type": "model",
+      "created": 1783555200,
+      "created_at": "2026-07-09T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT-5.6 Luna",
+      "display_name": "GPT-5.6 Luna",
+      "canonical_slug": "gpt-5-6-luna",
+      "context_length": 1050000,
+      "max_input_tokens": 922000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text+image",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text",
+          "image"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000002",
+        "completion": "0.0000012",
+        "input_cache_read": "0.00000002",
+        "input_cache_write": "0.00000025",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.0000004",
+            "completion": "0.0000018",
+            "input_cache_read": "0.00000004",
+            "input_cache_write": "0.0000005"
+          }
+        ]
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1050000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2026-02-16",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "openai",
+      "dialects": [
+        "chat_completions",
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt-luna",
+      "release_date": "2026-07-09",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": true,
+        "embeddings": false,
+        "web_search": true,
+        "image_generation": true,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-6-astra",
+      "object": "model",
+      "type": "model",
+      "created": 1788480000,
+      "created_at": "2026-09-04T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT-6 Astra",
+      "display_name": "GPT-6 Astra",
+      "canonical_slug": "gpt-6-astra",
+      "context_length": 1050000,
+      "max_input_tokens": 922000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text+image",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text",
+          "image"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00001",
+        "completion": "0.00005",
+        "input_cache_read": "0.000001",
+        "input_cache_write": "0.0000125",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.00002",
+            "completion": "0.000075",
+            "input_cache_read": "0.000002",
+            "input_cache_write": "0.000025"
+          }
+        ]
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1050000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2026-04-30",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "openai",
+      "dialects": [
+        "chat_completions",
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt-astra",
+      "release_date": "2026-09-04",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": true,
+        "embeddings": false,
+        "web_search": true,
+        "image_generation": true,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-6-sol",
+      "object": "model",
+      "type": "model",
+      "created": 1790035200,
+      "created_at": "2026-09-22T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT-6 Sol",
+      "display_name": "GPT-6 Sol",
+      "canonical_slug": "gpt-6-sol",
+      "context_length": 1050000,
+      "max_input_tokens": 922000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.0000025",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000004",
+            "completion": "0.000015",
+            "input_cache_read": "0.0000004",
+            "input_cache_write": "0.000005"
+          }
+        ]
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1050000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "openai",
+      "dialects": [
+        "chat_completions",
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt-sol",
+      "release_date": "2026-09-22",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": true,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-6-1-sol",
+      "object": "model",
+      "type": "model",
+      "created": 1790640000,
+      "created_at": "2026-09-29T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT-6.1 Sol",
+      "display_name": "GPT-6.1 Sol",
+      "canonical_slug": "gpt-6-1-sol",
+      "context_length": 1050000,
+      "max_input_tokens": 922000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "input_cache_read": "0.0000001",
+        "input_cache_write": "0.0000025",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000004",
+            "completion": "0.000015",
+            "input_cache_read": "0.0000002",
+            "input_cache_write": "0.000005"
+          }
+        ]
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1050000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "openai",
+      "dialects": [
+        "chat_completions",
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt-sol",
+      "release_date": "2026-09-29",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": true,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-6-luna",
+      "object": "model",
+      "type": "model",
+      "created": 1790035200,
+      "created_at": "2026-09-22T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT-6 Luna",
+      "display_name": "GPT-6 Luna",
+      "canonical_slug": "gpt-6-luna",
+      "context_length": 1050000,
+      "max_input_tokens": 922000,
+      "max_tokens": 128000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000001",
+        "completion": "0.0000005",
+        "input_cache_read": "0.00000001",
+        "input_cache_write": "0.000000125",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.0000002",
+            "completion": "0.00000075",
+            "input_cache_read": "0.00000002",
+            "input_cache_write": "0.00000025"
+          }
+        ]
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1050000,
+        "max_completion_tokens": 128000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "openai",
+      "dialects": [
+        "chat_completions",
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt-luna",
+      "release_date": "2026-09-22",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": true,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": false,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "gpt-oss-120b",
+      "object": "model",
+      "type": "model",
+      "created": 1754352000,
+      "created_at": "2025-08-05T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT OSS 120B",
+      "display_name": "GPT OSS 120B",
+      "canonical_slug": "gpt-oss-120b",
+      "context_length": 131072,
+      "max_input_tokens": 131072,
+      "max_tokens": 25000,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.0000006"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 131072,
+        "max_completion_tokens": 25000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "databricks",
+      "dialects": [
+        "chat_completions"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt-oss",
+      "release_date": "2025-08-05",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": true,
+        "attachment": false
+      }
+    },
+    {
+      "id": "gpt-oss-20b",
+      "object": "model",
+      "type": "model",
+      "created": 1754352000,
+      "created_at": "2025-08-05T00:00:00Z",
+      "owned_by": "openai",
+      "name": "GPT OSS 20B",
+      "display_name": "GPT OSS 20B",
+      "canonical_slug": "gpt-oss-20b",
+      "context_length": 131072,
+      "max_input_tokens": 131072,
+      "max_tokens": 25000,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000007",
+        "completion": "0.0000003"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 131072,
+        "max_completion_tokens": 25000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "databricks",
+      "dialects": [
+        "chat_completions"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "gpt-oss",
+      "release_date": "2025-08-05",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": true,
+        "attachment": false
+      }
+    },
+    {
+      "id": "llama-4-maverick",
+      "object": "model",
+      "type": "model",
+      "created": 1743811200,
+      "created_at": "2025-04-05T00:00:00Z",
+      "owned_by": "meta",
+      "name": "Llama 4 Maverick",
+      "display_name": "Llama 4 Maverick",
+      "canonical_slug": "llama-4-maverick",
+      "context_length": 1000000,
+      "max_input_tokens": 1000000,
+      "max_tokens": 8192,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000005",
+        "completion": "0.0000015"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1000000,
+        "max_completion_tokens": 8192
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "max_tokens",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": null,
+      "reasoning_options": null,
+      "knowledge_cutoff": "2024-08",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "meta",
+      "dialects": [
+        "chat_completions"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "llama",
+      "release_date": "2025-04-05",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": false,
+        "temperature": true,
+        "open_weights": true,
+        "attachment": true
+      }
+    },
+    {
+      "id": "meta-llama-3-1-8b-instruct",
+      "object": "model",
+      "type": "model",
+      "created": 1721692800,
+      "created_at": "2024-07-23T00:00:00Z",
+      "owned_by": "meta",
+      "name": "Meta Llama 3.1 8B Instruct",
+      "display_name": "Meta Llama 3.1 8B Instruct",
+      "canonical_slug": "meta-llama-3-1-8b-instruct",
+      "context_length": 131072,
+      "max_input_tokens": 131072,
+      "max_tokens": 8192,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.00000045"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 131072,
+        "max_completion_tokens": 8192
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "max_tokens",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": null,
+      "reasoning_options": null,
+      "knowledge_cutoff": "2023-12-31",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "meta",
+      "dialects": [
+        "chat_completions"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "llama",
+      "release_date": "2024-07-23",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": false,
+        "temperature": true,
+        "open_weights": true,
+        "attachment": false
+      }
+    },
+    {
+      "id": "meta-llama-3-3-70b-instruct",
+      "object": "model",
+      "type": "model",
+      "created": 1733443200,
+      "created_at": "2024-12-06T00:00:00Z",
+      "owned_by": "meta",
+      "name": "Meta Llama 3.3 70B Instruct",
+      "display_name": "Meta Llama 3.3 70B Instruct",
+      "canonical_slug": "meta-llama-3-3-70b-instruct",
+      "context_length": 128000,
+      "max_input_tokens": 128000,
+      "max_tokens": 8192,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000005",
+        "completion": "0.0000015"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 128000,
+        "max_completion_tokens": 8192
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "max_tokens",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": null,
+      "reasoning_options": null,
+      "knowledge_cutoff": "2023-12",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "meta",
+      "dialects": [
+        "chat_completions"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "llama",
+      "release_date": "2024-12-06",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": false,
+        "temperature": true,
+        "open_weights": true,
+        "attachment": false
+      }
+    },
+    {
+      "id": "qwen3-embedding-0-6b",
+      "object": "model",
+      "type": "model",
+      "created": 1748908800,
+      "created_at": "2025-06-03T00:00:00Z",
+      "owned_by": "alibaba",
+      "name": "Qwen3 Embedding 0.6B",
+      "display_name": "Qwen3 Embedding 0.6B",
+      "canonical_slug": "qwen3-embedding-0-6b",
+      "context_length": null,
+      "max_input_tokens": null,
+      "max_tokens": null,
+      "architecture": {
+        "modality": "text->embeddings",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "embeddings"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000002",
+        "completion": "0"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": null,
+        "max_completion_tokens": null
+      },
+      "per_request_limits": null,
+      "supported_parameters": [],
+      "reasoning": null,
+      "reasoning_options": null,
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "alibaba",
+      "dialects": [
+        "embeddings"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "text-embedding",
+      "release_date": "2025-06-03",
+      "model_type": "embedding",
+      "dimensions": 1024,
+      "features": {
+        "chat": false,
+        "responses": false,
+        "embeddings": true,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": false,
+        "structured_output": false,
+        "reasoning": false,
+        "temperature": false,
+        "open_weights": true,
+        "attachment": false
+      }
+    },
+    {
+      "id": "gte-large-en",
+      "object": "model",
+      "type": "model",
+      "created": 1690416000,
+      "created_at": "2023-07-27T00:00:00Z",
+      "owned_by": "alibaba",
+      "name": "GTE Large (En)",
+      "display_name": "GTE Large (En)",
+      "canonical_slug": "gte-large-en",
+      "context_length": null,
+      "max_input_tokens": null,
+      "max_tokens": null,
+      "architecture": {
+        "modality": "text->embeddings",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "embeddings"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000013",
+        "completion": "0"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": null,
+        "max_completion_tokens": null
+      },
+      "per_request_limits": null,
+      "supported_parameters": [],
+      "reasoning": null,
+      "reasoning_options": null,
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "alibaba",
+      "dialects": [
+        "embeddings"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "text-embedding",
+      "release_date": "2023-07-27",
+      "model_type": "embedding",
+      "dimensions": 1024,
+      "features": {
+        "chat": false,
+        "responses": false,
+        "embeddings": true,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": false,
+        "structured_output": false,
+        "reasoning": false,
+        "temperature": false,
+        "open_weights": true,
+        "attachment": false
+      }
+    },
+    {
+      "id": "bge-large-en",
+      "object": "model",
+      "type": "model",
+      "created": 1694476800,
+      "created_at": "2023-09-12T00:00:00Z",
+      "owned_by": "baai",
+      "name": "BGE Large (En)",
+      "display_name": "BGE Large (En)",
+      "canonical_slug": "bge-large-en",
+      "context_length": null,
+      "max_input_tokens": null,
+      "max_tokens": null,
+      "architecture": {
+        "modality": "text->embeddings",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "embeddings"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000001",
+        "completion": "0"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": null,
+        "max_completion_tokens": null
+      },
+      "per_request_limits": null,
+      "supported_parameters": [],
+      "reasoning": null,
+      "reasoning_options": null,
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "baai",
+      "dialects": [
+        "embeddings"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "text-embedding",
+      "release_date": "2023-09-12",
+      "model_type": "embedding",
+      "dimensions": 1024,
+      "features": {
+        "chat": false,
+        "responses": false,
+        "embeddings": true,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": false,
+        "structured_output": false,
+        "reasoning": false,
+        "temperature": false,
+        "open_weights": true,
+        "attachment": false
+      }
+    },
+    {
+      "id": "qwen3-next-80b-a3b-instruct",
+      "object": "model",
+      "type": "model",
+      "created": 1756684800,
+      "created_at": "2025-09-01T00:00:00Z",
+      "owned_by": "alibaba",
+      "name": "Qwen3 Next Instruct",
+      "display_name": "Qwen3 Next Instruct",
+      "canonical_slug": "qwen3-next-80b-a3b-instruct",
+      "context_length": 131072,
+      "max_input_tokens": 131072,
+      "max_tokens": 10000,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.0000012"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 131072,
+        "max_completion_tokens": 10000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "max_tokens",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": null,
+      "reasoning_options": null,
+      "knowledge_cutoff": "2025-04",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "alibaba",
+      "dialects": [
+        "chat_completions"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "qwen",
+      "release_date": "2025-09",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": false,
+        "temperature": true,
+        "open_weights": true,
+        "attachment": false
+      }
+    },
+    {
+      "id": "qwen35-122b-a10b",
+      "object": "model",
+      "type": "model",
+      "created": 1771804800,
+      "created_at": "2026-02-23T00:00:00Z",
+      "owned_by": "alibaba",
+      "name": "Qwen3.5 122B A10B",
+      "display_name": "Qwen3.5 122B A10B",
+      "canonical_slug": "qwen35-122b-a10b",
+      "context_length": 262144,
+      "max_input_tokens": 262144,
+      "max_tokens": 25000,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000022",
+        "completion": "0.0000022"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 262144,
+        "max_completion_tokens": 25000
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "alibaba",
+      "dialects": [
+        "chat_completions"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "qwen",
+      "release_date": "2026-02-23",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": true,
+        "attachment": false
+      }
+    },
+    {
+      "id": "kimi-k3",
+      "object": "model",
+      "type": "model",
+      "created": 1784160000,
+      "created_at": "2026-07-16T00:00:00Z",
+      "owned_by": "moonshotai",
+      "name": "Kimi K3",
+      "display_name": "Kimi K3",
+      "canonical_slug": "kimi-k3",
+      "context_length": 1048576,
+      "max_input_tokens": 1048576,
+      "max_tokens": 65536,
+      "architecture": {
+        "modality": "text+image+video->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000003",
+        "completion": "0.000015",
+        "input_cache_read": "0.0000003"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1048576,
+        "max_completion_tokens": 65536
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "max"
+        ],
+        "mandatory": false,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "moonshot",
+      "dialects": [
+        "chat_completions"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "kimi-k3",
+      "release_date": "2026-07-16",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": true,
+        "attachment": true
+      }
+    },
+    {
+      "id": "grok-4-6",
+      "object": "model",
+      "type": "model",
+      "created": 1786492800,
+      "created_at": "2026-08-12T00:00:00Z",
+      "owned_by": "xai",
+      "name": "Grok 4.6",
+      "display_name": "Grok 4.6",
+      "canonical_slug": "grok-4-6",
+      "context_length": 500000,
+      "max_input_tokens": 500000,
+      "max_tokens": 524288,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.000006",
+        "input_cache_read": "0.0000005"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 500000,
+        "max_completion_tokens": 524288
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "knowledge_cutoff": "2026-02-01",
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "xai",
+      "dialects": [
+        "chat_completions",
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "grok",
+      "release_date": "2026-08-12",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": true,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": true
+      }
+    },
+    {
+      "id": "grok-4-7",
+      "object": "model",
+      "type": "model",
+      "created": 1790553600,
+      "created_at": "2026-09-28T00:00:00Z",
+      "owned_by": "xai",
+      "name": "Grok 4.7",
+      "display_name": "Grok 4.7",
+      "canonical_slug": "grok-4-7",
+      "context_length": 500000,
+      "max_input_tokens": 500000,
+      "max_tokens": 524288,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000025",
+        "completion": "0.0000075",
+        "input_cache_read": "0.0000005"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 500000,
+        "max_completion_tokens": 524288
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "xai",
+      "dialects": [
+        "chat_completions",
+        "openai_responses"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "grok",
+      "release_date": "2026-09-28",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": true,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": false,
+        "attachment": false
+      }
+    },
+    {
+      "id": "glm-5-2",
+      "object": "model",
+      "type": "model",
+      "created": 1781308800,
+      "created_at": "2026-06-13T00:00:00Z",
+      "owned_by": "zhipuai",
+      "name": "GLM 5.2",
+      "display_name": "GLM 5.2",
+      "canonical_slug": "glm-5-2",
+      "context_length": 1000000,
+      "max_input_tokens": 1000000,
+      "max_tokens": 65536,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000014",
+        "completion": "0.0000044",
+        "input_cache_read": "0.00000026"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1000000,
+        "max_completion_tokens": 65536
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "max"
+        ],
+        "mandatory": false,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "zhipu",
+      "dialects": [
+        "chat_completions"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "glm",
+      "release_date": "2026-06-13",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": true,
+        "attachment": false
+      }
+    },
+    {
+      "id": "glm-5-3-flash",
+      "object": "model",
+      "type": "model",
+      "created": 1787702400,
+      "created_at": "2026-08-26T00:00:00Z",
+      "owned_by": "zhipuai",
+      "name": "GLM 5.3 Flash",
+      "display_name": "GLM 5.3 Flash",
+      "canonical_slug": "glm-5-3-flash",
+      "context_length": 1048576,
+      "max_input_tokens": 1048576,
+      "max_tokens": 131072,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.0000005",
+        "input_cache_read": "0.00000003"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1048576,
+        "max_completion_tokens": 131072
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "high",
+          "max"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "zhipu",
+      "dialects": [
+        "chat_completions"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "glm-flash",
+      "release_date": "2026-08-26",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": true,
+        "attachment": true
+      }
+    },
+    {
+      "id": "glm-5-3",
+      "object": "model",
+      "type": "model",
+      "created": 1787875200,
+      "created_at": "2026-08-28T00:00:00Z",
+      "owned_by": "zhipuai",
+      "name": "GLM 5.3",
+      "display_name": "GLM 5.3",
+      "canonical_slug": "glm-5-3",
+      "context_length": 1048576,
+      "max_input_tokens": 1048576,
+      "max_tokens": 131072,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000014",
+        "completion": "0.0000044",
+        "input_cache_read": "0.00000026"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1048576,
+        "max_completion_tokens": 131072
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "low",
+          "high",
+          "max"
+        ],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "zhipu",
+      "dialects": [
+        "chat_completions"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "glm",
+      "release_date": "2026-08-28",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": true,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": true,
+        "attachment": false
+      }
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "object": "model",
+      "type": "model",
+      "created": 1788998400,
+      "created_at": "2026-09-10T00:00:00Z",
+      "owned_by": "deepseek",
+      "name": "DeepSeek V4.1 Flash",
+      "display_name": "DeepSeek V4.1 Flash",
+      "canonical_slug": "deepseek-v4-1-flash",
+      "context_length": 128000,
+      "max_input_tokens": 128000,
+      "max_tokens": 8192,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.00000003"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 128000,
+        "max_completion_tokens": 8192
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [],
+        "mandatory": null,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": null,
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "deepseek",
+      "dialects": [
+        "chat_completions"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "deepseek-flash",
+      "release_date": "2026-09-10",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": false,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": true,
+        "attachment": true
+      }
+    },
+    {
+      "id": "inkling",
+      "object": "model",
+      "type": "model",
+      "created": 1784073600,
+      "created_at": "2026-07-15T00:00:00Z",
+      "owned_by": "thinkingmachines",
+      "name": "Inkling",
+      "display_name": "Inkling",
+      "canonical_slug": "inkling",
+      "context_length": 1048576,
+      "max_input_tokens": 1048576,
+      "max_tokens": 65536,
+      "architecture": {
+        "modality": "text+image+audio->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000001",
+        "completion": "0.00000405",
+        "input_cache_read": "0.00000017"
+      },
+      "top_provider": {
+        "is_moderated": false,
+        "context_length": 1048576,
+        "max_completion_tokens": 65536
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "reasoning": {
+        "supported_efforts": [
+          "none",
+          "minimal",
+          "low",
+          "medium",
+          "high",
+          "max"
+        ],
+        "mandatory": false,
+        "default_enabled": null,
+        "default_effort": null
+      },
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "knowledge_cutoff": null,
+      "capabilities": null,
+      "line": null,
+      "model_eligibility": {
+        "status": "eligible",
+        "evaluated_runtime": "http"
+      },
+      "provider": "databricks",
+      "dialects": [
+        "chat_completions"
+      ],
+      "enabled": false,
+      "unavailable_reason": "paid_plan_required",
+      "recovery_url": "https://console.neon.tech/app/org-little-waterfall-45250622/billing",
+      "family": "ling",
+      "release_date": "2026-07-15",
+      "model_type": "language",
+      "features": {
+        "chat": true,
+        "responses": false,
+        "embeddings": false,
+        "web_search": false,
+        "image_generation": false,
+        "tool_call": true,
+        "structured_output": false,
+        "reasoning": true,
+        "temperature": true,
+        "open_weights": true,
+        "attachment": true
+      }
+    }
+  ],
+  "has_more": false,
+  "first_id": "claude-opus-4-8",
+  "last_id": "inkling",
+  "request_context_availability": {
+    "http": {
+      "status": "unavailable",
+      "reason": "paid_plan_required"
+    }
+  },
+  "availability_status": "complete"
+}

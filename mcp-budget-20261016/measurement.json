@@ -1,0 +1,19 @@
+{
+  "id": "mcp-discovery-byte-comparison-20261016",
+  "class": "deterministic-replay-of-observed-public-data",
+  "capturedAt": "2026-10-16T20:59:17.683Z",
+  "responseSha256": "79a3c6923f996468a6187098a5da0276540f569b82e1a6ad6083fcc6885be7bc",
+  "availableRecords": 27,
+  "returnedSummaries": 10,
+  "beforeUtf8Bytes": 129881,
+  "afterUtf8Bytes": 5075,
+  "reductionFraction": 0.9609257705130081,
+  "returnedReceiptIdsPreserved": true,
+  "fullRecordTool": "dxp_get_experience",
+  "modelTrials": 0,
+  "limits": [
+    "List now returns summaries and a first page, not all full records; compare tasks before claiming downstream efficiency.",
+    "Byte count is not tokenizer usage, billed cost or model task success.",
+    "Additional get calls can offset savings when all full records are needed."
+  ]
+}

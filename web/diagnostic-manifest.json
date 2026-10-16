@@ -1,0 +1,124 @@
+{
+  "id": "diagnostic-20261016-v2",
+  "frozenAt": "2026-10-16T10:59:09.263Z",
+  "sourceCommit": "49a2f838ce32bc0267a35c384a37182bc0e2f09d",
+  "purpose": "public-task-development-diagnostic",
+  "confirmatory": false,
+  "allocation": [
+    {
+      "id": "B1",
+      "provider": "gemini",
+      "condition": "dxp",
+      "promptSha256": "sha256:f3ed6ebb857f55d5226f06b06386d60c6582bb5968f3476e7ceacc986132ba2a",
+      "bytes": 40001
+    },
+    {
+      "id": "B2",
+      "provider": "grok",
+      "condition": "note",
+      "promptSha256": "sha256:0bc0a16d4de37accd5beba67b8bbb9d0ea6a4dd4c549dd405412fd7e2f5628db",
+      "bytes": 40798
+    },
+    {
+      "id": "B3",
+      "provider": "gemini",
+      "condition": "none",
+      "promptSha256": "sha256:033edee19969e31aa4eaa59f77a1957eab3c24708d3bb904a1e6a6bf44f7d6bc",
+      "bytes": 34070
+    },
+    {
+      "id": "B4",
+      "provider": "grok",
+      "condition": "dxp",
+      "promptSha256": "sha256:f3ed6ebb857f55d5226f06b06386d60c6582bb5968f3476e7ceacc986132ba2a",
+      "bytes": 40001
+    },
+    {
+      "id": "B5",
+      "provider": "gemini",
+      "condition": "note",
+      "promptSha256": "sha256:0bc0a16d4de37accd5beba67b8bbb9d0ea6a4dd4c549dd405412fd7e2f5628db",
+      "bytes": 40798
+    },
+    {
+      "id": "B6",
+      "provider": "grok",
+      "condition": "none",
+      "promptSha256": "sha256:033edee19969e31aa4eaa59f77a1957eab3c24708d3bb904a1e6a6bf44f7d6bc",
+      "bytes": 34070
+    }
+  ],
+  "plannedBatches": 6,
+  "plannedTaskArtifacts": 36,
+  "independentExperimentalUnit": "One fresh private/temporary browser conversation per batch; six tasks share one context and are correlated. No six-task independent sample claim.",
+  "models": {
+    "gemini": "Google Gemini browser UI, Flash mode; exact backend revision unavailable",
+    "grok": "Grok in X browser UI, Fast mode; exact backend revision unavailable"
+  },
+  "memory": {
+    "parityVerified": true,
+    "meaning": "Note and DXP derive from identical frozen repository and actual validated contextPacket. Note repeats prose already present in evidence. No-memory deliberately omits experiences only.",
+    "operation": "Coordinator calls actual DXP validator/contextPacket; note contains same complete facts; consumer receives serialized material. No interactive retrieval operations."
+  },
+  "budget": {
+    "generationsPerBatch": 1,
+    "feedback": false,
+    "modelTokens": null,
+    "temperature": "Provider UI default, not controllable",
+    "wallLimitSeconds": 600
+  },
+  "tasks": [
+    {
+      "id": "P01",
+      "target": "web/core.mjs",
+      "acceptanceSha256": "sha256:42636123961f067c6320b7e06f9e378a62f9adbb410adfc3b4282c45dc3769b6"
+    },
+    {
+      "id": "P02",
+      "target": "web/core.mjs",
+      "acceptanceSha256": "sha256:30a001c1e66d19cdd28529f36a65c648d130787f4c6d0ba407b7b5e1ab6c0e42"
+    },
+    {
+      "id": "P03",
+      "target": "worker/index.js",
+      "acceptanceSha256": "sha256:defb79ccf419b96b3078e42f4c861188c2cf63e00aef6caada3a9b628adef85a"
+    },
+    {
+      "id": "P04",
+      "target": "worker/index.js",
+      "acceptanceSha256": "sha256:e2045250a77aff9f8c83b5e15e1edfa1a6fb595b087718c3920f3a053a0d16b8"
+    },
+    {
+      "id": "P05",
+      "target": "web/core.mjs",
+      "acceptanceSha256": "sha256:a59fcf7f07f6cb7695b10a081c775000913ab4a2784c8c5775b2aeacc9751308"
+    },
+    {
+      "id": "P06",
+      "target": "worker/index.js",
+      "acceptanceSha256": "sha256:ff1ac31f40a3863b0c9dac0a6bda060f0a2039253a669393170ab68194875884"
+    }
+  ],
+  "sourceHashes": {
+    "web/core.mjs": "sha256:643cc5415ff27ba065290f86dc13df581c86cc7e158de5c8c55e2c9cf128e576",
+    "worker/index.js": "sha256:ab4923cee80f590723f143a0335a7cfc783ad5c96640f4377774afb43f52288c"
+  },
+  "limitations": [
+    "P01-P06 publicly disclosed; not held out",
+    "Provider identities observed through UI; weights and backend versions unattested",
+    "No claim that browser private mode removes every provider-side personalization influence",
+    "Six tasks in one batch; no task-level independent inference or confidence interval",
+    "Costs/tokens unavailable; elapsed observation includes browser latency",
+    "Presentation diagnostic only; cannot establish versioning operation utility or replace 384-run weekly matrix",
+    "Same known tasks reused after transport diagnosis; new contexts do not establish no provider-side caching or personalization.",
+    "v1 archived independently; v2 is an explicit development protocol revision, not a repaired historical score."
+  ],
+  "successCriterion": "Each task artifact passes its unchanged acceptance and common regressions. Record missing cells, invalid edits, errors and all raw visible responses. No manual repair of model output.",
+  "transportVersion": 2,
+  "preparedPacketSha256": "sha256:41dc34e21519df292bb41e5864f92f0dd6176bbe377a67515204df4961e7a331",
+  "transportGate": {
+    "input": "Single-line serialized JSON; verify exact editor text before submit, allowing only surrounding editor newlines.",
+    "output": "One visible fenced code block extracted as pre/code textContent; JSON parsed without repair.",
+    "calibration": "Both providers passed exact echo of underscores, operators and escapes before v2 freeze."
+  }
+}

@@ -1,0 +1,401 @@
+{"workerBytes":5218275,"embeddedAssets":81,"durableBinding":"DB"}
+TAP version 13
+# Subtest: seed corpus is valid with complete evidence references and immutable hashes
+ok 1 - seed corpus is valid with complete evidence references and immutable hashes
+  ---
+  duration_ms: 18.1417
+  type: 'test'
+  ...
+# Subtest: canonical object key order does not change identity; array order does
+ok 2 - canonical object key order does not change identity; array order does
+  ---
+  duration_ms: 2.4351
+  type: 'test'
+  ...
+# Subtest: an experience edit changes hash and tampering is rejected
+ok 3 - an experience edit changes hash and tampering is rejected
+  ---
+  duration_ms: 4.9371
+  type: 'test'
+  ...
+# Subtest: branch and commit preserve their input repository and parent snapshots
+ok 4 - branch and commit preserve their input repository and parent snapshots
+  ---
+  duration_ms: 7.7521
+  type: 'test'
+  ...
+# Subtest: stale branch updates and cross-experience ancestry are rejected
+ok 5 - stale branch updates and cross-experience ancestry are rejected
+  ---
+  duration_ms: 5.1958
+  type: 'test'
+  ...
+# Subtest: typed conflicts distinguish plan mismatch, version drift and same-scope disagreement
+ok 6 - typed conflicts distinguish plan mismatch, version drift and same-scope disagreement
+  ---
+  duration_ms: 4.2347
+  type: 'test'
+  ...
+# Subtest: conditional merge preserves each scope and both parents, does not claim execution success
+ok 7 - conditional merge preserves each scope and both parents, does not claim execution success
+  ---
+  duration_ms: 7.3653
+  type: 'test'
+  ...
+# Subtest: same-scope incompatible lessons remain disputed instead of being averaged
+ok 8 - same-scope incompatible lessons remain disputed instead of being averaged
+  ---
+  duration_ms: 9.4502
+  type: 'test'
+  ...
+# Subtest: evidence collisions are remapped without corrupting lesson references
+ok 9 - evidence collisions are remapped without corrupting lesson references
+  ---
+  duration_ms: 8.1629
+  type: 'test'
+  ...
+# Subtest: revert adds a new head, retains descendants and matches ancestral snapshot
+ok 10 - revert adds a new head, retains descendants and matches ancestral snapshot
+  ---
+  duration_ms: 9.6531
+  type: 'test'
+  ...
+# Subtest: revert to a sibling or unrelated experience is rejected
+ok 11 - revert to a sibling or unrelated experience is rejected
+  ---
+  duration_ms: 12.4836
+  type: 'test'
+  ...
+# Subtest: dangling ancestry, duplicate commits and prototype ref names are rejected
+ok 12 - dangling ancestry, duplicate commits and prototype ref names are rejected
+  ---
+  duration_ms: 6.4731
+  type: 'test'
+  ...
+# Subtest: missing evidence and malformed scope cannot be committed
+ok 13 - missing evidence and malformed scope cannot be committed
+  ---
+  duration_ms: 5.5753
+  type: 'test'
+  ...
+# Subtest: context packet excludes all demo records; includes only scoped non-demo heads and requires review
+ok 14 - context packet excludes all demo records; includes only scoped non-demo heads and requires review
+  ---
+  duration_ms: 5.6951
+  type: 'test'
+  ...
+# Subtest: synthetic benchmark is exactly reproducible including every task
+ok 15 - synthetic benchmark is exactly reproducible including every task
+  ---
+  duration_ms: 4.3582
+  type: 'test'
+  ...
+# Subtest: unknown scope produces abstention, counted as unresolved rather than success
+ok 16 - unknown scope produces abstention, counted as unresolved rather than success
+  ---
+  duration_ms: 0.5877
+  type: 'test'
+  ...
+# Subtest: benchmark oracle selector obeys scope and rejects the declared untrusted record
+ok 17 - benchmark oracle selector obeys scope and rejects the declared untrusted record
+  ---
+  duration_ms: 0.7129
+  type: 'test'
+  ...
+# Subtest: real source review preserves the initially unresolved claim and primary-source correction
+ok 18 - real source review preserves the initially unresolved claim and primary-source correction
+  ---
+  duration_ms: 44.7621
+  type: 'test'
+  ...
+# Subtest: capture preserves observed data without serializing provider configuration
+ok 19 - capture preserves observed data without serializing provider configuration
+  ---
+  duration_ms: 1.0259
+  type: 'test'
+  ...
+# Subtest: failed generation is captured once with no inferred successful output
+ok 20 - failed generation is captured once with no inferred successful output
+  ---
+  duration_ms: 0.365
+  type: 'test'
+  ...
+# Subtest: unreviewed imports are empty; reviewed imports are data and never mandatory constraints
+ok 21 - unreviewed imports are empty; reviewed imports are data and never mandatory constraints
+  ---
+  duration_ms: 4.296
+  type: 'test'
+  ...
+# Subtest: modified evidence fails integrity before any entity import
+ok 22 - modified evidence fails integrity before any entity import
+  ---
+  duration_ms: 2.354
+  type: 'test'
+  ...
+# Subtest: empty supplied run cannot be recorded as a successful observed execution
+ok 23 - empty supplied run cannot be recorded as a successful observed execution
+  ---
+  duration_ms: 1.1135
+  type: 'test'
+  ...
+# Subtest: lesson metadata cannot impersonate an approved source revision
+ok 24 - lesson metadata cannot impersonate an approved source revision
+  ---
+  duration_ms: 3.6937
+  type: 'test'
+  ...
+# Subtest: approving A excludes a hash-valid B that claims to come from A
+ok 25 - approving A excludes a hash-valid B that claims to come from A
+  ---
+  duration_ms: 3.8294
+  type: 'test'
+  ...
+# Subtest: a source claiming another identity still requires approval of its actual revision
+ok 26 - a source claiming another identity still requires approval of its actual revision
+  ---
+  duration_ms: 3.6512
+  type: 'test'
+  ...
+# Subtest: shareable contribution persists, round-trips and duplicate does not create another row
+ok 27 - shareable contribution persists, round-trips and duplicate does not create another row
+  ---
+  duration_ms: 30.5467
+  type: 'test'
+  ...
+# Subtest: local records, malformed bodies and oversized payloads are rejected before persistence
+ok 28 - local records, malformed bodies and oversized payloads are rejected before persistence
+  ---
+  duration_ms: 2.6472
+  type: 'test'
+  ...
+# Subtest: experiment arithmetic is computed but never promoted to scientific verification
+ok 29 - experiment arithmetic is computed but never promoted to scientific verification
+  ---
+  duration_ms: 2.1098
+  type: 'test'
+  ...
+# Subtest: discovery and negative pilot evaluation are readable without DB or account
+ok 30 - discovery and negative pilot evaluation are readable without DB or account
+  ---
+  duration_ms: 2.0639
+  type: 'test'
+  ...
+# Subtest: live evaluation changes with received reports while preserving unverified status
+ok 31 - live evaluation changes with received reports while preserving unverified status
+  ---
+  duration_ms: 7.7789
+  type: 'test'
+  ...
+# Subtest: unknown experience prefixes and nested suffixes are not intake routes
+ok 32 - unknown experience prefixes and nested suffixes are not intake routes
+  ---
+  duration_ms: 0.6182
+  type: 'test'
+  ...
+# Subtest: T1 query scope, heads, demos, validity and immutability
+ok 33 - T1 query scope, heads, demos, validity and immutability
+  ---
+  duration_ms: 7.6545
+  type: 'test'
+  ...
+# Subtest: T2 bounded deterministic context
+ok 34 - T2 bounded deterministic context
+  ---
+  duration_ms: 4.6184
+  type: 'test'
+  ...
+# Subtest: T3 operational evidence eligibility
+ok 35 - T3 operational evidence eligibility
+  ---
+  duration_ms: 1.4693
+  type: 'test'
+  ...
+# Subtest: T4 filters public GET without side effects
+ok 36 - T4 filters public GET without side effects
+  ---
+  duration_ms: 2.2959
+  type: 'test'
+  ...
+# Subtest: T5 HEAD metadata and no body
+ok 37 - T5 HEAD metadata and no body
+  ---
+  duration_ms: 12.8549
+  type: 'test'
+  ...
+# Subtest: T6 note-controlled experiment arithmetic
+ok 38 - T6 note-controlled experiment arithmetic
+  ---
+  duration_ms: 15.7322
+  type: 'test'
+  ...
+# Subtest: Outreach separates drafts, limitations and currently available contribution route
+ok 39 - Outreach separates drafts, limitations and currently available contribution route
+  ---
+  duration_ms: 1.5567
+  type: 'test'
+  ...
+# Subtest: Outreach guidance does not bypass destination rules or imply completed publication
+ok 40 - Outreach guidance does not bypass destination rules or imply completed publication
+  ---
+  duration_ms: 1.5529
+  type: 'test'
+  ...
+# Subtest: Compiled worker serves the outreach pack and existing contribution guide
+ok 41 - Compiled worker serves the outreach pack and existing contribution guide
+  ---
+  duration_ms: 4.3684
+  type: 'test'
+  ...
+# Subtest: run allocation uses the catalog, random condition and only persists a token hash
+ok 42 - run allocation uses the catalog, random condition and only persists a token hash
+  ---
+  duration_ms: 6.4314
+  type: 'test'
+  ...
+# Subtest: material and result submission require the run bearer; run records cannot be read as results
+ok 43 - material and result submission require the run bearer; run records cannot be read as results
+  ---
+  duration_ms: 3.8473
+  type: 'test'
+  ...
+# Subtest: results require material delivery and the matching receipt; repeat delivery is idempotent
+ok 44 - results require material delivery and the matching receipt; repeat delivery is idempotent
+  ---
+  duration_ms: 3.3427
+  type: 'test'
+  ...
+# Subtest: received result whitelists data, preserves declared failure and cannot spoof verification; duplicates deduplicate
+ok 45 - received result whitelists data, preserves declared failure and cannot spoof verification; duplicates deduplicate
+  ---
+  duration_ms: 3.8645
+  type: 'test'
+  ...
+# Subtest: each assigned condition serves only its frozen material, never public contributions
+ok 46 - each assigned condition serves only its frozen material, never public contributions
+  ---
+  duration_ms: 3.1351
+  type: 'test'
+  ...
+# Subtest: catalog discovery, CORS, HEAD and route methods follow the contract without HEAD delivery events
+ok 47 - catalog discovery, CORS, HEAD and route methods follow the contract without HEAD delivery events
+  ---
+  duration_ms: 2.3844
+  type: 'test'
+  ...
+# Subtest: invalid run bodies and denied quota never persist a run
+ok 48 - invalid run bodies and denied quota never persist a run
+  ---
+  duration_ms: 2.2263
+  type: 'test'
+  ...
+# Subtest: result validation enforces bounds, types, evidence and finite nonnegative metrics
+ok 49 - result validation enforces bounds, types, evidence and finite nonnegative metrics
+  ---
+  duration_ms: 6.4647
+  type: 'test'
+  ...
+# Subtest: storage failures have generic JSON responses and catalog remains readable without storage
+ok 50 - storage failures have generic JSON responses and catalog remains readable without storage
+  ---
+  duration_ms: 1.8792
+  type: 'test'
+  ...
+# Subtest: purpose and preregistered budget are server metadata; bearer expires after 24 hours
+ok 51 - purpose and preregistered budget are server metadata; bearer expires after 24 hours
+  ---
+  duration_ms: 2.8677
+  type: 'test'
+  ...
+# Subtest: material UTF-8 receipt is independently reproducible; another run receipt is refused
+ok 52 - material UTF-8 receipt is independently reproducible; another run receipt is refused
+  ---
+  duration_ms: 3.9864
+  type: 'test'
+  ...
+# Subtest: new submissions spend quota while duplicates do not; denominators count unique submitted runs
+ok 53 - new submissions spend quota while duplicates do not; denominators count unique submitted runs
+  ---
+  duration_ms: 18.9374
+  type: 'test'
+  ...
+# Subtest: published participation assets and catalog match the frozen source and archive
+ok 54 - published participation assets and catalog match the frozen source and archive
+  ---
+  duration_ms: 12.0223
+  type: 'test'
+  ...
+# Subtest: compiled participation routes bind all source hashes and hide internal run records
+ok 55 - compiled participation routes bind all source hashes and hide internal run records
+  ---
+  duration_ms: 7.3499
+  type: 'test'
+  ...
+# Subtest: compiled HEAD material creates no delivery event
+ok 56 - compiled HEAD material creates no delivery event
+  ---
+  duration_ms: 1.355
+  type: 'test'
+  ...
+# Subtest: P06 illustrative reports do not count as execution evidence
+ok 57 - P06 illustrative reports do not count as execution evidence
+  ---
+  duration_ms: 2.2358
+  type: 'test'
+  ...
+# Subtest: guided entry uses a completed observed experience with verifiable before/after history
+ok 58 - guided entry uses a completed observed experience with verifiable before/after history
+  ---
+  duration_ms: 10.6941
+  type: 'test'
+  ...
+# Subtest: guided steps reveal the actual evidence and both revisions without mixing scientific claims
+ok 59 - guided steps reveal the actual evidence and both revisions without mixing scientific claims
+  ---
+  duration_ms: 1.2531
+  type: 'test'
+  ...
+# Subtest: hosted entry keeps advanced tools in a disclosure and serves the correction evidence
+ok 60 - hosted entry keeps advanced tools in a disclosure and serves the correction evidence
+  ---
+  duration_ms: 1.7243
+  type: 'test'
+  ...
+# Subtest: P01 quarantine cannot be bypassed through an alias
+ok 61 - P01 quarantine cannot be bypassed through an alias
+  ---
+  duration_ms: 1.666
+  type: 'test'
+  ...
+# Subtest: P02 metadata differences are visible without mutation
+ok 62 - P02 metadata differences are visible without mutation
+  ---
+  duration_ms: 0.3902
+  type: 'test'
+  ...
+# Subtest: P03 malformed URL is a client error with no writes
+ok 63 - P03 malformed URL is a client error with no writes
+  ---
+  duration_ms: 0.4942
+  type: 'test'
+  ...
+# Subtest: P04 individual receipts cannot receive POST
+ok 64 - P04 individual receipts cannot receive POST
+  ---
+  duration_ms: 1.593
+  type: 'test'
+  ...
+# Subtest: P05 branch segments have one validation rule
+ok 65 - P05 branch segments have one validation rule
+  ---
+  duration_ms: 2.5485
+  type: 'test'
+  ...
+1..65
+# tests 65
+# suites 0
+# pass 65
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 390.1364

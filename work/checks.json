@@ -1,0 +1,49 @@
+{
+  "executedAt": "2026-10-16T07:12:03.171Z",
+  "dataset": "Real project-task observations in work/repository.json",
+  "design": "Engineering checks with matched data and explicit interventions; not model evaluation.",
+  "preregisteredScientificExperiment": false,
+  "modelCalls": 0,
+  "checks": [
+    {
+      "id": "scope",
+      "hypothesis": "Declared scope conditions should constrain retrieval.",
+      "observation": {
+        "sameScopeLessons": 20,
+        "differentScopeLessons": 0
+      },
+      "expected": "Different environment returns zero lessons.",
+      "passed": true,
+      "limit": "Exact equality is implemented; semantic applicability and task utility untested."
+    },
+    {
+      "id": "quarantine",
+      "hypothesis": "A quarantined experience should not be admitted by the context selector.",
+      "observation": {
+        "eligibleBefore": 20,
+        "eligibleAfter": 19,
+        "removedHead": true
+      },
+      "expected": "Target HEAD is absent; raw history remains.",
+      "passed": true,
+      "limit": "Quarantine label assigned by the test, not an automatic poisoning detector."
+    },
+    {
+      "id": "integrity",
+      "hypothesis": "An edit without a new commit should be detected.",
+      "observation": {
+        "tamperedRepositories": 1,
+        "rejected": 1
+      },
+      "expected": "Validation rejects changed hashed content.",
+      "passed": true,
+      "limit": "Integrity does not establish author identity or truth."
+    }
+  ],
+  "scientificHypothesesValidated": [],
+  "limitations": [
+    "One building session and one producer.",
+    "Retrospective tasks are not preregistered.",
+    "No randomized consumer, held-out model tasks, token measurements or quality comparison."
+  ]
+}

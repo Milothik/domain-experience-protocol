@@ -1,0 +1,6 @@
+{
+  "id": "T3",
+  "target": "web/core.mjs",
+  "title": "Hipótesis excluidas del contexto operativo",
+  "requirement": "contextPacket must exclude lessons with type=hypothesis by default. Add includeHypotheses=false option; true admits hypotheses under all other existing filters. Never admit intuition/disputed, demo or non-active experiences. Preserve includeNegative behavior and exact lesson scope."
+}

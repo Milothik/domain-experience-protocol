@@ -1,0 +1,1 @@
+{"code":"const __probe__ = x => x === 3 && /\\\\w+/.test(x);","newline":"a\\nb","literal":"__proto__ !== demo"}

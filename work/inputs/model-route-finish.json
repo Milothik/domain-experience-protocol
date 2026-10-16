@@ -1,0 +1,26 @@
+{
+  "taskId": "model-route-20261016",
+  "status": "failure",
+  "result": "Supported headless CLI probe ended with IneligibleTierError / UNSUPPORTED_CLIENT, exit 55, before generation. Zero new model trials.",
+  "evidence": {
+    "id": "supported-gemini-cli-probe-20261016",
+    "class": "unscored-infrastructure-probe",
+    "requestedModel": "gemini-2.5-flash",
+    "cliVersion": "0.39.1",
+    "elapsedMs": 5453,
+    "exitCode": 55,
+    "stdoutEmpty": true,
+    "modelGenerationObserved": false,
+    "errorType": "IneligibleTierError",
+    "reasonCode": "UNSUPPORTED_CLIENT",
+    "message": "This client is no longer supported for Gemini Code Assist for individuals.",
+    "policy": "Explicit deny-all-tools; no model output or tool call observed.",
+    "confirmatoryTrialsAdded": 0,
+    "limitations": [
+      "One existing account and installed CLI version; not a claim about all Google model access.",
+      "No migration, credential change, purchase or client-identity workaround attempted."
+    ]
+  },
+  "lesson": "A working CLI installation is not verified inference access. Keep the service refusal separate from a model task failure and do not bypass client eligibility.",
+  "resultClass": "infrastructure-failure-not-model-trial"
+}

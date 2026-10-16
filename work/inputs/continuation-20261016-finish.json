@@ -1,0 +1,11 @@
+{
+ "taskId":"continuation-20261016",
+ "result":"Fuente vigente recuperada y auditada; cinco defectos reproducidos y corregidos, 65/65 pruebas actuales. Se registró el fallo histórico con recibo público y lectura de vuelta. Primera matriz conservada: 21 artefactos ejecutados, 18 aceptados, 15 indisponibles. Transporte corregido y segunda matriz completa: Gemini none 5/6, note 5/6, DXP 6/6; Grok 6/6 en los tres brazos. Se reprodujeron los 36 estados de cada matriz a partir de salidas guardadas. DXP sigue no validado; publicación del avance pendiente de su operación separada.",
+ "status":"partial",
+ "lesson":"Conservar fallos de transporte, comprobar entrada exacta y capturar código protegido antes de interpretar diferencias entre modelos. La aceptación de parches sobre tareas públicas no prueba ventaja general ni utilidad causal de operaciones DXP.",
+ "evidence":{"sourceCommit":"49a2f838ce32bc0267a35c384a37182bc0e2f09d","engineeringBefore":"work/continuation-defects-before.tap","engineeringAfter":"work/continuation-final.tap","historicalReceipt":"work/registration-failure-retrospective-receipt.json","firstMatrix":"diagnostic-20261016/report.json","revisedMatrix":"diagnostic-20261016-v2/report.json","reproduction":"diagnostic-20261016-v2/reproduction-verification.json","publication":"pending-separate-task"},
+ "pivot":true,
+ "uncertainty":"Seis conversaciones por matriz, tareas públicas correlacionadas, versiones backend no atestadas, sin tokens/coste. La igualdad del editor no certifica comprensión ni excluye toda personalización del proveedor.",
+ "resultClass":"engineering-and-development-model-diagnostic",
+ "verdict":"not-validated"
+}

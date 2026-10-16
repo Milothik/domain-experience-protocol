@@ -1,0 +1,120 @@
+{
+  "id": "diagnostic-20261016",
+  "updatedAt": "2026-10-16T10:55:28.005Z",
+  "verdict": "not-validated",
+  "claim": "No incremental DXP utility established. Do not adopt on presumed benefit.",
+  "confirmatory": false,
+  "confirmatoryExecutionsAdded": 0,
+  "plannedBatches": 6,
+  "capturedBatches": 6,
+  "allocatedTaskArtifacts": 36,
+  "evaluatedArtifacts": 21,
+  "acceptedArtifacts": 18,
+  "unavailableArtifacts": 15,
+  "pendingArtifacts": 0,
+  "batches": [
+    {
+      "id": "B1",
+      "provider": "gemini",
+      "condition": "dxp",
+      "allocated": 6,
+      "artifactsEvaluated": 0,
+      "accepted": 0,
+      "unavailable": 6,
+      "pending": 0,
+      "assertionFailures": 0,
+      "responseCaptured": true
+    },
+    {
+      "id": "B2",
+      "provider": "grok",
+      "condition": "note",
+      "allocated": 6,
+      "artifactsEvaluated": 5,
+      "accepted": 5,
+      "unavailable": 1,
+      "pending": 0,
+      "assertionFailures": 0,
+      "responseCaptured": true
+    },
+    {
+      "id": "B3",
+      "provider": "gemini",
+      "condition": "none",
+      "allocated": 6,
+      "artifactsEvaluated": 3,
+      "accepted": 2,
+      "unavailable": 3,
+      "pending": 0,
+      "assertionFailures": 1,
+      "responseCaptured": true
+    },
+    {
+      "id": "B4",
+      "provider": "grok",
+      "condition": "dxp",
+      "allocated": 6,
+      "artifactsEvaluated": 5,
+      "accepted": 4,
+      "unavailable": 1,
+      "pending": 0,
+      "assertionFailures": 1,
+      "responseCaptured": true
+    },
+    {
+      "id": "B5",
+      "provider": "gemini",
+      "condition": "note",
+      "allocated": 6,
+      "artifactsEvaluated": 3,
+      "accepted": 2,
+      "unavailable": 3,
+      "pending": 0,
+      "assertionFailures": 1,
+      "responseCaptured": true
+    },
+    {
+      "id": "B6",
+      "provider": "grok",
+      "condition": "none",
+      "allocated": 6,
+      "artifactsEvaluated": 5,
+      "accepted": 5,
+      "unavailable": 1,
+      "pending": 0,
+      "assertionFailures": 0,
+      "responseCaptured": true
+    }
+  ],
+  "informationParity": {
+    "prepared": true,
+    "delivered": "Not established for Gemini editor; Grok B4 and B6 exact input checks passed. B1/B2 checks absent.",
+    "independentProviderUI": true,
+    "backendVersionsAttested": false
+  },
+  "interpretation": "These are browser-pipeline artifact acceptances on public development tasks, not 36 independent model trials. Six tasks share one response context per arm/provider. Missing/invalid captured artifacts do not establish model inability. The representation test does not compare interactive DXP/Git operations, and supplies no pure model-performance estimate.",
+  "engineering": {
+    "baselineRegressionPassed": 60,
+    "newDefectsReproduced": 5,
+    "defectsFixed": 5,
+    "regressionPassed": 65,
+    "regressionFailed": 0
+  },
+  "limitations": [
+    "P01-P06 publicly disclosed; not held out",
+    "Provider identities observed through UI; weights and backend versions unattested",
+    "No claim that browser private mode removes every provider-side personalization influence",
+    "Six tasks in one batch; no task-level independent inference or confidence interval",
+    "Costs/tokens unavailable; elapsed observation includes browser latency",
+    "Presentation diagnostic only; cannot establish versioning operation utility or replace 384-run weekly matrix",
+    "Rendered response can lose JSON escapes and underscores; raw generation cannot be reconstructed.",
+    "UI transport incidents are preserved in transport-deviations.json.",
+    "Historical baseline integrity checks permit only Windows CRLF-to-LF normalization; acceptance bytes match frozen diagnostic hashes."
+  ],
+  "evidence": {
+    "manifest": "/diagnostic-manifest.json",
+    "details": "/diagnostic-results.json",
+    "download": "/diagnostic-evidence.zip",
+    "audit": "/CONTINUATION_AUDIT.md"
+  }
+}

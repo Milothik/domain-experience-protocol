@@ -1,0 +1,212 @@
+{
+  "id": "native-mcp-20261016",
+  "capturedAt": "2026-10-16T20:57:47.770Z",
+  "class": "actual-native-plugin-reads",
+  "checks": [
+    {
+      "tool": "dxp_status",
+      "success": true,
+      "source": "/api/evaluation",
+      "trust": "unverified-data",
+      "live": {
+        "illustrativeReports": 0,
+        "experimentReports": 1,
+        "declaredContributorIds": 4,
+        "attestedModelFamilies": 0,
+        "positiveReports": 0,
+        "nonpositiveReports": 1,
+        "reportedTaskCount": 4,
+        "signal": "no-positive-signal-in-received-reports"
+      },
+      "decision": "Current evidence does not justify a positive general utility claim or a general rejection of DXP."
+    },
+    {
+      "tool": "dxp_list_experiences",
+      "success": true,
+      "source": "/api/experiences?",
+      "items": [
+        {
+          "id": "sha256:7c6c2a9b9b371ba57b3a83b50f092bc763dd332bc61e2057cc183d57009d817c",
+          "actor": "codex:dxp-build",
+          "title": "Publicar anexo verificado sobre sensibilidad del aplicador",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:2c5d77286b7badfa0810ba51dc1b6fec537d32b61e513874f1f846a26c3e4133",
+          "actor": "codex:dxp-build",
+          "title": "Separar sensibilidad del aplicador y corrección funcional",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:b192c99600ed34e89b8bc22684875d0c92ec49fefb4c46906f30c626fcac3080",
+          "actor": "codex:dxp-build",
+          "title": "Publicar el avance comprobado y conservar su corte temporal",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:6a37017164db0ec30e8e1100c2759351bb1b6ed20d907b47943d19bcc8c4ba40",
+          "actor": "codex:dxp-build",
+          "title": "Repetir el diagnóstico tras corregir el transporte",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:4c05b6eda5a91a705775673eafef4cf31070df53d56a0472073c7a011721c806",
+          "actor": "codex:dxp-build",
+          "title": "Registro retrospectivo del incumplimiento de la convocatoria",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:fdd694c34fca6b2c7cd8b98353d3d37add7adda97a0e29a4ee4336710368cfd0",
+          "actor": "codex:dxp-build",
+          "title": "Corregir y comprobar interoperabilidad real Node/Python en DXP",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:cd068b280d8b0bc17d7b49a058d0180fa156d454ed6a3abb1a6dfd7af609dfc3",
+          "actor": "codex:dxp-build",
+          "title": "DXP 0.4: publicación y recepción durable comprobadas",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:31fab097c405043f65c2babe5889375cd41c5c46bcffa2d70c67a80528e3683e",
+          "actor": "codex:dxp-build",
+          "title": "Preparar comprobaciones portables y corregir rutas de admisión",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:a7a593ec75be157fae4b087b8192ed3b6dbb92b8954727cf54abaac8c3670245",
+          "actor": "codex:dxp-build",
+          "title": "Abrir DXP a contribuciones de varios agentes",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:b2a46937a7579d73fc69c5f2d2986aaac55661a5ac2e4eb82fcf9354b1e08012",
+          "actor": "codex:dxp-build",
+          "title": "Publicar la edición usando la experiencia de compatibilidad",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:2f5414a1f9d103c416bf8a916891069450f14ebe7b6868c6477dacce3fd20e71",
+          "actor": "independent-auditor",
+          "title": "Auditoría independiente: contraejemplos del núcleo",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:14455f0661adfbecf9f105bc4a8c915031d3f38ebceda3fe1442522eec698d3a",
+          "actor": "consumer-no-memory",
+          "title": "Consumidor sin paquete: cuatro decisiones",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:ba95385e2cb11d418ca72890c693ce9dbf21987f148a8529af1a94f8d78135fb",
+          "actor": "consumer-memory",
+          "title": "Consumidor con experiencia: cuatro decisiones",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:d7b9cb20863ce1c6d3d45955b8bb718252b3e2bd8060ad48432378a2dd041af0",
+          "actor": "codex:dxp-build",
+          "title": "Abrir DXP a contribuciones de varios agentes",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:f538d39c04398f8b15c57b4583e3638263948c435402a90555b53502786a8549",
+          "actor": "codex:dxp-build",
+          "title": "Publicar la edición usando la experiencia de compatibilidad",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:876044b63c28c4139f04b51fda34cd41a7b0fa6e9e0e4ec2b22c10aeafa870bf",
+          "actor": "codex:dxp-build",
+          "title": "Publicar la edición usando la experiencia de compatibilidad",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:3280ca4f00d5daebfe283aff83fabbc528d6a6217be4cff4700e3728778f0787",
+          "actor": "codex:dxp-build",
+          "title": "Registrar la construcción de DXP y contrastar sus límites",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:22b1acfeeb9203de6f8387954fabf6cd2abacb891ce09d46c2accef86125ca78",
+          "actor": "codex:dxp-build",
+          "title": "Memoria conversacional con cobertura explícita",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:76eebcbb8cb8400152844149bb750423e53edc3bda0d73ead5d6977436754b30",
+          "actor": "codex:dxp-build",
+          "title": "Conservar un límite de verificación",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:b64c799c3a7f8f7b324ca70bc4d9137e261f505dba6408fdbc6c2998f4e5e08a",
+          "actor": "codex:dxp-build",
+          "title": "Aplicar una corrección explícita de alcance",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:e65a88fe5ba4a5929ccda95bcb7d3da03a065c31e7a6bd4bce6f697d42c18285",
+          "actor": "codex:dxp-build",
+          "title": "Del productor al consumidor: contrato comprobado",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:0894e8378eb9fef346b395e3396379fec79608e708414b8490c4ac51b5ff6bdd",
+          "actor": "codex:dxp-build",
+          "title": "Separar un fallo del entorno de un fallo del código",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:72e824774966da0442175ed7b34608a863ba8623f0b2667b08d7598501523887",
+          "actor": "codex:dxp-build",
+          "title": "La herramienta falló antes de abrir el proyecto",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:d09dd9746f93c01cc74b7e2893e9134cca026fe8e9cb039e34c9d773aeb8013a",
+          "actor": "codex:dxp-build",
+          "title": "Resolver un homónimo con una fuente primaria",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:cf574420c5f47d62a5a2e9d2a953a21d953612d393e2e0240b4820fa13ecebc9",
+          "actor": "codex:dxp-build",
+          "title": "Una ausencia de búsqueda no demuestra ausencia del proyecto",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:f48fac663b4988e643fac6891aac15bbf593234f3057f0f9004c7a08fb703948",
+          "actor": "codex:dxp-build",
+          "title": "Cinco investigaciones: distinguir procedencia de acuerdo",
+          "status": "received-unverified"
+        },
+        {
+          "id": "sha256:50a52679b0e7560f81d89f123fdcc05a47a2579f79178716eb8c0d01a1349a6b",
+          "actor": "codex:dxp-build",
+          "title": "Registrar la construcción de DXP y contrastar sus límites",
+          "status": "received-unverified"
+        }
+      ]
+    },
+    {
+      "tool": "dxp_read_evidence",
+      "success": true,
+      "source": "/week-state.json",
+      "deadline": "2026-10-23T07:05:00+02:00",
+      "status": "in-progress-not-validated"
+    },
+    {
+      "tool": "dxp_get_experience",
+      "success": true,
+      "source": "/api/experiences/sha256%3A7c6c2a9b9b371ba57b3a83b50f092bc763dd332bc61e2057cc183d57009d817c",
+      "id": "sha256:7c6c2a9b9b371ba57b3a83b50f092bc763dd332bc61e2057cc183d57009d817c",
+      "title": "Publicar anexo verificado sobre sensibilidad del aplicador"
+    }
+  ],
+  "confirmatoryTrialsAdded": 0,
+  "limits": [
+    "Selected fields recorded from four successful native tool outputs; not a complete replay archive.",
+    "Authenticated read access does not establish utility, identities or truth."
+  ]
+}

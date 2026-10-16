@@ -1,0 +1,4 @@
+[
+ {"batch":"B3","sha256":"sha256:05e804c3a36566cc75b038ee7c9c2263a3114ee18a271c2a196499f5b1c8bbbf","reviewedAt":"2026-10-16","scope":"Full worker source inspected before execution; existing database operations, no added external I/O. Suspected unmatched route brace; execute unchanged acceptance to establish outcome."},
+ {"batch":"B5","sha256":"sha256:1030786381957d52092f716b45aa717ea16dcc3631e548140852c56da6bf1c3f","reviewedAt":"2026-10-16","scope":"Full worker source inspected before execution; existing database operations, no added external I/O. Demo/illustrative report filtering only; execute unchanged acceptance."}
+]

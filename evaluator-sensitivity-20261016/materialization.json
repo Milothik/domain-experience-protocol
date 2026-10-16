@@ -1,0 +1,28 @@
+[
+  {
+    "batch": "B3",
+    "taskId": "P06",
+    "condition": "none",
+    "originalMatches": 0,
+    "removedPrefixCharacters": 3,
+    "adjustedMatches": 1,
+    "replacementSha256": "sha256:1f9a747f938b48d4a7dc3b9dd01f87d732bfba02360d5cab4ab19fe90d0438f9",
+    "replacementEdited": false,
+    "directory": "evaluator-sensitivity-20261016/runs/B3-P06",
+    "artifactSha256": "sha256:05e804c3a36566cc75b038ee7c9c2263a3114ee18a271c2a196499f5b1c8bbbf",
+    "status": "awaiting-source-review"
+  },
+  {
+    "batch": "B5",
+    "taskId": "P06",
+    "condition": "note",
+    "originalMatches": 0,
+    "removedPrefixCharacters": 2,
+    "adjustedMatches": 1,
+    "replacementSha256": "sha256:56f3cc78c20db13a7d60aa2b417777ba832233c33e686bdc2636ede24729bfb6",
+    "replacementEdited": false,
+    "directory": "evaluator-sensitivity-20261016/runs/B5-P06",
+    "artifactSha256": "sha256:1030786381957d52092f716b45aa717ea16dcc3631e548140852c56da6bf1c3f",
+    "status": "awaiting-source-review"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "id": "T6",
+  "target": "worker/index.js",
+  "title": "Informes con control de nota equivalente",
+  "requirement": "POST /api/experiments optionally accepts noteSuccess. If present, require integer 0..sampleSize, recompute computedDifferenceVsNote=(dxpSuccess-noteSuccess)/sampleSize ignoring submitted derived value, preserve scientificallyVerified=false. Legacy two-arm reports without noteSuccess remain accepted and must omit computedDifferenceVsNote even if client spoofs it. Reject null, strings, negative, noninteger and out-of-range noteSuccess with 400 before storing."
+}

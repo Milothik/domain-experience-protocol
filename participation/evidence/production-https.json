@@ -1,0 +1,219 @@
+{
+  "kind": "real-production-HTTPS-client-conformance-no-model-experiment",
+  "at": "2026-10-15T15:37:59.749Z",
+  "origin": "https://dxp-experience-atlas.milothik.chatgpt.site",
+  "deployedSourceCommit": "fe3fec4cf90e65145502243b67e8806e0c524a53",
+  "purpose": "conformance",
+  "verifiedModelTrials": 0,
+  "steps": [
+    {
+      "name": "public task catalog",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "published join.mjs matches reviewed source",
+      "passed": true
+    },
+    {
+      "name": "published join.py matches reviewed source",
+      "passed": true
+    },
+    {
+      "name": "published baseline archive SHA256",
+      "expected": "sha256:272c760200e354fa7f09713ac5f809167e6b17c1a51388748242f0be8e098867",
+      "actual": "sha256:272c760200e354fa7f09713ac5f809167e6b17c1a51388748242f0be8e098867",
+      "passed": true
+    },
+    {
+      "name": "Node client production registration",
+      "code": 0,
+      "out": "{\"runId\":\"56933073-cffa-4ed8-9c45-6c5b1d196c1b\",\"condition\":\"dxp\",\"session\":\"/workspace\\\\tools\\\\portal-live\\\\node-session.json\"}\n",
+      "err": "",
+      "passed": true
+    },
+    {
+      "name": "Python client production registration",
+      "code": 1,
+      "out": "",
+      "err": "Error: Server returned HTTP 403.\r\n",
+      "passed": false
+    },
+    {
+      "name": "Python production registration after truthful client identification fix",
+      "code": 0,
+      "out": "{\"runId\": \"af833fa2-e22a-41f1-9023-fb49a08391b7\", \"condition\": \"dxp\", \"session\": \"python-session.json\"}\r\n",
+      "err": "",
+      "passed": true
+    },
+    {
+      "name": "production missing bearer refused",
+      "status": 401,
+      "passed": true
+    },
+    {
+      "name": "production result before material refused",
+      "status": 409,
+      "passed": true
+    },
+    {
+      "name": "production HEAD does not serve material",
+      "status": 405,
+      "passed": true
+    },
+    {
+      "name": "Python reads Node-created session in production",
+      "code": 0,
+      "out": "{\"runId\": \"56933073-cffa-4ed8-9c45-6c5b1d196c1b\", \"materialReceiptId\": \"117b9eab-60ab-46eb-a280-3a7a74250039\", \"materialUtf8Sha256\": \"sha256:a1135c02191ad85faa2b0a410f867239e9d1b5cad1028edf38cf651363dc3c44\", \"output\": \"node-material.json\"}\r\n",
+      "err": "",
+      "passed": true
+    },
+    {
+      "name": "Node reads Python-created session in production",
+      "code": 0,
+      "out": "{\"runId\":\"af833fa2-e22a-41f1-9023-fb49a08391b7\",\"materialReceiptId\":\"41fe781b-7882-4929-a624-f0f926bb1a29\",\"materialUtf8Sha256\":\"sha256:a1135c02191ad85faa2b0a410f867239e9d1b5cad1028edf38cf651363dc3c44\",\"output\":\"/workspace\\\\tools\\\\portal-live\\\\python-material.json\"}\n",
+      "err": "",
+      "passed": true
+    },
+    {
+      "name": "production foreign receipt refused",
+      "status": 400,
+      "passed": true
+    },
+    {
+      "name": "Node production submission",
+      "code": 0,
+      "out": "{\"id\":\"sha256:fbc9ec2340f4554c720d56a9b1c643ed8a1bb722e723634762c09d6afe971ff1\",\"runId\":\"56933073-cffa-4ed8-9c45-6c5b1d196c1b\",\"status\":\"received-unverified\",\"duplicate\":false,\"materialDeliveryVerified\":true,\"materialDeliveryMeaning\":\"material-served-only\",\"artifactValidationStatus\":\"not-reproduced\",\"runProvenanceStatus\":\"declared-unattested\",\"submissionStatus\":\"received-unverified\",\"executionVerified\":false,\"identityVerified\":false,\"verificationStatus\":\"received-unverified\",\"deliveryOnly\":true}\n",
+      "err": "",
+      "passed": true
+    },
+    {
+      "name": "Python production submission",
+      "code": 0,
+      "out": "{\"id\": \"sha256:0c87ef424e23105fd3ffee327c2cce6af83c5dac464b5752176fcf2101d44d52\", \"runId\": \"af833fa2-e22a-41f1-9023-fb49a08391b7\", \"status\": \"received-unverified\", \"duplicate\": false, \"materialDeliveryVerified\": true, \"materialDeliveryMeaning\": \"material-served-only\", \"artifactValidationStatus\": \"not-reproduced\", \"runProvenanceStatus\": \"declared-unattested\", \"submissionStatus\": \"received-unverified\", \"executionVerified\": false, \"identityVerified\": false, \"verificationStatus\": \"received-unverified\", \"deliveryOnly\": true}\r\n",
+      "err": "",
+      "passed": true
+    },
+    {
+      "name": "production duplicate is idempotent",
+      "code": 0,
+      "out": "{\"id\": \"sha256:0c87ef424e23105fd3ffee327c2cce6af83c5dac464b5752176fcf2101d44d52\", \"runId\": \"af833fa2-e22a-41f1-9023-fb49a08391b7\", \"status\": \"received-unverified\", \"duplicate\": true, \"materialDeliveryVerified\": true, \"materialDeliveryMeaning\": \"material-served-only\", \"artifactValidationStatus\": \"not-reproduced\", \"runProvenanceStatus\": \"declared-unattested\", \"submissionStatus\": \"received-unverified\", \"executionVerified\": false, \"identityVerified\": false, \"verificationStatus\": \"received-unverified\", \"deliveryOnly\": true}\r\n",
+      "err": "",
+      "passed": true
+    },
+    {
+      "name": "production status separates technical checks",
+      "status": {
+        "total": {
+          "assigned": 2,
+          "materialServed": 2,
+          "submitted": 2,
+          "pending": 0
+        },
+        "byCondition": {
+          "none": {
+            "assigned": 0,
+            "materialServed": 0,
+            "submitted": 0,
+            "pending": 0
+          },
+          "note": {
+            "assigned": 0,
+            "materialServed": 0,
+            "submitted": 0,
+            "pending": 0
+          },
+          "dxp": {
+            "assigned": 2,
+            "materialServed": 2,
+            "submitted": 2,
+            "pending": 0
+          }
+        },
+        "byPurpose": {
+          "evaluation": {
+            "assigned": 0,
+            "materialServed": 0,
+            "submitted": 0,
+            "pending": 0
+          },
+          "conformance": {
+            "assigned": 2,
+            "materialServed": 2,
+            "submitted": 2,
+            "pending": 0
+          }
+        },
+        "byConditionAndPurpose": {
+          "none": {
+            "evaluation": {
+              "assigned": 0,
+              "materialServed": 0,
+              "submitted": 0,
+              "pending": 0
+            },
+            "conformance": {
+              "assigned": 0,
+              "materialServed": 0,
+              "submitted": 0,
+              "pending": 0
+            }
+          },
+          "note": {
+            "evaluation": {
+              "assigned": 0,
+              "materialServed": 0,
+              "submitted": 0,
+              "pending": 0
+            },
+            "conformance": {
+              "assigned": 0,
+              "materialServed": 0,
+              "submitted": 0,
+              "pending": 0
+            }
+          },
+          "dxp": {
+            "evaluation": {
+              "assigned": 0,
+              "materialServed": 0,
+              "submitted": 0,
+              "pending": 0
+            },
+            "conformance": {
+              "assigned": 2,
+              "materialServed": 2,
+              "submitted": 2,
+              "pending": 0
+            }
+          }
+        },
+        "limitPerKind": 1000,
+        "possibleTruncation": false,
+        "coverage": "Latest 1000 rows per kind; counts may be truncated and joined runs may be absent.",
+        "materialDeliveryMeaning": "material-served-only",
+        "deliveryOnly": true,
+        "executionVerified": false,
+        "identityVerified": false,
+        "scientificallyVerified": false,
+        "verifiedExperiments": 0
+      },
+      "passed": true
+    }
+  ],
+  "initialFailureRetained": true,
+  "correction": "Python default urllib User-Agent received Cloudflare error 1010. Explicit truthful DXP-Participation/0.1 (Python stdlib) User-Agent worked; no browser impersonation, redirect bypass or server access-policy change.",
+  "conditionsObserved": [
+    "dxp",
+    "dxp"
+  ],
+  "note": "Two technical checks; no coding task solved or model invoked. Python correction will be included in final published SDK.",
+  "reviewedClientVersions": {
+    "node": "f30c3517497e3a9ecd41239e4051c0b011dad41c45887ca84151bffbbb40a157",
+    "python": "be22c775e142d0c7ecb119c555873c69ed939a77dcc3314901143a7d9aa572d5"
+  },
+  "runtime": {
+    "node": "v22.16.0",
+    "python": "Python 3.9.6"
+  }
+}

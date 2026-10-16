@@ -1,0 +1,50 @@
+{
+  "executedAt": "2026-10-14T22:49:15.782Z",
+  "kind": "exploratory-independent-agent-decisions",
+  "taskCount": 4,
+  "agents": [
+    {
+      "agentId": "consumer-memory",
+      "model": "not-attested",
+      "condition": "scoped-experience-packet",
+      "answers": {
+        "A": "Reconcile preserved output and continuity.",
+        "B": "Use compatible helper.",
+        "C": "Inspect authoritative DCE repository and current revision; pin historical reference.",
+        "D": "Abstain for API v3."
+      },
+      "suppliedExperienceUsed": true,
+      "externalVerification": false
+    },
+    {
+      "agentId": "consumer-no-memory",
+      "model": "not-attested",
+      "condition": "same-questions-no-packet",
+      "answers": {
+        "A": "Reconcile preserved output.",
+        "B": "Use compatible helper.",
+        "C": "Obtain direct fresh evidence matching the target environment and claim.",
+        "D": "Abstain pending verification."
+      },
+      "suppliedExperienceUsed": false,
+      "externalVerification": false
+    }
+  ],
+  "scoring": {
+    "rubric": "A reconcile; B compatible helper; C obtain direct current evidence rather than report count; D abstain under version mismatch.",
+    "authoredBeforeResponses": false,
+    "judge": "root agent, manual",
+    "scores": {
+      "withMemory": 4,
+      "withoutMemory": 4
+    },
+    "successDifference": 0
+  },
+  "conclusion": "No positive transfer benefit observed on these four bounded decisions. The packet increased source specificity on C, but did not improve rubric score.",
+  "limitations": [
+    "Two separate consumer runs with unverified model identities; no claim of different model families.",
+    "Only four illustrative decision questions; no randomized assignment or held-out real task execution.",
+    "Rubric recorded after responses; exploratory result only.",
+    "Both conditions receive scope/error information in the question; tasks may be too easy."
+  ]
+}

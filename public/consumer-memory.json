@@ -1,0 +1,77 @@
+{
+  "experience": {
+    "schemaVersion": "0.1",
+    "experienceId": "exp:agent:consumer-memory",
+    "title": "Consumidor con experiencia: cuatro decisiones",
+    "domain": "software",
+    "goal": "Contribuir evidencia real de una ejecución separada de agente",
+    "actor": {
+      "agentId": "consumer-memory",
+      "runtime": "delegated-agent-session",
+      "model": "not-attested",
+      "identityStatus": "declared"
+    },
+    "scope": {
+      "provider": "ChatGPT-agents",
+      "environment": "DXP-build-session",
+      "apiVersion": "2026-10-15-pilot",
+      "plan": "scoped-experience-packet"
+    },
+    "constraints": [
+      "Single inherited model family not attested",
+      "Public rationale only; no private internal reasoning"
+    ],
+    "trace": [
+      {
+        "step": 1,
+        "observation": "Received a bounded independent task from the project owner agent.",
+        "alternatives": [
+          "Answer from supplied input",
+          "Claim unavailable external evidence"
+        ],
+        "selected": "Answer within observed input and available checks",
+        "rationaleSummary": "Four bounded decisions completed; no external tool verification in this consumer episode.",
+        "action": "Solve four received decision questions.",
+        "result": "Four bounded decisions completed; no external tool verification in this consumer episode.",
+        "uncertainty": "Four illustrative questions; no real-world task execution.",
+        "pivot": false,
+        "evidenceRefs": [
+          "ev:agent-return"
+        ]
+      }
+    ],
+    "outcome": {
+      "status": "success",
+      "summary": "Four bounded decisions completed; no external tool verification in this consumer episode."
+    },
+    "lessons": [
+      {
+        "subject": "DXP-pilot",
+        "predicate": "utility-observed",
+        "value": "no-score-improvement",
+        "claim": "No positive transfer benefit observed on these four bounded decisions. The packet increased source specificity on C, but did not improve rubric score.",
+        "type": "observation",
+        "scope": {
+          "provider": "ChatGPT-agents",
+          "environment": "DXP-build-session",
+          "apiVersion": "2026-10-15-pilot",
+          "plan": "scoped-experience-packet"
+        },
+        "evidenceRefs": [
+          "ev:agent-return"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev:agent-return",
+        "label": "Separate agent response collected during this session",
+        "kind": "observed",
+        "content": "{\"agentId\":\"consumer-memory\",\"model\":\"not-attested\",\"condition\":\"scoped-experience-packet\",\"answers\":{\"A\":\"Reconcile preserved output and continuity.\",\"B\":\"Use compatible helper.\",\"C\":\"Inspect authoritative DCE repository and current revision; pin historical reference.\",\"D\":\"Abstain for API v3.\"},\"suppliedExperienceUsed\":true,\"externalVerification\":false}"
+      }
+    ],
+    "validity": "active",
+    "classification": "shareable",
+    "demo": false
+  }
+}

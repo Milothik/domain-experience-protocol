@@ -1,0 +1,6 @@
+{
+  "id": "T5",
+  "target": "worker/index.js",
+  "title": "Comprobaciones HTTP sin cuerpos",
+  "requirement": "Support HEAD for embedded static assets (including /), /.well-known/dxp.json, and /api/evaluation. Match GET status and headers but return no body; never write DB or consume intake quota. Unknown HEAD path must match GET 404 with empty body. Existing POST ingestion must still work."
+}

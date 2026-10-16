@@ -1,0 +1,26 @@
+{
+  "commitId": "sha256:91b38d91120f95582e47cb016befae66fc441d267bb4fa3c1c2c297b4983735a",
+  "timestamp": "2026-10-16T05:14:52.548Z",
+  "parents": [
+    "sha256:95062db108802fa07510082df8f5acf2339a0ac1c51f0d7636dd4cdd1c5a815c"
+  ],
+  "operation": "commit",
+  "record": {
+    "experienceId": "exp:work:week-decision-20261016",
+    "scope": {
+      "provider": "Codex",
+      "environment": "DXP-site-project",
+      "apiVersion": "atlas-0.2",
+      "plan": "project-build"
+    },
+    "status": "success",
+    "observedOutcome": "Auditor\u00eda, protocolo y evidencia publicados en Site v8. Programaci\u00f3n guardada y activada para siete ejecuciones a las 06:00 Europe/Madrid del 17 al 23 de octubre; ninguna activaci\u00f3n ejecutada a\u00fan. Can\u00f3nico del diario incluido en el c\u00f3digo versionado. El corte de esta revisi\u00f3n registra estos \u00e9xitos ya observados; publicar el recibo actualizado sigue pendiente.",
+    "lesson": "Una suite de conformidad aprobada no implica utilidad ni gobernanza completa. Una comparaci\u00f3n con datos id\u00e9nticos exige reglas fuertes tambi\u00e9n en el control plano. La documentaci\u00f3n externa puede compartir linaje y contener errores verificables.",
+    "evidence": {
+      "id": "ev:result:2",
+      "label": "Observed task result",
+      "kind": "observed",
+      "content": "[\"week/evidence/day0-audit-original.json\",\"week/regression.tap\",\"week/review-manifest.json\",\"week/PROTOCOL.md\",\"week/state.json\",\"week/schedule-receipt.json\"]"
+    }
+  }
+}

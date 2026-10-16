@@ -1,0 +1,11 @@
+{
+ "taskId":"evaluator-sensitivity-20261016",
+ "title":"Separar sensibilidad del aplicador y corrección funcional",
+ "goal":"Auditar los dos P06 de Gemini no materializados y coordinar la continuación con el otro agente.",
+ "observation":"El materializador exige una coincidencia literal única de old. B3/P06 y B5/P06 quedan fuera antes de ejecutar pruebas. Esa métrica mide entregabilidad completa, no solo funcionalidad. El otro agente ha recibido el estado v12 y la propuesta de reparto.",
+ "prediction":"Quitar exclusivamente espacios o tabulaciones iniciales del ancla old puede hacerla coincidir sin cambiar new. Una solución todavía puede fallar por sintaxis o semántica; no se presupone éxito.",
+ "control":"Conservar respuestas, protocolos, puntuaciones y aceptación originales. En copias nuevas, permitir solo eliminar prefijo de espacios/tabulaciones en old, nunca editar new. Revisar el código antes de ejecutar la aceptación P06 y regresiones congeladas. Sin nueva inferencia.",
+ "usedExperienceCommits":["sha256:5fc7da80b8846016e440ffc08f8c58ab1f9f91565c843c5bd7526bfe40d2caa2","sha256:73646e2c3cba2b88ac93ec68885be7bd7706a3681ed3c1aafa6e19f52925f780"],
+ "uncertainty":"Análisis posterior a los resultados y limitado a dos artefactos; no modifica la comparación original ni estima un efecto causal de memoria.",
+ "recordingMode":"prospective"
+}

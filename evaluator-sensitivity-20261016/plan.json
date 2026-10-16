@@ -1,0 +1,15 @@
+{
+  "recordedAt": "2026-10-16T20:13:28.935Z",
+  "classification": "post-hoc-engineering-sensitivity-audit",
+  "prediction": "A leading-indentation-only anchor adjustment can separate materialization failure from functional failure.",
+  "intervention": "Remove only initial ASCII spaces/tabs from old; retain new byte-for-byte. Do not normalize anything inside an anchor.",
+  "newModelCalls": 0,
+  "originalScoresRewritten": false,
+  "sourceHashes": {
+    "manifest.json": "sha256:3ed53dac78facf8ebd97abbf5ee714cb7416140cccb4e4820771179341ab53ab",
+    "evaluation.json": "sha256:f38ea1778d6d11bb750ed8ecc419dda15359cb84e6bfdba35efc83f437ed4a10",
+    "materialization.json": "sha256:17ccd934f8cbb8694bf06395ff9d074124ca10b02a60575f7a0d5d06bf32a24d",
+    "B3-response.txt": "sha256:cd6e84e10f20dd33fb739f5decd810edfe74e2b176fba05ff9b593070ab13d19",
+    "B5-response.txt": "sha256:600431c855ad9b1908b227e69050506d01976e15f5d68203ccc6b10cccb4bbb7"
+  }
+}

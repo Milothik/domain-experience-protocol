@@ -1,0 +1,11 @@
+{
+  "taskId": "mcp-read-20261016",
+  "title": "Read-only MCP access to public DXP evidence",
+  "goal": "Expose bounded public reads as native MCP tools",
+  "observation": "Published v13 has no MCP declaration. Public HTTP read routes exist; scientific utility remains unvalidated.",
+  "prediction": "MCP discovery and four read tools pass routing, validation and error checks without writes.",
+  "control": "Unknown tools, bad arguments, malformed RPC and unavailable storage must fail explicitly.",
+  "usedExperienceCommits": [
+    "sha256:efc9e2ac059be9e0e1b346d97fb5a881d784a88601277a10a7574408e4a3e888"
+  ]
+}

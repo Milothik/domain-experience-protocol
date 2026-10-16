@@ -1,0 +1,35 @@
+{
+  "kind": "evaluator-conformance-not-model-trials",
+  "checks": [
+    {
+      "id": "DEV-Q-known-correct",
+      "pass": true
+    },
+    {
+      "id": "DEV-Q-broken-baseline-rejected",
+      "pass": true
+    },
+    {
+      "id": "DEV-C-known-correct",
+      "pass": true
+    },
+    {
+      "id": "DEV-C-broken-baseline-rejected",
+      "pass": true
+    },
+    {
+      "id": "no-host-io",
+      "pass": true
+    },
+    {
+      "id": "infinite-loop-interrupted",
+      "pass": true
+    },
+    {
+      "id": "new-context-per-evaluation",
+      "pass": true
+    }
+  ],
+  "allPassed": true,
+  "limits": "No OS isolation claim. QuickJS guest code has no Python callbacks or host I/O modules; finite negative tests are not a proof against engine vulnerabilities."
+}

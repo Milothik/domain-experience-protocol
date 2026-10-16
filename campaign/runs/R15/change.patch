@@ -1,0 +1,18 @@
+diff --git a//workspace/sites/dxp-experience-atlas/campaign/baseline/worker/index.js "b//workspace\\campaign-runs\\R15/worker/index.js"
+index 08b27c9..b7e1ee9 100644
+--- a//workspace/sites/dxp-experience-atlas/campaign/baseline/worker/index.js
++++ "b//workspace\\campaign-runs\\R15/worker/index.js"
+@@ -17,7 +17,12 @@ export async function handle(request,env){
+   if(!env.DB)return response({error:'Durable database binding unavailable'},503);
+   if(request.method==='GET'){
+    const id=p.split('/')[3]?decodeURIComponent(p.split('/')[3]):null;if(id){const row=await env.DB.prepare('SELECT * FROM contributions WHERE id=?').bind(id).first();return row?response({...row,payload:JSON.parse(row.payload)}):response({error:'Not found'},404);}
+-   const kind=p==='/api/experiments'?'experiment':'experience';const results=await env.DB.prepare('SELECT id,actor,title,created_at,status,payload FROM contributions WHERE kind=? ORDER BY created_at DESC LIMIT 50').bind(kind).all();return response({items:results.results.map(x=>({...x,payload:JSON.parse(x.payload)})),limit:50,identity:'declared',factualVerification:false});
++   const kind=p==='/api/experiments'?'experiment':'experience';
++   const domain=kind==='experience'?url.searchParams.get('domain'):null,outcome=kind==='experience'?url.searchParams.get('outcome'):null;
++   if(outcome&&!['success','failure','partial','incomplete'].includes(outcome))return response({error:'Invalid outcome filter'},400);
++   const results=await env.DB.prepare('SELECT id,actor,title,created_at,status,payload FROM contributions WHERE kind=? ORDER BY created_at DESC LIMIT 50').bind(kind).all();
++   const items=results.results.map(x=>({...x,payload:JSON.parse(x.payload)})).filter(x=>(!domain||x.payload?.domain===domain)&&(!outcome||x.payload?.outcome?.status===outcome));
++   return response({items,limit:50,identity:'declared',factualVerification:false});
+   }
+   if(request.method!=='POST')return response({error:'Method not allowed'},405);
+   let body;try{body=await limitedJson(request);}catch(e){return response({error:e.message},400);}

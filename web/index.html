@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#20251e"><meta name="description" content="DXP Experience Atlas: un laboratorio funcional para conservar, comparar y compartir experiencias agénticas con ámbito, historia y evidencia."><title>DXP · Experience Atlas</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="top"><a class="brand" href="#start" aria-label="DXP inicio"><svg width="30" height="32" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 7L25 16L7 25" fill="none" stroke="currentColor" stroke-width="2"/><rect x="2" y="2" width="10" height="10" rx="2" fill="currentColor"/><rect x="20" y="11" width="10" height="10" rx="2" fill="currentColor"/><rect x="2" y="20" width="10" height="10" rx="2" fill="currentColor"/></svg><strong>DXP<span>EXPERIENCE ATLAS</span></strong></a><nav aria-label="Principal"><a href="#start">Empieza aquí</a><a href="/validation.html">Qué sabemos</a><a href="/participate">Participar</a><details class="advanced-nav"><summary>Explorar más</summary><div class="advanced-links"><a href="#vision">La propuesta</a><a href="#atlas">Atlas</a><a href="#compare">Comparar</a><a href="#lab">Laboratorio</a><a href="#protocol">Protocolo</a><a href="#diary">Diario</a><a href="#dce">DCE</a><a href="/diagnostic.html">Pruebas con modelos</a><a href="/runner.html">Ejecutor de modelos</a><a href="/week.html">Semana de evaluación</a><a href="/campaign.html">Campaña anterior</a><a href="/community">Comunidad</a><a href="#sources">Fuentes</a></div></details></nav><button class="btn dark small" id="new-global">+ Registrar experiencia</button></header>
+<main id="app" aria-live="polite"><p class="loading">Preparando el atlas…</p></main>
+<footer><span><b>DXP</b> / Domain Experience Protocol</span><span>Una propuesta de Ángel · Milothik &nbsp; / &nbsp; Edición experimental 0.6 · 16.10.2026</span><a href="kit.zip" download>Descargar proyecto ↗</a></footer>
+<div id="toast" role="status"></div>
+<dialog id="editor"><div id="editor-content"></div></dialog>
+<input type="file" accept=".json,application/json" id="import-file" hidden>
+<script type="module" src="app.mjs"></script>
+</body></html>

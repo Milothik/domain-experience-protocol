@@ -1,0 +1,85 @@
+{
+  "capturedAt": "2026-10-14T22:40:34.977Z",
+  "sources": [
+    {
+      "filename": "DXP versionado de experiencias agénticas.md",
+      "sha256": "a0dda6de1949f7e82152076ed3d395f23e4a331816d27ff4c46a2e6346a93654",
+      "bytes": 46708,
+      "lines": 204,
+      "kind": "user-supplied-secondary-research",
+      "providerAttribution": "Claude (reported by user)",
+      "providerAttested": false,
+      "generationPromptAvailable": false,
+      "originalGenerationTimeAvailable": false,
+      "urlMentions": 66,
+      "uniqueLiteralUrls": 65,
+      "independentEvidenceRoots": "not-established",
+      "usedFor": "Definitions, competing proposals and verification agenda; claims checked separately."
+    },
+    {
+      "filename": "Gemini DXP.txt",
+      "sha256": "b7aada3572e1a9d06f3208bc371f599d652df9382704314f576bc1b44914c2c3",
+      "bytes": 96218,
+      "lines": 372,
+      "kind": "user-supplied-secondary-research",
+      "providerAttribution": "Gemini (filename attribution)",
+      "providerAttested": false,
+      "generationPromptAvailable": false,
+      "originalGenerationTimeAvailable": false,
+      "urlMentions": 20,
+      "uniqueLiteralUrls": 15,
+      "independentEvidenceRoots": "not-established",
+      "usedFor": "Definitions, competing proposals and verification agenda; claims checked separately."
+    },
+    {
+      "filename": "GPT DXP.txt",
+      "sha256": "f35121dd4ad2cb384e12b94f4af04d753b5d15e1cba8d35877ea2473a1a9c980",
+      "bytes": 54029,
+      "lines": 821,
+      "kind": "user-supplied-secondary-research",
+      "providerAttribution": "GPT (filename attribution)",
+      "providerAttested": false,
+      "generationPromptAvailable": false,
+      "originalGenerationTimeAvailable": false,
+      "urlMentions": 2,
+      "uniqueLiteralUrls": 2,
+      "independentEvidenceRoots": "not-established",
+      "usedFor": "Definitions, competing proposals and verification agenda; claims checked separately."
+    },
+    {
+      "filename": "Grok DXP.txt",
+      "sha256": "c5fee0715ef35134daf66961ba15c197387898e3cee907add303fa95b853d657",
+      "bytes": 14371,
+      "lines": 126,
+      "kind": "user-supplied-secondary-research",
+      "providerAttribution": "Grok (filename attribution)",
+      "providerAttested": false,
+      "generationPromptAvailable": false,
+      "originalGenerationTimeAvailable": false,
+      "urlMentions": 0,
+      "uniqueLiteralUrls": 0,
+      "independentEvidenceRoots": "not-established",
+      "usedFor": "Definitions, competing proposals and verification agenda; claims checked separately."
+    },
+    {
+      "filename": "Meta IA DXP.txt",
+      "sha256": "91eb102f06d73268c6ec0ed47e7f444817945c01be4dad4acc6a6668541d14c4",
+      "bytes": 3232,
+      "lines": 29,
+      "kind": "user-supplied-secondary-research",
+      "providerAttribution": "Meta IA (filename attribution)",
+      "providerAttested": false,
+      "generationPromptAvailable": false,
+      "originalGenerationTimeAvailable": false,
+      "urlMentions": 0,
+      "uniqueLiteralUrls": 0,
+      "independentEvidenceRoots": "not-established",
+      "usedFor": "Definitions, competing proposals and verification agenda; claims checked separately."
+    }
+  ],
+  "limits": [
+    "Content hashes establish exact supplied versions, not authorship or truth.",
+    "A repeated URL is not an independent source; equivalent URLs can still share a root.",
+    "Full prompts and provider execution records were not supplied."
+  ]
+}

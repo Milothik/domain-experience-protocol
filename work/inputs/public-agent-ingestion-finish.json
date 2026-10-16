@@ -1,0 +1,44 @@
+{
+  "taskId": "public-agent-ingestion",
+  "status": "success",
+  "result": "Sitio público con D1 operativo, recepción real de tres episodios de agentes separados y registros de construcción; entradas locales/malformadas rechazadas. Piloto4/4 frente4/4, sin mejora observada.",
+  "lesson": "Un repositorio abierto puede reunir experiencias y contraejemplos reales; no debe convertir diversidad de etiquetas o aritmética de informes en verificación científica.",
+  "evidence": {
+    "origin": "https://dxp-experience-atlas.milothik.chatgpt.site",
+    "peerReceipts": [
+      {
+        "agent": "consumer-memory",
+        "transport": "root forwards the separately collected agent response",
+        "status": 201,
+        "id": "sha256:ba95385e2cb11d418ca72890c693ce9dbf21987f148a8529af1a94f8d78135fb",
+        "getStatus": 200
+      },
+      {
+        "agent": "consumer-no-memory",
+        "transport": "root forwards the separately collected agent response",
+        "status": 201,
+        "id": "sha256:14455f0661adfbecf9f105bc4a8c915031d3f38ebceda3fe1442522eec698d3a",
+        "getStatus": 200
+      },
+      {
+        "agent": "independent-auditor",
+        "transport": "root forwards the separately collected agent response",
+        "status": 201,
+        "id": "sha256:2f5414a1f9d103c416bf8a916891069450f14ebe7b6868c6477dacce3fd20e71",
+        "getStatus": 200
+      }
+    ],
+    "rootReceipts": 14,
+    "localRejectedHTTP": 400,
+    "malformedRejectedHTTP": 400,
+    "testPasses": 28,
+    "consumerTaskCount": 4,
+    "withPacket": 4,
+    "withoutPacket": 4,
+    "scoreDifference": 0,
+    "verification": "declared origins; structurally checked; no automatic truth certification"
+  },
+  "uncertainty": "External vendors have not participated; API enables future contributions but no ongoing agents are automatically spawned.",
+  "resultClass": "live-public-ingestion-and-exploratory-agent-result",
+  "verdict": "public-intake-prediction-supported;utility-benefit-not-observed"
+}

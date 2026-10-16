@@ -1,0 +1,55 @@
+{
+  "source": {
+    "filename": "DXP_Experience_Atlas_Observaciones_GAMC_151026_v3.pdf",
+    "sha256": "a3a874fe1ef87945a46c514b6c275748b9f0b9e7d27f96f3ccb5f766e847e79c",
+    "bytes": 79536,
+    "attribution": "GAMC 15.10.26, tal como figura en el documento aportado; sin atestación externa de autoría."
+  },
+  "checkedAt": "2026-10-16T07:09:33.869664+00:00",
+  "provenance": {
+    "reproducedBeforeFix": true,
+    "hashValidAttack": true,
+    "before": {
+      "passed": 5,
+      "failed": 3
+    },
+    "after": {
+      "passed": 8,
+      "failed": 0
+    },
+    "change": "contextPacket asigna commitId desde el commit recorrido después de copiar los campos de la lección. La aprobación del consumidor se compara con esa identidad derivada.",
+    "tests": [
+      "lesson metadata cannot impersonate an approved source revision",
+      "approving A excludes a hash-valid B that claims to come from A",
+      "a source claiming another identity still requires approval of its actual revision"
+    ],
+    "scope": "Control de procedencia del paquete y adaptador DCE; sin certificación de seguridad ni identidad de autor."
+  },
+  "distribution": {
+    "originalCleanExtractionExitCode": 1,
+    "originalFailure": "ENOENT participation/catalog.json",
+    "correction": "Inventario exacto kit-files.json, datos públicos de campaña/participación en las rutas requeridas y manifiesto de hashes.",
+    "verification": "kit-verification.json"
+  },
+  "humanEntry": {
+    "defaultRoute": "start",
+    "steps": [
+      "Ver una experiencia",
+      "Entender qué ocurrió",
+      "Comprobar su evidencia",
+      "Explorar sus ramas"
+    ],
+    "sourceBranch": "work/gamc-trust-20261016",
+    "advancedTools": "Explorar más",
+    "visualBrowserReview": "No disponible en este entorno; comprobaciones de módulos, contenido, rutas e interacciones mediante pruebas de código."
+  },
+  "scientificStatus": "no validado",
+  "reason": "Estas comprobaciones reparan software y distribución. No son una prueba confirmatoria de transferencia entre modelos independientes.",
+  "preservation": "No se modifican protocolos, snapshots ni resultados históricos de campañas o del piloto local.",
+  "engineeringTests": {
+    "passed": 60,
+    "failed": 0,
+    "finalArchiveReport": "kit-verification.json",
+    "log": "kit-tests.tap"
+  }
+}

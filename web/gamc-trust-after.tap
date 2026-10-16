@@ -1,0 +1,16 @@
+✔ capture preserves observed data without serializing provider configuration (1.551144ms)
+✔ failed generation is captured once with no inferred successful output (0.333572ms)
+✔ unreviewed imports are empty; reviewed imports are data and never mandatory constraints (6.681693ms)
+✔ modified evidence fails integrity before any entity import (0.792702ms)
+✔ empty supplied run cannot be recorded as a successful observed execution (0.270667ms)
+✔ lesson metadata cannot impersonate an approved source revision (1.720989ms)
+✔ approving A excludes a hash-valid B that claims to come from A (2.655761ms)
+✔ a source claiming another identity still requires approval of its actual revision (1.359114ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 19.762486

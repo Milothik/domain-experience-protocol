@@ -1,0 +1,36 @@
+{
+  "capturedAt": "2026-10-16T05:11:10.494Z",
+  "files": [
+    {
+      "name": "DXP versionado de experiencias agénticas.pdf",
+      "bytes": 147210,
+      "sha256": "sha256:e0174af7970e26850efcf9c04f86bfc7abc26a21fbe141ebd1080f4afb3a9b7d"
+    },
+    {
+      "name": "05-DXP-versionado-de-experiencias-age-nticas.md",
+      "bytes": 46708,
+      "sha256": "sha256:a0dda6de1949f7e82152076ed3d395f23e4a331816d27ff4c46a2e6346a93654"
+    }
+  ],
+  "attribution": "External friend review supplied by user; author/provider identity not independently attested.",
+  "independence": "PDF content closely matches previously supplied fifth research report; treat as one documentary lineage, not independent empirical replication.",
+  "issues": [
+    {
+      "issue": "Scion attribution",
+      "disposition": "Corrected against official Anthropic source; review confused homonyms",
+      "source": "https://www.anthropic.com/engineering/redesigning-source-control"
+    },
+    {
+      "issue": "Incremental benefit against strong baselines",
+      "disposition": "Accepted as core experimental requirement"
+    },
+    {
+      "issue": "All quantitative literature claims",
+      "disposition": "Not imported as DXP results; verify individually before use"
+    },
+    {
+      "issue": "Absence of DXP implementation",
+      "disposition": "Outdated relative to current hosted prototype; utility remains unproved"
+    }
+  ]
+}

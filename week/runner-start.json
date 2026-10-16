@@ -1,0 +1,10 @@
+{
+  "taskId":"runner-access-20261016",
+  "title":"Habilitar y comprobar el ejecutor real de modelos",
+  "goal":"Resolver el acceso a modelos identificables y ejecutar una prueba técnica sin puntuar antes de la comparación.",
+  "observation":"No hay CLI codex/claude/gemini ni claves de proveedor en el entorno comprobado. Las herramientas conectadas de Neon exponen descubrimiento de AI Gateway y credenciales limitadas a invocación. La disponibilidad se comprobará con el servicio; tener herramientas no prueba que haya proyectos o saldo.",
+  "prediction":"Una llamada real a un gateway disponible podrá conservar modelo devuelto, uso, latencia y respuesta, o devolverá un bloqueo verificable que no debe contarse como fallo de tarea de un agente.",
+  "control":"Sonda técnica con respuesta verificable, sin tareas puntuadas; aislamiento y equivalencia de material se comprueban por separado antes de experimentos.",
+  "usedExperienceCommits":["sha256:91b38d91120f95582e47cb016befae66fc441d267bb4fa3c1c2c297b4983735a","sha256:b0d8943463b5dba0adb082d32974e6292bbdd0edbb58bd887e35c8741f05012a"],
+  "uncertainty":"Todavía no hay respuesta del servicio ni ejecutor independiente validado."
+}

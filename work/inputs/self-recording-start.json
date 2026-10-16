@@ -1,0 +1,15 @@
+{
+  "taskId": "self-recording",
+  "title": "Registrar la construcción de DXP y contrastar sus límites",
+  "goal": "Añadir un diario verificable y ejecutar comprobaciones acotadas usando experiencias anteriores.",
+  "observation": "El usuario pide usar el propio trabajo como caso real del protocolo.",
+  "prediction": "Cada tarea completada tendrá evidencia referenciada y un commit verificable; el contexto excluirá un ámbito distinto y una experiencia en cuarentena.",
+  "control": "Mismos registros, ámbito incompatible y un registro marcado en cuarentena; no hay control aleatorio de modelos.",
+  "hypothesisRefs": [
+    "H1-history",
+    "H4-failure",
+    "H6-scope"
+  ],
+  "usedExperienceCommits": [],
+  "uncertainty": "Esta predicción se registra antes de las pruebas del diario, pero después de diseñar el script; no es preregistro científico."
+}

@@ -1,0 +1,21 @@
+{
+  "taskId": "editorial-scope",
+  "title": "Aplicar una corrección explícita de alcance",
+  "goal": "Mantener la entrega centrada en DXP.",
+  "observation": "El usuario excluyó un proyecto ajeno de la entrega.",
+  "action": "Retirar el ejemplo y menciones de interfaz y documentos; regenerar JSON inicial, HTML autónomo y descargas.",
+  "result": "La inspección textual de los archivos actuales del proyecto devolvió cero referencias excluidas; las fuentes originales permanecieron intactas.",
+  "lesson": "Una preferencia actual del usuario prevalece sobre ejemplos heredados. Regenerar los derivados antes de dar por terminada la corrección.",
+  "evidence": {
+    "scanResultCount": 0,
+    "scanned": "current project text files excluding Git history",
+    "sourceFilesModified": false
+  },
+  "uncertainty": "La comprobación del ZIP final y la publicación quedan para el cierre.",
+  "recordingMode": "retrospective",
+  "prediction": null,
+  "resultClass": "observed-project-work",
+  "hypothesisRefs": [
+    "H1-history"
+  ]
+}

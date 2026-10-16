@@ -1,0 +1,1 @@
+Public evidence copy. Local machine paths are replaced by /workspace. Protocol, frozen experience and acceptance criteria are unchanged. Raw tool activity and solve-time telemetry were not available; reports are declarations. Separate agent contexts and folders do not establish sealed operating-system isolation. strictControlledCampaignComplete=false.

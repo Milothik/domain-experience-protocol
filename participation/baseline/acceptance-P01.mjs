@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+await import('./scripts/build-worker.mjs');const {default:worker}=await import('./dist/server/index.js');
+import {clone,commit,branch,validateRepository,diff,contextPacket,emptyRepository} from './web/core.mjs';
+import {scope,experience,database,request} from './fixture.mjs';
+await import('./tests/dce-adapter.test.mjs');await import('./tests/public-api.test.mjs');await import('./tests/routing.test.mjs');
+test('P01 quarantine cannot be bypassed through an alias',async()=>{let repo=emptyRepository(),e=experience('a',{demo:false});repo=(await commit(repo,e,{branch:'main',message:'Fixture'})).repo;const original=repo.refs.main;repo.refs.alias=original;e=clone(e);e.validity='quarantined';repo=(await commit(repo,e,{branch:'main',parents:[original],message:'Quarantine fixture'})).repo;repo=(await commit(repo,experience('b',{demo:false}),{branch:'other',message:'Other fixture'})).repo;const before=JSON.stringify(repo),packet=contextPacket(repo,{scope,domain:'software'});assert.equal(packet.lessons.length,1);assert.equal(packet.lessons[0].commitId,repo.refs.other);assert.equal(JSON.stringify(repo),before);repo.refs.main=original;assert.equal(contextPacket(repo,{scope,domain:'software'}).lessons.length,2);});

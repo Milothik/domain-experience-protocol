@@ -1,0 +1,69 @@
+{
+  "experience": {
+    "schemaVersion": "0.1",
+    "experienceId": "fixture",
+    "title": "Synthetic contract fixture",
+    "domain": "software",
+    "goal": "Test schema; not observed work",
+    "actor": {
+      "agentId": "consumer-memory",
+      "runtime": "synthetic-test"
+    },
+    "scope": {
+      "provider": "test",
+      "environment": "unit",
+      "apiVersion": "v1",
+      "plan": "test"
+    },
+    "constraints": [],
+    "trace": [
+      {
+        "step": 1,
+        "observation": "Synthetic input",
+        "alternatives": [],
+        "selected": "Test contract",
+        "rationaleSummary": "Fixture only",
+        "action": "No external action",
+        "result": "Test data",
+        "uncertainty": "Not factual evidence",
+        "pivot": false,
+        "evidenceRefs": [
+          "ev"
+        ]
+      }
+    ],
+    "outcome": {
+      "status": "success",
+      "summary": "Synthetic fixture"
+    },
+    "lessons": [
+      {
+        "subject": "s",
+        "predicate": "p",
+        "value": "v",
+        "claim": "Synthetic lesson",
+        "type": "observation",
+        "scope": {
+          "provider": "test",
+          "environment": "unit",
+          "apiVersion": "v1",
+          "plan": "test"
+        },
+        "evidenceRefs": [
+          "ev"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev",
+        "label": "Fixture",
+        "kind": "illustrative",
+        "content": "Synthetic unit data"
+      }
+    ],
+    "validity": "active",
+    "classification": "shareable",
+    "demo": true
+  }
+}

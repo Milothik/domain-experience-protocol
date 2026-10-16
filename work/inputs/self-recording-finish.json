@@ -1,0 +1,18 @@
+{
+  "taskId": "self-recording",
+  "result": "Diario creado con nueve tareas reconstruidas y tres checks prospectivos superados: ámbito, cuarentena e integridad.",
+  "lesson": "El propio proyecto produce datos auditables, pero un check del núcleo no valida utilidad científica.",
+  "evidence": {
+    "checks": "work/checks.json",
+    "observations": {
+      "sameScope": 10,
+      "differentScope": 0,
+      "quarantineBefore": 10,
+      "quarantineAfter": 9,
+      "tamperingRejected": 1
+    }
+  },
+  "uncertainty": "La interfaz del diario todavía requiere checks de composición; no hay evaluación de modelos.",
+  "resultClass": "prospective-engineering-check",
+  "verdict": "prediction-supported-within-implemented-contract"
+}

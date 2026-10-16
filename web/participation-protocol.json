@@ -1,0 +1,157 @@
+{
+  "id": "dxp-participation-01",
+  "frozenAt": "2026-10-15T08:30:18.453Z",
+  "purpose": "Open external diagnostic evaluation; not a sealed causal experiment",
+  "sourceCommit": "a5485fe793f93a857d265f4a2394017cb96b8466",
+  "initialFiles": {
+    "web/core.mjs": "sha256:049a45f5c91452f2746662e6e26e294e8771aa1cb59140bb4cd73b76063c7d34",
+    "web/dce-adapter.mjs": "sha256:951a5ce3f2facd2d5dfee0c38e297aea5f571d7fa5b27a796e25da85d4615ce6",
+    "worker/index.js": "sha256:472e2c17e1e5820873c254585d4d5831c23b2934d4da760ba1d34c2f1e5e0e5e",
+    "scripts/build-worker.mjs": "sha256:fde118a2c902773ada6f389645c3433fa35247a9edf571a5f8fc744d805984ff",
+    "tests/dce-adapter.test.mjs": "sha256:b601852e3d44371613c2816b00806b7f0c2587d750cfb836d12886ddc8573ee2",
+    "tests/public-api.test.mjs": "sha256:0638ed979aa493ad0352d28961288d16e330fb5f57a79e81a36ed8c6ba78f129",
+    "tests/routing.test.mjs": "sha256:14efbacf0996f4839be88a45ae65de2b25166625fc68cfbc8e3244cc59573e20",
+    "fixture.mjs": "sha256:839e6e8f9a1f3541f1a178418b6e1fbc82cc6b6c7ab6afca5afaa55277196390"
+  },
+  "baselineHash": "sha256:4934a3f6cc97e070821a614774ed9cfbca9c537f6f4f414d0327c9d72d8a3986",
+  "snapshotId": "dxp-participation-snapshot-01",
+  "snapshotSha256": "sha256:3853324bf2115f9bd3969e8ab66d69ab86485a60253caa3664199d046900902c",
+  "noteTransformation": "Plain prose lessons plus complete JSON provenance of exactly the same repository and context packet, including unchanged commit IDs. The note is an intentionally strong control.",
+  "tasks": [
+    {
+      "id": "P01",
+      "title": "Cuarentena coherente entre alias",
+      "description": "Una revisión en cuarentena puede coexistir con un alias antiguo activo. Excluir del contexto todas las revisiones de una experiencia cuando cualquiera de sus cabeceras actuales esté en cuarentena. Una cuarentena que ya no sea cabecera no debe bloquear una restauración.",
+      "target": "web/core.mjs",
+      "successCriteria": [
+        "Un alias antiguo no elude la cuarentena actual de la misma experienceId.",
+        "Otras experiencias conservan sus lecciones.",
+        "Revertir todas las cabeceras a una revisión activa permite recuperación.",
+        "No se modifica el repositorio."
+      ],
+      "acceptanceCommand": "node acceptance-P01.mjs",
+      "acceptanceSha256": "sha256:6046942c2bff9733f4ac9f9be253fe7ecd0df28ce7ab8e58e8adb2b2691c726f"
+    },
+    {
+      "id": "P02",
+      "title": "Diff fiel de metadatos",
+      "description": "El comparador debe mostrar también cambios en demo, domain y experienceId como cambios de campo, sin alterar el cálculo existente de conflictos ni mutar sus entradas.",
+      "target": "web/core.mjs",
+      "successCriteria": [
+        "Los tres campos aparecen cuando cambian.",
+        "Campos sin cambios no generan diferencias.",
+        "La comparación existente por ámbito continúa funcionando."
+      ],
+      "acceptanceCommand": "node acceptance-P02.mjs",
+      "acceptanceSha256": "sha256:faa53f3d809e76e863e2168fb52aca27ea5899e271f625d21704663c5324c263"
+    },
+    {
+      "id": "P03",
+      "title": "URL malformada es error de cliente",
+      "description": "GET /api/experiences/%ZZ y secuencias UTF-8 percent-encoded inválidas deben devolver 400 JSON en lugar de un error de almacenamiento 503. No escribir ni consumir cuota.",
+      "target": "worker/index.js",
+      "successCriteria": [
+        "Escape inválido devuelve 400.",
+        "Secuencia UTF-8 inválida devuelve 400.",
+        "Un ID válido inexistente sigue devolviendo 404.",
+        "Ninguna escritura en los casos de lectura."
+      ],
+      "acceptanceCommand": "node acceptance-P03.mjs",
+      "acceptanceSha256": "sha256:5ab4ba856542089e4c9c0963b6e74e9a073b224edfc95faf7f715ab4ccb72402"
+    },
+    {
+      "id": "P04",
+      "title": "Método correcto para recibos individuales",
+      "description": "Una URL /api/experiences/:id es de lectura. POST debe responder 405 con Allow: GET, HEAD sin insertar una experiencia ni consumir cuota; la colección debe seguir admitiendo POST.",
+      "target": "worker/index.js",
+      "successCriteria": [
+        "POST a recibo individual devuelve 405 y Allow correcto.",
+        "No guarda datos ni consume cuota.",
+        "POST a la colección conserva su comportamiento."
+      ],
+      "acceptanceCommand": "node acceptance-P04.mjs",
+      "acceptanceSha256": "sha256:bc73b5ce643431787e4b79f1549a36a8038b097c3f3bb9e6cf722d6db6943bce"
+    },
+    {
+      "id": "P05",
+      "title": "Nombres de rama interoperables",
+      "description": "Rechazar nombres de rama con segmentos vacíos, \".\" o \"..\". Mantener nombres existentes como work/task-1. La misma regla debe aplicarse en commit(), branch() y validateRepository(). No se afirma compatibilidad total con Git.",
+      "target": "web/core.mjs",
+      "successCriteria": [
+        "Rechaza work//a, work/../a, work/., work/ y work/./a.",
+        "Acepta work/task-1.",
+        "Las tres operaciones aplican la misma regla."
+      ],
+      "acceptanceCommand": "node acceptance-P05.mjs",
+      "acceptanceSha256": "sha256:ac786026663a65db4f4296770109dfede82908bdb7d4c53372a31004482136e8"
+    },
+    {
+      "id": "P06",
+      "title": "Separar ilustraciones de informes de ejecución",
+      "description": "En /api/evaluation, los informes con demo:true o executionClass:\"illustrative\" deben contarse aparte en live.illustrativeReports y excluirse de experimentReports, reportedTaskCount, positiveReports y nonpositiveReports. Conservar los informes en el registro.",
+      "target": "worker/index.js",
+      "successCriteria": [
+        "Los informes ilustrativos se conservan pero no cambian la señal de ejecución.",
+        "Los informes sin esa marca mantienen semántica anterior.",
+        "Se publica la cuenta aparte illustrativeReports."
+      ],
+      "acceptanceCommand": "node acceptance-P06.mjs",
+      "acceptanceSha256": "sha256:cbf7b44cb034a8f142a9369e2fc44f7c8dc9398c9d39b298eec16e57a6f2809a"
+    }
+  ],
+  "budget": {
+    "wallSeconds": 900,
+    "toolCalls": 30,
+    "acceptanceAttempts": 3,
+    "enforcement": "Participant-declared policy; hosted endpoint cannot enforce local solver budgets."
+  },
+  "conditions": [
+    "none",
+    "note",
+    "dxp"
+  ],
+  "assignment": "Server crypto-random condition after actor/model/runtime/task registration; voluntary public participation is not blocked randomization or independent sampling.",
+  "dataFlow": [
+    "Register run and receive private token",
+    "Fetch assigned frozen material with bearer token",
+    "Server records material-served timestamp/hash; clients check exact UTF-8 materialText hash",
+    "Solve in clean local environment and keep tests unchanged",
+    "Submit patch, evidence and declared metrics with matching material receipt",
+    "Independent artifact reproduction and run-provenance assessment remain separate"
+  ],
+  "receipts": "A material-served receipt is not proof of complete delivery, reading, understanding, model use or execution.",
+  "resultStatus": {
+    "submission": "received-unverified",
+    "artifactValidation": "not-reproduced",
+    "runProvenance": "declared-unattested"
+  },
+  "primaryMetric": "Per-task acceptance plus common regression tests, evaluated independently on unchanged baseline/evaluator",
+  "secondaryMetrics": [
+    "Regressions",
+    "All assignments/material-served/abandoned/submitted runs by condition, including failures",
+    "Actual solver tool/time/token/cost telemetry only where independently observable; otherwise declared or null",
+    "Preparation, retrieval and verification overhead"
+  ],
+  "candidateDecisionRules": {
+    "usableProtocol": "Both independent JS/Python clients complete lifecycle and cross-client sessions; negative auth/expiry/receipt/duplicate/integrity cases behave as specified; regression suite passes. Scope limited to tested contract/version.",
+    "localUtilityGate": "Before adoption, repeat all six tasks with each condition in at least two separately configured model environments; DXP must resolve at least one additional task versus note per configuration with no additional regression. This is a provisional engineering adoption threshold, not statistical significance.",
+    "rejectLocalBenefit": "If DXP adds no functional success in both configurations and its independently measured total overhead is equal or worse, reject the claimed benefit for that tested setting. Missing telemetry or unverified runs means inconclusive, not pass.",
+    "stateOfArtGate": "No state-of-art claim until matched direct runs against pinned Git-backed note, AXTP and appropriate Letta/Mem0 implementations/adapters; named alternatives and broader held-out task sets must be tested before a broad claim.",
+    "totalRejection": "No finite local task set can establish universal impossibility. Rejecting this implementation or the measured benefit is possible; total theoretical rejection is not a conclusion this portal can support."
+  },
+  "samplePlan": {
+    "diagnosticTasks": 6,
+    "conditions": 3,
+    "minimumModelConfigurations": 2,
+    "plannedRuns": 36,
+    "completedVerifiedRuns": 0
+  },
+  "limitations": [
+    "Public tasks and visible tests are diagnostic; after solutions are public they are not held-out.",
+    "Per-agent filesystem and model provenance are not enforced by the website.",
+    "Snapshot coverage is narrow and part of its portable-test advice overlaps common instructions.",
+    "Open participation permits self-selection, rerolls and selective submission; denominators reduce but do not remove bias.",
+    "No actual model is invoked by protocol conformance clients.",
+    "Material packet delivery tests access and representation; not independent value of every DXP versioning operation."
+  ]
+}

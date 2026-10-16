@@ -1,0 +1,79 @@
+{
+  "kind": "real-local-HTTP-with-database-double;no-model",
+  "completedAt": "2026-10-15T08:37:02.271Z",
+  "steps": [
+    {
+      "name": "JS start",
+      "code": 0,
+      "stdout": "{\"runId\":\"e1eb19bc-70a5-4c7f-b812-8fd72cafd937\",\"condition\":\"note\",\"session\":\"/workspace\\\\tools\\\\participation-smoke\\\\js-session.json\"}\n",
+      "stderr": ""
+    },
+    {
+      "name": "Python start",
+      "code": 0,
+      "stdout": "{\"runId\": \"ddca6a7b-a98c-4351-abdd-9ce385676985\", \"condition\": \"dxp\", \"session\": \"py-session.json\"}\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "No bearer denied",
+      "status": 401,
+      "passed": true
+    },
+    {
+      "name": "Result before material denied",
+      "status": 409,
+      "passed": true
+    },
+    {
+      "name": "python reads other-client session",
+      "code": 0,
+      "stdout": "{\"runId\": \"e1eb19bc-70a5-4c7f-b812-8fd72cafd937\", \"materialReceiptId\": \"204ffece-7e2e-4c68-9778-5421a24e2a0e\", \"materialUtf8Sha256\": \"sha256:5de33e712c703ce09ba549c770c219c93632e64e345e1077231ece6708bc7663\", \"output\": \"js-material.json\"}\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "node reads other-client session",
+      "code": 0,
+      "stdout": "{\"runId\":\"ddca6a7b-a98c-4351-abdd-9ce385676985\",\"materialReceiptId\":\"e430cfdf-b99d-4fc6-8d2d-71636cd77e52\",\"materialUtf8Sha256\":\"sha256:a1135c02191ad85faa2b0a410f867239e9d1b5cad1028edf38cf651363dc3c44\",\"output\":\"/workspace\\\\tools\\\\participation-smoke\\\\py-material.json\"}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "node submits with other-client receipt",
+      "code": 0,
+      "stdout": "{\"id\":\"sha256:f81faa2f5780a9b73b9109e4f06952fc58f86b09e36259d666ab4ff361e11104\",\"runId\":\"e1eb19bc-70a5-4c7f-b812-8fd72cafd937\",\"status\":\"received-unverified\",\"duplicate\":false,\"materialDeliveryVerified\":true,\"materialDeliveryMeaning\":\"material-served-only\",\"artifactValidationStatus\":\"not-reproduced\",\"runProvenanceStatus\":\"declared-unattested\",\"submissionStatus\":\"received-unverified\",\"executionVerified\":false,\"identityVerified\":false,\"verificationStatus\":\"received-unverified\",\"deliveryOnly\":true}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "python submits with other-client receipt",
+      "code": 0,
+      "stdout": "{\"id\": \"sha256:c7b5e8df22330d5b3d48c7afbab086c54c3d26bbfcc6cb03c48b74a2975bb59f\", \"runId\": \"ddca6a7b-a98c-4351-abdd-9ce385676985\", \"status\": \"received-unverified\", \"duplicate\": false, \"materialDeliveryVerified\": true, \"materialDeliveryMeaning\": \"material-served-only\", \"artifactValidationStatus\": \"not-reproduced\", \"runProvenanceStatus\": \"declared-unattested\", \"submissionStatus\": \"received-unverified\", \"executionVerified\": false, \"identityVerified\": false, \"verificationStatus\": \"received-unverified\", \"deliveryOnly\": true}\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "Duplicate submission",
+      "code": 0,
+      "duplicate": true,
+      "passed": true
+    },
+    {
+      "name": "node rejects altered UTF-8 hash",
+      "code": 0,
+      "error": "",
+      "passed": false
+    },
+    {
+      "name": "python rejects altered UTF-8 hash",
+      "code": 0,
+      "error": "",
+      "passed": false
+    }
+  ],
+  "allChecksPassed": false,
+  "conditionsObserved": [
+    "note",
+    "dxp"
+  ]
+}

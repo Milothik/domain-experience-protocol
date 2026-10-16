@@ -1,0 +1,11 @@
+{
+ "taskId":"diagnostic-v2-20261016",
+ "title":"Repetir el diagnóstico tras corregir el transporte",
+ "goal":"Obtener una comparación de entregas verificables en las tres condiciones y dos proveedores.",
+ "observation":"La primera matriz produjo 21 artefactos ejecutables y 15 indisponibles. El texto renderizado pierde caracteres. Un ensayo de eco con bloque de código conserva las cadenas exactas en ambos proveedores.",
+ "prediction":"Una entrada JSON de una línea y una salida de código protegida deben conservar la información; la ventaja DXP puede seguir ausente.",
+ "control":"Mismas seis tareas públicas, código inicial, pruebas, datos nota/DXP y presupuesto por lote. Tres contextos nuevos por proveedor, sin feedback de soluciones.",
+ "usedExperienceCommits":["sha256:884ca58e16518c5255eec3bdbc4b1010b571297a2bb4b00ce314c325ee6032b7"],
+ "uncertainty":"Diagnóstico de desarrollo, sin tareas retenidas, sin operaciones interactivas ni versiones backend atestadas. No se suma a los 384 ensayos confirmatorios.",
+ "recordingMode":"prospective"
+}

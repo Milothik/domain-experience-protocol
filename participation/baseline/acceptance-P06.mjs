@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+await import('./scripts/build-worker.mjs');const {default:worker}=await import('./dist/server/index.js');
+import {clone,commit,branch,validateRepository,diff,contextPacket,emptyRepository} from './web/core.mjs';
+import {scope,experience,database,request} from './fixture.mjs';
+await import('./tests/dce-adapter.test.mjs');await import('./tests/public-api.test.mjs');await import('./tests/routing.test.mjs');
+test('P06 illustrative reports do not count as execution evidence',async()=>{const DB=database(),base={agentId:'test',hypothesis:'test-fixture',sampleSize:6,baselineSuccess:1,dxpSuccess:6,evidence:['Synthetic unit fixture']};for(const mark of [{demo:true},{executionClass:'illustrative'}])assert.equal((await worker.fetch(request('/api/experiments',{...base,...mark}),{DB})).status,201);const real={...base,agentId:'declared',baselineSuccess:3,dxpSuccess:3};assert.equal((await worker.fetch(request('/api/experiments',real),{DB})).status,201);const x=await (await worker.fetch(request('/api/evaluation'),{DB})).json();assert.equal(x.live.illustrativeReports,2);assert.equal(x.live.experimentReports,1);assert.equal(x.live.reportedTaskCount,6);assert.equal(x.live.positiveReports,0);assert.equal(x.live.nonpositiveReports,1);assert.equal(DB.rows.size,3);});

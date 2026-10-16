@@ -1,0 +1,59 @@
+{
+  "byProvider": {
+    "gemini": {
+      "dxp": {
+        "accepted": 6,
+        "allocated": 6,
+        "evaluated": 6,
+        "unavailable": 0
+      },
+      "none": {
+        "accepted": 5,
+        "allocated": 6,
+        "evaluated": 5,
+        "unavailable": 1
+      },
+      "note": {
+        "accepted": 5,
+        "allocated": 6,
+        "evaluated": 5,
+        "unavailable": 1
+      }
+    },
+    "grok": {
+      "note": {
+        "accepted": 6,
+        "allocated": 6,
+        "evaluated": 6,
+        "unavailable": 0
+      },
+      "dxp": {
+        "accepted": 6,
+        "allocated": 6,
+        "evaluated": 6,
+        "unavailable": 0
+      },
+      "none": {
+        "accepted": 6,
+        "allocated": 6,
+        "evaluated": 6,
+        "unavailable": 0
+      }
+    }
+  },
+  "differences": {
+    "gemini": {
+      "dxpMinusNote": 1,
+      "dxpMinusNone": 1
+    },
+    "grok": {
+      "dxpMinusNote": 0,
+      "dxpMinusNone": 0
+    }
+  },
+  "tokens": null,
+  "cost": null,
+  "freshConversationBatches": 6,
+  "taskLevelIndependentSampling": false,
+  "claim": "Matched development artifact comparison. No held-out utility validation, equivalence or general theoretical refutation."
+}

@@ -1,0 +1,275 @@
+[
+  {
+    "id": "DEV-Q",
+    "source": "web/core.mjs contextPacket; known P01 quarantine-alias case",
+    "brief": "Repair the DXP head selector. Implement function solve(input). Input has commits: array of {id,experienceId,validity} and refs: object mapping branch names to commit IDs. Only current unique ref targets matter. Return sorted unique IDs of active current heads, except exclude ALL current heads of an experience if ANY current head of that same experience is quarantined. Historical non-head quarantines do not block restored active heads. Ignore refs pointing to missing commits. Do not mutate input. Return only a JavaScript function solve(input); no imports, exports or prose.",
+    "initialCode": "function solve(input) { const ids = Object.values(input.refs); return input.commits.filter(c => ids.includes(c.id) && c.validity === 'active').map(c => c.id).sort(); }",
+    "tests": [
+      {
+        "input": {
+          "commits": [
+            {
+              "id": "a",
+              "experienceId": "e",
+              "validity": "active"
+            },
+            {
+              "id": "q",
+              "experienceId": "e",
+              "validity": "quarantined"
+            }
+          ],
+          "refs": {
+            "old": "a",
+            "main": "q"
+          }
+        },
+        "expected": []
+      },
+      {
+        "input": {
+          "commits": [
+            {
+              "id": "a",
+              "experienceId": "e",
+              "validity": "active"
+            },
+            {
+              "id": "q",
+              "experienceId": "e",
+              "validity": "quarantined"
+            },
+            {
+              "id": "b",
+              "experienceId": "f",
+              "validity": "active"
+            }
+          ],
+          "refs": {
+            "old": "a",
+            "main": "q",
+            "other": "b"
+          }
+        },
+        "expected": [
+          "b"
+        ]
+      },
+      {
+        "input": {
+          "commits": [
+            {
+              "id": "q",
+              "experienceId": "e",
+              "validity": "quarantined"
+            },
+            {
+              "id": "a",
+              "experienceId": "e",
+              "validity": "active"
+            }
+          ],
+          "refs": {
+            "main": "a"
+          }
+        },
+        "expected": [
+          "a"
+        ]
+      },
+      {
+        "input": {
+          "commits": [
+            {
+              "id": "z",
+              "experienceId": "f",
+              "validity": "active"
+            },
+            {
+              "id": "a",
+              "experienceId": "e",
+              "validity": "active"
+            }
+          ],
+          "refs": {
+            "x": "z",
+            "y": "a",
+            "duplicate": "z",
+            "missing": "none"
+          }
+        },
+        "expected": [
+          "a",
+          "z"
+        ]
+      },
+      {
+        "input": {
+          "commits": [],
+          "refs": {}
+        },
+        "expected": []
+      }
+    ]
+  },
+  {
+    "id": "DEV-C",
+    "source": "web/core.mjs diff/contextPacket; known G03 contradictory-head case",
+    "brief": "Implement function solve(input). Input is an array of lessons with subject, predicate, value, scope (string), and type. Exclude intuition, hypothesis and disputed lessons. Among remaining lessons, exclude every non-negative lesson if another remaining non-negative lesson has the same subject, predicate and scope but a different value (JSON primitive). Keep negative lessons, which do not create conflicts. Preserve the input order and return the accepted original lesson objects. Do not mutate input. Return only JavaScript function solve(input); no imports, exports or prose.",
+    "initialCode": "function solve(input) { return input.filter(l => !['intuition','hypothesis','disputed'].includes(l.type)); }",
+    "tests": [
+      {
+        "input": [
+          {
+            "subject": "x",
+            "predicate": "mode",
+            "value": "a",
+            "scope": "v1",
+            "type": "observation"
+          },
+          {
+            "subject": "x",
+            "predicate": "mode",
+            "value": "b",
+            "scope": "v1",
+            "type": "observation"
+          }
+        ],
+        "expected": []
+      },
+      {
+        "input": [
+          {
+            "subject": "x",
+            "predicate": "mode",
+            "value": "a",
+            "scope": "v1",
+            "type": "observation"
+          },
+          {
+            "subject": "x",
+            "predicate": "mode",
+            "value": "b",
+            "scope": "v1",
+            "type": "negative"
+          }
+        ],
+        "expected": [
+          {
+            "subject": "x",
+            "predicate": "mode",
+            "value": "a",
+            "scope": "v1",
+            "type": "observation"
+          },
+          {
+            "subject": "x",
+            "predicate": "mode",
+            "value": "b",
+            "scope": "v1",
+            "type": "negative"
+          }
+        ]
+      },
+      {
+        "input": [
+          {
+            "subject": "x",
+            "predicate": "mode",
+            "value": "a",
+            "scope": "v1",
+            "type": "observation"
+          },
+          {
+            "subject": "x",
+            "predicate": "mode",
+            "value": "b",
+            "scope": "v2",
+            "type": "observation"
+          }
+        ],
+        "expected": [
+          {
+            "subject": "x",
+            "predicate": "mode",
+            "value": "a",
+            "scope": "v1",
+            "type": "observation"
+          },
+          {
+            "subject": "x",
+            "predicate": "mode",
+            "value": "b",
+            "scope": "v2",
+            "type": "observation"
+          }
+        ]
+      },
+      {
+        "input": [
+          {
+            "subject": "x",
+            "predicate": "mode",
+            "value": "a",
+            "scope": "v1",
+            "type": "observation"
+          },
+          {
+            "subject": "x",
+            "predicate": "mode",
+            "value": "b",
+            "scope": "v1",
+            "type": "hypothesis"
+          }
+        ],
+        "expected": [
+          {
+            "subject": "x",
+            "predicate": "mode",
+            "value": "a",
+            "scope": "v1",
+            "type": "observation"
+          }
+        ]
+      },
+      {
+        "input": [
+          {
+            "subject": "x",
+            "predicate": "mode",
+            "value": "a",
+            "scope": "v1",
+            "type": "observation"
+          },
+          {
+            "subject": "y",
+            "predicate": "mode",
+            "value": "b",
+            "scope": "v1",
+            "type": "observation"
+          }
+        ],
+        "expected": [
+          {
+            "subject": "x",
+            "predicate": "mode",
+            "value": "a",
+            "scope": "v1",
+            "type": "observation"
+          },
+          {
+            "subject": "y",
+            "predicate": "mode",
+            "value": "b",
+            "scope": "v1",
+            "type": "observation"
+          }
+        ]
+      },
+      {
+        "input": [],
+        "expected": []
+      }
+    ]
+  }
+]

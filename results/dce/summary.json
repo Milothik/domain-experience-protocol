@@ -1,0 +1,39 @@
+{
+  "executedAt": "2026-10-14T22:29:05.749Z",
+  "source": {
+    "repository": "https://github.com/Milothik/domain-context-engine",
+    "revision": "81426cceecc631b488422c96f7ee46c751c02136",
+    "version": "0.2.0"
+  },
+  "engine": "real DCE run()",
+  "fixture": "public synthetic WeirdWay example",
+  "modelCalls": 0,
+  "producer": {
+    "task": "page-2",
+    "contextSchema": "2.0",
+    "selectedEntities": 3,
+    "commit": "sha256:f229b6a43552b14db3f2b0f60a8cb9de104de3616fd71624ab23e17858647216"
+  },
+  "consumer": {
+    "task": "page-2-with-dxp",
+    "importedExperienceEntities": 1,
+    "requiresExplicitReview": true,
+    "contextContainsDxp": true
+  },
+  "failure": {
+    "type": "StateCommitError",
+    "generationCalls": 1,
+    "outputPreserved": true,
+    "automaticRetry": false
+  },
+  "repository": {
+    "commits": 3,
+    "hashesVerified": true
+  },
+  "limits": [
+    "Offline preview provider; no real image or language-model generation.",
+    "Synthetic source data; not actual WeirdWay canon.",
+    "Integration test, not an experiment proving improved task performance.",
+    "Review policy in this fixture is deterministic; no claim of independent verification."
+  ]
+}

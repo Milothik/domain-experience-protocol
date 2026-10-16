@@ -1,0 +1,90 @@
+{
+  "id": "dxp-local-runner-probe-20261016",
+  "startedAt": "2026-10-16T05:30:22.060689+00:00",
+  "scoredTrials": 0,
+  "python": "3.12.14",
+  "llamaCppPython": "0.3.36",
+  "quickjs": "1.19.4",
+  "paidServicesPurchased": false,
+  "isolation": {
+    "type": "restricted-JavaScript-runtime",
+    "checks": [
+      {
+        "id": "no-io-host-bridges",
+        "pass": true,
+        "globals": {
+          "process": "undefined",
+          "require": "undefined",
+          "fetch": "undefined",
+          "std": "undefined",
+          "os": "undefined",
+          "Python": "undefined",
+          "readFile": "undefined",
+          "load": "undefined",
+          "importScripts": "undefined"
+        }
+      },
+      {
+        "id": "time-limit",
+        "pass": true
+      },
+      {
+        "id": "fresh-context",
+        "pass": true
+      }
+    ],
+    "osNamespacesAvailable": false,
+    "hostFilesystemBridgeExposed": false,
+    "limits": "Model tasks are pure JS functions. No arbitrary shell, Node modules or whole-repository execution; not an OS-container sandbox."
+  },
+  "models": [
+    {
+      "id": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "family": "qwen2",
+      "revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+      "filename": "qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+      "local": "qwen.gguf",
+      "bytes": 1117320768,
+      "sha256": "sha256:cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046",
+      "loadSeconds": 1.2534790419999808,
+      "inferenceSeconds": 0.5010657510001693,
+      "prompt": "Return only the integer result of 37 + 58. No explanation.",
+      "answer": "95",
+      "usage": {
+        "prompt_tokens": 46,
+        "completion_tokens": 2,
+        "total_tokens": 48
+      },
+      "returnedModel": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "answerVerified": true,
+      "ggufArchitecture": "qwen2",
+      "ggufName": "Qwen2.5 Coder 1.5B Instruct GGUF",
+      "chatTemplatePresent": true
+    },
+    {
+      "id": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "family": "smollm2",
+      "revision": "2d4a76a30b4af41ecd395c35725ac11688d4cfe4",
+      "filename": "smollm2-1.7b-instruct-q4_k_m.gguf",
+      "local": "smol.gguf",
+      "bytes": 1055609536,
+      "sha256": "sha256:decd2598bc2c8ed08c19adc3c8fdd461ee19ed5708679d1c54ef54a5a30d4f33",
+      "loadSeconds": 3.8376343630000065,
+      "inferenceSeconds": 1.3069081099999948,
+      "prompt": "Return only the integer result of 37 + 58. No explanation.",
+      "answer": "The integer result of 37 + 58 is 95.",
+      "usage": {
+        "prompt_tokens": 47,
+        "completion_tokens": 16,
+        "total_tokens": 63
+      },
+      "returnedModel": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "answerVerified": false,
+      "ggufArchitecture": "llama",
+      "ggufName": "Smollm2 1.7B 8k Mix7 Ep2 v2",
+      "chatTemplatePresent": true
+    }
+  ],
+  "twoDistinctWeightFamiliesInvoked": false,
+  "completedAt": "2026-10-16T05:30:31.061438+00:00"
+}

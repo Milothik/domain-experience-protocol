@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+await import('./scripts/build-worker.mjs');const {default:worker}=await import('./dist/server/index.js');
+import {clone,commit,query,contextPacket,emptyRepository} from './web/core.mjs';
+import {scope,experience,repository,database,request} from './fixture.mjs';
+await import('./tests/dce-adapter.test.mjs');await import('./tests/public-api.test.mjs');await import('./tests/routing.test.mjs');
+test('T4 filters public GET without side effects',async()=>{const DB=database();for(const [id,domain,outcome] of [['one','software','failure'],['two','research','success'],['three','software','success']])DB.rows.set(id,{id,kind:'experience',payload:JSON.stringify(experience(id,{domain,outcome:{status:outcome,summary:'fixture'}}))});const get=async p=>await (await worker.fetch(request(p),{DB})).json();assert.equal((await get('/api/experiences')).items.length,3);assert.deepEqual((await get('/api/experiences?domain=software&outcome=success')).items.map(x=>x.id),['three']);assert.equal((await get('/api/experiences?domain=none')).items.length,0);assert.equal((await worker.fetch(request('/api/experiences?outcome=invalid'),{DB})).status,400);assert.equal((await get('/api/experiences?outcome=')).items.length,3);assert.equal(DB.rows.size,3);assert.equal(DB.quotas.size,0);});

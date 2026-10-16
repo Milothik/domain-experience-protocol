@@ -1,0 +1,38 @@
+{
+  "capturedAt": "2026-10-14T22:41:34.873Z",
+  "requestedThreads": 3,
+  "fullExportsRecovered": 0,
+  "coverage": "partial",
+  "items": [
+    {
+      "id": "local:genesis-fragment",
+      "title": "Génesis DXP (fragmento recuperado)",
+      "canonicalChatId": null,
+      "source": "conversation recall; not transcript",
+      "userRequestTimeReported": "2026-10-13T20:28:08Z",
+      "summary": "El usuario pide estudiar experiencias temporales de agentes, intuiciones expresadas, procesos y resultados; DCE actúa como punto de partida.",
+      "status": "fragment-only"
+    },
+    {
+      "id": "local:prior-delivery-fragment",
+      "title": "Continuación publicación DXP (contexto parcial)",
+      "canonicalChatId": null,
+      "source": "visible project summary and retrieved prior assistant statements",
+      "summary": "El usuario solicita una entrega completa y utilizable; la entrega anterior contiene núcleo local y Atlas. Sus afirmaciones se contrastan ahora con el código recuperado.",
+      "status": "fragment-only"
+    },
+    {
+      "id": "local:current-dialogue",
+      "title": "Construcción actual del Atlas",
+      "canonicalChatId": null,
+      "source": "current user messages and observed tool results",
+      "summary": "Revisar Claude; explicar DCE y su repo; ajustar alcance editorial; registrar cada tarea y probar hipótesis al construir.",
+      "status": "current-session-observed-not-full-export"
+    }
+  ],
+  "limits": [
+    "These are local evidence slots, not verified identifiers of three ChatGPT threads.",
+    "No claim of three complete chats archived.",
+    "Prior assistant statements are not proof of current implementation."
+  ]
+}

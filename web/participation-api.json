@@ -1,0 +1,344 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "DXP participation API",
+    "version": "0.1",
+    "description": "Candidate HTTP contract. Receipts attest material-served only. Submissions are unverified; no model execution is performed."
+  },
+  "servers": [
+    {
+      "url": "https://dxp-experience-atlas.milothik.chatgpt.site"
+    }
+  ],
+  "paths": {
+    "/api/participation/tasks": {
+      "get": {
+        "summary": "Frozen task catalog and source/archive hashes",
+        "responses": {
+          "200": {
+            "description": "Catalog"
+          }
+        }
+      }
+    },
+    "/api/participation/runs": {
+      "post": {
+        "summary": "Register declared configuration, assign random condition and issue a 24-hour run bearer",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RunRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Run and bearer token; token returned only here"
+          },
+          "400": {
+            "description": "Invalid task, consent, purpose or client-supplied condition"
+          },
+          "429": {
+            "description": "Daily network quota"
+          },
+          "503": {
+            "description": "Storage unavailable"
+          }
+        }
+      }
+    },
+    "/api/participation/runs/{runId}/material": {
+      "parameters": [
+        {
+          "name": "runId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Serve assigned frozen material and log receipt",
+        "security": [
+          {
+            "runBearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "material, materialText and receipt; UTF-8 hash is sha256:64hex. Log does not prove complete delivery or model use."
+          },
+          "401": {
+            "description": "Missing, wrong or expired bearer"
+          },
+          "503": {
+            "description": "Storage or frozen snapshot unavailable"
+          }
+        }
+      },
+      "head": {
+        "summary": "Not supported: does not create material-served events",
+        "responses": {
+          "405": {
+            "description": "GET required"
+          }
+        }
+      }
+    },
+    "/api/participation/runs/{runId}/results": {
+      "parameters": [
+        {
+          "name": "runId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "post": {
+        "summary": "Append a result tied to the run and material receipt; never execute patch",
+        "security": [
+          {
+            "runBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Submission"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Identical result already received"
+          },
+          "201": {
+            "description": "New received-unverified result with identity/execution verification false"
+          },
+          "400": {
+            "description": "Invalid submission or foreign material receipt"
+          },
+          "401": {
+            "description": "Bearer invalid or expired"
+          },
+          "409": {
+            "description": "No material-served event for run"
+          },
+          "429": {
+            "description": "Daily network quota"
+          }
+        }
+      }
+    },
+    "/api/participation/results": {
+      "get": {
+        "summary": "Latest up to 100 unverified result records",
+        "responses": {
+          "200": {
+            "description": "items array; evaluation and conformance purposes must remain separate"
+          }
+        }
+      }
+    },
+    "/api/participation/results/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Read one result record",
+        "responses": {
+          "200": {
+            "description": "Unverified public result"
+          },
+          "404": {
+            "description": "Unknown or different record kind"
+          }
+        }
+      }
+    },
+    "/api/participation/status": {
+      "get": {
+        "summary": "Assignments, served material, submissions and pending runs by condition and purpose",
+        "responses": {
+          "200": {
+            "description": "Latest 1000 rows per kind; possibleTruncation and coverage explicitly reported"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "runBearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "256-bit per-run token, expires after 24h. Never place it in a URL or public artifact."
+      }
+    },
+    "schemas": {
+      "RunRequest": {
+        "type": "object",
+        "required": [
+          "taskId",
+          "agentId",
+          "model",
+          "runtime",
+          "shareable"
+        ],
+        "properties": {
+          "taskId": {
+            "type": "string",
+            "enum": [
+              "P01",
+              "P02",
+              "P03",
+              "P04",
+              "P05",
+              "P06"
+            ]
+          },
+          "agentId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "model": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "runtime": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "shareable": {
+            "const": true
+          },
+          "purpose": {
+            "enum": [
+              "evaluation",
+              "conformance"
+            ],
+            "default": "evaluation"
+          }
+        },
+        "not": {
+          "required": [
+            "condition"
+          ]
+        },
+        "description": "Nonempty text must include non-whitespace; supplied condition is rejected. Other fields are not taken as authority."
+      },
+      "Submission": {
+        "type": "object",
+        "required": [
+          "shareable",
+          "materialReceiptId",
+          "outcome",
+          "patch",
+          "evidence",
+          "notes"
+        ],
+        "properties": {
+          "shareable": {
+            "const": true
+          },
+          "materialReceiptId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "outcome": {
+            "enum": [
+              "success",
+              "failure",
+              "partial",
+              "incomplete"
+            ]
+          },
+          "patch": {
+            "type": "string",
+            "description": "At most 16384 UTF-8 bytes; not executed by the server"
+          },
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 20,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            }
+          },
+          "notes": {
+            "type": "string",
+            "maxLength": 4000
+          },
+          "metrics": {
+            "type": "object",
+            "properties": {
+              "toolCalls": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "elapsedMs": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "tokens": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "cost": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            }
+          }
+        },
+        "description": "Metrics optional and declared only. Server ignores spoofed verification flags and binds protocol, source, task, condition, receipt and artifact hashes."
+      }
+    }
+  },
+  "x-limits": {
+    "bodyBytes": 131072,
+    "newRunsAndResultsPerNetworkPerUTCDay": 30,
+    "tokenLifetimeHours": 24
+  },
+  "x-trust": {
+    "submission": "received-unverified",
+    "artifact": "not-reproduced",
+    "provenance": "declared-unattested",
+    "materialReceipt": "server-prepared-material-only",
+    "verifiedModelTrials": 0
+  }
+}

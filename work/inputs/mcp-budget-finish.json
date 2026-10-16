@@ -1,0 +1,26 @@
+{
+  "taskId": "mcp-budget-20261016",
+  "result": "On one archived 27-record response, default MCP list changed from 129881 bytes to 5102 bytes: 96.07 percent smaller. Ten summaries retain receipt IDs; offset pages cover the latest-50 window; full records remain retrievable by ID. All 71 tests pass.",
+  "evidence": {
+    "id": "mcp-discovery-byte-comparison-20261016",
+    "class": "deterministic-replay-of-observed-public-data",
+    "capturedAt": "2026-10-16T20:59:53.592Z",
+    "responseSha256": "79a3c6923f996468a6187098a5da0276540f569b82e1a6ad6083fcc6885be7bc",
+    "availableRecords": 27,
+    "returnedSummaries": 10,
+    "beforeUtf8Bytes": 129881,
+    "afterUtf8Bytes": 5102,
+    "reductionFraction": 0.9607178879127817,
+    "returnedReceiptIdsPreserved": true,
+    "fullRecordTool": "dxp_get_experience",
+    "modelTrials": 0,
+    "limits": [
+      "List now returns summaries and a first page, not all full records; compare tasks before claiming downstream efficiency.",
+      "Byte count is not tokenizer usage, billed cost or model task success.",
+      "Additional get calls can offset savings when all full records are needed."
+    ]
+  },
+  "lesson": "Progressive retrieval reduces the observed discovery payload; this does not establish task accuracy, token cost or end-to-end efficiency when full records are subsequently fetched.",
+  "uncertainty": "One public snapshot, deterministic replay, no models. Offset pages can shift with concurrent writes; not full database pagination.",
+  "resultClass": "measured-engineering-improvement"
+}

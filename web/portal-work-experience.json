@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "0.1",
+  "experienceId": "exp:work:portal-client-conformance-20261015",
+  "title": "Corregir y comprobar interoperabilidad real Node/Python en DXP",
+  "domain": "software",
+  "goal": "Publicar el portal y comprobar el intercambio de material y resultados con clientes independientes, conservando fallos y límites.",
+  "actor": {
+    "agentId": "codex:dxp-build",
+    "runtime": "ChatGPT Work / project operator",
+    "model": "not-attested",
+    "identityStatus": "declared"
+  },
+  "scope": {
+    "provider": "Sites/DXP HTTP",
+    "environment": "public-production-endpoint",
+    "apiVersion": "participation-0.1",
+    "plan": "client-conformance"
+  },
+  "constraints": [
+    "Registro del propio proyecto; no participante externo ni ensayo de utilidad.",
+    "Snapshot experimental sin cambios.",
+    "Sin razonamiento privado ni credenciales."
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "observation": "La revisión encontró discrepancia entre los campos pedidos por el encargo y los aceptados por los clientes; el evaluador antiguo incluía ilustraciones.",
+      "alternatives": [],
+      "selected": "Corregir contrato e interfaz antes del cierre",
+      "rationaleSummary": "Las instrucciones y los cómputos deben corresponder a lo que realmente acepta y acredita el servicio.",
+      "action": "Se alineó el encargo con outcome/patch/evidence/notes/metrics y se separaron ilustraciones; se ejecutaron las pruebas.",
+      "result": "54 pruebas aprobadas; P06 corregida en producción después de congelar su baseline.",
+      "uncertainty": "La aprobación de pruebas no verifica la utilidad de la memoria.",
+      "pivot": true,
+      "evidenceRefs": [
+        "ev:tests"
+      ]
+    },
+    {
+      "step": 2,
+      "observation": "El cliente Python por defecto recibió HTTP403/error1010 en el alojamiento; Node se registró correctamente.",
+      "alternatives": [],
+      "selected": "Identificar explícitamente el cliente propio",
+      "rationaleSummary": "Probar compatibilidad mediante una identificación veraz sin suplantar navegador ni cambiar protecciones.",
+      "action": "Se añadió User-Agent DXP-Participation/0.1 (Python stdlib). Se repitió el registro y el intercambio cruzado de sesiones.",
+      "result": "Python y Node completaron material y envío; se rechazaron bearer ausente, envío prematuro y recibo ajeno. Duplicado idempotente.",
+      "uncertainty": "No se conoce la regla interna exacta del alojamiento ni se afirma compatibilidad universal.",
+      "pivot": true,
+      "evidenceRefs": [
+        "ev:https"
+      ]
+    },
+    {
+      "step": 3,
+      "observation": "El registro público mostró dos sesiones conformance y cero evaluation.",
+      "alternatives": [],
+      "selected": "Conservar la separación de evidencia técnica y experimental",
+      "rationaleSummary": "Las pruebas de clientes no son tareas resueltas por modelos.",
+      "action": "Se conservaron ambos resultados como incomplete con parche vacío y modelo no invocado; se documentaron versiones y fallos.",
+      "result": "Dos entregas técnicas recibidas; cero nuevas ejecuciones experimentales verificadas.",
+      "uncertainty": "La identidad de los operadores externos y su presupuesto siguen sin atestar.",
+      "pivot": false,
+      "evidenceRefs": [
+        "ev:https"
+      ]
+    }
+  ],
+  "outcome": {
+    "status": "success",
+    "summary": "Portal publicado y flujo HTTP probado con dos clientes tras corregir Python; ventaja de DXP no evaluada."
+  },
+  "lessons": [
+    {
+      "subject": "DXP Python HTTP client",
+      "predicate": "observed-host-compatibility",
+      "value": "Default urllib identification returned403; truthful DXP identification allowed the lifecycle in this deployment.",
+      "claim": "En el entorno probado se necesitó identificar explícitamente el cliente Python. No se generaliza la causa ni se recomienda suplantar otro cliente.",
+      "type": "observation",
+      "scope": {
+        "provider": "Sites/DXP HTTP",
+        "environment": "public-production-endpoint",
+        "apiVersion": "participation-0.1",
+        "plan": "client-conformance"
+      },
+      "evidenceRefs": [
+        "ev:https"
+      ]
+    },
+    {
+      "subject": "Participation results",
+      "predicate": "verification-scope",
+      "value": "Material served, artifact reproduced and model provenance require different evidence.",
+      "claim": "Las dos entregas de conformidad no se cuentan como ensayos externos ni como mejora en tareas.",
+      "type": "observation",
+      "scope": {
+        "provider": "Sites/DXP HTTP",
+        "environment": "public-production-endpoint",
+        "apiVersion": "participation-0.1",
+        "plan": "client-conformance"
+      },
+      "evidenceRefs": [
+        "ev:https",
+        "ev:tests"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev:tests",
+      "kind": "observed",
+      "label": "Suite de integración",
+      "content": "node scripts/test-all.mjs: 54 passed,0 failed. Public evidence archive: https://dxp-experience-atlas.milothik.chatgpt.site/participation-evidence.zip ; tests-integration.tap."
+    },
+    {
+      "id": "ev:https",
+      "kind": "observed",
+      "label": "HTTP real y resultados técnicos",
+      "content": "{\"nodeRun\":\"56933073-cffa-4ed8-9c45-6c5b1d196c1b\",\"pythonRun\":\"af833fa2-e22a-41f1-9023-fb49a08391b7\",\"resultIds\":[\"sha256:fbc9ec2340f4554c720d56a9b1c643ed8a1bb722e723634762c09d6afe971ff1\",\"sha256:0c87ef424e23105fd3ffee327c2cce6af83c5dac464b5752176fcf2101d44d52\"],\"initialPythonStatus\":403,\"correctedLifecyclePassed\":true,\"sourceHashes\":{\"node\":\"f30c3517497e3a9ecd41239e4051c0b011dad41c45887ca84151bffbbb40a157\",\"python\":\"be22c775e142d0c7ecb119c555873c69ed939a77dcc3314901143a7d9aa572d5\"},\"evidence\":\"https://dxp-experience-atlas.milothik.chatgpt.site/participation-evidence.zip\",\"entry\":\"evidence/production-https.json\",\"modelInvoked\":false}"
+    }
+  ],
+  "validity": "active",
+  "classification": "shareable",
+  "demo": false,
+  "recording": {
+    "mode": "post-action-observed-work",
+    "causalUtilityClaim": false,
+    "privateReasoningRecorded": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "dxp-experience-atlas",
+  "version": "0.6.0",
+  "private": true,
+  "type": "module",
+  "description": "Local reference kernel and interactive research atlas for versioned agent experiences",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Milothik/domain-experience-protocol.git"
+  },
+  "homepage": "https://github.com/Milothik/domain-experience-protocol#readme",
+  "bugs": "https://github.com/Milothik/domain-experience-protocol/issues",
+  "scripts": {
+    "test": "node scripts/test-all.mjs",
+    "test:dce": "node scripts/run-dce.mjs",
+    "prepare-release": "node prepare-release.mjs",
+    "benchmark": "node cli.mjs benchmark --seed 17",
+    "build": "node scripts/build-worker.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

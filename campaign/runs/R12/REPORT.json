@@ -1,0 +1,30 @@
+{
+  "taskId": "T2",
+  "run": "R12",
+  "status": "completed",
+  "actions": [
+    "Read assigned AGENTS.md and TASK.json.",
+    "Read web/core.mjs and acceptance.mjs.",
+    "Updated contextPacket in web/core.mjs to validate supplied maxLessons, sort cloned eligible lessons lexically by commitId/subject/predicate/claim, and slice the requested count while preserving omitted-option order and filtering.",
+    "Ran node acceptance.mjs successfully: 12 tests passed, 0 failed.",
+    "Wrote REPORT.json."
+  ],
+  "commands": [
+    "Get-Content AGENTS.md; Get-Content TASK.json",
+    "Get-Content web/core.mjs; Get-Content acceptance.mjs",
+    "node acceptance.mjs"
+  ],
+  "errors": [],
+  "corrections": [],
+  "acceptanceAttempts": 1,
+  "toolCalls": {
+    "functionsExec": 4,
+    "execCommand": 3,
+    "applyPatch": 2
+  },
+  "memoryUsed": false,
+  "outsideDirectoryAccess": false,
+  "limitations": [
+    "Verification was limited to the prescribed acceptance suite; its build step generated worker output."
+  ]
+}

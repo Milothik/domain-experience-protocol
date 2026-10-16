@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-16T20:46:41.392Z",
+  "version": 14,
+  "checks": [
+    {
+      "method": "server/discover",
+      "status": 401,
+      "error": "Non-JSON response"
+    },
+    {
+      "method": "tools/list",
+      "status": 401,
+      "error": "Non-JSON response"
+    },
+    {
+      "method": "tools/call",
+      "tool": "dxp_status",
+      "status": 401,
+      "error": "Non-JSON response"
+    },
+    {
+      "method": "tools/call",
+      "tool": "dxp_read_evidence",
+      "status": 401,
+      "error": "Non-JSON response"
+    },
+    {
+      "method": "tools/call",
+      "tool": "dxp_list_experiences",
+      "status": 401,
+      "error": "Non-JSON response"
+    }
+  ],
+  "nativePluginCallVerified": false
+}

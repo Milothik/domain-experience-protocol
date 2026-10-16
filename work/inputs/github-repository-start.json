@@ -1,0 +1,14 @@
+{
+  "taskId": "github-repository",
+  "title": "Publish DXP as a reproducible GitHub repository connected to DCE",
+  "goal": "Create Milothik/domain-experience-protocol with the approved public DXP code and a pinned DCE dependency.",
+  "observation": "Existing public kit contains the working kernel, CLI, UI, worker and reviewed evidence. DCE is a separate repository pinned by the adapter. The integration runner imports web/index.js although DCE builds dist/index.js.",
+  "alternatives": [
+    "Publish all original workspace history",
+    "Import only approved release paths and pin DCE"
+  ],
+  "selected": "Import the reviewed public file mapping into an independent checkout and connect DCE through a pinned submodule.",
+  "action": "Verify the imported project, fix the DCE build entry point, document architecture limits and add CI.",
+  "uncertainty": "GitHub creation, remote push and clean-clone checks remain unobserved.",
+  "usedExperienceCommits": []
+}

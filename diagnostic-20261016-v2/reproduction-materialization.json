@@ -1,0 +1,360 @@
+[
+  {
+    "batch": "B1",
+    "provider": "gemini",
+    "condition": "dxp",
+    "taskId": "P01",
+    "responseSha256": "sha256:f48ac12ced1e245c49bc41633b287579ff30a1176dca8e0c5500120d4a946a7b",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B1-P01",
+    "artifactSha256": "sha256:94f1bffb608240b4582f912b129e051f5709e4b2b4868ebaec2c5637fa49d356"
+  },
+  {
+    "batch": "B1",
+    "provider": "gemini",
+    "condition": "dxp",
+    "taskId": "P02",
+    "responseSha256": "sha256:f48ac12ced1e245c49bc41633b287579ff30a1176dca8e0c5500120d4a946a7b",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B1-P02",
+    "artifactSha256": "sha256:313260d13ff443e8fd1e522ede4bf1338046e55791e8ca33dbc4709f7f3259cb"
+  },
+  {
+    "batch": "B1",
+    "provider": "gemini",
+    "condition": "dxp",
+    "taskId": "P03",
+    "responseSha256": "sha256:f48ac12ced1e245c49bc41633b287579ff30a1176dca8e0c5500120d4a946a7b",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B1-P03",
+    "artifactSha256": "sha256:27401e5bf1c00c99f39c09f23744e63765b5941fcba6a95cbdbf02dd64e730a5"
+  },
+  {
+    "batch": "B1",
+    "provider": "gemini",
+    "condition": "dxp",
+    "taskId": "P04",
+    "responseSha256": "sha256:f48ac12ced1e245c49bc41633b287579ff30a1176dca8e0c5500120d4a946a7b",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B1-P04",
+    "artifactSha256": "sha256:f691da991f2f83639e5a0ebcce3b80c27e584265a738046d3bf11d2dfd0ab7e6"
+  },
+  {
+    "batch": "B1",
+    "provider": "gemini",
+    "condition": "dxp",
+    "taskId": "P05",
+    "responseSha256": "sha256:f48ac12ced1e245c49bc41633b287579ff30a1176dca8e0c5500120d4a946a7b",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B1-P05",
+    "artifactSha256": "sha256:517cbad4db19f3e999a6d8a5135048552830b18970931a2dce335686d0a0e2b7"
+  },
+  {
+    "batch": "B1",
+    "provider": "gemini",
+    "condition": "dxp",
+    "taskId": "P06",
+    "responseSha256": "sha256:f48ac12ced1e245c49bc41633b287579ff30a1176dca8e0c5500120d4a946a7b",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B1-P06",
+    "artifactSha256": "sha256:803ef8bbe3aa43eb81614431e0fd1d46cde8aa91f4dea73709559a5535e42edd"
+  },
+  {
+    "batch": "B2",
+    "provider": "grok",
+    "condition": "note",
+    "taskId": "P01",
+    "responseSha256": "sha256:bba93b3845e679cd6cd573a1cba4f8f4051bfaf2866619734f60dfa9fbf54bd4",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B2-P01",
+    "artifactSha256": "sha256:a9d1e6e4e8ba50f0171455a62453eab35ed976b2b7e68c1956071f4e4c07e0a4"
+  },
+  {
+    "batch": "B2",
+    "provider": "grok",
+    "condition": "note",
+    "taskId": "P02",
+    "responseSha256": "sha256:bba93b3845e679cd6cd573a1cba4f8f4051bfaf2866619734f60dfa9fbf54bd4",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B2-P02",
+    "artifactSha256": "sha256:313260d13ff443e8fd1e522ede4bf1338046e55791e8ca33dbc4709f7f3259cb"
+  },
+  {
+    "batch": "B2",
+    "provider": "grok",
+    "condition": "note",
+    "taskId": "P03",
+    "responseSha256": "sha256:bba93b3845e679cd6cd573a1cba4f8f4051bfaf2866619734f60dfa9fbf54bd4",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B2-P03",
+    "artifactSha256": "sha256:c228db7cd49949ec74e88f34525e903003968d0396ddb8f149da6d1a7f155ca8"
+  },
+  {
+    "batch": "B2",
+    "provider": "grok",
+    "condition": "note",
+    "taskId": "P04",
+    "responseSha256": "sha256:bba93b3845e679cd6cd573a1cba4f8f4051bfaf2866619734f60dfa9fbf54bd4",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B2-P04",
+    "artifactSha256": "sha256:d04ebb5bb0e0f63449673fbeb484b7aecc3bd0dc8c556a2d15ac84ecd78cb9ac"
+  },
+  {
+    "batch": "B2",
+    "provider": "grok",
+    "condition": "note",
+    "taskId": "P05",
+    "responseSha256": "sha256:bba93b3845e679cd6cd573a1cba4f8f4051bfaf2866619734f60dfa9fbf54bd4",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B2-P05",
+    "artifactSha256": "sha256:ebb0d5c8f50459e0552959730dcebb1a723980280007569350bd906c666aa0ca"
+  },
+  {
+    "batch": "B2",
+    "provider": "grok",
+    "condition": "note",
+    "taskId": "P06",
+    "responseSha256": "sha256:bba93b3845e679cd6cd573a1cba4f8f4051bfaf2866619734f60dfa9fbf54bd4",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B2-P06",
+    "artifactSha256": "sha256:7a4e6eca74a7055766add1d5c84c6f9b3a01f1fd610f5ed001c311b2ad4dd71d"
+  },
+  {
+    "batch": "B3",
+    "provider": "gemini",
+    "condition": "none",
+    "taskId": "P01",
+    "responseSha256": "sha256:cd6e84e10f20dd33fb739f5decd810edfe74e2b176fba05ff9b593070ab13d19",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B3-P01",
+    "artifactSha256": "sha256:d52bf86cda8768ab19cb3ebcc4784fa3fb9a8de6ef05037ec45ef8bf16ff25d8"
+  },
+  {
+    "batch": "B3",
+    "provider": "gemini",
+    "condition": "none",
+    "taskId": "P02",
+    "responseSha256": "sha256:cd6e84e10f20dd33fb739f5decd810edfe74e2b176fba05ff9b593070ab13d19",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B3-P02",
+    "artifactSha256": "sha256:ced2059a14da45ecb6f48733b6fac24bbe1c559303b5c8c48bcba25d6d23247f"
+  },
+  {
+    "batch": "B3",
+    "provider": "gemini",
+    "condition": "none",
+    "taskId": "P03",
+    "responseSha256": "sha256:cd6e84e10f20dd33fb739f5decd810edfe74e2b176fba05ff9b593070ab13d19",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B3-P03",
+    "artifactSha256": "sha256:7093ba0a6462e75d92d74d58871d0e1cd86e32f4be076f279fb2d77d7d1a801d"
+  },
+  {
+    "batch": "B3",
+    "provider": "gemini",
+    "condition": "none",
+    "taskId": "P04",
+    "responseSha256": "sha256:cd6e84e10f20dd33fb739f5decd810edfe74e2b176fba05ff9b593070ab13d19",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B3-P04",
+    "artifactSha256": "sha256:5ccd85662ede1ce9faa45da843604e719f3bdecd9f8e9a43a7dfbdb23c09d76d"
+  },
+  {
+    "batch": "B3",
+    "provider": "gemini",
+    "condition": "none",
+    "taskId": "P05",
+    "responseSha256": "sha256:cd6e84e10f20dd33fb739f5decd810edfe74e2b176fba05ff9b593070ab13d19",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B3-P05",
+    "artifactSha256": "sha256:ebb0d5c8f50459e0552959730dcebb1a723980280007569350bd906c666aa0ca"
+  },
+  {
+    "batch": "B3",
+    "provider": "gemini",
+    "condition": "none",
+    "taskId": "P06",
+    "responseSha256": "sha256:cd6e84e10f20dd33fb739f5decd810edfe74e2b176fba05ff9b593070ab13d19",
+    "status": "artifact-unavailable",
+    "error": "Exact old substring matches 0 times"
+  },
+  {
+    "batch": "B4",
+    "provider": "grok",
+    "condition": "dxp",
+    "taskId": "P01",
+    "responseSha256": "sha256:78f467d77040287dbb8bfb2dde6bcbce3aaaed5093a961ec353b4823b64551c6",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B4-P01",
+    "artifactSha256": "sha256:a9d1e6e4e8ba50f0171455a62453eab35ed976b2b7e68c1956071f4e4c07e0a4"
+  },
+  {
+    "batch": "B4",
+    "provider": "grok",
+    "condition": "dxp",
+    "taskId": "P02",
+    "responseSha256": "sha256:78f467d77040287dbb8bfb2dde6bcbce3aaaed5093a961ec353b4823b64551c6",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B4-P02",
+    "artifactSha256": "sha256:313260d13ff443e8fd1e522ede4bf1338046e55791e8ca33dbc4709f7f3259cb"
+  },
+  {
+    "batch": "B4",
+    "provider": "grok",
+    "condition": "dxp",
+    "taskId": "P03",
+    "responseSha256": "sha256:78f467d77040287dbb8bfb2dde6bcbce3aaaed5093a961ec353b4823b64551c6",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B4-P03",
+    "artifactSha256": "sha256:c228db7cd49949ec74e88f34525e903003968d0396ddb8f149da6d1a7f155ca8"
+  },
+  {
+    "batch": "B4",
+    "provider": "grok",
+    "condition": "dxp",
+    "taskId": "P04",
+    "responseSha256": "sha256:78f467d77040287dbb8bfb2dde6bcbce3aaaed5093a961ec353b4823b64551c6",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B4-P04",
+    "artifactSha256": "sha256:0dbaf4c9f20c9de24de39308bf8a0adaaa989e464377a80173866924ac678515"
+  },
+  {
+    "batch": "B4",
+    "provider": "grok",
+    "condition": "dxp",
+    "taskId": "P05",
+    "responseSha256": "sha256:78f467d77040287dbb8bfb2dde6bcbce3aaaed5093a961ec353b4823b64551c6",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B4-P05",
+    "artifactSha256": "sha256:ebb0d5c8f50459e0552959730dcebb1a723980280007569350bd906c666aa0ca"
+  },
+  {
+    "batch": "B4",
+    "provider": "grok",
+    "condition": "dxp",
+    "taskId": "P06",
+    "responseSha256": "sha256:78f467d77040287dbb8bfb2dde6bcbce3aaaed5093a961ec353b4823b64551c6",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B4-P06",
+    "artifactSha256": "sha256:7a4e6eca74a7055766add1d5c84c6f9b3a01f1fd610f5ed001c311b2ad4dd71d"
+  },
+  {
+    "batch": "B5",
+    "provider": "gemini",
+    "condition": "note",
+    "taskId": "P01",
+    "responseSha256": "sha256:600431c855ad9b1908b227e69050506d01976e15f5d68203ccc6b10cccb4bbb7",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B5-P01",
+    "artifactSha256": "sha256:386db0532acfd81dea50f7126bc974e6e7c3a6f80d09b7b3fb8ada4bd553f763"
+  },
+  {
+    "batch": "B5",
+    "provider": "gemini",
+    "condition": "note",
+    "taskId": "P02",
+    "responseSha256": "sha256:600431c855ad9b1908b227e69050506d01976e15f5d68203ccc6b10cccb4bbb7",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B5-P02",
+    "artifactSha256": "sha256:313260d13ff443e8fd1e522ede4bf1338046e55791e8ca33dbc4709f7f3259cb"
+  },
+  {
+    "batch": "B5",
+    "provider": "gemini",
+    "condition": "note",
+    "taskId": "P03",
+    "responseSha256": "sha256:600431c855ad9b1908b227e69050506d01976e15f5d68203ccc6b10cccb4bbb7",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B5-P03",
+    "artifactSha256": "sha256:4a0eb569df641aaef8114e6df15cb00680e0c798a8ec020d73b6c34abcfd191f"
+  },
+  {
+    "batch": "B5",
+    "provider": "gemini",
+    "condition": "note",
+    "taskId": "P04",
+    "responseSha256": "sha256:600431c855ad9b1908b227e69050506d01976e15f5d68203ccc6b10cccb4bbb7",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B5-P04",
+    "artifactSha256": "sha256:068e0f9cea51bf808d713c5be98cb1aaa11a65063dde3e301e8a20195a6fad71"
+  },
+  {
+    "batch": "B5",
+    "provider": "gemini",
+    "condition": "note",
+    "taskId": "P05",
+    "responseSha256": "sha256:600431c855ad9b1908b227e69050506d01976e15f5d68203ccc6b10cccb4bbb7",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B5-P05",
+    "artifactSha256": "sha256:305b2394b79f6507490768ddb358dc15858cab0cc7eda28b27fe788d5b6a0ca2"
+  },
+  {
+    "batch": "B5",
+    "provider": "gemini",
+    "condition": "note",
+    "taskId": "P06",
+    "responseSha256": "sha256:600431c855ad9b1908b227e69050506d01976e15f5d68203ccc6b10cccb4bbb7",
+    "status": "artifact-unavailable",
+    "error": "Exact old substring matches 0 times"
+  },
+  {
+    "batch": "B6",
+    "provider": "grok",
+    "condition": "none",
+    "taskId": "P01",
+    "responseSha256": "sha256:588785c2e05f85c0e6490dfd5f38ba334408fafce873e3489bebb23ad99e9c8b",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B6-P01",
+    "artifactSha256": "sha256:a9d1e6e4e8ba50f0171455a62453eab35ed976b2b7e68c1956071f4e4c07e0a4"
+  },
+  {
+    "batch": "B6",
+    "provider": "grok",
+    "condition": "none",
+    "taskId": "P02",
+    "responseSha256": "sha256:588785c2e05f85c0e6490dfd5f38ba334408fafce873e3489bebb23ad99e9c8b",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B6-P02",
+    "artifactSha256": "sha256:313260d13ff443e8fd1e522ede4bf1338046e55791e8ca33dbc4709f7f3259cb"
+  },
+  {
+    "batch": "B6",
+    "provider": "grok",
+    "condition": "none",
+    "taskId": "P03",
+    "responseSha256": "sha256:588785c2e05f85c0e6490dfd5f38ba334408fafce873e3489bebb23ad99e9c8b",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B6-P03",
+    "artifactSha256": "sha256:c228db7cd49949ec74e88f34525e903003968d0396ddb8f149da6d1a7f155ca8"
+  },
+  {
+    "batch": "B6",
+    "provider": "grok",
+    "condition": "none",
+    "taskId": "P04",
+    "responseSha256": "sha256:588785c2e05f85c0e6490dfd5f38ba334408fafce873e3489bebb23ad99e9c8b",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B6-P04",
+    "artifactSha256": "sha256:60d259ed9ac4bd6980c0466257ca2cd7137e252047a999235bf99e0286a1bc9f"
+  },
+  {
+    "batch": "B6",
+    "provider": "grok",
+    "condition": "none",
+    "taskId": "P05",
+    "responseSha256": "sha256:588785c2e05f85c0e6490dfd5f38ba334408fafce873e3489bebb23ad99e9c8b",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B6-P05",
+    "artifactSha256": "sha256:ebb0d5c8f50459e0552959730dcebb1a723980280007569350bd906c666aa0ca"
+  },
+  {
+    "batch": "B6",
+    "provider": "grok",
+    "condition": "none",
+    "taskId": "P06",
+    "responseSha256": "sha256:588785c2e05f85c0e6490dfd5f38ba334408fafce873e3489bebb23ad99e9c8b",
+    "status": "awaiting-source-review",
+    "directory": "diagnostic-20261016-v2/reproduction-runs/B6-P06",
+    "artifactSha256": "sha256:8c77e775af99192cbd079a3ec21b2b65fd83450f3dcacbf9273c8d57ae625349"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "taskId": "continuation-20261016",
+  "title": "Comparación ejecutada y correcciones verificadas",
+  "goal": "Ejecutar consumidores independientes, conservar denominadores y corregir defectos comprobados.",
+  "observation": "Fuente vigente 49a2f838; campaña histórica 6/6 por brazo sin consulta DXP declarada; piloto local 16 fallos; P01-P05 siguen siendo diagnósticos públicos. La inspección inicial de copias anteriores fue retrospectiva y no se presenta como preregistración.",
+  "prediction": "Una comparación sobre tareas públicas puede quedar empatada; no valida causalmente DXP. Toda inferencia y fallo de infraestructura tendrá un registro. Las regresiones reproducidas deberán fallar antes y pasar después.",
+  "control": "Mismo código inicial, tarea, información útil en nota/DXP, configuración de generación y evaluador; sin memoria omite solamente las experiencias previas. Sin historial por llamada.",
+  "usedExperienceCommits": ["sha256:ff5e7b94b54c60a92d76f917ff5093a8b5e59e0d646c3bbf6faca61d1c375d86", "sha256:f19862d8c422828223650ca90507467e9085db0ece06c7fc0e63f8961b732abf"],
+  "uncertainty": "Acceso efectivo a proveedor y revisión del modelo todavía no comprobados; tasks públicas no retenidas. Sin compra ni actualización de plan.",
+  "recordingMode": "prospective"
+}

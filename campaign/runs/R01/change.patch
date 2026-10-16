@@ -1,0 +1,30 @@
+diff --git a//workspace/sites/dxp-experience-atlas/campaign/baseline/web/core.mjs "b//workspace\\campaign-runs\\R01/web/core.mjs"
+index 6aa9b98..d3cac80 100644
+--- a//workspace/sites/dxp-experience-atlas/campaign/baseline/web/core.mjs
++++ "b//workspace\\campaign-runs\\R01/web/core.mjs"
+@@ -157,11 +157,24 @@ export function query(repo,{text='',domain='',outcome='',scope=null}={}) {
+     return (!domain||e.domain===domain)&&(!outcome||e.outcome.status===outcome)&&(!scope||scopeMatch(e.scope,scope))&&terms.every(t=>JSON.stringify(e).toLocaleLowerCase().includes(t));
+   });
+ }
+-export function contextPacket(repo,{scope,domain,includeNegative=true}) {
++export function contextPacket(repo,options) {
++  const {scope,domain,includeNegative=true,maxLessons}=options;
++  const bounded=Object.hasOwn(options,'maxLessons');
++  if(bounded) req(Number.isInteger(maxLessons)&&maxLessons>=1&&maxLessons<=1000,'maxLessons debe ser un entero entre 1 y 1000.');
+   // Current branch heads only. Data is never executed as instructions.
+   const ids=[...new Set(Object.values(repo.refs))];
+   const candidates=ids.map(id=>getCommit(repo,id)).filter(c=>c.experience.validity==='active'&&c.experience.domain===domain&&!c.experience.demo);
+   const lessons=candidates.flatMap(c=>c.experience.lessons.filter(l=>scopeMatch(l.scope,scope)&&!['intuition','disputed'].includes(l.type)&&(includeNegative||l.type!=='negative')).map(l=>({commitId:c.commitId,...clone(l),evidenceKind:c.experience.evidence.filter(e=>l.evidenceRefs.includes(e.id)).map(e=>e.kind)})));
++  if(bounded) {
++    lessons.sort((a,b)=>{
++      for(const key of ['commitId','subject','predicate','claim']) {
++        if(a[key]<b[key]) return -1;
++        if(a[key]>b[key]) return 1;
++      }
++      return 0;
++    });
++    lessons.length=Math.min(lessons.length,maxLessons);
++  }
+   return {format:'dxp-context-packet',version:VERSION,scope,domain,trust:'unverified-data',reviewRequired:true,lessons};
+ }
+ export const BENCH_MEMORY = [

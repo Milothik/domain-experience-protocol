@@ -1,0 +1,206 @@
+[
+  {
+    "batch": "B1",
+    "taskId": "P01",
+    "sha256": "sha256:94f1bffb608240b4582f912b129e051f5709e4b2b4868ebaec2c5637fa49d356",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B1",
+    "taskId": "P02",
+    "sha256": "sha256:313260d13ff443e8fd1e522ede4bf1338046e55791e8ca33dbc4709f7f3259cb",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B1",
+    "taskId": "P03",
+    "sha256": "sha256:27401e5bf1c00c99f39c09f23744e63765b5941fcba6a95cbdbf02dd64e730a5",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B1",
+    "taskId": "P04",
+    "sha256": "sha256:f691da991f2f83639e5a0ebcce3b80c27e584265a738046d3bf11d2dfd0ab7e6",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B1",
+    "taskId": "P05",
+    "sha256": "sha256:517cbad4db19f3e999a6d8a5135048552830b18970931a2dce335686d0a0e2b7",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B1",
+    "taskId": "P06",
+    "sha256": "sha256:803ef8bbe3aa43eb81614431e0fd1d46cde8aa91f4dea73709559a5535e42edd",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B2",
+    "taskId": "P01",
+    "sha256": "sha256:a9d1e6e4e8ba50f0171455a62453eab35ed976b2b7e68c1956071f4e4c07e0a4",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B2",
+    "taskId": "P02",
+    "sha256": "sha256:313260d13ff443e8fd1e522ede4bf1338046e55791e8ca33dbc4709f7f3259cb",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B2",
+    "taskId": "P03",
+    "sha256": "sha256:c228db7cd49949ec74e88f34525e903003968d0396ddb8f149da6d1a7f155ca8",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B2",
+    "taskId": "P04",
+    "sha256": "sha256:d04ebb5bb0e0f63449673fbeb484b7aecc3bd0dc8c556a2d15ac84ecd78cb9ac",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B2",
+    "taskId": "P05",
+    "sha256": "sha256:ebb0d5c8f50459e0552959730dcebb1a723980280007569350bd906c666aa0ca",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B2",
+    "taskId": "P06",
+    "sha256": "sha256:7a4e6eca74a7055766add1d5c84c6f9b3a01f1fd610f5ed001c311b2ad4dd71d",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B3",
+    "taskId": "P01",
+    "sha256": "sha256:d52bf86cda8768ab19cb3ebcc4784fa3fb9a8de6ef05037ec45ef8bf16ff25d8",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B3",
+    "taskId": "P02",
+    "sha256": "sha256:ced2059a14da45ecb6f48733b6fac24bbe1c559303b5c8c48bcba25d6d23247f",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B3",
+    "taskId": "P03",
+    "sha256": "sha256:7093ba0a6462e75d92d74d58871d0e1cd86e32f4be076f279fb2d77d7d1a801d",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B3",
+    "taskId": "P04",
+    "sha256": "sha256:5ccd85662ede1ce9faa45da843604e719f3bdecd9f8e9a43a7dfbdb23c09d76d",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B3",
+    "taskId": "P05",
+    "sha256": "sha256:ebb0d5c8f50459e0552959730dcebb1a723980280007569350bd906c666aa0ca",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B4",
+    "taskId": "P01",
+    "sha256": "sha256:a9d1e6e4e8ba50f0171455a62453eab35ed976b2b7e68c1956071f4e4c07e0a4",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B4",
+    "taskId": "P02",
+    "sha256": "sha256:313260d13ff443e8fd1e522ede4bf1338046e55791e8ca33dbc4709f7f3259cb",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B4",
+    "taskId": "P03",
+    "sha256": "sha256:c228db7cd49949ec74e88f34525e903003968d0396ddb8f149da6d1a7f155ca8",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B4",
+    "taskId": "P04",
+    "sha256": "sha256:0dbaf4c9f20c9de24de39308bf8a0adaaa989e464377a80173866924ac678515",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B4",
+    "taskId": "P05",
+    "sha256": "sha256:ebb0d5c8f50459e0552959730dcebb1a723980280007569350bd906c666aa0ca",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B4",
+    "taskId": "P06",
+    "sha256": "sha256:7a4e6eca74a7055766add1d5c84c6f9b3a01f1fd610f5ed001c311b2ad4dd71d",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B5",
+    "taskId": "P01",
+    "sha256": "sha256:386db0532acfd81dea50f7126bc974e6e7c3a6f80d09b7b3fb8ada4bd553f763",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B5",
+    "taskId": "P02",
+    "sha256": "sha256:313260d13ff443e8fd1e522ede4bf1338046e55791e8ca33dbc4709f7f3259cb",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B5",
+    "taskId": "P03",
+    "sha256": "sha256:4a0eb569df641aaef8114e6df15cb00680e0c798a8ec020d73b6c34abcfd191f",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B5",
+    "taskId": "P04",
+    "sha256": "sha256:068e0f9cea51bf808d713c5be98cb1aaa11a65063dde3e301e8a20195a6fad71",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B5",
+    "taskId": "P05",
+    "sha256": "sha256:305b2394b79f6507490768ddb358dc15858cab0cc7eda28b27fe788d5b6a0ca2",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B6",
+    "taskId": "P01",
+    "sha256": "sha256:a9d1e6e4e8ba50f0171455a62453eab35ed976b2b7e68c1956071f4e4c07e0a4",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B6",
+    "taskId": "P02",
+    "sha256": "sha256:313260d13ff443e8fd1e522ede4bf1338046e55791e8ca33dbc4709f7f3259cb",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B6",
+    "taskId": "P03",
+    "sha256": "sha256:c228db7cd49949ec74e88f34525e903003968d0396ddb8f149da6d1a7f155ca8",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B6",
+    "taskId": "P04",
+    "sha256": "sha256:60d259ed9ac4bd6980c0466257ca2cd7137e252047a999235bf99e0286a1bc9f",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B6",
+    "taskId": "P05",
+    "sha256": "sha256:ebb0d5c8f50459e0552959730dcebb1a723980280007569350bd906c666aa0ca",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  },
+  {
+    "batch": "B6",
+    "taskId": "P06",
+    "sha256": "sha256:8c77e775af99192cbd079a3ec21b2b65fd83450f3dcacbf9273c8d57ae625349",
+    "review": "Exact replacement source reviewed; bounded core/HTTP changes only, no new external I/O or host execution."
+  }
+]

@@ -1,0 +1,247 @@
+{
+  "id": "dxp-real-build-20261015",
+  "frozenAt": "2026-10-15T07:50:23.500Z",
+  "sourceCommit": "1dd5a3251dce3a2214c2f7c7e427974d749a889f",
+  "sourceState": "Commit plus producer fixes, pinned by hashes",
+  "initialFiles": {
+    "web/core.mjs": "e66c8743e3529d2dfa3afaea8c02a249a2b6815495d105434219cbe5ed589518",
+    "web/dce-adapter.mjs": "951a5ce3f2facd2d5dfee0c38e297aea5f571d7fa5b27a796e25da85d4615ce6",
+    "worker/index.js": "89a9a0eae418ae1c21c54718aa48d80ddb794e96bae5040c02371bee4a715191",
+    "scripts/build-worker.mjs": "f500cc0a7a3d1612a184752b004ce94af84360780e0c207027319add2097b894",
+    "tests/dce-adapter.test.mjs": "b601852e3d44371613c2816b00806b7f0c2587d750cfb836d12886ddc8573ee2",
+    "tests/public-api.test.mjs": "0638ed979aa493ad0352d28961288d16e330fb5f57a79e81a36ed8c6ba78f129",
+    "tests/routing.test.mjs": "14efbacf0996f4839be88a45ae65de2b25166625fc68cfbc8e3244cc59573e20",
+    "package.json": "17155e80df04e3891c0cf1031ac67a8fd266c3bf2a64eb5e52b93df83c1d3d5c",
+    "web/index.html": "cbe94b344d06d7168d732542c55b3ae7153c0553e989ac83280c7a2173fa594a",
+    ".openai/hosting.json": "f7381356f2a6340db519f7b9d51c4f8d01b9b7bd8b57123ef65e66be18f1e09b",
+    "public/pilot.json": "67b6cdcfc18927e571b9c870ac3ee4b66c19bec30de6972718b7d02469f86f26",
+    "fixture.mjs": "839e6e8f9a1f3541f1a178418b6e1fbc82cc6b6c7ab6afca5afaa55277196390",
+    "public/consumer-memory.json": "54e7ec514399a674cfd2158a79392a33adef2532685a07a9ef68d1d44528e011"
+  },
+  "baselineHash": "3919ae3c04f36853528f110e2d94bec400ba8b1b52b63337122d870ec08ca0d2",
+  "frozenExperienceHash": "012ecdbca325bf61c63ad4e7484f516af2b9e73e0c0872ec1a2e0700b4410aad",
+  "noteHash": "639fdfb89ef4b9a26f52aaed8a7d0584950f1693334a940fa50db0e915ac2c53",
+  "seed": 3049001143,
+  "randomization": "Fisher-Yates across 18 pairs; OS-random seed, LCG; launch order=schedule",
+  "tasks": [
+    {
+      "id": "T1",
+      "target": "web/core.mjs",
+      "title": "Filtros de consulta de historial",
+      "requirement": "Extend query(repo, options) with headsOnly=false, includeDemo=true, validity='' (one VALIDITY value or empty). headsOnly returns only unique current ref heads; includeDemo=false excludes demo experiences; validity filters by exact value. Preserve all existing filters and defaults, preserve repository. Invalid validity must throw."
+    },
+    {
+      "id": "T2",
+      "target": "web/core.mjs",
+      "title": "Presupuesto de contexto reproducible",
+      "requirement": "Extend contextPacket options with maxLessons. Omission preserves current behavior and ordering. Supplied maxLessons must be an integer in 1..1000, otherwise throw. When supplied, sort eligible lessons by commitId, subject, predicate, claim using string lexical comparisons, then return the first maxLessons. Preserve scope filtering and no mutation."
+    },
+    {
+      "id": "T3",
+      "target": "web/core.mjs",
+      "title": "Hipótesis excluidas del contexto operativo",
+      "requirement": "contextPacket must exclude lessons with type=hypothesis by default. Add includeHypotheses=false option; true admits hypotheses under all other existing filters. Never admit intuition/disputed, demo or non-active experiences. Preserve includeNegative behavior and exact lesson scope."
+    },
+    {
+      "id": "T4",
+      "target": "worker/index.js",
+      "title": "Filtros del registro externo",
+      "requirement": "GET /api/experiences accepts optional domain (exact string) and outcome (one of success/failure/partial/incomplete). Filter returned items by payload.domain and payload.outcome.status, combining both with AND, when payload came from DB as JSON string. Empty omitted filters preserve behavior; invalid nonempty outcome returns 400. No writes or quota consumption on GET. Operate on existing up-to-50 retrieved records; no pagination claim."
+    },
+    {
+      "id": "T5",
+      "target": "worker/index.js",
+      "title": "Comprobaciones HTTP sin cuerpos",
+      "requirement": "Support HEAD for embedded static assets (including /), /.well-known/dxp.json, and /api/evaluation. Match GET status and headers but return no body; never write DB or consume intake quota. Unknown HEAD path must match GET 404 with empty body. Existing POST ingestion must still work."
+    },
+    {
+      "id": "T6",
+      "target": "worker/index.js",
+      "title": "Informes con control de nota equivalente",
+      "requirement": "POST /api/experiments optionally accepts noteSuccess. If present, require integer 0..sampleSize, recompute computedDifferenceVsNote=(dxpSuccess-noteSuccess)/sampleSize ignoring submitted derived value, preserve scientificallyVerified=false. Legacy two-arm reports without noteSuccess remain accepted and must omit computedDifferenceVsNote even if client spoofs it. Reject null, strings, negative, noninteger and out-of-range noteSuccess with 400 before storing."
+    }
+  ],
+  "schedule": [
+    {
+      "taskId": "T2",
+      "condition": "note",
+      "runId": "R01",
+      "acceptanceSha256": "ab1bda5d0a108fbf7d4064a596fee9c219e2068643fe11333d629c7fb0010616",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available as a plain note in NOTE.md. Read if useful.\nTask: {\"id\":\"T2\",\"target\":\"web/core.mjs\",\"title\":\"Presupuesto de contexto reproducible\",\"requirement\":\"Extend contextPacket options with maxLessons. Omission preserves current behavior and ordering. Supplied maxLessons must be an integer in 1..1000, otherwise throw. When supplied, sort eligible lessons by commitId, subject, predicate, claim using string lexical comparisons, then return the first maxLessons. Preserve scope filtering and no mutation.\"}"
+    },
+    {
+      "taskId": "T4",
+      "condition": "note",
+      "runId": "R02",
+      "acceptanceSha256": "7f966bb1de5b4d79816a9ac4074bee5e8f4637bedc3d7a7f8918f25ecbd3aafb",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available as a plain note in NOTE.md. Read if useful.\nTask: {\"id\":\"T4\",\"target\":\"worker/index.js\",\"title\":\"Filtros del registro externo\",\"requirement\":\"GET /api/experiences accepts optional domain (exact string) and outcome (one of success/failure/partial/incomplete). Filter returned items by payload.domain and payload.outcome.status, combining both with AND, when payload came from DB as JSON string. Empty omitted filters preserve behavior; invalid nonempty outcome returns 400. No writes or quota consumption on GET. Operate on existing up-to-50 retrieved records; no pagination claim.\"}"
+    },
+    {
+      "taskId": "T4",
+      "condition": "dxp",
+      "runId": "R03",
+      "acceptanceSha256": "7f966bb1de5b4d79816a9ac4074bee5e8f4637bedc3d7a7f8918f25ecbd3aafb",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available through DXP: node memory.mjs list; node memory.mjs query <text>; node memory.mjs context. Interface uses real DXP validator/query/contextPacket on a frozen repository. Use if useful, do not edit memory.\nTask: {\"id\":\"T4\",\"target\":\"worker/index.js\",\"title\":\"Filtros del registro externo\",\"requirement\":\"GET /api/experiences accepts optional domain (exact string) and outcome (one of success/failure/partial/incomplete). Filter returned items by payload.domain and payload.outcome.status, combining both with AND, when payload came from DB as JSON string. Empty omitted filters preserve behavior; invalid nonempty outcome returns 400. No writes or quota consumption on GET. Operate on existing up-to-50 retrieved records; no pagination claim.\"}"
+    },
+    {
+      "taskId": "T1",
+      "condition": "dxp",
+      "runId": "R04",
+      "acceptanceSha256": "6f60aec87a618000ee45ddff9dd8186f1e1882879f5f19735d922b545d4228dd",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available through DXP: node memory.mjs list; node memory.mjs query <text>; node memory.mjs context. Interface uses real DXP validator/query/contextPacket on a frozen repository. Use if useful, do not edit memory.\nTask: {\"id\":\"T1\",\"target\":\"web/core.mjs\",\"title\":\"Filtros de consulta de historial\",\"requirement\":\"Extend query(repo, options) with headsOnly=false, includeDemo=true, validity='' (one VALIDITY value or empty). headsOnly returns only unique current ref heads; includeDemo=false excludes demo experiences; validity filters by exact value. Preserve all existing filters and defaults, preserve repository. Invalid validity must throw.\"}"
+    },
+    {
+      "taskId": "T5",
+      "condition": "dxp",
+      "runId": "R05",
+      "acceptanceSha256": "041b80da0861af215f55599e565b2f364591f24e871c493fc89a9ff52433fac0",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available through DXP: node memory.mjs list; node memory.mjs query <text>; node memory.mjs context. Interface uses real DXP validator/query/contextPacket on a frozen repository. Use if useful, do not edit memory.\nTask: {\"id\":\"T5\",\"target\":\"worker/index.js\",\"title\":\"Comprobaciones HTTP sin cuerpos\",\"requirement\":\"Support HEAD for embedded static assets (including /), /.well-known/dxp.json, and /api/evaluation. Match GET status and headers but return no body; never write DB or consume intake quota. Unknown HEAD path must match GET 404 with empty body. Existing POST ingestion must still work.\"}"
+    },
+    {
+      "taskId": "T3",
+      "condition": "none",
+      "runId": "R06",
+      "acceptanceSha256": "6bba29f1b57c190e28c5fc51074ecfe7a5bee2fc95fa920d5c5017744b96f600",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nNo previous work experiences are supplied.\nTask: {\"id\":\"T3\",\"target\":\"web/core.mjs\",\"title\":\"Hipótesis excluidas del contexto operativo\",\"requirement\":\"contextPacket must exclude lessons with type=hypothesis by default. Add includeHypotheses=false option; true admits hypotheses under all other existing filters. Never admit intuition/disputed, demo or non-active experiences. Preserve includeNegative behavior and exact lesson scope.\"}"
+    },
+    {
+      "taskId": "T3",
+      "condition": "dxp",
+      "runId": "R07",
+      "acceptanceSha256": "6bba29f1b57c190e28c5fc51074ecfe7a5bee2fc95fa920d5c5017744b96f600",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available through DXP: node memory.mjs list; node memory.mjs query <text>; node memory.mjs context. Interface uses real DXP validator/query/contextPacket on a frozen repository. Use if useful, do not edit memory.\nTask: {\"id\":\"T3\",\"target\":\"web/core.mjs\",\"title\":\"Hipótesis excluidas del contexto operativo\",\"requirement\":\"contextPacket must exclude lessons with type=hypothesis by default. Add includeHypotheses=false option; true admits hypotheses under all other existing filters. Never admit intuition/disputed, demo or non-active experiences. Preserve includeNegative behavior and exact lesson scope.\"}"
+    },
+    {
+      "taskId": "T5",
+      "condition": "note",
+      "runId": "R08",
+      "acceptanceSha256": "041b80da0861af215f55599e565b2f364591f24e871c493fc89a9ff52433fac0",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available as a plain note in NOTE.md. Read if useful.\nTask: {\"id\":\"T5\",\"target\":\"worker/index.js\",\"title\":\"Comprobaciones HTTP sin cuerpos\",\"requirement\":\"Support HEAD for embedded static assets (including /), /.well-known/dxp.json, and /api/evaluation. Match GET status and headers but return no body; never write DB or consume intake quota. Unknown HEAD path must match GET 404 with empty body. Existing POST ingestion must still work.\"}"
+    },
+    {
+      "taskId": "T6",
+      "condition": "note",
+      "runId": "R09",
+      "acceptanceSha256": "10ece05631e4dcab3e3dfddd5aa8d6d99c6fe724ea3d31f5662c7cb1bad77aca",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available as a plain note in NOTE.md. Read if useful.\nTask: {\"id\":\"T6\",\"target\":\"worker/index.js\",\"title\":\"Informes con control de nota equivalente\",\"requirement\":\"POST /api/experiments optionally accepts noteSuccess. If present, require integer 0..sampleSize, recompute computedDifferenceVsNote=(dxpSuccess-noteSuccess)/sampleSize ignoring submitted derived value, preserve scientificallyVerified=false. Legacy two-arm reports without noteSuccess remain accepted and must omit computedDifferenceVsNote even if client spoofs it. Reject null, strings, negative, noninteger and out-of-range noteSuccess with 400 before storing.\"}"
+    },
+    {
+      "taskId": "T3",
+      "condition": "note",
+      "runId": "R10",
+      "acceptanceSha256": "6bba29f1b57c190e28c5fc51074ecfe7a5bee2fc95fa920d5c5017744b96f600",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available as a plain note in NOTE.md. Read if useful.\nTask: {\"id\":\"T3\",\"target\":\"web/core.mjs\",\"title\":\"Hipótesis excluidas del contexto operativo\",\"requirement\":\"contextPacket must exclude lessons with type=hypothesis by default. Add includeHypotheses=false option; true admits hypotheses under all other existing filters. Never admit intuition/disputed, demo or non-active experiences. Preserve includeNegative behavior and exact lesson scope.\"}"
+    },
+    {
+      "taskId": "T2",
+      "condition": "none",
+      "runId": "R11",
+      "acceptanceSha256": "ab1bda5d0a108fbf7d4064a596fee9c219e2068643fe11333d629c7fb0010616",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nNo previous work experiences are supplied.\nTask: {\"id\":\"T2\",\"target\":\"web/core.mjs\",\"title\":\"Presupuesto de contexto reproducible\",\"requirement\":\"Extend contextPacket options with maxLessons. Omission preserves current behavior and ordering. Supplied maxLessons must be an integer in 1..1000, otherwise throw. When supplied, sort eligible lessons by commitId, subject, predicate, claim using string lexical comparisons, then return the first maxLessons. Preserve scope filtering and no mutation.\"}"
+    },
+    {
+      "taskId": "T2",
+      "condition": "dxp",
+      "runId": "R12",
+      "acceptanceSha256": "ab1bda5d0a108fbf7d4064a596fee9c219e2068643fe11333d629c7fb0010616",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available through DXP: node memory.mjs list; node memory.mjs query <text>; node memory.mjs context. Interface uses real DXP validator/query/contextPacket on a frozen repository. Use if useful, do not edit memory.\nTask: {\"id\":\"T2\",\"target\":\"web/core.mjs\",\"title\":\"Presupuesto de contexto reproducible\",\"requirement\":\"Extend contextPacket options with maxLessons. Omission preserves current behavior and ordering. Supplied maxLessons must be an integer in 1..1000, otherwise throw. When supplied, sort eligible lessons by commitId, subject, predicate, claim using string lexical comparisons, then return the first maxLessons. Preserve scope filtering and no mutation.\"}"
+    },
+    {
+      "taskId": "T6",
+      "condition": "dxp",
+      "runId": "R13",
+      "acceptanceSha256": "10ece05631e4dcab3e3dfddd5aa8d6d99c6fe724ea3d31f5662c7cb1bad77aca",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available through DXP: node memory.mjs list; node memory.mjs query <text>; node memory.mjs context. Interface uses real DXP validator/query/contextPacket on a frozen repository. Use if useful, do not edit memory.\nTask: {\"id\":\"T6\",\"target\":\"worker/index.js\",\"title\":\"Informes con control de nota equivalente\",\"requirement\":\"POST /api/experiments optionally accepts noteSuccess. If present, require integer 0..sampleSize, recompute computedDifferenceVsNote=(dxpSuccess-noteSuccess)/sampleSize ignoring submitted derived value, preserve scientificallyVerified=false. Legacy two-arm reports without noteSuccess remain accepted and must omit computedDifferenceVsNote even if client spoofs it. Reject null, strings, negative, noninteger and out-of-range noteSuccess with 400 before storing.\"}"
+    },
+    {
+      "taskId": "T1",
+      "condition": "note",
+      "runId": "R14",
+      "acceptanceSha256": "6f60aec87a618000ee45ddff9dd8186f1e1882879f5f19735d922b545d4228dd",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available as a plain note in NOTE.md. Read if useful.\nTask: {\"id\":\"T1\",\"target\":\"web/core.mjs\",\"title\":\"Filtros de consulta de historial\",\"requirement\":\"Extend query(repo, options) with headsOnly=false, includeDemo=true, validity='' (one VALIDITY value or empty). headsOnly returns only unique current ref heads; includeDemo=false excludes demo experiences; validity filters by exact value. Preserve all existing filters and defaults, preserve repository. Invalid validity must throw.\"}"
+    },
+    {
+      "taskId": "T4",
+      "condition": "none",
+      "runId": "R15",
+      "acceptanceSha256": "7f966bb1de5b4d79816a9ac4074bee5e8f4637bedc3d7a7f8918f25ecbd3aafb",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nNo previous work experiences are supplied.\nTask: {\"id\":\"T4\",\"target\":\"worker/index.js\",\"title\":\"Filtros del registro externo\",\"requirement\":\"GET /api/experiences accepts optional domain (exact string) and outcome (one of success/failure/partial/incomplete). Filter returned items by payload.domain and payload.outcome.status, combining both with AND, when payload came from DB as JSON string. Empty omitted filters preserve behavior; invalid nonempty outcome returns 400. No writes or quota consumption on GET. Operate on existing up-to-50 retrieved records; no pagination claim.\"}"
+    },
+    {
+      "taskId": "T5",
+      "condition": "none",
+      "runId": "R16",
+      "acceptanceSha256": "041b80da0861af215f55599e565b2f364591f24e871c493fc89a9ff52433fac0",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nNo previous work experiences are supplied.\nTask: {\"id\":\"T5\",\"target\":\"worker/index.js\",\"title\":\"Comprobaciones HTTP sin cuerpos\",\"requirement\":\"Support HEAD for embedded static assets (including /), /.well-known/dxp.json, and /api/evaluation. Match GET status and headers but return no body; never write DB or consume intake quota. Unknown HEAD path must match GET 404 with empty body. Existing POST ingestion must still work.\"}"
+    },
+    {
+      "taskId": "T6",
+      "condition": "none",
+      "runId": "R17",
+      "acceptanceSha256": "10ece05631e4dcab3e3dfddd5aa8d6d99c6fe724ea3d31f5662c7cb1bad77aca",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nNo previous work experiences are supplied.\nTask: {\"id\":\"T6\",\"target\":\"worker/index.js\",\"title\":\"Informes con control de nota equivalente\",\"requirement\":\"POST /api/experiments optionally accepts noteSuccess. If present, require integer 0..sampleSize, recompute computedDifferenceVsNote=(dxpSuccess-noteSuccess)/sampleSize ignoring submitted derived value, preserve scientificallyVerified=false. Legacy two-arm reports without noteSuccess remain accepted and must omit computedDifferenceVsNote even if client spoofs it. Reject null, strings, negative, noninteger and out-of-range noteSuccess with 400 before storing.\"}"
+    },
+    {
+      "taskId": "T1",
+      "condition": "none",
+      "runId": "R18",
+      "acceptanceSha256": "6f60aec87a618000ee45ddff9dd8186f1e1882879f5f19735d922b545d4228dd",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nNo previous work experiences are supplied.\nTask: {\"id\":\"T1\",\"target\":\"web/core.mjs\",\"title\":\"Filtros de consulta de historial\",\"requirement\":\"Extend query(repo, options) with headsOnly=false, includeDemo=true, validity='' (one VALIDITY value or empty). headsOnly returns only unique current ref heads; includeDemo=false excludes demo experiences; validity filters by exact value. Preserve all existing filters and defaults, preserve repository. Invalid validity must throw.\"}"
+    }
+  ],
+  "budget": {
+    "toolCalls": 20,
+    "wallSeconds": 480,
+    "acceptanceAttempts": 2
+  },
+  "model": "Same inherited parent model, no overrides; backend revision not exposed.",
+  "tools": "Same local exec_command/apply_patch policy for all",
+  "primaryMetric": "All preregistered task and regression assertions pass in coordinator evaluation, immutable tests unchanged, only authorized source edits",
+  "secondaryMetrics": [
+    "acceptance failures/attempts",
+    "elapsed wall time from spawn to response; includes tool delays",
+    "tool calls self-reported, exact count not independently observable",
+    "common adapter/API/routing regressions"
+  ],
+  "tokensAndCost": null,
+  "informationParity": "Note contains every field of frozen DXP commit, all evidence/actions/limits/IDs. DXP adds real validator/query/context interface, no extra lesson or solution.",
+  "heldOut": "Producer fixed launcher and route identity; no tested feature solution in memory.",
+  "integration": "Score all before integration. Select passing patches, combine, then re-run all six task suites and full production regressions.",
+  "isolation": {
+    "context": "fork_turns=none, new consumer every run",
+    "files": "separate identical module checkout; no .git, diary, research, previous consumer output or live site data",
+    "enforcement": "Procedural directory boundary, NOT per-agent OS sandbox. Host shared, other paths technically readable. Full access audit and sealed isolation unavailable; report this limitation.",
+    "sourceScope": "Production core/worker source with isolated build harness, synthetic unit-only assets and DB double; no live deployment access"
+  },
+  "interpretation": [
+    "6 paired tasks, one run per condition/task; no general validity/statistical significance/cross-model claims.",
+    "Tests access/representation, not separate causal contribution of versioning.",
+    "Protocol violation or missing isolation/metrics must be disclosed, never simulated as completed."
+  ],
+  "immutableAcceptanceSha256": [
+    {
+      "taskId": "T1",
+      "sha256": "6f60aec87a618000ee45ddff9dd8186f1e1882879f5f19735d922b545d4228dd"
+    },
+    {
+      "taskId": "T2",
+      "sha256": "ab1bda5d0a108fbf7d4064a596fee9c219e2068643fe11333d629c7fb0010616"
+    },
+    {
+      "taskId": "T3",
+      "sha256": "6bba29f1b57c190e28c5fc51074ecfe7a5bee2fc95fa920d5c5017744b96f600"
+    },
+    {
+      "taskId": "T4",
+      "sha256": "7f966bb1de5b4d79816a9ac4074bee5e8f4637bedc3d7a7f8918f25ecbd3aafb"
+    },
+    {
+      "taskId": "T5",
+      "sha256": "041b80da0861af215f55599e565b2f364591f24e871c493fc89a9ff52433fac0"
+    },
+    {
+      "taskId": "T6",
+      "sha256": "10ece05631e4dcab3e3dfddd5aa8d6d99c6fe724ea3d31f5662c7cb1bad77aca"
+    }
+  ]
+}

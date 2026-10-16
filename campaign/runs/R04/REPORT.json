@@ -1,0 +1,27 @@
+{
+  "run": "R04",
+  "task": "T1",
+  "status": "completed",
+  "actions": [
+    "Read AGENTS.md and TASK.json in the assigned directory.",
+    "Read web/core.mjs.",
+    "Extended query with headsOnly=false, includeDemo=true and validity=''; validated validity, filtered current ref heads and demo experiences, and retained existing query filters.",
+    "Ran node acceptance.mjs: exit code 0, all 12 tests passed, including T1 query scope, heads, demos, validity and immutability.",
+    "Wrote REPORT.json."
+  ],
+  "commands": [
+    "Get-Content AGENTS.md; Get-Content TASK.json",
+    "Get-Content web/core.mjs",
+    "node acceptance.mjs"
+  ],
+  "errors": [],
+  "corrections": [],
+  "acceptanceAttempts": 1,
+  "toolCalls": 4,
+  "toolCallAccounting": "Four functions.exec calls including report creation; five nested exec_command/apply_patch operations.",
+  "memoryUsed": false,
+  "limitations": [
+    "No checks beyond the prescribed acceptance script."
+  ],
+  "outsideDirectoryAccess": false
+}

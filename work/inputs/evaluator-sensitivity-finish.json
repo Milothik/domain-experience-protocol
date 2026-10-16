@@ -1,0 +1,10 @@
+{
+ "taskId":"evaluator-sensitivity-20261016",
+ "status":"success",
+ "result":"Auditoría posterior de B3/P06 y B5/P06: retirar solo 3 y 2 espacios iniciales de old permite aplicar ambos new intactos. B3/sin memoria falla por sintaxis antes de ejecutar pruebas; B5/nota pasa 12/12. La repetición en copias nuevas conserva hashes y desenlaces. Se enviaron al otro agente el estado v12 y el hallazgo; no se ha confirmado recepción.",
+ "lesson":"Separar entregabilidad literal del parche y corrección funcional. La diferencia estricta DXP frente a nota en Gemini incluye un fallo del ancla; no demuestra ventaja funcional. Conservar resultados originales y etiquetar toda intervención posterior.",
+ "evidence":{"plan":"evaluator-sensitivity-20261016/plan.json","materialization":"evaluator-sensitivity-20261016/materialization.json","review":"evaluator-sensitivity-20261016/reviewed-artifacts.json","evaluation":"evaluator-sensitivity-20261016/evaluation.json","replay":"evaluator-sensitivity-20261016/replay.json","newModelCalls":0,"confirmatoryExecutionsAdded":0,"originalScoresRewritten":false,"originalsUnchanged":true},
+ "uncertainty":"Dos artefactos seleccionados tras conocer los resultados. No estima efecto causal ni equivalencia general. Los mensajes enviados al agente remoto aún no tienen respuesta visible.",
+ "resultClass":"post-hoc-engineering-sensitivity-audit",
+ "verdict":"not-validated"
+}

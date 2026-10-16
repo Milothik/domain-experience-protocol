@@ -1,0 +1,17 @@
+node:fs:484
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '/tmp/dxp-original-kit-9sh2jrkp/participation/catalog.json'
+    at Object.readFileSync (node:fs:484:20)
+    at file:///tmp/dxp-original-kit-9sh2jrkp/scripts/build-worker.mjs:14:50
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async file:///tmp/dxp-original-kit-9sh2jrkp/scripts/test-all.mjs:3:1 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/tmp/dxp-original-kit-9sh2jrkp/participation/catalog.json'
+}
+
+Node.js v24.19.0

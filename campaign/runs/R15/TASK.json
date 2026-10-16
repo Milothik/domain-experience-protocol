@@ -1,0 +1,6 @@
+{
+  "id": "T4",
+  "target": "worker/index.js",
+  "title": "Filtros del registro externo",
+  "requirement": "GET /api/experiences accepts optional domain (exact string) and outcome (one of success/failure/partial/incomplete). Filter returned items by payload.domain and payload.outcome.status, combining both with AND, when payload came from DB as JSON string. Empty omitted filters preserve behavior; invalid nonempty outcome returns 400. No writes or quota consumption on GET. Operate on existing up-to-50 retrieved records; no pagination claim."
+}

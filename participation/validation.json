@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "0.1",
+  "kind": "engineering-conformance-no-model-experiment",
+  "status": "passed-after-documented-client-correction",
+  "completedAt": "2026-10-15T15:39:49.220Z",
+  "verifiedModelTrials": 0,
+  "usabilityGate": "Passed for tested HTTP contract and reviewed Node/Python clients; no utility, model-provenance or all-provider claim.",
+  "utilityGate": "not-tested",
+  "stateOfArtGate": "not-tested",
+  "tests": {
+    "passed": 54,
+    "failed": 0,
+    "evidence": "evidence/tests-integration.tap"
+  },
+  "baseline": {
+    "tasks": 6,
+    "newAcceptanceFails": 6,
+    "commonAcceptancePassesPerTask": 11,
+    "evidence": "evidence/baseline-before.json"
+  },
+  "clients": {
+    "implementations": [
+      "Node.js standard library",
+      "Python standard library"
+    ],
+    "transport": "real localhost HTTP; D1 database double",
+    "validLifecycleChecks": 9,
+    "correctedIntegrityNegativeChecks": 2,
+    "passed": true,
+    "conditionsObserved": [
+      "note",
+      "dxp"
+    ],
+    "crossClient": true,
+    "evidence": [
+      "evidence/client-http-first-injection-not-applied.json",
+      "evidence/client-integrity-corrected.json"
+    ],
+    "harnessCorrection": "First two integrity observations were invalid because fault injection was not applied. Retained in evidence, corrected verified injection rejects in both clients."
+  },
+  "reviewCorrections": [
+    "Client/server SHA-256 prefix mismatch corrected before HTTP checks.",
+    "Result binds frozen protocol, baseline, source commit, acceptance digest and artifact hash.",
+    "Copied task brief now matches strict result keys accepted by both clients.",
+    "Legacy evaluation excludes illustrative reports and counts them separately."
+  ],
+  "limits": [
+    "No new model coding experiments performed.",
+    "Material receipt demonstrates bytes served, not consultation or comprehension.",
+    "External result provenance and identity remain declared, not attested.",
+    "Budgets are declared, not enforced."
+  ],
+  "maintenance": {
+    "task": "P06",
+    "mainFixedAfterProtocolFreeze": true,
+    "baselineUnchanged": true,
+    "heldOut": false,
+    "meaning": "Engineering maintenance checked with frozen acceptance logic, not an agent-comparison execution."
+  },
+  "production": {
+    "sourceCommitTested": "fe3fec4cf90e65145502243b67e8806e0c524a53",
+    "sessions": 2,
+    "submissions": 2,
+    "verifiedModelTrials": 0,
+    "purpose": "conformance",
+    "conditionsObserved": [
+      "dxp",
+      "dxp"
+    ],
+    "historicalFailures": 1,
+    "failure": "Default Python urllib client was rejected by hosting edge with HTTP403/error1010.",
+    "correction": "Explicit truthful DXP client User-Agent; no browser impersonation.",
+    "correctedLifecyclePassed": true,
+    "sourceHashes": {
+      "node": "f30c3517497e3a9ecd41239e4051c0b011dad41c45887ca84151bffbbb40a157",
+      "python": "be22c775e142d0c7ecb119c555873c69ed939a77dcc3314901143a7d9aa572d5"
+    },
+    "runtime": {
+      "node": "v22.16.0",
+      "python": "Python 3.9.6"
+    },
+    "evidence": "evidence/production-https.json",
+    "resultIds": [
+      "sha256:fbc9ec2340f4554c720d56a9b1c643ed8a1bb722e723634762c09d6afe971ff1",
+      "sha256:0c87ef424e23105fd3ffee327c2cce6af83c5dac464b5752176fcf2101d44d52"
+    ]
+  },
+  "uiChecks": {
+    "publishedPortalLoaded": true,
+    "sixTaskCardsVisible": true,
+    "copyP01Confirmed": true,
+    "evaluationDenominator": 0,
+    "technicalConformanceDenominator": 2,
+    "resultsClassifiedAsTechnical": true,
+    "visualScreenshotReview": false
+  }
+}

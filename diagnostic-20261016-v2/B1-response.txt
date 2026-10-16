@@ -1,0 +1,58 @@
+{
+  "solutions": [
+    {
+      "taskId": "P01",
+      "edits": [
+        {
+          "old": "const candidates=ids.map(id=>getCommit(repo,id)).filter(c=>c.experience.validity==='active'&&c.experience.domain===domain&&!c.experience.demo);",
+          "new": "const heads=ids.map(id=>getCommit(repo,id)),quarantined=new Set(heads.filter(c=>c.experience.validity==='quarantined').map(c=>c.experience.experienceId)),candidates=heads.filter(c=>c.experience.validity==='active'&&c.experience.domain===domain&&!c.experience.demo&&!quarantined.has(c.experience.experienceId));"
+        }
+      ]
+    },
+    {
+      "taskId": "P02",
+      "edits": [
+        {
+          "old": "const fields=['title','goal','scope','constraints','trace','outcome','lessons','evidence','validity','actor','classification'];",
+          "new": "const fields=['title','goal','scope','constraints','trace','outcome','lessons','evidence','validity','actor','classification','demo','domain','experienceId'];"
+        }
+      ]
+    },
+    {
+      "taskId": "P03",
+      "edits": [
+        {
+          "old": "const id=p.split('/')[3]?decodeURIComponent(p.split('/')[3]):null;",
+          "new": "let id=null;if(p.split('/')[3]){try{id=decodeURIComponent(p.split('/')[3]);}catch(e){return response({error:e.message},400);}}"
+        }
+      ]
+    },
+    {
+      "taskId": "P04",
+      "edits": [
+        {
+          "old": "if(!env.DB)return response({error:'Durable database binding unavailable'},503);",
+          "new": "if(!env.DB)return response({error:'Durable database binding unavailable'},503);if(p.split('/')[3]&&request.method!=='GET')return new Response(JSON.stringify({error:'Method not allowed'}),{status:405,headers:{...headers,'Content-Type':'application/json','Allow':'GET, HEAD'}});"
+        }
+      ]
+    },
+    {
+      "taskId": "P05",
+      "edits": [
+        {
+          "old": "const refName = s => typeof s==='string' && /^[A-Za-z0-9][A-Za-z0-9._/-]{0,79}$/.test(s)&&!['__proto__','constructor','prototype'].includes(s);",
+          "new": "const refName = s => typeof s==='string' && /^[A-Za-z0-9][A-Za-z0-9._/-]{0,79}$/.test(s)&&!['__proto__','constructor','prototype'].includes(s)&&s.split('/').every(x=>x&&x!=='.'&&x!=='..');"
+        }
+      ]
+    },
+    {
+      "taskId": "P06",
+      "edits": [
+        {
+          "old": "const positive=reports.filter(x=>x.dxpSuccess>x.baselineSuccess).length;const nonpositive=reports.length-positive;const signal=!reports.length?'insufficient-received-evidence':positive&&nonpositive?'mixed-unverified-report-signals':positive?'positive-unverified-report-signal':'no-positive-signal-in-received-reports';return response({pilot:PILOT,campaign:CAMPAIGN,live:{experimentReports:reports.length,declaredContributorIds:contributors.length,attestedModelFamilies:0,positiveReports:positive,nonpositiveReports:nonpositive,reportedTaskCount:reports.reduce((n,x)=>n+x.sampleSize,0),signal},hypotheses:",
+          "new": "const isIll=x=>x.demo===true||x.executionClass==='illustrative';const valid=reports.filter(x=>!isIll(x)),illustrative=reports.length-valid.length;const positive=valid.filter(x=>x.dxpSuccess>x.baselineSuccess).length;const nonpositive=valid.length-positive;const signal=!valid.length?'insufficient-received-evidence':positive&&nonpositive?'mixed-unverified-report-signals':positive?'positive-unverified-report-signal':'no-positive-signal-in-received-reports';return response({pilot:PILOT,campaign:CAMPAIGN,live:{experimentReports:valid.length,illustrativeReports:illustrative,declaredContributorIds:contributors.length,attestedModelFamilies:0,positiveReports:positive,nonpositiveReports:nonpositive,reportedTaskCount:valid.reduce((n,x)=>n+x.sampleSize,0),signal},hypotheses:"
+        }
+      ]
+    }
+  ]
+}

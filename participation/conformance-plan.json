@@ -1,0 +1,22 @@
+{
+  "frozenAt": "2026-10-15T08:34:38.108Z",
+  "kind": "engineering-conformance-no-model-experiment",
+  "checks": [
+    "Both JS and Python start a conformance run without choosing condition",
+    "Both independently verify the exact UTF-8 receipt before saving material",
+    "JS-created session works in Python, Python-created session works in JS",
+    "Matching receipt permits an incomplete-task technical report, duplicate deduplicates",
+    "Unauthorized and foreign receipts rejected; expired bearer denied (unit test)",
+    "Material integrity corruption rejected by both clients",
+    "Public results never contain bearer and remain unverified",
+    "Production regression suite passes"
+  ],
+  "clientVersions": "Source hashes will be recorded at execution, not guessed",
+  "claimsExcluded": [
+    "Model performance",
+    "Actual model reading",
+    "All-provider interoperability",
+    "Strict filesystem isolation",
+    "State-of-art superiority"
+  ]
+}

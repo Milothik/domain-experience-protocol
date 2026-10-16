@@ -1,0 +1,23 @@
+{
+  "taskId": "browser-limitation",
+  "title": "Conservar un límite de verificación",
+  "goal": "Revisar visualmente la nueva interfaz.",
+  "observation": "La entrada de navegador devolvió un error de infraestructura.",
+  "action": "Intentar abrir la página local con el control de navegador disponible; conservar el error y realizar checks de sintaxis y HTTP.",
+  "result": "Revisión visual pendiente: el navegador no pudo iniciar; el servidor respondió HTTP 200 y el JavaScript pasó sintaxis.",
+  "status": "partial",
+  "lesson": "No convertir una prueba de sintaxis y respuesta HTTP en una afirmación de verificación visual.",
+  "lessonType": "negative",
+  "evidence": {
+    "browserError": "failed to write kernel assets: path not found",
+    "httpStatus": 200,
+    "javascriptSyntax": "passed"
+  },
+  "uncertainty": "No se han observado disposición responsive ni interacción en navegador durante esta sesión.",
+  "recordingMode": "retrospective",
+  "prediction": null,
+  "resultClass": "observed-project-work",
+  "hypothesisRefs": [
+    "H1-history"
+  ]
+}

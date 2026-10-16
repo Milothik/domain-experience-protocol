@@ -1,0 +1,3 @@
+[submodule "references/dce"]
+    path = references/dce
+    url = https://github.com/Milothik/domain-context-engine.git

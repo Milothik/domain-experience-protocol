@@ -1,0 +1,13 @@
+{
+  "id": "dxp-week-20261016-audit-01",
+  "scope": "Published kernel at source commit 7c331eac60c0f38dcdc42250453ffd9cd53f2f6f; bounded deterministic counterexamples, not a model benchmark",
+  "fixture": "First completed observed experience in web/work-repository.json, with explicit isolated adversarial transformations",
+  "checks": [
+    {"id":"G01", "property":"A current quarantined revision blocks an old active alias of the same experience", "pass":"zero lessons from the quarantined experience"},
+    {"id":"G02", "property":"Shareable context mode does not return a local classified experience", "pass":"zero local lessons"},
+    {"id":"G03", "property":"Conflicting active branch heads are not both returned as unqualified observations", "pass":"no contradictory pair admitted into operative context"},
+    {"id":"G04", "property":"Structural validity must not be confused with factual verification", "pass":"a fabricated observation cannot be described as factually verified", "interpretation":"Record whether structure accepts it and whether output still says unverified-data; structural acceptance is not by itself a contract violation"}
+  ],
+  "flatControl":"A 30-line selector over the exact same current-head records and provenance, with quarantine, shareability and typed-conflict filters. Not an AXTP implementation.",
+  "outcomePolicy":"Record every case including passes. No adjustment of expectations after results. Report both contract violations and stronger desired properties absent from the contract. No scientific utility inference."
+}

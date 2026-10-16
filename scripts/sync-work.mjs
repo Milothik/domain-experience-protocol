@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {validateRepository} from '../web/core.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const read=name=>JSON.parse(fs.readFileSync(path.join(root,'work',name),'utf8'));
+const repository=read('repository.json');await validateRepository(repository);
+const evidence={capturedAt:new Date().toISOString(),repository,sources:read('source-manifest.json'),conversations:read('conversations.json'),checks:read('checks.json')};
+fs.writeFileSync(path.join(root,'web/work-evidence.mjs'),'export const WORK_EVIDENCE = '+JSON.stringify(evidence).replaceAll('<','\\u003c')+';\n');
+fs.writeFileSync(path.join(root,'web/work-repository.json'),JSON.stringify(repository,null,2)+'\n');
+console.log(JSON.stringify({tasks:Object.keys(repository.refs).length,commits:repository.commits.length,capturedAt:evidence.capturedAt}));

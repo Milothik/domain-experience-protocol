@@ -1,0 +1,17 @@
+{
+  "taskId": "registration-failure-retrospective",
+  "title": "Registro retrospectivo del incumplimiento de la convocatoria",
+  "goal": "Conservar el fallo documentado que motivó esta continuación.",
+  "observation": "En la conversación de referencia «Convocatoria para validar DXP», el usuario pidió pruebas reales y registro de experiencias. La respuesta conservada reconoce haber priorizado una demo y carecer de evidencia suficiente para reconstruir la ejecución anterior. El intento declarado de registro quedó atascado.",
+  "action": "Leer los mensajes accesibles y registrar solo la discrepancia documentada; no reconstruir acciones ausentes.",
+  "result": "El contexto recuperado acredita la petición y la admisión del asistente, pero no una traza completa de lo ejecutado ni un recibo del registro anterior. Esta experiencia es una reconstrucción retrospectiva explícita.",
+  "status": "failure",
+  "lesson": "Un informe de avance no sustituye una ejecución verificable. Registrar el comienzo, las pruebas, sus fallos y el cierre; distinguir una admisión narrativa de evidencias de herramientas.",
+  "evidence": {"source": "Mensajes recuperados de la conversación aportada por el usuario", "coverage": "Página de historial accesible; no exportación completa ni telemetría anterior", "priorRegistrationReceipt": null, "privateReasoningIncluded": false},
+  "recordingMode": "retrospective",
+  "prediction": null,
+  "usedExperienceCommits": [],
+  "uncertainty": "El fallo de proceso es declarado en la conversación; no permite atribuir cada acción técnica anterior ni inventar una causa raíz.",
+  "verdict": "retrospective-process-failure-not-model-utility-evidence",
+  "resultClass": "retrospective-project-observation"
+}

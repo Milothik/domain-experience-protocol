@@ -1,0 +1,10 @@
+{
+  "taskId":"runner-access-20261016",
+  "result":"Comprobado el gateway: catálogo accesible, 60 modelos deshabilitados por plan de pago; sin compra ni cambio de suscripción. Se habilitó inferencia local con dos familias de pesos abiertas identificadas por hash. Ejecutadas 16/16 celdas de desarrollo sobre dos casos conocidos: 0/4 aciertos por condición. Evaluador restringido QuickJS con 7/7 controles aprobados. Conservados las respuestas, artefactos, tokens, tiempos, fallos, manifiesto previo y sonda de formato. Publicación de esta nueva evidencia pendiente en este corte.",
+  "status":"success",
+  "evidence":["runner/evidence/probe.json","runner/evidence/catalog.json","runner/evidence/first-strict-format-probe.json","runner/evidence/capsule-checks.json","runner/pilot/manifest.json","runner/pilot/manifest.sha256","runner/pilot/results-summary.json","runner/pilot/results/","runner/report.json"],
+  "lesson":"La disponibilidad de un catálogo no implica permiso de inferencia. Dos modelos abiertos pueden ejecutarse localmente sin claves comerciales. Eso habilita una vía de evaluación real, pero un piloto con efecto suelo no distingue utilidad de memoria ni operaciones de DXP.",
+  "uncertainty":"Dos modelos pequeños cuantizados; casos conocidos no retenidos; solo funciones JS, no shell ni repositorios completos. Material inyectado con etiquetas, sin recuperación agéntica ni operaciones DXP/Git. Cero ensayos confirmatorios nuevos. No se considera coste monetario cero ni superioridad o refutación general.",
+  "resultClass":"engineering-and-developmental-model-observation",
+  "verdict":"local-model-execution-verified-in-bounded-scope;utility-unresolved"
+}

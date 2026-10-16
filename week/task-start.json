@@ -1,0 +1,11 @@
+{
+  "taskId": "week-decision-20261016",
+  "title": "Semana decisiva DXP: protocolo y auditoría inicial",
+  "goal": "Decidir sobre la utilidad y gobernanza de la versión probada antes del 23 de octubre, con controles equivalentes y evidencia reproducible.",
+  "observation": "Auditoría y lectura ya realizadas antes de este start: Site público v7, 18 entregas históricas empatadas; API pública con cero evaluaciones y dos sesiones de conformidad. El repositorio work/repository.json no estaba en Git; se recupera el snapshot publicado, verificando sus hashes. Este start solo precede las nuevas comprobaciones adversariales y la publicación semanal.",
+  "prediction": "La suite histórica puede pasar aunque pruebas adicionales detecten límites de cuarentena, privacidad o contradicción; una memoria plana con las mismas reglas podría igualar la gobernanza de DXP.",
+  "control": "Mismo registro real de construcción, transformaciones explícitas de adversario y selector plano con procedencia; no modelos ni afirmación causal de transferencia.",
+  "hypothesisRefs": ["governance", "incremental-utility", "reproducibility"],
+  "usedExperienceCommits": ["sha256:8d41c815fcc23808895a06f3bb68d49593646a5cbe5e476a29fab907c35b5cab", "sha256:b0d8943463b5dba0adb082d32974e6292bbdd0edbb58bd887e35c8741f05012a", "sha256:ff5e7b94b54c60a92d76f917ff5093a8b5e59e0d646c3bbf6faca61d1c375d86"],
+  "uncertainty": "La reseña es crítica externa según el usuario; generación, independencia y autoría no atestadas. No hay aún ejecutor multi-modelo acreditado."
+}

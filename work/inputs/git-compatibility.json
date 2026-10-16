@@ -1,0 +1,25 @@
+{
+  "taskId": "git-compatibility",
+  "title": "La herramienta falló antes de abrir el proyecto",
+  "goal": "Recuperar el código existente del Atlas sin cambiar su identidad.",
+  "observation": "El helper falló con la instalación Git 2.24.1.windows.2.",
+  "action": "Conservar el primer fallo, usar entrada por stdin y adaptar una copia local del helper para autenticación por entorno compatible.",
+  "result": "Apertura completada; HEAD recuperado ff8b85e63a930bb1ef7b236d695017185cb475d6.",
+  "lesson": "Registrar versión de la herramienta y modo de ejecución antes de reutilizar un procedimiento; no repetir flags incompatibles.",
+  "status": "success",
+  "evidence": {
+    "gitVersion": "2.24.1.windows.2",
+    "firstError": "unknown option initial-branch",
+    "successfulExitCode": 0,
+    "sourceCommit": "ff8b85e63a930bb1ef7b236d695017185cb475d6",
+    "credentialsPersisted": false
+  },
+  "pivot": true,
+  "uncertainty": "Compatibilidad de este host; no recomendación universal para todas las versiones Git.",
+  "recordingMode": "retrospective",
+  "prediction": null,
+  "resultClass": "observed-project-work",
+  "hypothesisRefs": [
+    "H1-history"
+  ]
+}

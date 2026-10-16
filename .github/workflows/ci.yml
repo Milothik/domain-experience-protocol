@@ -1,0 +1,23 @@
+name: DXP and pinned DCE compatibility
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test
+      - run: npm ci
+        working-directory: references/dce
+      - run: npm test
+        working-directory: references/dce
+      - run: npm run test:dce
+      - run: node scripts/work-task.mjs verify

@@ -1,0 +1,11 @@
+{
+  "observedAt": "2026-10-15T08:03:05.964Z",
+  "desktopLocal": true,
+  "page": "/campaign.html",
+  "observations": [
+    "Hero and 3 equal comparison bars rendered",
+    "18-row disclosure opens and shows 0 DXP reads, 5 note reads",
+    "Protocol hashes rendered from JSON"
+  ],
+  "mobileViewportTested": false
+}

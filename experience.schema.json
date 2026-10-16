@@ -1,0 +1,350 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DXP Experience 0.1",
+  "description": "Candidate local contract; schema validation does not establish truth or evidence authenticity.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "experienceId",
+    "title",
+    "domain",
+    "goal",
+    "actor",
+    "scope",
+    "constraints",
+    "trace",
+    "outcome",
+    "lessons",
+    "evidence",
+    "validity",
+    "classification",
+    "demo"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "0.1"
+    },
+    "experienceId": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "domain": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "goal": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "actor": {
+      "type": "object",
+      "required": [
+        "agentId",
+        "runtime"
+      ],
+      "properties": {
+        "agentId": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "runtime": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "model": {
+          "type": "string"
+        },
+        "identityStatus": {
+          "type": "string"
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "required": [
+        "provider",
+        "environment",
+        "apiVersion",
+        "plan"
+      ],
+      "properties": {
+        "provider": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "environment": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "apiVersion": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "plan": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      }
+    },
+    "trace": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "step",
+          "observation",
+          "alternatives",
+          "selected",
+          "rationaleSummary",
+          "action",
+          "result",
+          "uncertainty",
+          "pivot",
+          "evidenceRefs"
+        ],
+        "properties": {
+          "step": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "observation": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "alternatives": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          },
+          "selected": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "rationaleSummary": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "result": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uncertainty": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "pivot": {
+            "type": "boolean"
+          },
+          "evidenceRefs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          }
+        }
+      }
+    },
+    "outcome": {
+      "type": "object",
+      "required": [
+        "status",
+        "summary"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "success",
+            "failure",
+            "partial",
+            "incomplete"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      }
+    },
+    "lessons": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "subject",
+          "predicate",
+          "value",
+          "claim",
+          "type",
+          "scope",
+          "evidenceRefs"
+        ],
+        "properties": {
+          "subject": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "predicate": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "value": {
+            "type": [
+              "string",
+              "number"
+            ]
+          },
+          "claim": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "type": {
+            "enum": [
+              "observation",
+              "hypothesis",
+              "intuition",
+              "negative",
+              "disputed"
+            ]
+          },
+          "scope": {
+            "type": "object",
+            "required": [
+              "provider",
+              "environment",
+              "apiVersion",
+              "plan"
+            ],
+            "properties": {
+              "provider": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "environment": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "apiVersion": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "plan": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            }
+          },
+          "evidenceRefs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "content",
+          "kind"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "content": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "kind": {
+            "enum": [
+              "illustrative",
+              "declared",
+              "observed"
+            ]
+          }
+        }
+      }
+    },
+    "validity": {
+      "enum": [
+        "active",
+        "superseded",
+        "quarantined"
+      ]
+    },
+    "classification": {
+      "enum": [
+        "local",
+        "shareable"
+      ]
+    },
+    "demo": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+Gemini ha dicho
+
+{
+"solutions": [
+{
+"taskId": "P01",
+"edits": [
+{
+"old": "  const ids=[...new Set(Object.values(repo.refs))];\r\n  const candidates=ids.map(id=>getCommit(repo,id)).filter(c=>c.experience.validity==='active'&&c.experience.domain=domain&&!c.experience.demo);",
+"new": "  const ids=[...new Set(Object.values(repo.refs))];\r\n  const headCommits=ids.map(id=>getCommit(repo,id));\r\n  const quarantinedExperiences=new Set(headCommits.filter(c=>c.experience.validity='quarantined').map(c=>c.experience.experienceId));\r\n  const candidates=headCommits.filter(c=>c.experience.validity==='active'&&!quarantinedExperiences.has(c.experience.experienceId)&&c.experience.domain=domain&&!c.experience.demo);"
+}
+]
+},
+{
+"taskId": "P02",
+"edits": [
+{
+"old": "  const fields=['title','goal','scope','constraints','trace','outcome','lessons','evidence','validity','actor','classification'];",
+"new": "  const fields=['experienceId','title','domain','goal','scope','constraints','trace','outcome','lessons','evidence','validity','demo','actor','classification'];"
+}
+]
+},
+{
+"taskId": "P03",
+"edits": [
+{
+"old": "   const id=p.split('/')[3]?decodeURIComponent(p.split('/')[3]):null;",
+"new": "   let id=null;\r\n   if(p.split('/')[3]){try{id=decodeURIComponent(p.split('/')[3]);}catch{return response({error:'Invalid encoded identifier'},400);}}"
+}
+]
+},
+{
+"taskId": "P04",
+"edits": [
+{
+"old": "  if(request.method!'POST')return response({error:'Method not allowed'},405);",
+"new": "  if(p!'/api/experiences'&&p!'/api/experiments'&&request.method==='POST')return new Response(JSON.stringify({error:'Method not allowed'}),{status:405,headers:{...headers,'Content-Type':'application/json','Allow':'GET, HEAD'}});\r\n  if(request.method!'POST')return response({error:'Method not allowed'},405);"
+}
+]
+},
+{
+"taskId": "P05",
+"edits": [
+{
+"old": "const refName = s => typeof s='string' && /^[A-Za-z0-9][A-Za-z0-9./-]{0,79}$/.test(s)&&!['proto','constructor','prototype'].includes(s);",
+"new": "const refName = s => typeof s==='string' && /^[A-Za-z0-9][A-Za-z0-9./-]{0,79}$/.test(s)&&!['proto','constructor','prototype'].includes(s)&&s.split('/').every(seg=>seg.length>0&&seg!'.'&&seg!'..');"
+}
+]
+},
+{
+"taskId": "P06",
+"edits": [
+{
+"old": "reports=rs.results.map(x=>JSON.parse(x.payload));const cs=await env.DB.prepare('SELECT actor,payload FROM contributions WHERE kind=? ORDER BY created_at DESC LIMIT 500').bind('experience').all();contributors=[...new Set(cs.results.map(x=>x.actor))];}const positive=reports.filter(x=>x.dxpSuccess>x.baselineSuccess).length;const nonpositive=reports.length-positive;const signal=!reports.length?'insufficient-received-evidence':positive&&nonpositive?'mixed-unverified-report-signals':positive?'positive-unverified-report-signal':'no-positive-signal-in-received-reports';return response({pilot:PILOT,campaign:CAMPAIGN,live:{experimentReports:reports.length,declaredContributorIds:contributors.length,attestedModelFamilies:0,positiveReports:positive,nonpositiveReports:nonpositive,reportedTaskCount:reports.reduce((n,x)=>n+x.sampleSize,0),signal}",
+"new": "reports=rs.results.map(x=>JSON.parse(x.payload));const cs=await env.DB.prepare('SELECT actor,payload FROM contributions WHERE kind=? ORDER BY created_at DESC LIMIT 500').bind('experience').all();contributors=[...new Set(cs.results.map(x=>x.actor))];}const illustrativeReports=reports.filter(x=>x.demo=true||x.executionClass='illustrative').length;const evaluableReports=reports.filter(x=>!(x.demo=true||x.executionClass='illustrative'));const positive=evaluableReports.filter(x=>x.dxpSuccess>x.baselineSuccess).length;const nonpositive=evaluableReports.length-positive;const signal=!evaluableReports.length?'insufficient-received-evidence':positive&&nonpositive?'mixed-unverified-report-signals':positive?'positive-unverified-report-signal':'no-positive-signal-in-received-reports';return response({pilot:PILOT,campaign:CAMPAIGN,live:{experimentReports:evaluableReports.length,illustrativeReports,declaredContributorIds:contributors.length,attestedModelFamilies:0,positiveReports:positive,nonpositiveReports:nonpositive,reportedTaskCount:evaluableReports.reduce((n,x)=>n+x.sampleSize,0),signal}"
+}
+]
+}
+]
+}

@@ -1,0 +1,10 @@
+{
+  "httpStatus": 201,
+  "id": "sha256:fdd694c34fca6b2c7cd8b98353d3d37add7adda97a0e29a4ee4336710368cfd0",
+  "status": "received-unverified",
+  "structuralValidation": "passed",
+  "factualVerification": false,
+  "identityVerification": false,
+  "createdAt": "2026-10-15T15:41:55.990Z",
+  "read": "https://dxp-experience-atlas.milothik.chatgpt.site/api/experiences/sha256%3Afdd694c34fca6b2c7cd8b98353d3d37add7adda97a0e29a4ee4336710368cfd0"
+}

@@ -1,0 +1,15 @@
+{
+  "taskId": "publication",
+  "title": "Publicar la edición usando la experiencia de compatibilidad",
+  "goal": "Sincronizar y publicar el sitio actual conservando su identidad y acceso.",
+  "observation": "La experiencia work/git-compatibility registra un helper compatible con Git 2.24 y credenciales por stdin.",
+  "prediction": "El helper adaptado preparará un commit y archivo válidos; Sites publicará la edición sin repetir el flag incompatible.",
+  "usedExperienceCommits": [
+    "sha256:d47025e0039e8b2e63da7d37b27ffde24ac55486f8a070369ddfbbfd052b0f41"
+  ],
+  "hypothesisRefs": [
+    "H4-reuse-failure"
+  ],
+  "uncertainty": "Una reutilización del mismo agente y host; sin comparación aleatoria de costes.",
+  "control": "Comparación descriptiva con el error anterior, no contrafactual causal."
+}

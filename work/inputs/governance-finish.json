@@ -1,0 +1,15 @@
+{
+  "taskId": "governance-20261016",
+  "result": "Twelve deterministic policy cases: previous selector 8/12, repaired explicit policy 12/12, strong flat selector 12/12. All 70 product tests pass after preserving local imports by default.",
+  "evidence": {
+    "before": "governance-20261016/before.json",
+    "after": "governance-20261016/after.json",
+    "regressions": "governance-20261016/regression.tap",
+    "firstIntegrationFailure": "governance-20261016/regression-first-failed.tap",
+    "modelTrials": 0
+  },
+  "lesson": "These sharing and conflict rules do not require DXP history: an equal-information flat selector matches them. Explicit metadata filtering is not an ACL or source authentication. Local consumers may legitimately retain local records; opt into sharing policy for exports.",
+  "uncertainty": "Constructed engineering cases derived from a real project record, not held-out agent tasks. No utility, equivalence or universal security claim.",
+  "resultClass": "comparative-engineering-observation",
+  "verdict": "continue-baseline-first-do-not-adopt-performance-claim"
+}

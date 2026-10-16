@@ -1,0 +1,41 @@
+{
+  "run": "R02",
+  "task": "T4",
+  "status": "completed",
+  "actions": [
+    "Read AGENTS.md and TASK.json in the assigned directory.",
+    "Read worker/index.js, NOTE.md and acceptance.mjs.",
+    "Updated worker/index.js to validate nonempty outcome filters and filter decoded experience payloads by exact domain and outcome status with AND.",
+    "Preserved empty-filter behavior, the existing 50-record retrieval limit, and read-only GET handling.",
+    "Ran node acceptance.mjs; the build and all 12 tests passed."
+  ],
+  "commands": [
+    "Get-Content AGENTS.md; Get-Content TASK.json",
+    "Get-Content worker/index.js; Get-Content NOTE.md; Get-Content acceptance.mjs",
+    "node acceptance.mjs"
+  ],
+  "errors": [],
+  "corrections": [],
+  "acceptanceAttempts": 1,
+  "acceptanceResult": {
+    "exitCode": 0,
+    "passed": 12,
+    "failed": 0
+  },
+  "toolCalls": {
+    "functionsExec": 4,
+    "execCommand": 3,
+    "applyPatch": 2,
+    "localToolOperations": 5
+  },
+  "memoryUsed": {
+    "read": true,
+    "source": "NOTE.md",
+    "application": "Used the prescribed acceptance entry point, which rebuilds the worker before testing; preserved exact experience-route matching."
+  },
+  "limitations": [
+    "Filtering applies only to the existing up-to-50 retrieved collection records; no pagination was added.",
+    "Validation used the prescribed local acceptance suite only."
+  ],
+  "accessOutsideAssignedDirectory": false
+}

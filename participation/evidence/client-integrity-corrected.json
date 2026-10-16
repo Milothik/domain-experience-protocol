@@ -1,0 +1,20 @@
+{
+  "completedAt": "2026-10-15T08:38:25.224Z",
+  "faultInjectionVerified": true,
+  "steps": [
+    {
+      "name": "node rejects verified corrupted hash",
+      "exitCode": 1,
+      "error": "Error: Material UTF-8 SHA-256 verification failed.\n",
+      "passed": true
+    },
+    {
+      "name": "python rejects verified corrupted hash",
+      "exitCode": 1,
+      "error": "Error: Material UTF-8 SHA-256 verification failed.\r\n",
+      "passed": true
+    }
+  ],
+  "allChecksPassed": true,
+  "previousHarnessIssue": "Initial closure flag did not apply corruption. Original outputs retained; initial two observations invalid as integrity tests."
+}

@@ -1,0 +1,24 @@
+{
+  "id": "dxp-runner-unscored-probe-20261016",
+  "startedAt": "2026-10-16T05:26:20.345668+00:00",
+  "projectId": "icy-brook-27441566",
+  "branchId": "br-still-bonus-b9gn5sls",
+  "baseUrl": "https://br-still-bonus-b9gn5sls-api.ai.c-7.eu-central-1.aws.neon.tech",
+  "scope": "ai_gateway:invoke",
+  "scoredTrials": 0,
+  "planChanged": false,
+  "creditsPurchased": false,
+  "modelFamilyAttestation": "Gateway catalog owned_by plus returned model metadata; provider backend revision not cryptographically attested.",
+  "catalogRequest": {
+    "at": "2026-10-16T05:26:26.710130+00:00",
+    "status": 200,
+    "elapsedSeconds": 6.364458400999865,
+    "bodySha256": "sha256:48614078d26fa196c5e11cf7f23f4d50df34baf83758cbe2428a984fe84d6618",
+    "requestId": "neon-platform-aigateway-5457f4b9bc-nqsrm/3imH6Yz9Zf-037418"
+  },
+  "catalogModelCount": 60,
+  "selectedModels": [],
+  "probes": [],
+  "twoFamiliesInvoked": false,
+  "completedAt": "2026-10-16T05:26:26.714186+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "automation_id": "Automation_8d152accb54c819184dd9cc8188151ad",
+  "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Europe/Madrid:20261017T000000\nRRULE:FREQ=HOURLY;INTERVAL=3;UNTIL=20261023T060000\nEND:VEVENT",
+  "timezone": "Europe/Madrid",
+  "is_enabled": true,
+  "observedUpdateAt": "2026-10-16T20:56:13.385923+00:00",
+  "last_run_time": null,
+  "next_run_time": null,
+  "meaning": "Backend accepted the update; no future execution is claimed. Discrete scheduled runs, not continuous processing."
+}

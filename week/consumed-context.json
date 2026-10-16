@@ -1,0 +1,315 @@
+{
+  "format": "dxp-context-packet",
+  "version": "0.1",
+  "scope": {
+    "provider": "Codex",
+    "environment": "DXP-site-project",
+    "apiVersion": "atlas-0.2",
+    "plan": "project-build"
+  },
+  "domain": "software",
+  "trust": "unverified-data",
+  "reviewRequired": true,
+  "lessons": [
+    {
+      "commitId": "sha256:7d114fc99be604696022a15a3d86395f63e5ab2094a5898e30fdc8fc8bde9340",
+      "subject": "self-recording",
+      "predicate": "project-observation",
+      "value": "Diario creado con nueve tareas reconstruidas y tres checks prospectivos superados: ámbito, cuarentena e integridad.",
+      "claim": "El propio proyecto produce datos auditables, pero un check del núcleo no valida utilidad científica.",
+      "type": "observation",
+      "scope": {
+        "provider": "Codex",
+        "environment": "DXP-site-project",
+        "apiVersion": "atlas-0.2",
+        "plan": "project-build"
+      },
+      "evidenceRefs": [
+        "ev:result:1"
+      ],
+      "evidenceKind": [
+        "observed"
+      ]
+    },
+    {
+      "commitId": "sha256:2b4450d9e0b61106aa350274b28164ca4f0accf2dedff941c66703de9bcc448a",
+      "subject": "source-provenance",
+      "predicate": "project-observation",
+      "value": "Cinco versiones identificadas; Meta y Grok no contienen URLs literales, GPT conserva identificadores de citas y dos URLs; Gemini repite enlaces. No se ha establecido independencia de fuentes.",
+      "claim": "La diversidad de productores declarados no acredita diversidad de evidencia: recuperar el original de cada afirmación material.",
+      "type": "observation",
+      "scope": {
+        "provider": "Codex",
+        "environment": "DXP-site-project",
+        "apiVersion": "atlas-0.2",
+        "plan": "project-build"
+      },
+      "evidenceRefs": [
+        "ev:result:1"
+      ],
+      "evidenceKind": [
+        "observed"
+      ]
+    },
+    {
+      "commitId": "sha256:6946e793fe96b2fb2b9017e66b776722297f42ff06d128cdb9371b9ff48e595d",
+      "subject": "dce-discovery",
+      "predicate": "project-observation",
+      "value": "DCE público localizado: v0.2.0, revisión 81426cceecc631b488422c96f7ee46c751c02136.",
+      "claim": "Una conclusión negativa de un informe debe conservar su límite de búsqueda; el código localizado permite corregirla.",
+      "type": "observation",
+      "scope": {
+        "provider": "Codex",
+        "environment": "DXP-site-project",
+        "apiVersion": "atlas-0.2",
+        "plan": "project-build"
+      },
+      "evidenceRefs": [
+        "ev:result:1"
+      ],
+      "evidenceKind": [
+        "observed"
+      ]
+    },
+    {
+      "commitId": "sha256:8d41c815fcc23808895a06f3bb68d49593646a5cbe5e476a29fab907c35b5cab",
+      "subject": "scion-review",
+      "predicate": "project-observation",
+      "value": "El artículo oficial del 13-10-2026 describe Scion como sistema interno de control de versiones de Anthropic.",
+      "claim": "Conservar entidades y autores exactos al contrastar fuentes: un homónimo no refuta el proyecto original.",
+      "type": "observation",
+      "scope": {
+        "provider": "Codex",
+        "environment": "DXP-site-project",
+        "apiVersion": "atlas-0.2",
+        "plan": "project-build"
+      },
+      "evidenceRefs": [
+        "ev:result:1"
+      ],
+      "evidenceKind": [
+        "observed"
+      ]
+    },
+    {
+      "commitId": "sha256:d47025e0039e8b2e63da7d37b27ffde24ac55486f8a070369ddfbbfd052b0f41",
+      "subject": "git-compatibility",
+      "predicate": "project-observation",
+      "value": "Apertura completada; HEAD recuperado ff8b85e63a930bb1ef7b236d695017185cb475d6.",
+      "claim": "Registrar versión de la herramienta y modo de ejecución antes de reutilizar un procedimiento; no repetir flags incompatibles.",
+      "type": "observation",
+      "scope": {
+        "provider": "Codex",
+        "environment": "DXP-site-project",
+        "apiVersion": "atlas-0.2",
+        "plan": "project-build"
+      },
+      "evidenceRefs": [
+        "ev:result:1"
+      ],
+      "evidenceKind": [
+        "observed"
+      ]
+    },
+    {
+      "commitId": "sha256:b0d8943463b5dba0adb082d32974e6292bbdd0edbb58bd887e35c8741f05012a",
+      "subject": "test-environment",
+      "predicate": "project-observation",
+      "value": "22/22 pruebas DXP y 41/41 pruebas DCE superadas; el fallo inicial era de lanzamiento del runner.",
+      "claim": "Un runner que no puede arrancar no demuestra un defecto del código. Conservar el error de entorno y la ejecución comprobada por separado.",
+      "type": "observation",
+      "scope": {
+        "provider": "Codex",
+        "environment": "DXP-site-project",
+        "apiVersion": "atlas-0.2",
+        "plan": "project-build"
+      },
+      "evidenceRefs": [
+        "ev:result:1"
+      ],
+      "evidenceKind": [
+        "observed"
+      ]
+    },
+    {
+      "commitId": "sha256:0727deabf265bdf5c89a76125a9f4c4cf75954af13928bd732d347b2aef84ba6",
+      "subject": "dce-roundtrip",
+      "predicate": "project-observation",
+      "value": "Tres capturas: productor con tres entidades, consumidor con una experiencia revisada y fallo StateCommitError con salida preservada y una generación.",
+      "claim": "Una integración ejecutada acredita compatibilidad; no equivale a transferencia útil entre modelos.",
+      "type": "observation",
+      "scope": {
+        "provider": "Codex",
+        "environment": "DXP-site-project",
+        "apiVersion": "atlas-0.2",
+        "plan": "project-build"
+      },
+      "evidenceRefs": [
+        "ev:result:1"
+      ],
+      "evidenceKind": [
+        "observed"
+      ]
+    },
+    {
+      "commitId": "sha256:935e6051fadb1139915e742e453ae95233c5fc1d642755861257333d5ba38ad3",
+      "subject": "editorial-scope",
+      "predicate": "project-observation",
+      "value": "La inspección textual de los archivos actuales del proyecto devolvió cero referencias excluidas; las fuentes originales permanecieron intactas.",
+      "claim": "Una preferencia actual del usuario prevalece sobre ejemplos heredados. Regenerar los derivados antes de dar por terminada la corrección.",
+      "type": "observation",
+      "scope": {
+        "provider": "Codex",
+        "environment": "DXP-site-project",
+        "apiVersion": "atlas-0.2",
+        "plan": "project-build"
+      },
+      "evidenceRefs": [
+        "ev:result:1"
+      ],
+      "evidenceKind": [
+        "observed"
+      ]
+    },
+    {
+      "commitId": "sha256:62f1315566719073881048bf3e2d3420af491511e29d9b59fff91e809d13be24",
+      "subject": "browser-limitation",
+      "predicate": "project-observation",
+      "value": "Revisión visual pendiente: el navegador no pudo iniciar; el servidor respondió HTTP 200 y el JavaScript pasó sintaxis.",
+      "claim": "No convertir una prueba de sintaxis y respuesta HTTP en una afirmación de verificación visual.",
+      "type": "negative",
+      "scope": {
+        "provider": "Codex",
+        "environment": "DXP-site-project",
+        "apiVersion": "atlas-0.2",
+        "plan": "project-build"
+      },
+      "evidenceRefs": [
+        "ev:result:1"
+      ],
+      "evidenceKind": [
+        "observed"
+      ]
+    },
+    {
+      "commitId": "sha256:25e5f7d745a07ff92aacfd73badf7ea51351ace66d020bc60a355c59f64e4c71",
+      "subject": "conversation-recovery",
+      "predicate": "project-observation",
+      "value": "Se recuperaron fragmentos de la génesis y de la entrega anterior, además del diálogo actual. No se identificaron íntegramente los tres chats ni sus IDs.",
+      "claim": "La memoria orienta la recuperación, pero no sustituye una transcripción. Conservar la cobertura parcial y no completar chats faltantes.",
+      "type": "observation",
+      "scope": {
+        "provider": "Codex",
+        "environment": "DXP-site-project",
+        "apiVersion": "atlas-0.2",
+        "plan": "project-build"
+      },
+      "evidenceRefs": [
+        "ev:result:1"
+      ],
+      "evidenceKind": [
+        "observed"
+      ]
+    },
+    {
+      "commitId": "sha256:6b1956d225c457df43a71d457c35f2f2ac2e2c0846548cb3aeb6ca6efbd8164a",
+      "subject": "publication",
+      "predicate": "project-observation",
+      "value": "Versión2 desplegada con éxito y acceso público; endpoints de lectura HTTP200 e ingreso POST201 comprobados.",
+      "claim": "La compatibilidad Git se reutilizó, pero hubo un fallo nuevo de empaquetado. Se corrigió separadamente y se conservó el primer resultado negativo.",
+      "type": "observation",
+      "scope": {
+        "provider": "Codex",
+        "environment": "DXP-site-project",
+        "apiVersion": "atlas-0.2",
+        "plan": "project-build"
+      },
+      "evidenceRefs": [
+        "ev:result:2"
+      ],
+      "evidenceKind": [
+        "observed"
+      ]
+    },
+    {
+      "commitId": "sha256:67f02c05e5bdd20d37ff76dc9dcead8abe1a890fe442a76c73c76a5c9b37d300",
+      "subject": "public-agent-ingestion",
+      "predicate": "project-observation",
+      "value": "Sitio público con D1 operativo, recepción real de tres episodios de agentes separados y registros de construcción; entradas locales/malformadas rechazadas. Piloto4/4 frente4/4, sin mejora observada.",
+      "claim": "Un repositorio abierto puede reunir experiencias y contraejemplos reales; no debe convertir diversidad de etiquetas o aritmética de informes en verificación científica.",
+      "type": "observation",
+      "scope": {
+        "provider": "Codex",
+        "environment": "DXP-site-project",
+        "apiVersion": "atlas-0.2",
+        "plan": "project-build"
+      },
+      "evidenceRefs": [
+        "ev:result:1"
+      ],
+      "evidenceKind": [
+        "observed"
+      ]
+    },
+    {
+      "commitId": "sha256:909e33a871078690b828a5fe787a616c0225e31e9d4248d6df25251a8581ce0b",
+      "subject": "campaign-producer-20261015",
+      "predicate": "project-observation",
+      "value": "29 pruebas pasan con un lanzador en el mismo proceso que reconstruye primero el worker; rutas con prefijos y sufijos no admitidos devuelven 404.",
+      "claim": "En este entorno node --test falla al crear procesos; importar las suites directamente funciona. Las pruebas de API consumen dist/server/index.js: reconstruir antes evita probar código antiguo. Las rutas de admisión deben identificar recursos completos.",
+      "type": "observation",
+      "scope": {
+        "provider": "Codex",
+        "environment": "DXP-site-project",
+        "apiVersion": "atlas-0.2",
+        "plan": "project-build"
+      },
+      "evidenceRefs": [
+        "ev:result:1"
+      ],
+      "evidenceKind": [
+        "observed"
+      ]
+    },
+    {
+      "commitId": "sha256:c685252709b3e4038ebb6bc7cd1355a0099a31661cbca8c1d7a250202811f432",
+      "subject": "campaign-publication-20261015",
+      "predicate": "project-observation",
+      "value": "Seis mejoras integradas; 35 pruebas pasan. Página, protocolo, evidencia depurada y API de evaluación preparados para publicación; la recepción durable se comprobará después del despliegue.",
+      "claim": "Separar evaluación y selección de parches permite mejorar el producto sin convertir los cambios integrados en evidencia de utilidad de la memoria.",
+      "type": "observation",
+      "scope": {
+        "provider": "Codex",
+        "environment": "DXP-site-project",
+        "apiVersion": "atlas-0.2",
+        "plan": "project-build"
+      },
+      "evidenceRefs": [
+        "ev:result:1"
+      ],
+      "evidenceKind": [
+        "observed"
+      ]
+    },
+    {
+      "commitId": "sha256:ff5e7b94b54c60a92d76f917ff5093a8b5e59e0d646c3bbf6faca61d1c375d86",
+      "subject": "campaign-comparison-20261015",
+      "predicate": "project-observation",
+      "value": "18/18 entregas pasan las 12 pruebas de su tarea; 6/6 en cada condición. Cero consultas DXP declaradas y cinco lecturas de nota. Aislamiento por contexto y carpeta; no sandbox individual. No se acredita campaña estrictamente controlada ni efecto de consulta.",
+      "claim": "El acceso opcional a DXP no produjo consulta efectiva en esta campaña. El empate no demuestra equivalencia cuando se consulta, y la instrucción común hizo redundante parte de la memoria.",
+      "type": "observation",
+      "scope": {
+        "provider": "Codex",
+        "environment": "DXP-site-project",
+        "apiVersion": "atlas-0.2",
+        "plan": "project-build"
+      },
+      "evidenceRefs": [
+        "ev:result:1"
+      ],
+      "evidenceKind": [
+        "observed"
+      ]
+    }
+  ]
+}

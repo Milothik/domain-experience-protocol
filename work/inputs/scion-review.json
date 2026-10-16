@@ -1,0 +1,22 @@
+{
+  "taskId": "scion-review",
+  "title": "Resolver un homónimo con una fuente primaria",
+  "goal": "Contrastar una contradicción entre investigaciones.",
+  "observation": "Claude confunde el Scion de Anthropic con el proyecto homónimo de GoogleCloudPlatform.",
+  "action": "Abrir la publicación oficial de Anthropic y distinguir el objeto de ambos proyectos.",
+  "result": "El artículo oficial del 13-10-2026 describe Scion como sistema interno de control de versiones de Anthropic.",
+  "lesson": "Conservar entidades y autores exactos al contrastar fuentes: un homónimo no refuta el proyecto original.",
+  "evidence": {
+    "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+    "published": "2026-10-13",
+    "sourceKind": "first-party article"
+  },
+  "pivot": true,
+  "uncertainty": "Comprobación documental; las métricas del proveedor no son métricas DXP.",
+  "recordingMode": "retrospective",
+  "prediction": null,
+  "resultClass": "observed-project-work",
+  "hypothesisRefs": [
+    "H1-history"
+  ]
+}

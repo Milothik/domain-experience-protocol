@@ -1,0 +1,109 @@
+{
+  "id": "dxp-local-runner-status-20261016",
+  "updatedAt": "2026-10-16T05:35:42.034700+00:00",
+  "invocationVerified": true,
+  "independentWeightFamilies": 2,
+  "models": [
+    {
+      "id": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "family": "qwen2",
+      "revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+      "filename": "qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+      "local": "qwen.gguf",
+      "sha256": "sha256:cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046",
+      "bytes": 1117320768
+    },
+    {
+      "id": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+      "family": "smollm2",
+      "revision": "2d4a76a30b4af41ecd395c35725ac11688d4cfe4",
+      "filename": "smollm2-1.7b-instruct-q4_k_m.gguf",
+      "local": "smol.gguf",
+      "sha256": "sha256:decd2598bc2c8ed08c19adc3c8fdd461ee19ed5708679d1c54ef54a5a30d4f33",
+      "bytes": 1055609536
+    }
+  ],
+  "developmentalExecutions": 16,
+  "confirmatoryExecutions": 0,
+  "materialDelivery": "Exactly assigned serialized payload injected into each model prompt; not tool retrieval or understanding.",
+  "evaluator": "Restricted QuickJS, no host callbacks, filesystem or network API; 7 positive/negative/isolation controls passed. No OS namespace claim.",
+  "byModel": {
+    "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF": {
+      "family": "qwen2",
+      "successes": 0,
+      "allocated": 8
+    },
+    "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF": {
+      "family": "smollm2",
+      "successes": 0,
+      "allocated": 8
+    }
+  },
+  "byArm": {
+    "none": {
+      "successes": 0,
+      "allocated": 4,
+      "promptTokens": 903,
+      "completionTokens": 293,
+      "runSeconds": 20.00499571199998
+    },
+    "note": {
+      "successes": 0,
+      "allocated": 4,
+      "promptTokens": 2935,
+      "completionTokens": 295,
+      "runSeconds": 40.762220566000224
+    },
+    "git": {
+      "successes": 0,
+      "allocated": 4,
+      "promptTokens": 2955,
+      "completionTokens": 359,
+      "runSeconds": 43.13964446599971
+    },
+    "dxp": {
+      "successes": 0,
+      "allocated": 4,
+      "promptTokens": 2951,
+      "completionTokens": 305,
+      "runSeconds": 41.07696425199947
+    }
+  },
+  "setup": {
+    "modelsDownloadedBytes": 2172930304,
+    "modelLoads": [
+      {
+        "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+        "seconds": 1.485258697999825,
+        "sha256": "sha256:cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046"
+      },
+      {
+        "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF",
+        "seconds": 1.479863868999928,
+        "sha256": "sha256:decd2598bc2c8ed08c19adc3c8fdd461ee19ed5708679d1c54ef54a5a30d4f33"
+      }
+    ],
+    "costUSD": null,
+    "costMeaning": "No paid API credit purchase or subscription upgrade. CPU/storage/energy value not measured; no claim of zero total cost or savings."
+  },
+  "cloudRoute": {
+    "catalogReachable": true,
+    "catalogModels": 60,
+    "enabledModels": 0,
+    "reason": "paid_plan_required",
+    "creditsPurchased": false,
+    "subscriptionChanged": false,
+    "temporaryCredentialRevoked": true,
+    "separateEmptyProject": "icy-brook-27441566"
+  },
+  "decision": "Local model invocation and bounded evaluation now work. This developmental matrix is not evidence of novel-task transfer or incremental DXP operations. If both small models fail all acceptances, the pilot has a capability floor and cannot distinguish memory benefits.",
+  "nextGate": "Improve model/task capability on unscored development work, implement actual controlled DXP/Git/flat operations, then freeze a separate unseen task matrix before confirmatory outputs.",
+  "limitations": [
+    "Two small quantized open models, no frontier-provider comparison.",
+    "Known diagnostic cases do not test held-out method transfer.",
+    "Same material is injected in three formats; no actual Git/DXP operation or retrieval advantage is tested.",
+    "No inference from delivery to comprehension.",
+    "No OS namespace isolation; the evaluated code has no host I/O bridges.",
+    "No significance or equivalence claim from this small development pilot."
+  ]
+}

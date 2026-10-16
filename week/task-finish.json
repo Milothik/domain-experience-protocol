@@ -1,0 +1,10 @@
+{
+  "taskId":"week-decision-20261016",
+  "result":"Leída y contrastada la reseña. Se conservaron 54/54 pruebas de regresión y cuatro comprobaciones adicionales: un defecto conocido de cuarentena reproducido, dos propiedades de gobernanza ausentes y etiquetado de confianza no verificada conservado. El control plano bloquea los tres casos. Protocolo y página semanal preparados; publicación y programación pendientes en este corte.",
+  "status":"success",
+  "evidence":["week/evidence/day0-audit-original.json","week/regression.tap","week/review-manifest.json","week/PROTOCOL.md","week/state.json"],
+  "lesson":"Una suite de conformidad aprobada no implica utilidad ni gobernanza completa. Una comparación con datos idénticos exige reglas fuertes también en el control plano. La documentación externa puede compartir linaje y contener errores verificables.",
+  "uncertainty":"Cero nuevos ensayos causales de modelos; executor independiente no verificado; ninguna afirmación de superioridad o refutación universal. Éxito de publicación y activación programada aún no observado en este registro.",
+  "resultClass":"engineering-observation",
+  "verdict":"current-implementation-not-validated"
+}

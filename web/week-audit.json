@@ -1,0 +1,75 @@
+{
+  "id": "dxp-week-day0-audit",
+  "capturedAt": "2026-10-16T05:09:18.601Z",
+  "sourceCommit": "7c331eac60c0f38dcdc42250453ffd9cd53f2f6f",
+  "planSha256": "sha256:2f04693a9dd1fd472d428d265e15fb60f7c1b9e90db9fb79eac57d249e8dcae1",
+  "kernelSha256": "sha256:049a45f5c91452f2746662e6e26e294e8771aa1cb59140bb4cd73b76063c7d34",
+  "fixtureSourceCommit": "sha256:2b4450d9e0b61106aa350274b28164ca4f0accf2dedff941c66703de9bcc448a",
+  "fixtureExperienceId": "exp:work:source-provenance",
+  "rows": [
+    {
+      "id": "G01",
+      "kind": "contract-bug-known-diagnostic-P01",
+      "repositoryValid": true,
+      "expected": 0,
+      "dxpLessonCount": 1,
+      "flatLessonCount": 0,
+      "dxpPass": false,
+      "flatPass": true,
+      "trust": "unverified-data",
+      "reviewRequired": true,
+      "returnedValues": [
+        "Cinco versiones identificadas; Meta y Grok no contienen URLs literales, GPT conserva identificadores de citas y dos URLs; Gemini repite enlaces. No se ha establecido independencia de fuentes."
+      ]
+    },
+    {
+      "id": "G02",
+      "kind": "desired-property-not-implemented-in-context-api",
+      "repositoryValid": true,
+      "expected": 0,
+      "dxpLessonCount": 1,
+      "flatLessonCount": 0,
+      "dxpPass": false,
+      "flatPass": true,
+      "trust": "unverified-data",
+      "reviewRequired": true,
+      "returnedValues": [
+        "Cinco versiones identificadas; Meta y Grok no contienen URLs literales, GPT conserva identificadores de citas y dos URLs; Gemini repite enlaces. No se ha establecido independencia de fuentes."
+      ]
+    },
+    {
+      "id": "G03",
+      "kind": "desired-property-conflict-gate-applies-only-after-merge",
+      "repositoryValid": true,
+      "expected": 0,
+      "dxpLessonCount": 2,
+      "flatLessonCount": 0,
+      "dxpPass": false,
+      "flatPass": true,
+      "trust": "unverified-data",
+      "reviewRequired": true,
+      "returnedValues": [
+        "Cinco versiones identificadas; Meta y Grok no contienen URLs literales, GPT conserva identificadores de citas y dos URLs; Gemini repite enlaces. No se ha establecido independencia de fuentes.",
+        "AUDIT-CONTRADICTION"
+      ]
+    },
+    {
+      "id": "G04",
+      "kind": "declared-structural-only-contract-limit",
+      "repositoryValid": true,
+      "fabricatedObservationStructurallyAccepted": true,
+      "factuallyVerified": false,
+      "trust": "unverified-data",
+      "reviewRequired": true,
+      "pass": true
+    }
+  ],
+  "modelTrials": 0,
+  "limitations": [
+    "Four bounded deterministic counterexamples, explicitly injected; not real model trajectories or statistical trials.",
+    "G01 was already described by public task P01, so it is not a held-out discovery.",
+    "G02 and G03 test stronger desired properties, not existing declared API guarantees.",
+    "The flat baseline is a local reference selector, not AXTP, GitOfThoughts or a state-of-art benchmark.",
+    "No core fix has been applied during this audit."
+  ]
+}

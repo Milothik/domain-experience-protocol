@@ -1,0 +1,128 @@
+[
+  {
+    "batch": "B2",
+    "taskId": "P01",
+    "sha256": "sha256:a9d1e6e4e8ba50f0171455a62453eab35ed976b2b7e68c1956071f4e4c07e0a4",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B2",
+    "taskId": "P02",
+    "sha256": "sha256:313260d13ff443e8fd1e522ede4bf1338046e55791e8ca33dbc4709f7f3259cb",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B2",
+    "taskId": "P03",
+    "sha256": "sha256:3bc3470fff79575d2d6fcc103009f03ae043fcd7e6c782053dcd90e269a86949",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B2",
+    "taskId": "P04",
+    "sha256": "sha256:c84f227bc0c7476ad0fbbe14e43fbe61eec1b1899f3dc6b9970a1aab374adfa7",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B2",
+    "taskId": "P06",
+    "sha256": "sha256:9ebbe8c7943dc95390d7af5b3753df163b13bb6c80b15abed4a4f5ef51a035f1",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B3",
+    "taskId": "P02",
+    "sha256": "sha256:ced2059a14da45ecb6f48733b6fac24bbe1c559303b5c8c48bcba25d6d23247f",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B3",
+    "taskId": "P03",
+    "sha256": "sha256:7139c9a11a74b9f017725d10bf44bd6e053e8c520fc87d98889cc1b877c5147a",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B3",
+    "taskId": "P06",
+    "sha256": "sha256:8fb1396267d356d1382d8ed353387f2d7988f7766593a3169a9e700db176be71",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B4",
+    "taskId": "P01",
+    "sha256": "sha256:ff8d6dcce270cb4846faea857204305e99479705c0b2f3d9e591bf991da2f5fc",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B4",
+    "taskId": "P02",
+    "sha256": "sha256:313260d13ff443e8fd1e522ede4bf1338046e55791e8ca33dbc4709f7f3259cb",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B4",
+    "taskId": "P03",
+    "sha256": "sha256:7345fd51401a51e966d3115432fd0c5a59b92214bc088dc42e90c70d4bfc9e26",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B4",
+    "taskId": "P04",
+    "sha256": "sha256:6d6c649d1ffd8ef2d1a0cbdfbbf5585c79bd23a896dba5efa792d3af8d1a3b99",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B4",
+    "taskId": "P06",
+    "sha256": "sha256:1155f3b72197d5d31a1329df3d0272f00a4bdf8c8e828d536e3e850358ba21e4",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B5",
+    "taskId": "P02",
+    "sha256": "sha256:313260d13ff443e8fd1e522ede4bf1338046e55791e8ca33dbc4709f7f3259cb",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B5",
+    "taskId": "P03",
+    "sha256": "sha256:da1ef20e0b47f1cff9bd8788f79b0fa1d1437eba2952bddd5f2f96825ca377b8",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B5",
+    "taskId": "P06",
+    "sha256": "sha256:b4f64ffa5608a27145bff8395c6b3220e54aac9a09a63c6417d9a09966b2ccd2",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B6",
+    "taskId": "P01",
+    "sha256": "sha256:c929b81c24716b77b427b5a2dac0be5745cf240dad1e01d5a3902ef12db0e4dd",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B6",
+    "taskId": "P02",
+    "sha256": "sha256:313260d13ff443e8fd1e522ede4bf1338046e55791e8ca33dbc4709f7f3259cb",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B6",
+    "taskId": "P03",
+    "sha256": "sha256:c228db7cd49949ec74e88f34525e903003968d0396ddb8f149da6d1a7f155ca8",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B6",
+    "taskId": "P04",
+    "sha256": "sha256:27b29726c38e75df86cb785c43657cb90f76fa3ec605a09f3245855a2756e24a",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  },
+  {
+    "batch": "B6",
+    "taskId": "P06",
+    "sha256": "sha256:9ebbe8c7943dc95390d7af5b3753df163b13bb6c80b15abed4a4f5ef51a035f1",
+    "review": "Exact substitutions reviewed: selector/metadata/URI/method/report edits only; no new external I/O or host execution. Syntax errors evaluated without repair."
+  }
+]

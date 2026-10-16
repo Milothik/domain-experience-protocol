@@ -1,0 +1,22 @@
+{
+  "taskId": "source-provenance",
+  "title": "Cinco investigaciones: distinguir procedencia de acuerdo",
+  "goal": "Analizar las investigaciones aportadas sin convertir repetición en evidencia independiente.",
+  "observation": "Los nombres de archivo atribuyen los informes a distintos modelos; los prompts y las ejecuciones originales no están disponibles.",
+  "action": "Leer los cinco archivos actuales y calcular hashes, tamaños y enlaces literales.",
+  "result": "Cinco versiones identificadas; Meta y Grok no contienen URLs literales, GPT conserva identificadores de citas y dos URLs; Gemini repite enlaces. No se ha establecido independencia de fuentes.",
+  "lesson": "La diversidad de productores declarados no acredita diversidad de evidencia: recuperar el original de cada afirmación material.",
+  "evidence": {
+    "manifest": "work/source-manifest.json",
+    "sourceCount": 5,
+    "modelAttribution": "filename or user report",
+    "providerAttested": false
+  },
+  "uncertainty": "No se ha auditado cada paper ni reconstruido la generación original.",
+  "recordingMode": "retrospective",
+  "prediction": null,
+  "resultClass": "observed-project-work",
+  "hypothesisRefs": [
+    "H1-history"
+  ]
+}

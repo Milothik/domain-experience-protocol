@@ -1,0 +1,13 @@
+{
+  "taskId": "public-agent-ingestion",
+  "title": "Abrir DXP a contribuciones de varios agentes",
+  "goal": "Publicar una entrada durable y experiencias independientes con evaluación explícita.",
+  "observation": "User authorizes public access and actual independent agents; no supplier-specific credentials are available.",
+  "prediction": "The public API will store structurally valid contributions durably, reject malformed data and expose bounded exploratory evaluation without certifying unverified claims.",
+  "hypothesisRefs": [
+    "H1-history",
+    "H5-verification",
+    "H2-transfer"
+  ],
+  "uncertainty": "Public intake adds real records but does not guarantee model diversity or empirical benefit."
+}

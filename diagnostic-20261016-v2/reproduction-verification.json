@@ -1,0 +1,7 @@
+{
+  "checkedAt": "2026-10-16T11:09:07.354Z",
+  "rows": 36,
+  "allOutcomesReproduced": true,
+  "newInference": false,
+  "meaning": "Re-executed exact archived outputs on frozen tests; does not rerun provider generation"
+}

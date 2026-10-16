@@ -1,0 +1,11 @@
+{
+ "taskId":"publish-continuation-20261016",
+ "title":"Publicar el avance comprobado y conservar su corte temporal",
+ "goal":"Publicar código corregido, comparación revisada, primera matriz íntegra y evidencia descargable.",
+ "observation":"Sitio vigente v11, audiencia pública y propietario confirmados. Suite actual 65/65; un ZIP limpio reproduce los 36 estados de cada matriz. No se ha validado utilidad DXP.",
+ "prediction":"El paquete generado desde la fuente enviada podrá desplegarse y recuperar los mismos resultados públicos y sus descargas.",
+ "control":"Manifiesto de archivos exacto, hashes del ZIP, extracción limpia, reevaluación de ambas matrices y verificación de versión/deployment más rutas públicas.",
+ "usedExperienceCommits":["sha256:d94058bfdf0b39556b8d9024f64f12635063f7fb3e87045ecfb15695792269df","sha256:5fc7da80b8846016e440ffc08f8c58ab1f9f91565c843c5bd7526bfe40d2caa2"],
+ "uncertainty":"El snapshot enviado conservará esta publicación pendiente: no puede incluir prueba de su propio despliegue antes de suceder. El resultado se añadirá después como revisión.",
+ "recordingMode":"prospective"
+}

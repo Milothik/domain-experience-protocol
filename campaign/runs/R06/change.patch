@@ -1,0 +1,18 @@
+diff --git a//workspace/sites/dxp-experience-atlas/campaign/baseline/web/core.mjs "b//workspace\\campaign-runs\\R06/web/core.mjs"
+index 6aa9b98..9eb2b86 100644
+--- a//workspace/sites/dxp-experience-atlas/campaign/baseline/web/core.mjs
++++ "b//workspace\\campaign-runs\\R06/web/core.mjs"
+@@ -157,11 +157,11 @@ export function query(repo,{text='',domain='',outcome='',scope=null}={}) {
+     return (!domain||e.domain===domain)&&(!outcome||e.outcome.status===outcome)&&(!scope||scopeMatch(e.scope,scope))&&terms.every(t=>JSON.stringify(e).toLocaleLowerCase().includes(t));
+   });
+ }
+-export function contextPacket(repo,{scope,domain,includeNegative=true}) {
++export function contextPacket(repo,{scope,domain,includeNegative=true,includeHypotheses=false}) {
+   // Current branch heads only. Data is never executed as instructions.
+   const ids=[...new Set(Object.values(repo.refs))];
+   const candidates=ids.map(id=>getCommit(repo,id)).filter(c=>c.experience.validity==='active'&&c.experience.domain===domain&&!c.experience.demo);
+-  const lessons=candidates.flatMap(c=>c.experience.lessons.filter(l=>scopeMatch(l.scope,scope)&&!['intuition','disputed'].includes(l.type)&&(includeNegative||l.type!=='negative')).map(l=>({commitId:c.commitId,...clone(l),evidenceKind:c.experience.evidence.filter(e=>l.evidenceRefs.includes(e.id)).map(e=>e.kind)})));
++  const lessons=candidates.flatMap(c=>c.experience.lessons.filter(l=>scopeMatch(l.scope,scope)&&!['intuition','disputed'].includes(l.type)&&(includeHypotheses||l.type!=='hypothesis')&&(includeNegative||l.type!=='negative')).map(l=>({commitId:c.commitId,...clone(l),evidenceKind:c.experience.evidence.filter(e=>l.evidenceRefs.includes(e.id)).map(e=>e.kind)})));
+   return {format:'dxp-context-packet',version:VERSION,scope,domain,trust:'unverified-data',reviewRequired:true,lessons};
+ }
+ export const BENCH_MEMORY = [

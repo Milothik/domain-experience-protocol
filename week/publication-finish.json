@@ -1,0 +1,17 @@
+{
+  "taskId": "week-decision-20261016",
+  "result": "Auditoría, protocolo y evidencia publicados en Site v8. Programación guardada y activada para siete ejecuciones a las 06:00 Europe/Madrid del 17 al 23 de octubre; ninguna activación ejecutada aún. Canónico del diario incluido en el código versionado. El corte de esta revisión registra estos éxitos ya observados; publicar el recibo actualizado sigue pendiente.",
+  "status": "success",
+  "evidence": [
+    "week/evidence/day0-audit-original.json",
+    "week/regression.tap",
+    "week/review-manifest.json",
+    "week/PROTOCOL.md",
+    "week/state.json",
+    "week/schedule-receipt.json"
+  ],
+  "lesson": "Una suite de conformidad aprobada no implica utilidad ni gobernanza completa. Una comparación con datos idénticos exige reglas fuertes también en el control plano. La documentación externa puede compartir linaje y contener errores verificables.",
+  "uncertainty": "Cero nuevos ensayos causales; ejecutor independiente aún no verificado. La creación de la programación no prueba que sus ejecuciones futuras completen el trabajo.",
+  "resultClass": "engineering-observation",
+  "verdict": "current-implementation-not-validated"
+}

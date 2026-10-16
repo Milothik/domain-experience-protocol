@@ -1,0 +1,23 @@
+{
+  "taskId": "conversation-recovery",
+  "title": "Memoria conversacional con cobertura explícita",
+  "goal": "Recuperar la génesis de DXP y los tres chats señalados por el usuario.",
+  "observation": "La memoria disponible no contiene tres exportaciones completas verificables.",
+  "action": "Solicitar contexto del proyecto y separar mensajes del usuario recuperados, afirmaciones previas del asistente y huecos.",
+  "result": "Se recuperaron fragmentos de la génesis y de la entrega anterior, además del diálogo actual. No se identificaron íntegramente los tres chats ni sus IDs.",
+  "lesson": "La memoria orienta la recuperación, pero no sustituye una transcripción. Conservar la cobertura parcial y no completar chats faltantes.",
+  "status": "partial",
+  "evidence": {
+    "origin": "retrieved conversational fragments and current visible session",
+    "requestedFullThreads": 3,
+    "recoveredFullExports": 0,
+    "unrelatedMemoriesUsed": false
+  },
+  "uncertainty": "Títulos e identificadores completos pendientes; se usan únicamente fragmentos relevantes disponibles.",
+  "recordingMode": "retrospective",
+  "prediction": null,
+  "resultClass": "observed-project-work",
+  "hypothesisRefs": [
+    "H1-history"
+  ]
+}

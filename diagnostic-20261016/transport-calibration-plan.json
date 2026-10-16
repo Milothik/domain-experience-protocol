@@ -1,0 +1,14 @@
+{
+  "id": "transport-conformance-after-diagnostic",
+  "frozenAt": "2026-10-16T10:56:45.795Z",
+  "prediction": "Fenced code DOM should preserve JSON escapes and underscores that ordinary rendered prose may lose.",
+  "criterion": "Both captured JSON objects parse and every fixture string equals the expected string exactly.",
+  "expected": {
+    "code": "const __probe__ = x => x === 3 && /\\\\w+/.test(x);",
+    "newline": "a\\nb",
+    "literal": "__proto__ !== demo"
+  },
+  "prompt": "Transport conformance only, not a DXP utility test. Echo the following JSON VERBATIM inside one fenced json code block. No explanation, tools, browsing or previous-chat context. Preserve every character inside string values. {\"code\":\"const __probe__ = x => x === 3 && /\\\\\\\\w+/.test(x);\",\"newline\":\"a\\\\nb\",\"literal\":\"__proto__ !== demo\"}",
+  "sha256": "3cd110af27859937832d9fbc631443b5458dbaa8ac9111857983166226f38be9",
+  "newUtilityTrials": 0
+}

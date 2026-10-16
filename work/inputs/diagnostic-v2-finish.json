@@ -1,0 +1,10 @@
+{
+ "taskId":"diagnostic-v2-20261016",
+ "result":"Seis lotes capturados con entrada exacta comprobada y salida de código protegida; 34 parches ejecutados y aceptados. Dos entregas P06 de Gemini (none/note) no coincidían exactamente con el código inicial y no fueron reparadas. Gemini 5/6, 5/6, 6/6; Grok 6/6, 6/6, 6/6. Los 36 estados se reprodujeron sin nuevas inferencias.",
+ "status":"success",
+ "lesson":"La corrección del transporte recuperó artefactos; la diferencia de una entrega en Gemini no se repitió en Grok. No cumple el criterio de ventaja consistente en ambas configuraciones ni valida DXP.",
+ "evidence":{"manifest":"diagnostic-20261016-v2/manifest.json","comparison":"diagnostic-20261016-v2/comparison.json","evaluation":"diagnostic-20261016-v2/evaluation.json","review":"diagnostic-20261016-v2/reviewed-artifacts.json","reproduction":"diagnostic-20261016-v2/reproduction-verification.json","inputExactChecks":6,"acceptedArtifacts":34,"allocatedArtifacts":36,"confirmatoryExecutionsAdded":0},
+ "uncertainty":"Un lote por proveedor/condición; tareas públicas, sin telemetría de costes ni revisión exacta del modelo; prueba de presentación, no de operaciones interactivas o generalización.",
+ "resultClass":"completed-development-diagnostic-not-confirmatory",
+ "verdict":"not-validated"
+}

@@ -1,0 +1,11 @@
+{
+ "taskId":"publish-sensitivity-20261016",
+ "title":"Publicar anexo verificado sobre sensibilidad del aplicador",
+ "goal":"Añadir informe y reproducción al sitio vigente y al kit sin alterar diagnósticos históricos.",
+ "observation":"El sitio sigue en v12 y la fuente remota continúa en 49cf9b27. La auditoría de los dos P06 y su repetición en copias nuevas terminó. El otro agente recibió dos mensajes pero no hay respuesta visible.",
+ "prediction":"El kit limpio reproduce 65 pruebas de producto y los dos desenlaces de sensibilidad, y la publicación sirve el mismo ZIP verificado.",
+ "control":"Solo documentación, evidencia y scripts de auditoría; preservar runtime y puntuaciones originales. Verificar fuente remota antes de publicar para detectar edición concurrente.",
+ "usedExperienceCommits":["sha256:b8edc3ee1ca48717deb267f6351c2a97ea0d694d8e6c434efc7a6fd53b55f38d"],
+ "uncertainty":"Publicación de ingeniería; no validación científica. El corte estático antecede al resultado de su propia publicación.",
+ "recordingMode":"prospective"
+}

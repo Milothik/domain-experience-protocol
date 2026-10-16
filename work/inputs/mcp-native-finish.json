@@ -1,0 +1,12 @@
+{
+  "taskId": "mcp-read-20261016",
+  "result": "All four native MCP tools succeeded in the resumed conversation: status, list, evidence and get by ID. This supersedes the earlier connection-unverified observation.",
+  "evidence": {
+    "summary": "native-mcp-20261016/evidence.json",
+    "successfulNativeReadTools": 4,
+    "confirmatoryTrialsAdded": 0
+  },
+  "lesson": "Verify installed-tool access with real calls; the previous HTTP 401 was not evidence that the native OAuth connection would fail.",
+  "uncertainty": "The four calls come from this agent and session, not four independent consumers.",
+  "resultClass": "native-mcp-read-verification"
+}

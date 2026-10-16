@@ -1,0 +1,92 @@
+[
+  {
+    "runId": "R01",
+    "launchObservedNoLaterThan": "2026-10-15T07:51:47.097Z",
+    "timingNote": "Coordinator observation after spawning; exact spawn timestamp not exposed"
+  },
+  {
+    "runId": "R02",
+    "launchObservedNoLaterThan": "2026-10-15T07:51:47.098Z",
+    "timingNote": "Coordinator observation after spawning; exact spawn timestamp not exposed"
+  },
+  {
+    "runId": "R03",
+    "launchObservedNoLaterThan": "2026-10-15T07:51:47.098Z",
+    "timingNote": "Coordinator observation after spawning; exact spawn timestamp not exposed"
+  },
+  {
+    "runId": "R04",
+    "launchObservedNoLaterThan": "2026-10-15T07:51:47.098Z",
+    "timingNote": "Coordinator observation after spawning; exact spawn timestamp not exposed"
+  },
+  {
+    "runId": "R05",
+    "launchObservedNoLaterThan": "2026-10-15T07:51:47.098Z",
+    "timingNote": "Coordinator observation after spawning; exact spawn timestamp not exposed"
+  },
+  {
+    "runId": "R06",
+    "launchObservedNoLaterThan": "2026-10-15T07:51:47.098Z",
+    "timingNote": "Coordinator observation after spawning; exact spawn timestamp not exposed"
+  },
+  {
+    "runId": "R07",
+    "launchObservedNoLaterThan": "2026-10-15T07:53:07.418Z",
+    "timingNote": "Observation after spawning; exact spawn timestamp unavailable"
+  },
+  {
+    "runId": "R08",
+    "launchObservedNoLaterThan": "2026-10-15T07:53:07.418Z",
+    "timingNote": "Observation after spawning; exact spawn timestamp unavailable"
+  },
+  {
+    "runId": "R09",
+    "launchObservedNoLaterThan": "2026-10-15T07:53:07.418Z",
+    "timingNote": "Observation after spawning; exact spawn timestamp unavailable"
+  },
+  {
+    "runId": "R10",
+    "launchObservedNoLaterThan": "2026-10-15T07:53:07.418Z",
+    "timingNote": "Observation after spawning; exact spawn timestamp unavailable"
+  },
+  {
+    "runId": "R11",
+    "launchObservedNoLaterThan": "2026-10-15T07:53:07.418Z",
+    "timingNote": "Observation after spawning; exact spawn timestamp unavailable"
+  },
+  {
+    "runId": "R12",
+    "launchObservedNoLaterThan": "2026-10-15T07:53:07.418Z",
+    "timingNote": "Observation after spawning; exact spawn timestamp unavailable"
+  },
+  {
+    "runId": "R13",
+    "launchObservedNoLaterThan": "2026-10-15T07:54:21.593Z",
+    "timingNote": "Observation after spawning; exact spawn timestamp unavailable"
+  },
+  {
+    "runId": "R14",
+    "launchObservedNoLaterThan": "2026-10-15T07:54:21.593Z",
+    "timingNote": "Observation after spawning; exact spawn timestamp unavailable"
+  },
+  {
+    "runId": "R15",
+    "launchObservedNoLaterThan": "2026-10-15T07:54:21.593Z",
+    "timingNote": "Observation after spawning; exact spawn timestamp unavailable"
+  },
+  {
+    "runId": "R16",
+    "launchObservedNoLaterThan": "2026-10-15T07:54:21.593Z",
+    "timingNote": "Observation after spawning; exact spawn timestamp unavailable"
+  },
+  {
+    "runId": "R17",
+    "launchObservedNoLaterThan": "2026-10-15T07:54:21.593Z",
+    "timingNote": "Observation after spawning; exact spawn timestamp unavailable"
+  },
+  {
+    "runId": "R18",
+    "launchObservedNoLaterThan": "2026-10-15T07:54:21.593Z",
+    "timingNote": "Observation after spawning; exact spawn timestamp unavailable"
+  }
+]

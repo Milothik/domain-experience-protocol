@@ -1,0 +1,32 @@
+{
+  "run": "R07",
+  "taskId": "T3",
+  "target": "web/core.mjs",
+  "actions": [
+    "Read local AGENTS.md and TASK.json",
+    "Read web/core.mjs",
+    "Added includeHypotheses=false option and hypothesis eligibility condition to contextPacket",
+    "Ran node acceptance.mjs"
+  ],
+  "commands": [
+    "Get-Content AGENTS.md; Get-Content TASK.json",
+    "Get-Content web/core.mjs",
+    "node acceptance.mjs"
+  ],
+  "errors": [],
+  "corrections": [],
+  "acceptanceAttempts": 1,
+  "acceptanceResult": {
+    "failed": 0,
+    "tests": 12,
+    "passed": 12,
+    "exitCode": 0
+  },
+  "toolCalls": 4,
+  "memoryUsed": false,
+  "limitations": [
+    "Only prescribed acceptance suite executed"
+  ],
+  "outsideDirectoryAccess": [],
+  "result": "Hypotheses excluded by default and admitted with includeHypotheses=true subject to existing filters; includeNegative and exact lesson scope preserved."
+}

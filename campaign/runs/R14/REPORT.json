@@ -1,0 +1,38 @@
+{
+  "run": "R14",
+  "task": "T1",
+  "status": "completed",
+  "actions": [
+    "Read AGENTS.md and TASK.json inside R14.",
+    "Read web/core.mjs, acceptance.mjs and NOTE.md inside R14.",
+    "Extended query options with headsOnly=false, includeDemo=true and validity=''; validated validity before filtering, selected current reference heads using a Set, and combined the new filters with all existing filters.",
+    "Ran node acceptance.mjs successfully: 12 passed, 0 failed; repository immutability assertion passed.",
+    "Wrote REPORT.json."
+  ],
+  "commands": [
+    "Get-Content -LiteralPath AGENTS.md; Get-Content -LiteralPath TASK.json",
+    "Get-Content -LiteralPath web/core.mjs; Get-Content -LiteralPath acceptance.mjs; Get-Content -LiteralPath NOTE.md",
+    "node acceptance.mjs",
+    "Set-Content -LiteralPath REPORT.json -Encoding utf8"
+  ],
+  "errors": [],
+  "corrections": [],
+  "acceptanceAttempts": 1,
+  "acceptanceResult": {
+    "exitCode": 0,
+    "passed": 12,
+    "failed": 0
+  },
+  "toolCalls": 4,
+  "nestedToolCalls": 5,
+  "memoryUsed": {
+    "read": true,
+    "source": "NOTE.md",
+    "application": "The note described direct in-process testing and rebuilding the worker. Used the prescribed acceptance runner, which performs the build before importing suites."
+  },
+  "limitations": [
+    "Verification was limited to the prescribed acceptance suite.",
+    "The acceptance command rebuilt generated worker output as part of its prescribed execution."
+  ],
+  "outsideDirectoryAccess": false
+}

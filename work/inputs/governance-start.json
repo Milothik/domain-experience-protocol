@@ -1,0 +1,11 @@
+{
+  "taskId": "governance-20261016",
+  "title": "Compare explicit sharing and conflict selection with a strong flat control",
+  "goal": "Test and repair G02/G03 without rewriting frozen historical observations",
+  "observation": "G01 alias quarantine is fixed; contextPacket ignores classification and has no cross-head conflict selection. Native MCP reads now succeed.",
+  "prediction": "Explicit shareable and conflict-exclusion selection will reject local or conflicting candidates while retaining compatible and negative lessons; a same-rule flat selector will match these deterministic decisions.",
+  "control": "Frozen before-kernel, same input records, explicit expected values; no models and no utility inference.",
+  "usedExperienceCommits": [
+    "sha256:bb48348b271b467eb6d597624788801a562089007602d2b7f2298f907d5e7f3d"
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "id": "dxp-week-20261016",
+  "updatedAt": "2026-10-16T21:01:38.921496+00:00",
+  "starts": "2026-10-16",
+  "deadline": "2026-10-23T07:05:00+02:00",
+  "timezone": "Europe/Madrid",
+  "status": "in-progress-not-validated",
+  "decision": "Do not adopt on presumed utility; decision week in progress.",
+  "sourceBaseline": "7c331eac60c0f38dcdc42250453ffd9cd53f2f6f",
+  "protocolSha256": "sha256:5f95609846c14e7116a6540e012bdd51781f6c314831f598dcfcf22b4eca565c",
+  "auditPlanSha256": "sha256:2f04693a9dd1fd472d428d265e15fb60f7c1b9e90db9fb79eac57d249e8dcae1",
+  "initialAuditSha256": "sha256:c7732a7b53b00c30678d764e070dc712a397291c0971e28d0daacba27229dc80",
+  "modelTrials": {
+    "newVerified": 0,
+    "target": 384,
+    "independentTaskClustersTarget": 24,
+    "executionManifestFrozen": false,
+    "runnerVerified": true,
+    "runnerScope": "Local CPU model invocation with two distinct pinned weight families; bounded pure-JS evaluation, no whole-repository or OS-container guarantee.",
+    "observedDevelopmentalExecutions": 16,
+    "independentWeightFamiliesInvoked": 2,
+    "confirmatoryExecutions": 0
+  },
+  "engineering": {
+    "regressionPassed": 71,
+    "regressionFailed": 0,
+    "additionalChecks": 4,
+    "knownContractDefectsReproduced": 1,
+    "strongerGovernancePropertiesUnmet": 2,
+    "unverifiedTrustLabelPreserved": true,
+    "flatControlBlocksThreeCases": true,
+    "scientificUtilityEvidence": false
+  },
+  "publicParticipation": {
+    "total": {
+      "assigned": 2,
+      "materialServed": 2,
+      "submitted": 2,
+      "pending": 0
+    },
+    "byCondition": {
+      "none": {
+        "assigned": 0,
+        "materialServed": 0,
+        "submitted": 0,
+        "pending": 0
+      },
+      "note": {
+        "assigned": 0,
+        "materialServed": 0,
+        "submitted": 0,
+        "pending": 0
+      },
+      "dxp": {
+        "assigned": 2,
+        "materialServed": 2,
+        "submitted": 2,
+        "pending": 0
+      }
+    },
+    "byPurpose": {
+      "evaluation": {
+        "assigned": 0,
+        "materialServed": 0,
+        "submitted": 0,
+        "pending": 0
+      },
+      "conformance": {
+        "assigned": 2,
+        "materialServed": 2,
+        "submitted": 2,
+        "pending": 0
+      }
+    },
+    "byConditionAndPurpose": {
+      "none": {
+        "evaluation": {
+          "assigned": 0,
+          "materialServed": 0,
+          "submitted": 0,
+          "pending": 0
+        },
+        "conformance": {
+          "assigned": 0,
+          "materialServed": 0,
+          "submitted": 0,
+          "pending": 0
+        }
+      },
+      "note": {
+        "evaluation": {
+          "assigned": 0,
+          "materialServed": 0,
+          "submitted": 0,
+          "pending": 0
+        },
+        "conformance": {
+          "assigned": 0,
+          "materialServed": 0,
+          "submitted": 0,
+          "pending": 0
+        }
+      },
+      "dxp": {
+        "evaluation": {
+          "assigned": 0,
+          "materialServed": 0,
+          "submitted": 0,
+          "pending": 0
+        },
+        "conformance": {
+          "assigned": 2,
+          "materialServed": 2,
+          "submitted": 2,
+          "pending": 0
+        }
+      }
+    },
+    "limitPerKind": 1000,
+    "possibleTruncation": false,
+    "coverage": "Latest 1000 rows per kind; counts may be truncated and joined runs may be absent.",
+    "materialDeliveryMeaning": "material-served-only",
+    "deliveryOnly": true,
+    "executionVerified": false,
+    "identityVerified": false,
+    "scientificallyVerified": false,
+    "verifiedExperiments": 0
+  },
+  "blockers": [
+    {
+      "id": "independent-model-runner",
+      "status": "resolved-for-local-function-scope",
+      "detail": "Two distinct downloaded/hashed weight sets generate locally; 16 development allocations evaluated. Cloud access is paid-plan blocked. General repository isolation and confirmatory comparison remain separate gates."
+    },
+    {
+      "id": "diary-source-tracking",
+      "status": "repaired-and-source-published",
+      "detail": "Explicit !work/repository.json tracking exception added; canonical diary restored from verified published snapshot, new task revisions appended and synced."
+    },
+    {
+      "id": "developmental-capability-floor",
+      "status": "pending",
+      "detail": "Current small models failed all 16 developmental acceptances; calibrate model/task capability on development work before opening held-out tasks."
+    },
+    {
+      "id": "actual-memory-operations",
+      "status": "pending",
+      "detail": "Development pilot injected identical payloads under labels; actual DXP/Git/flat operation comparison not yet implemented."
+    }
+  ],
+  "schedule": {
+    "automation_id": "Automation_8d152accb54c819184dd9cc8188151ad",
+    "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Europe/Madrid:20261017T000000\nRRULE:FREQ=HOURLY;INTERVAL=3;UNTIL=20261023T060000\nEND:VEVENT",
+    "timezone": "Europe/Madrid",
+    "is_enabled": true,
+    "observedUpdateAt": "2026-10-16T20:56:13.385923+00:00",
+    "last_run_time": null,
+    "next_run_time": null,
+    "meaning": "Backend accepted the update; no future execution is claimed. Discrete scheduled runs, not continuous processing.",
+    "status": "updated-enabled-execution-not-yet-observed",
+    "intended": "Every three hours from 17 October 00:00 through 23 October 06:00 Europe/Madrid; final deadline unchanged."
+  },
+  "entries": [
+    {
+      "date": "2026-10-16",
+      "type": "engineering-audit",
+      "completed": [
+        "Review read and checked against primary sources",
+        "Source and live participation state inspected",
+        "Audit plan recorded before adversarial execution",
+        "54 existing checks passed; one known contract bug and two stronger-property gaps reproduced",
+        "Strong local flat control blocks the same three cases"
+      ],
+      "limits": [
+        "No new model trial executed",
+        "No universal validation/refutation",
+        "Current kernel unchanged"
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "type": "real-local-model-development-pilot",
+      "completed": [
+        "Created a separate DXP infrastructure project; no paid plan/credit purchase",
+        "Cloud catalog reachable but all 60 models disabled; scoped probe token revoked",
+        "Two local open-weight model families downloaded and pinned by SHA-256",
+        "16/16 allocated model generations, 0/4 acceptance passes in every arm",
+        "Seven evaluator controls passed; complete prompts, visible outputs, artifacts, tokens and times retained"
+      ],
+      "limits": [
+        "Developmental and known-task only; no confirmatory count increase",
+        "Material injection, not agent tool retrieval or actual DXP/Git operations",
+        "Restricted JS evaluation, not OS container isolation",
+        "Next gate is developmental capability and unseen-task design"
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "type": "GAMC-review-engineering-corrections",
+      "completed": [
+        "Reproduced hash-valid B→A source-approval bypass; three new regressions fail before and pass after the current kernel fix",
+        "Reproduced broken original clean ZIP; exact public inventory, required paths and per-file hashes added",
+        "New progressive first visit based on an observed project experience and its actual revisions",
+        "60/60 checks pass, including clean extraction without installing dependencies"
+      ],
+      "limits": [
+        "No new confirmatory model trial; scientific status remains not validated",
+        "No browser visual QA available",
+        "Frozen historical baselines retain earlier code; correction applies to current kernel"
+      ],
+      "evidence": "/gamc-review.json"
+    }
+  ],
+  "links": {
+    "protocol": "/week-protocol.md",
+    "continuation": "/week-continuation.md",
+    "audit": "/week-audit.json",
+    "review": "/week-review.json",
+    "evidence": "/week-evidence.zip",
+    "runner": "/runner.html",
+    "runnerReport": "/runner-report.json",
+    "runnerEvidence": "/runner-evidence.zip",
+    "runnerGuide": "/runner-guide.md",
+    "GAMCreview": "/gamc-review.md",
+    "kitVerification": "/kit-verification.json",
+    "latestContinuation": "/continuation-20261016.html"
+  },
+  "protocolHistory": [
+    {
+      "sha256": "sha256:ec4d2268e96c9b26f9eb1355c1d17ab273ddb8bb34f31b8585915ed4248f85eb",
+      "path": "week/evidence/protocol-first-publication.md",
+      "change": "Only scheduled run/final-close time moved to 06:00 to leave time before the fixed 07:05 deadline. Statistical rules and outcomes unchanged; zero confirmatory trials."
+    },
+    {
+      "sha256": "sha256:622e48a9f1559ec57fed25ddf6a31aafa549a601e8b0a28f8f2bf446270ea452",
+      "path": "week/evidence/protocol-before-local-runner.md",
+      "change": "Append tested local runtime route and developmental findings. Original thresholds, deadline and confirmatory count unchanged."
+    }
+  ],
+  "publication": {
+    "status": "published",
+    "version": 8,
+    "commit": "74c44f64b411e30f5b2f05828d8067bb5ff49680",
+    "url": "https://dxp-experience-atlas.milothik.chatgpt.site/week.html",
+    "scope": "Initial week protocol, audit and evidence; schedule receipt added in the next revision."
+  },
+  "diagnosticContinuation": {
+    "id": "diagnostic-20261016-v2",
+    "url": "/diagnostic.html",
+    "verdict": "not-validated",
+    "capturedBatches": 6,
+    "evaluatedArtifacts": 34,
+    "acceptedArtifacts": 34,
+    "unavailableArtifacts": 2,
+    "pendingArtifacts": 0,
+    "confirmatoryExecutionsAdded": 0
+  },
+  "mcpAccess": {
+    "status": "native-read-verified",
+    "readTools": 4,
+    "nativeReadToolsSucceeded": 4,
+    "privateMemory": false,
+    "evidence": "/native-mcp-evidence.json",
+    "confirmatoryTrialsAdded": 0
+  },
+  "governanceComparison": {
+    "cases": 12,
+    "previousPassed": 8,
+    "explicitPolicyPassed": 12,
+    "strongFlatPassed": 12,
+    "evidence": "/governance-comparison.json",
+    "class": "deterministic-not-agent-utility"
+  },
+  "mcpDiscoveryBudget": {
+    "beforeBytes": 129881,
+    "afterBytes": 5102,
+    "reductionFraction": 0.9607178879127817,
+    "evidence": "/mcp-discovery-measurement.json",
+    "modelUtilityMeasured": false
+  },
+  "latestExecutionAccessProbe": {
+    "route": "Gemini CLI 0.39.1 / gemini-2.5-flash",
+    "status": "UNSUPPORTED_CLIENT",
+    "generationObserved": false,
+    "evidence": "/model-route-probe.json"
+  },
+  "workingDirection": {
+    "decision": "Continue finite comparative research; do not adopt an incremental performance claim. Prioritize a strong flat/Git baseline over expanding the protocol.",
+    "basis": [
+      "Strong flat selection matches 12/12 constructed governance cases.",
+      "MCP native access works, with concrete discovery overfetch reduced.",
+      "No new confirmatory model trial; cross-model task utility unresolved."
+    ],
+    "deadlineUnchanged": true
+  }
+}

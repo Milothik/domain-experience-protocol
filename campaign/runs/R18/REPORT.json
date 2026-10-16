@@ -1,0 +1,30 @@
+{
+  "taskId": "T1",
+  "status": "completed",
+  "summary": "Extended query with headsOnly, includeDemo and validated exact validity filtering while preserving existing defaults, filters and repository data.",
+  "observedActions": [
+    "Read assigned AGENTS.md and TASK.json.",
+    "Read web/core.mjs and acceptance.mjs.",
+    "Modified only query in web/core.mjs.",
+    "Ran node acceptance.mjs: exit 0, all 12 tests passed.",
+    "Wrote REPORT.json."
+  ],
+  "commands": [
+    "Get-Content AGENTS.md; Get-Content TASK.json",
+    "Get-Content web/core.mjs; Get-Content acceptance.mjs",
+    "node acceptance.mjs"
+  ],
+  "errors": [],
+  "corrections": [],
+  "acceptanceAttempts": 1,
+  "toolCalls": {
+    "functions.exec": 4,
+    "exec_command": 4,
+    "apply_patch": 1
+  },
+  "memoryUsed": false,
+  "outsideDirectoryAccess": false,
+  "limitations": [
+    "Verification limited to the prescribed acceptance suite."
+  ]
+}

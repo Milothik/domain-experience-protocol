@@ -1,0 +1,27 @@
+{
+  "taskId": "campaign-comparison-20261015",
+  "title": "18 entregas reales y evaluación independiente",
+  "goal": "Comparar acceso opcional a experiencias en seis tareas nuevas de código.",
+  "observation": "Protocolo guardado antes de lanzar consumidores; mismo núcleo/worker, copias por carpeta y contextos nuevos.",
+  "recordingMode": "retrospective",
+  "status": "partial",
+  "result": "18/18 entregas pasan las 12 pruebas de su tarea; 6/6 en cada condición. Cero consultas DXP declaradas y cinco lecturas de nota. Aislamiento por contexto y carpeta; no sandbox individual. No se acredita campaña estrictamente controlada ni efecto de consulta.",
+  "action": "Se lanzaron 18 subagentes nuevos con fork_turns=none en orden aleatorio, se congelaron experiencias y criterios, se conservaron parches e informes y el coordinador ejecutó las pruebas de cada entrega.",
+  "lesson": "El acceso opcional a DXP no produjo consulta efectiva en esta campaña. El empate no demuestra equivalencia cuando se consulta, y la instrucción común hizo redundante parte de la memoria.",
+  "evidence": {
+    "protocol": "campaign/protocol.json",
+    "protocolSha256": "75ed7aa5125dbaa45c3c43679668894022213f8ce6b4a5b16a341d4a3cbac7d4",
+    "runs": 18,
+    "successByCondition": {
+      "none": 6,
+      "note": 6,
+      "dxp": 6
+    },
+    "coordinatorResults": "campaign/evaluation.json",
+    "sourceChecks": "campaign/source-audit.json",
+    "tokens": null,
+    "cost": null,
+    "solveTime": null
+  },
+  "uncertainty": "Seis tareas pequeñas, tests visibles, un productor, consulta opcional, modelo heredado sin revisión del backend atestada, sin auditoría completa de accesos ni telemetría fiable."
+}

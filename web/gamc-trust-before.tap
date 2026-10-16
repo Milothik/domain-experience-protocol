@@ -1,0 +1,71 @@
+✔ capture preserves observed data without serializing provider configuration (1.674529ms)
+✔ failed generation is captured once with no inferred successful output (0.321914ms)
+✔ unreviewed imports are empty; reviewed imports are data and never mandatory constraints (10.114911ms)
+✔ modified evidence fails integrity before any entity import (1.072113ms)
+✔ empty supplied run cannot be recorded as a successful observed execution (0.416437ms)
+✖ lesson metadata cannot impersonate an approved source revision (2.866552ms)
+✖ approving A excludes a hash-valid B that claims to come from A (2.673802ms)
+✖ a source claiming another identity still requires approval of its actual revision (1.446045ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 5
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 25.415017
+
+✖ failing tests:
+
+test at tests/dce-adapter.test.mjs:27:1
+✖ lesson metadata cannot impersonate an approved source revision (2.866552ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'sha256:882b0ec3d1cc388b120aa24363c097e47946618da1a2c21b3d41ec4113983eee'
+  - 'sha256:137e683e34fd81c52b12adf8e67ef7f9fd777e5c90604a07912b7b578bb8b9f7'
+  
+      at TestContext.<anonymous> (file:///workspace/dxp/tests/dce-adapter.test.mjs:31:9)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'sha256:882b0ec3d1cc388b120aa24363c097e47946618da1a2c21b3d41ec4113983eee',
+    expected: 'sha256:137e683e34fd81c52b12adf8e67ef7f9fd777e5c90604a07912b7b578bb8b9f7',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/dce-adapter.test.mjs:35:1
+✖ approving A excludes a hash-valid B that claims to come from A (2.673802ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 1
+  
+      at TestContext.<anonymous> (file:///workspace/dxp/tests/dce-adapter.test.mjs:38:9)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/dce-adapter.test.mjs:42:1
+✖ a source claiming another identity still requires approval of its actual revision (1.446045ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///workspace/dxp/tests/dce-adapter.test.mjs:45:9)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

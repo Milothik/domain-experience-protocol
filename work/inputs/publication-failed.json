@@ -1,0 +1,16 @@
+{
+  "taskId": "publication",
+  "status": "failure",
+  "result": "El código se sincronizó, pero el empaquetado falló porque el helper eligió Bash/WSL y el ejecutable requerido no estaba disponible.",
+  "lesson": "Reutilizar la solución de Git resolvió esa etapa; no cubría el entorno de empaquetado. No asumir que un procedimiento compuesto se transfiere entero.",
+  "lessonType": "negative",
+  "pivot": true,
+  "evidence": {
+    "sourcePushed": true,
+    "sourceCommit": "df34811",
+    "error": "WSL execvpe /bin/bash failed: no such file or directory",
+    "deploymentAttempted": false
+  },
+  "uncertainty": "La publicación no se ha intentado todavía; el fallo corresponde al empaquetado local.",
+  "verdict": "first-attempt-prediction-not-fully-supported"
+}

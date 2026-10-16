@@ -1,0 +1,77 @@
+{
+  "release": "0.2",
+  "deterministic": true,
+  "benchmark": {
+    "kind": "deterministic synthetic policy comparison; no LLM",
+    "seed": 17,
+    "count": 120,
+    "totals": {
+      "none": {
+        "success": 0,
+        "failures": 120,
+        "calls": 966,
+        "quarantined": 0,
+        "abstentions": 0
+      },
+      "raw": {
+        "success": 30,
+        "failures": 90,
+        "calls": 878,
+        "quarantined": 0,
+        "abstentions": 0
+      },
+      "flat": {
+        "success": 0,
+        "failures": 120,
+        "calls": 340,
+        "quarantined": 0,
+        "abstentions": 0
+      },
+      "dxp": {
+        "success": 120,
+        "failures": 0,
+        "calls": 2016,
+        "quarantined": 29,
+        "abstentions": 0
+      }
+    }
+  },
+  "unknown": {
+    "totals": {
+      "none": {
+        "success": 0,
+        "failures": 120,
+        "calls": 966,
+        "quarantined": 0,
+        "abstentions": 0
+      },
+      "raw": {
+        "success": 26,
+        "failures": 94,
+        "calls": 971,
+        "quarantined": 0,
+        "abstentions": 0
+      },
+      "flat": {
+        "success": 0,
+        "failures": 120,
+        "calls": 340,
+        "quarantined": 0,
+        "abstentions": 0
+      },
+      "dxp": {
+        "success": 96,
+        "failures": 0,
+        "calls": 1628,
+        "quarantined": 22,
+        "abstentions": 24
+      }
+    }
+  },
+  "limitations": [
+    "No models or tokens",
+    "Oracle trust labels",
+    "Constructed exact-match scopes",
+    "Does not validate H1-H6"
+  ]
+}

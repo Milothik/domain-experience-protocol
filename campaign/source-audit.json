@@ -1,0 +1,1893 @@
+{
+  "auditedAt": "2026-10-15T07:54:36.829Z",
+  "runs": [
+    {
+      "taskId": "T2",
+      "condition": "note",
+      "runId": "R01",
+      "acceptanceSha256": "ab1bda5d0a108fbf7d4064a596fee9c219e2068643fe11333d629c7fb0010616",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available as a plain note in NOTE.md. Read if useful.\nTask: {\"id\":\"T2\",\"target\":\"web/core.mjs\",\"title\":\"Presupuesto de contexto reproducible\",\"requirement\":\"Extend contextPacket options with maxLessons. Omission preserves current behavior and ordering. Supplied maxLessons must be an integer in 1..1000, otherwise throw. When supplied, sort eligible lessons by commitId, subject, predicate, claim using string lexical comparisons, then return the first maxLessons. Preserve scope filtering and no mutation.\"}",
+      "target": "web/core.mjs",
+      "immutableChecks": [
+        {
+          "path": "web/dce-adapter.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "worker/index.js",
+          "unchanged": true
+        },
+        {
+          "path": "scripts/build-worker.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/dce-adapter.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/public-api.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/routing.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "package.json",
+          "unchanged": true
+        },
+        {
+          "path": "web/index.html",
+          "unchanged": true
+        },
+        {
+          "path": ".openai/hosting.json",
+          "unchanged": true
+        },
+        {
+          "path": "public/pilot.json",
+          "unchanged": true
+        },
+        {
+          "path": "fixture.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "public/consumer-memory.json",
+          "unchanged": true
+        },
+        {
+          "path": "acceptance.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "AGENTS.md",
+          "unchanged": true
+        },
+        {
+          "path": "NOTE.md",
+          "unchanged": true
+        }
+      ],
+      "immutablePassed": true,
+      "targetSha256": "804202596b1de999b638f10fe5ac20f9c8170558bb876f7f05c23385fc65184c",
+      "report": {
+        "run": "R01",
+        "task": "T2",
+        "target": "web/core.mjs",
+        "summary": "Added maxLessons validation and deterministic lexical ordering before limiting eligible context lessons. Omitted maxLessons preserves existing ordering and filtering.",
+        "observedActions": [
+          "Read AGENTS.md and TASK.json in assigned directory.",
+          "Read web/core.mjs and acceptance.mjs.",
+          "Edited only the target source file with apply_patch.",
+          "Ran node acceptance.mjs; its build step generated worker output.",
+          "Wrote REPORT.json."
+        ],
+        "commands": [
+          "Get-Content AGENTS.md; Get-Content TASK.json",
+          "Get-Content web/core.mjs; Get-Content acceptance.mjs",
+          "node acceptance.mjs"
+        ],
+        "errors": [],
+        "corrections": [],
+        "acceptanceAttempts": [
+          {
+            "command": "node acceptance.mjs",
+            "exitCode": 0,
+            "tests": 12,
+            "passed": 12,
+            "failed": 0
+          }
+        ],
+        "toolCalls": {
+          "functionsExec": 4,
+          "execCommand": 4,
+          "applyPatch": 1
+        },
+        "memoryUsed": false,
+        "outsideDirectoryAccess": false,
+        "limitations": [
+          "Validation relied on the prescribed acceptance suite; no additional tests were executed."
+        ]
+      },
+      "observedReportModifiedAt": "2026-10-15T07:51:29.267Z"
+    },
+    {
+      "taskId": "T4",
+      "condition": "note",
+      "runId": "R02",
+      "acceptanceSha256": "7f966bb1de5b4d79816a9ac4074bee5e8f4637bedc3d7a7f8918f25ecbd3aafb",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available as a plain note in NOTE.md. Read if useful.\nTask: {\"id\":\"T4\",\"target\":\"worker/index.js\",\"title\":\"Filtros del registro externo\",\"requirement\":\"GET /api/experiences accepts optional domain (exact string) and outcome (one of success/failure/partial/incomplete). Filter returned items by payload.domain and payload.outcome.status, combining both with AND, when payload came from DB as JSON string. Empty omitted filters preserve behavior; invalid nonempty outcome returns 400. No writes or quota consumption on GET. Operate on existing up-to-50 retrieved records; no pagination claim.\"}",
+      "target": "worker/index.js",
+      "immutableChecks": [
+        {
+          "path": "web/core.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "web/dce-adapter.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "scripts/build-worker.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/dce-adapter.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/public-api.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/routing.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "package.json",
+          "unchanged": true
+        },
+        {
+          "path": "web/index.html",
+          "unchanged": true
+        },
+        {
+          "path": ".openai/hosting.json",
+          "unchanged": true
+        },
+        {
+          "path": "public/pilot.json",
+          "unchanged": true
+        },
+        {
+          "path": "fixture.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "public/consumer-memory.json",
+          "unchanged": true
+        },
+        {
+          "path": "acceptance.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "AGENTS.md",
+          "unchanged": true
+        },
+        {
+          "path": "NOTE.md",
+          "unchanged": true
+        }
+      ],
+      "immutablePassed": true,
+      "targetSha256": "354f63134984366d2ff946bb02ffafce27d4c94bc1418d73e36256ba9abfc6e8",
+      "report": {
+        "run": "R02",
+        "task": "T4",
+        "status": "completed",
+        "actions": [
+          "Read AGENTS.md and TASK.json in the assigned directory.",
+          "Read worker/index.js, NOTE.md and acceptance.mjs.",
+          "Updated worker/index.js to validate nonempty outcome filters and filter decoded experience payloads by exact domain and outcome status with AND.",
+          "Preserved empty-filter behavior, the existing 50-record retrieval limit, and read-only GET handling.",
+          "Ran node acceptance.mjs; the build and all 12 tests passed."
+        ],
+        "commands": [
+          "Get-Content AGENTS.md; Get-Content TASK.json",
+          "Get-Content worker/index.js; Get-Content NOTE.md; Get-Content acceptance.mjs",
+          "node acceptance.mjs"
+        ],
+        "errors": [],
+        "corrections": [],
+        "acceptanceAttempts": 1,
+        "acceptanceResult": {
+          "exitCode": 0,
+          "passed": 12,
+          "failed": 0
+        },
+        "toolCalls": {
+          "functionsExec": 4,
+          "execCommand": 3,
+          "applyPatch": 2,
+          "localToolOperations": 5
+        },
+        "memoryUsed": {
+          "read": true,
+          "source": "NOTE.md",
+          "application": "Used the prescribed acceptance entry point, which rebuilds the worker before testing; preserved exact experience-route matching."
+        },
+        "limitations": [
+          "Filtering applies only to the existing up-to-50 retrieved collection records; no pagination was added.",
+          "Validation used the prescribed local acceptance suite only."
+        ],
+        "accessOutsideAssignedDirectory": false
+      },
+      "observedReportModifiedAt": "2026-10-15T07:51:34.946Z"
+    },
+    {
+      "taskId": "T4",
+      "condition": "dxp",
+      "runId": "R03",
+      "acceptanceSha256": "7f966bb1de5b4d79816a9ac4074bee5e8f4637bedc3d7a7f8918f25ecbd3aafb",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available through DXP: node memory.mjs list; node memory.mjs query <text>; node memory.mjs context. Interface uses real DXP validator/query/contextPacket on a frozen repository. Use if useful, do not edit memory.\nTask: {\"id\":\"T4\",\"target\":\"worker/index.js\",\"title\":\"Filtros del registro externo\",\"requirement\":\"GET /api/experiences accepts optional domain (exact string) and outcome (one of success/failure/partial/incomplete). Filter returned items by payload.domain and payload.outcome.status, combining both with AND, when payload came from DB as JSON string. Empty omitted filters preserve behavior; invalid nonempty outcome returns 400. No writes or quota consumption on GET. Operate on existing up-to-50 retrieved records; no pagination claim.\"}",
+      "target": "worker/index.js",
+      "immutableChecks": [
+        {
+          "path": "web/core.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "web/dce-adapter.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "scripts/build-worker.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/dce-adapter.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/public-api.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/routing.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "package.json",
+          "unchanged": true
+        },
+        {
+          "path": "web/index.html",
+          "unchanged": true
+        },
+        {
+          "path": ".openai/hosting.json",
+          "unchanged": true
+        },
+        {
+          "path": "public/pilot.json",
+          "unchanged": true
+        },
+        {
+          "path": "fixture.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "public/consumer-memory.json",
+          "unchanged": true
+        },
+        {
+          "path": "acceptance.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "AGENTS.md",
+          "unchanged": true
+        },
+        {
+          "path": "memory/repository.json",
+          "unchanged": true
+        }
+      ],
+      "immutablePassed": true,
+      "targetSha256": "650674e85563635db428867a7fdcb244487ccf23332d1b21d6bae683acc06271",
+      "report": {
+        "run": "R03",
+        "task": "T4",
+        "status": "completed",
+        "actions": [
+          "Read AGENTS.md and TASK.json inside assigned directory.",
+          "Read worker/index.js.",
+          "Updated worker/index.js to validate outcome and apply exact domain and outcome.status filters after JSON parsing, with AND semantics on existing up-to-50 results.",
+          "Preserved empty-filter behavior, experiment listing behavior, and GET read-only execution.",
+          "Ran node acceptance.mjs; exit code 0, all 12 tests passed.",
+          "Wrote REPORT.json."
+        ],
+        "commands": [
+          "Get-Content AGENTS.md; Get-Content TASK.json",
+          "Get-Content worker/index.js",
+          "node acceptance.mjs",
+          "Set-Content REPORT.json"
+        ],
+        "errors": [],
+        "corrections": [],
+        "acceptanceAttempts": 1,
+        "toolCalls": {
+          "functionsExec": 4,
+          "execCommand": 4,
+          "applyPatch": 1,
+          "totalNestedToolInvocations": 5
+        },
+        "memoryUsed": false,
+        "outsideDirectoryAccess": false,
+        "limitations": [
+          "Filtering applies only to the existing up-to-50 retrieved records; no pagination added."
+        ]
+      },
+      "observedReportModifiedAt": "2026-10-15T07:51:35.480Z"
+    },
+    {
+      "taskId": "T1",
+      "condition": "dxp",
+      "runId": "R04",
+      "acceptanceSha256": "6f60aec87a618000ee45ddff9dd8186f1e1882879f5f19735d922b545d4228dd",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available through DXP: node memory.mjs list; node memory.mjs query <text>; node memory.mjs context. Interface uses real DXP validator/query/contextPacket on a frozen repository. Use if useful, do not edit memory.\nTask: {\"id\":\"T1\",\"target\":\"web/core.mjs\",\"title\":\"Filtros de consulta de historial\",\"requirement\":\"Extend query(repo, options) with headsOnly=false, includeDemo=true, validity='' (one VALIDITY value or empty). headsOnly returns only unique current ref heads; includeDemo=false excludes demo experiences; validity filters by exact value. Preserve all existing filters and defaults, preserve repository. Invalid validity must throw.\"}",
+      "target": "web/core.mjs",
+      "immutableChecks": [
+        {
+          "path": "web/dce-adapter.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "worker/index.js",
+          "unchanged": true
+        },
+        {
+          "path": "scripts/build-worker.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/dce-adapter.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/public-api.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/routing.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "package.json",
+          "unchanged": true
+        },
+        {
+          "path": "web/index.html",
+          "unchanged": true
+        },
+        {
+          "path": ".openai/hosting.json",
+          "unchanged": true
+        },
+        {
+          "path": "public/pilot.json",
+          "unchanged": true
+        },
+        {
+          "path": "fixture.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "public/consumer-memory.json",
+          "unchanged": true
+        },
+        {
+          "path": "acceptance.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "AGENTS.md",
+          "unchanged": true
+        },
+        {
+          "path": "memory/repository.json",
+          "unchanged": true
+        }
+      ],
+      "immutablePassed": true,
+      "targetSha256": "eff77f3885f57a9b103ae9ebab1ee0f5b0a30468ba4fe58448331e0ed3a1e3b6",
+      "report": {
+        "run": "R04",
+        "task": "T1",
+        "status": "completed",
+        "actions": [
+          "Read AGENTS.md and TASK.json in the assigned directory.",
+          "Read web/core.mjs.",
+          "Extended query with headsOnly=false, includeDemo=true and validity=''; validated validity, filtered current ref heads and demo experiences, and retained existing query filters.",
+          "Ran node acceptance.mjs: exit code 0, all 12 tests passed, including T1 query scope, heads, demos, validity and immutability.",
+          "Wrote REPORT.json."
+        ],
+        "commands": [
+          "Get-Content AGENTS.md; Get-Content TASK.json",
+          "Get-Content web/core.mjs",
+          "node acceptance.mjs"
+        ],
+        "errors": [],
+        "corrections": [],
+        "acceptanceAttempts": 1,
+        "toolCalls": 4,
+        "toolCallAccounting": "Four functions.exec calls including report creation; five nested exec_command/apply_patch operations.",
+        "memoryUsed": false,
+        "limitations": [
+          "No checks beyond the prescribed acceptance script."
+        ],
+        "outsideDirectoryAccess": false
+      },
+      "observedReportModifiedAt": "2026-10-15T07:51:42.195Z"
+    },
+    {
+      "taskId": "T5",
+      "condition": "dxp",
+      "runId": "R05",
+      "acceptanceSha256": "041b80da0861af215f55599e565b2f364591f24e871c493fc89a9ff52433fac0",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available through DXP: node memory.mjs list; node memory.mjs query <text>; node memory.mjs context. Interface uses real DXP validator/query/contextPacket on a frozen repository. Use if useful, do not edit memory.\nTask: {\"id\":\"T5\",\"target\":\"worker/index.js\",\"title\":\"Comprobaciones HTTP sin cuerpos\",\"requirement\":\"Support HEAD for embedded static assets (including /), /.well-known/dxp.json, and /api/evaluation. Match GET status and headers but return no body; never write DB or consume intake quota. Unknown HEAD path must match GET 404 with empty body. Existing POST ingestion must still work.\"}",
+      "target": "worker/index.js",
+      "immutableChecks": [
+        {
+          "path": "web/core.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "web/dce-adapter.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "scripts/build-worker.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/dce-adapter.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/public-api.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/routing.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "package.json",
+          "unchanged": true
+        },
+        {
+          "path": "web/index.html",
+          "unchanged": true
+        },
+        {
+          "path": ".openai/hosting.json",
+          "unchanged": true
+        },
+        {
+          "path": "public/pilot.json",
+          "unchanged": true
+        },
+        {
+          "path": "fixture.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "public/consumer-memory.json",
+          "unchanged": true
+        },
+        {
+          "path": "acceptance.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "AGENTS.md",
+          "unchanged": true
+        },
+        {
+          "path": "memory/repository.json",
+          "unchanged": true
+        }
+      ],
+      "immutablePassed": true,
+      "targetSha256": "f6cb0b197ed79f78aa8489bc94410218f34bf3899744260f09dd66fd4b1228dc",
+      "report": {
+        "taskId": "T5",
+        "status": "completed",
+        "target": "worker/index.js",
+        "actions": [
+          "Read AGENTS.md and TASK.json within assigned directory.",
+          "Read worker/index.js and acceptance.mjs.",
+          "Implemented HEAD using existing GET routing and metadata with a null response body, including caught failures.",
+          "Added HEAD to advertised CORS methods.",
+          "Executed node acceptance.mjs: exit 0; all 12 tests passed.",
+          "Wrote REPORT.json."
+        ],
+        "commands": [
+          "Get-Content AGENTS.md; Get-Content TASK.json",
+          "Get-Content worker/index.js; Get-Content acceptance.mjs",
+          "node acceptance.mjs"
+        ],
+        "errors": [],
+        "corrections": [],
+        "acceptanceAttempts": 1,
+        "toolCalls": 4,
+        "toolCallCounting": "Four functions.exec calls including report creation; five nested exec_command/apply_patch calls.",
+        "memoryUsed": false,
+        "outsideDirectoryAccess": false,
+        "limitations": [
+          "Verification used the supplied local acceptance suite; no external services were accessed.",
+          "HEAD follows GET read paths, including database reads for evaluation; it does not enter POST quota or persistence paths."
+        ]
+      },
+      "observedReportModifiedAt": "2026-10-15T07:51:53.968Z"
+    },
+    {
+      "taskId": "T3",
+      "condition": "none",
+      "runId": "R06",
+      "acceptanceSha256": "6bba29f1b57c190e28c5fc51074ecfe7a5bee2fc95fa920d5c5017744b96f600",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nNo previous work experiences are supplied.\nTask: {\"id\":\"T3\",\"target\":\"web/core.mjs\",\"title\":\"Hipótesis excluidas del contexto operativo\",\"requirement\":\"contextPacket must exclude lessons with type=hypothesis by default. Add includeHypotheses=false option; true admits hypotheses under all other existing filters. Never admit intuition/disputed, demo or non-active experiences. Preserve includeNegative behavior and exact lesson scope.\"}",
+      "target": "web/core.mjs",
+      "immutableChecks": [
+        {
+          "path": "web/dce-adapter.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "worker/index.js",
+          "unchanged": true
+        },
+        {
+          "path": "scripts/build-worker.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/dce-adapter.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/public-api.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/routing.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "package.json",
+          "unchanged": true
+        },
+        {
+          "path": "web/index.html",
+          "unchanged": true
+        },
+        {
+          "path": ".openai/hosting.json",
+          "unchanged": true
+        },
+        {
+          "path": "public/pilot.json",
+          "unchanged": true
+        },
+        {
+          "path": "fixture.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "public/consumer-memory.json",
+          "unchanged": true
+        },
+        {
+          "path": "acceptance.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "AGENTS.md",
+          "unchanged": true
+        }
+      ],
+      "immutablePassed": true,
+      "targetSha256": "48451eaddb97a96ba0bae70d571d488a04e0308597721c5f495fd632c2f0ca32",
+      "report": {
+        "taskId": "T3",
+        "run": "R06",
+        "status": "completed",
+        "changes": [
+          "Added includeHypotheses=false to contextPacket options.",
+          "Excluded hypothesis lessons by default; opt-in preserves all existing eligibility and scope filters."
+        ],
+        "observedActions": [
+          "Read AGENTS.md and TASK.json within assigned directory.",
+          "Read web/core.mjs and acceptance.mjs.",
+          "Patched only web/core.mjs.",
+          "Executed node acceptance.mjs: exit 0, 12 tests passed.",
+          "Wrote REPORT.json."
+        ],
+        "commands": [
+          "Get-Content AGENTS.md; Get-Content TASK.json",
+          "Get-Content web/core.mjs; Get-Content acceptance.mjs",
+          "node acceptance.mjs"
+        ],
+        "errors": [],
+        "corrections": [],
+        "acceptanceAttempts": 1,
+        "toolCalls": 5,
+        "memoryUsed": false,
+        "outsideDirectoryAccess": false,
+        "limitations": [
+          "Validation limited to prescribed acceptance suite; its build step generated dist output."
+        ]
+      },
+      "observedReportModifiedAt": "2026-10-15T07:51:52.633Z"
+    },
+    {
+      "taskId": "T3",
+      "condition": "dxp",
+      "runId": "R07",
+      "acceptanceSha256": "6bba29f1b57c190e28c5fc51074ecfe7a5bee2fc95fa920d5c5017744b96f600",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available through DXP: node memory.mjs list; node memory.mjs query <text>; node memory.mjs context. Interface uses real DXP validator/query/contextPacket on a frozen repository. Use if useful, do not edit memory.\nTask: {\"id\":\"T3\",\"target\":\"web/core.mjs\",\"title\":\"Hipótesis excluidas del contexto operativo\",\"requirement\":\"contextPacket must exclude lessons with type=hypothesis by default. Add includeHypotheses=false option; true admits hypotheses under all other existing filters. Never admit intuition/disputed, demo or non-active experiences. Preserve includeNegative behavior and exact lesson scope.\"}",
+      "target": "web/core.mjs",
+      "immutableChecks": [
+        {
+          "path": "web/dce-adapter.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "worker/index.js",
+          "unchanged": true
+        },
+        {
+          "path": "scripts/build-worker.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/dce-adapter.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/public-api.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/routing.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "package.json",
+          "unchanged": true
+        },
+        {
+          "path": "web/index.html",
+          "unchanged": true
+        },
+        {
+          "path": ".openai/hosting.json",
+          "unchanged": true
+        },
+        {
+          "path": "public/pilot.json",
+          "unchanged": true
+        },
+        {
+          "path": "fixture.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "public/consumer-memory.json",
+          "unchanged": true
+        },
+        {
+          "path": "acceptance.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "AGENTS.md",
+          "unchanged": true
+        },
+        {
+          "path": "memory/repository.json",
+          "unchanged": true
+        }
+      ],
+      "immutablePassed": true,
+      "targetSha256": "6b12070a468e68e8a91b99228479eb08c0fd81987070001b504cbec469578ed9",
+      "report": {
+        "run": "R07",
+        "taskId": "T3",
+        "target": "web/core.mjs",
+        "actions": [
+          "Read local AGENTS.md and TASK.json",
+          "Read web/core.mjs",
+          "Added includeHypotheses=false option and hypothesis eligibility condition to contextPacket",
+          "Ran node acceptance.mjs"
+        ],
+        "commands": [
+          "Get-Content AGENTS.md; Get-Content TASK.json",
+          "Get-Content web/core.mjs",
+          "node acceptance.mjs"
+        ],
+        "errors": [],
+        "corrections": [],
+        "acceptanceAttempts": 1,
+        "acceptanceResult": {
+          "failed": 0,
+          "tests": 12,
+          "passed": 12,
+          "exitCode": 0
+        },
+        "toolCalls": 4,
+        "memoryUsed": false,
+        "limitations": [
+          "Only prescribed acceptance suite executed"
+        ],
+        "outsideDirectoryAccess": [],
+        "result": "Hypotheses excluded by default and admitted with includeHypotheses=true subject to existing filters; includeNegative and exact lesson scope preserved."
+      },
+      "observedReportModifiedAt": "2026-10-15T07:52:23.145Z"
+    },
+    {
+      "taskId": "T5",
+      "condition": "note",
+      "runId": "R08",
+      "acceptanceSha256": "041b80da0861af215f55599e565b2f364591f24e871c493fc89a9ff52433fac0",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available as a plain note in NOTE.md. Read if useful.\nTask: {\"id\":\"T5\",\"target\":\"worker/index.js\",\"title\":\"Comprobaciones HTTP sin cuerpos\",\"requirement\":\"Support HEAD for embedded static assets (including /), /.well-known/dxp.json, and /api/evaluation. Match GET status and headers but return no body; never write DB or consume intake quota. Unknown HEAD path must match GET 404 with empty body. Existing POST ingestion must still work.\"}",
+      "target": "worker/index.js",
+      "immutableChecks": [
+        {
+          "path": "web/core.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "web/dce-adapter.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "scripts/build-worker.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/dce-adapter.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/public-api.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/routing.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "package.json",
+          "unchanged": true
+        },
+        {
+          "path": "web/index.html",
+          "unchanged": true
+        },
+        {
+          "path": ".openai/hosting.json",
+          "unchanged": true
+        },
+        {
+          "path": "public/pilot.json",
+          "unchanged": true
+        },
+        {
+          "path": "fixture.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "public/consumer-memory.json",
+          "unchanged": true
+        },
+        {
+          "path": "acceptance.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "AGENTS.md",
+          "unchanged": true
+        },
+        {
+          "path": "NOTE.md",
+          "unchanged": true
+        }
+      ],
+      "immutablePassed": true,
+      "targetSha256": "7e43fb9969405c3ef4080ee4c6d3e8e0d3acd753ad27804a3ac3cefe4c6fb8d2",
+      "report": {
+        "taskId": "T5",
+        "status": "completed",
+        "actions": [
+          "Read AGENTS.md, TASK.json, worker/index.js, acceptance.mjs and NOTE.md within the assigned directory.",
+          "Updated worker/index.js so HEAD delegates to GET routing and returns matching status and headers with an empty body.",
+          "Added HEAD to advertised methods and kept caught HEAD failures bodyless.",
+          "Ran the prescribed acceptance command, which rebuilt the worker."
+        ],
+        "commands": [
+          "Get-Content -Raw AGENTS.md; Get-Content -Raw TASK.json",
+          "Get-Content -Raw worker/index.js; Get-Content -Raw acceptance.mjs; Get-Content -Raw NOTE.md",
+          "node acceptance.mjs"
+        ],
+        "errors": [],
+        "corrections": [],
+        "acceptanceAttempts": [
+          {
+            "command": "node acceptance.mjs",
+            "exitCode": 0,
+            "passed": 12,
+            "failed": 0
+          }
+        ],
+        "toolCalls": {
+          "functionsExec": 4,
+          "execCommand": 3,
+          "applyPatch": 2,
+          "totalNestedToolCalls": 5
+        },
+        "memoryUsed": {
+          "noteRead": true,
+          "source": "NOTE.md",
+          "use": "Confirmed that acceptance rebuilds the worker and uses same-process test imports."
+        },
+        "limitations": [
+          "Executed the supplied acceptance suite once; no additional tests were created."
+        ],
+        "outsideDirectoryAccess": false
+      },
+      "observedReportModifiedAt": "2026-10-15T07:52:48.197Z"
+    },
+    {
+      "taskId": "T6",
+      "condition": "note",
+      "runId": "R09",
+      "acceptanceSha256": "10ece05631e4dcab3e3dfddd5aa8d6d99c6fe724ea3d31f5662c7cb1bad77aca",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available as a plain note in NOTE.md. Read if useful.\nTask: {\"id\":\"T6\",\"target\":\"worker/index.js\",\"title\":\"Informes con control de nota equivalente\",\"requirement\":\"POST /api/experiments optionally accepts noteSuccess. If present, require integer 0..sampleSize, recompute computedDifferenceVsNote=(dxpSuccess-noteSuccess)/sampleSize ignoring submitted derived value, preserve scientificallyVerified=false. Legacy two-arm reports without noteSuccess remain accepted and must omit computedDifferenceVsNote even if client spoofs it. Reject null, strings, negative, noninteger and out-of-range noteSuccess with 400 before storing.\"}",
+      "target": "worker/index.js",
+      "immutableChecks": [
+        {
+          "path": "web/core.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "web/dce-adapter.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "scripts/build-worker.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/dce-adapter.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/public-api.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/routing.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "package.json",
+          "unchanged": true
+        },
+        {
+          "path": "web/index.html",
+          "unchanged": true
+        },
+        {
+          "path": ".openai/hosting.json",
+          "unchanged": true
+        },
+        {
+          "path": "public/pilot.json",
+          "unchanged": true
+        },
+        {
+          "path": "fixture.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "public/consumer-memory.json",
+          "unchanged": true
+        },
+        {
+          "path": "acceptance.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "AGENTS.md",
+          "unchanged": true
+        },
+        {
+          "path": "NOTE.md",
+          "unchanged": true
+        }
+      ],
+      "immutablePassed": true,
+      "targetSha256": "85f4d2da98194418bc47fd628aa5f7951253601871a1e19ea9d1150f54a14913",
+      "report": {
+        "taskId": "T6",
+        "runId": "R09",
+        "status": "completed",
+        "actions": [
+          "Read assigned AGENTS.md and TASK.json",
+          "Read worker/index.js, acceptance.mjs and NOTE.md",
+          "Updated only worker/index.js to validate optional noteSuccess before persistence, recompute its comparison, remove spoofed legacy comparison and retain scientificallyVerified=false",
+          "Ran node acceptance.mjs",
+          "Wrote REPORT.json"
+        ],
+        "commands": [
+          "Get-Content AGENTS.md; Get-Content TASK.json",
+          "Get-Content worker/index.js; Get-Content acceptance.mjs; Get-Content NOTE.md",
+          "Scoped source replacement followed by node acceptance.mjs",
+          "Write REPORT.json"
+        ],
+        "errors": [],
+        "corrections": [],
+        "acceptanceAttempts": [
+          {
+            "command": "node acceptance.mjs",
+            "exitCode": 0,
+            "passed": 12,
+            "failed": 0
+          }
+        ],
+        "toolCalls": 4,
+        "memoryUsed": {
+          "noteRead": "NOTE.md",
+          "applied": "Used prescribed direct acceptance runner, which rebuilds worker before tests",
+          "causalBenefitClaim": false
+        },
+        "limitations": [
+          "Validation used only the prescribed local acceptance suite; no external integration checks"
+        ],
+        "outsideDirectoryAccess": []
+      },
+      "observedReportModifiedAt": "2026-10-15T07:52:34.748Z"
+    },
+    {
+      "taskId": "T3",
+      "condition": "note",
+      "runId": "R10",
+      "acceptanceSha256": "6bba29f1b57c190e28c5fc51074ecfe7a5bee2fc95fa920d5c5017744b96f600",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available as a plain note in NOTE.md. Read if useful.\nTask: {\"id\":\"T3\",\"target\":\"web/core.mjs\",\"title\":\"Hipótesis excluidas del contexto operativo\",\"requirement\":\"contextPacket must exclude lessons with type=hypothesis by default. Add includeHypotheses=false option; true admits hypotheses under all other existing filters. Never admit intuition/disputed, demo or non-active experiences. Preserve includeNegative behavior and exact lesson scope.\"}",
+      "target": "web/core.mjs",
+      "immutableChecks": [
+        {
+          "path": "web/dce-adapter.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "worker/index.js",
+          "unchanged": true
+        },
+        {
+          "path": "scripts/build-worker.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/dce-adapter.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/public-api.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/routing.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "package.json",
+          "unchanged": true
+        },
+        {
+          "path": "web/index.html",
+          "unchanged": true
+        },
+        {
+          "path": ".openai/hosting.json",
+          "unchanged": true
+        },
+        {
+          "path": "public/pilot.json",
+          "unchanged": true
+        },
+        {
+          "path": "fixture.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "public/consumer-memory.json",
+          "unchanged": true
+        },
+        {
+          "path": "acceptance.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "AGENTS.md",
+          "unchanged": true
+        },
+        {
+          "path": "NOTE.md",
+          "unchanged": true
+        }
+      ],
+      "immutablePassed": true,
+      "targetSha256": "6b12070a468e68e8a91b99228479eb08c0fd81987070001b504cbec469578ed9",
+      "report": {
+        "taskId": "T3",
+        "run": "R10",
+        "status": "passed",
+        "summary": "contextPacket excludes hypotheses by default and accepts includeHypotheses=true while preserving the existing eligibility and scope filters.",
+        "observedActions": [
+          "Read assigned AGENTS.md and TASK.json.",
+          "Read web/core.mjs and NOTE.md.",
+          "Edited only web/core.mjs to add includeHypotheses=false and its lesson filter.",
+          "Ran node acceptance.mjs: exit code 0; 12 tests passed, 0 failed.",
+          "Wrote REPORT.json."
+        ],
+        "commands": [
+          "Get-Content -Raw AGENTS.md; Get-Content -Raw TASK.json",
+          "Get-Content -Raw web/core.mjs; Get-Content -Raw NOTE.md",
+          "node acceptance.mjs"
+        ],
+        "errors": [],
+        "corrections": [],
+        "acceptanceAttempts": 1,
+        "toolCalls": {
+          "functionsExec": 4,
+          "execCommand": 3,
+          "applyPatch": 2,
+          "totalNestedToolCalls": 5
+        },
+        "memoryUsed": {
+          "read": true,
+          "source": "NOTE.md",
+          "applied": false,
+          "explanation": "The note concerns portable checks and routing; this change required only the existing contextPacket predicates and prescribed acceptance command."
+        },
+        "accessOutsideAssignedDirectory": false,
+        "limitations": [
+          "Validation is limited to the prescribed acceptance suite; no additional tests or external services were used."
+        ]
+      },
+      "observedReportModifiedAt": "2026-10-15T07:52:44.609Z"
+    },
+    {
+      "taskId": "T2",
+      "condition": "none",
+      "runId": "R11",
+      "acceptanceSha256": "ab1bda5d0a108fbf7d4064a596fee9c219e2068643fe11333d629c7fb0010616",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nNo previous work experiences are supplied.\nTask: {\"id\":\"T2\",\"target\":\"web/core.mjs\",\"title\":\"Presupuesto de contexto reproducible\",\"requirement\":\"Extend contextPacket options with maxLessons. Omission preserves current behavior and ordering. Supplied maxLessons must be an integer in 1..1000, otherwise throw. When supplied, sort eligible lessons by commitId, subject, predicate, claim using string lexical comparisons, then return the first maxLessons. Preserve scope filtering and no mutation.\"}",
+      "target": "web/core.mjs",
+      "immutableChecks": [
+        {
+          "path": "web/dce-adapter.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "worker/index.js",
+          "unchanged": true
+        },
+        {
+          "path": "scripts/build-worker.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/dce-adapter.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/public-api.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/routing.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "package.json",
+          "unchanged": true
+        },
+        {
+          "path": "web/index.html",
+          "unchanged": true
+        },
+        {
+          "path": ".openai/hosting.json",
+          "unchanged": true
+        },
+        {
+          "path": "public/pilot.json",
+          "unchanged": true
+        },
+        {
+          "path": "fixture.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "public/consumer-memory.json",
+          "unchanged": true
+        },
+        {
+          "path": "acceptance.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "AGENTS.md",
+          "unchanged": true
+        }
+      ],
+      "immutablePassed": true,
+      "targetSha256": "438ccce347878b7967d9cb4f797ef65ddccf493e5d657e4e96fe7f3271db5fc4",
+      "report": {
+        "taskId": "T2",
+        "run": "R11",
+        "status": "implemented",
+        "actions": [
+          "Read AGENTS.md and TASK.json within R11.",
+          "Read web/core.mjs and acceptance.mjs within R11.",
+          "Edited only target web/core.mjs: validate supplied maxLessons, lexically sort eligible cloned lessons by commitId/subject/predicate/claim, and slice to the requested limit; omission preserves existing order.",
+          "Executed node acceptance.mjs within R11; prescribed build ran and all 12 tests passed.",
+          "Wrote REPORT.json."
+        ],
+        "commands": [
+          "Get-Content -LiteralPath AGENTS.md; Get-Content -LiteralPath TASK.json",
+          "Get-Content -LiteralPath web/core.mjs; Get-Content -LiteralPath acceptance.mjs",
+          "node acceptance.mjs"
+        ],
+        "errors": [],
+        "corrections": [],
+        "acceptanceAttempts": 1,
+        "acceptanceResult": {
+          "exitCode": 0,
+          "passed": 12,
+          "failed": 0
+        },
+        "toolCalls": 4,
+        "toolCallAccounting": "Four functions.exec calls including report creation; nested tools: three exec_command calls and two apply_patch calls.",
+        "memoryUsed": false,
+        "outsideDirectoryAccess": false,
+        "limitations": [
+          "Verification limited to the prescribed acceptance execution; no additional test executions."
+        ]
+      },
+      "observedReportModifiedAt": "2026-10-15T07:52:59.371Z"
+    },
+    {
+      "taskId": "T2",
+      "condition": "dxp",
+      "runId": "R12",
+      "acceptanceSha256": "ab1bda5d0a108fbf7d4064a596fee9c219e2068643fe11333d629c7fb0010616",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available through DXP: node memory.mjs list; node memory.mjs query <text>; node memory.mjs context. Interface uses real DXP validator/query/contextPacket on a frozen repository. Use if useful, do not edit memory.\nTask: {\"id\":\"T2\",\"target\":\"web/core.mjs\",\"title\":\"Presupuesto de contexto reproducible\",\"requirement\":\"Extend contextPacket options with maxLessons. Omission preserves current behavior and ordering. Supplied maxLessons must be an integer in 1..1000, otherwise throw. When supplied, sort eligible lessons by commitId, subject, predicate, claim using string lexical comparisons, then return the first maxLessons. Preserve scope filtering and no mutation.\"}",
+      "target": "web/core.mjs",
+      "immutableChecks": [
+        {
+          "path": "web/dce-adapter.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "worker/index.js",
+          "unchanged": true
+        },
+        {
+          "path": "scripts/build-worker.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/dce-adapter.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/public-api.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/routing.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "package.json",
+          "unchanged": true
+        },
+        {
+          "path": "web/index.html",
+          "unchanged": true
+        },
+        {
+          "path": ".openai/hosting.json",
+          "unchanged": true
+        },
+        {
+          "path": "public/pilot.json",
+          "unchanged": true
+        },
+        {
+          "path": "fixture.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "public/consumer-memory.json",
+          "unchanged": true
+        },
+        {
+          "path": "acceptance.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "AGENTS.md",
+          "unchanged": true
+        },
+        {
+          "path": "memory/repository.json",
+          "unchanged": true
+        }
+      ],
+      "immutablePassed": true,
+      "targetSha256": "d34c6616c1165f6741740bc061544d437940ffcee8f0133da04edfe82baaa5f3",
+      "report": {
+        "taskId": "T2",
+        "run": "R12",
+        "status": "completed",
+        "actions": [
+          "Read assigned AGENTS.md and TASK.json.",
+          "Read web/core.mjs and acceptance.mjs.",
+          "Updated contextPacket in web/core.mjs to validate supplied maxLessons, sort cloned eligible lessons lexically by commitId/subject/predicate/claim, and slice the requested count while preserving omitted-option order and filtering.",
+          "Ran node acceptance.mjs successfully: 12 tests passed, 0 failed.",
+          "Wrote REPORT.json."
+        ],
+        "commands": [
+          "Get-Content AGENTS.md; Get-Content TASK.json",
+          "Get-Content web/core.mjs; Get-Content acceptance.mjs",
+          "node acceptance.mjs"
+        ],
+        "errors": [],
+        "corrections": [],
+        "acceptanceAttempts": 1,
+        "toolCalls": {
+          "functionsExec": 4,
+          "execCommand": 3,
+          "applyPatch": 2
+        },
+        "memoryUsed": false,
+        "outsideDirectoryAccess": false,
+        "limitations": [
+          "Verification was limited to the prescribed acceptance suite; its build step generated worker output."
+        ]
+      },
+      "observedReportModifiedAt": "2026-10-15T07:53:00.447Z"
+    },
+    {
+      "taskId": "T6",
+      "condition": "dxp",
+      "runId": "R13",
+      "acceptanceSha256": "10ece05631e4dcab3e3dfddd5aa8d6d99c6fe724ea3d31f5662c7cb1bad77aca",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available through DXP: node memory.mjs list; node memory.mjs query <text>; node memory.mjs context. Interface uses real DXP validator/query/contextPacket on a frozen repository. Use if useful, do not edit memory.\nTask: {\"id\":\"T6\",\"target\":\"worker/index.js\",\"title\":\"Informes con control de nota equivalente\",\"requirement\":\"POST /api/experiments optionally accepts noteSuccess. If present, require integer 0..sampleSize, recompute computedDifferenceVsNote=(dxpSuccess-noteSuccess)/sampleSize ignoring submitted derived value, preserve scientificallyVerified=false. Legacy two-arm reports without noteSuccess remain accepted and must omit computedDifferenceVsNote even if client spoofs it. Reject null, strings, negative, noninteger and out-of-range noteSuccess with 400 before storing.\"}",
+      "target": "worker/index.js",
+      "immutableChecks": [
+        {
+          "path": "web/core.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "web/dce-adapter.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "scripts/build-worker.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/dce-adapter.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/public-api.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/routing.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "package.json",
+          "unchanged": true
+        },
+        {
+          "path": "web/index.html",
+          "unchanged": true
+        },
+        {
+          "path": ".openai/hosting.json",
+          "unchanged": true
+        },
+        {
+          "path": "public/pilot.json",
+          "unchanged": true
+        },
+        {
+          "path": "fixture.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "public/consumer-memory.json",
+          "unchanged": true
+        },
+        {
+          "path": "acceptance.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "AGENTS.md",
+          "unchanged": true
+        },
+        {
+          "path": "memory/repository.json",
+          "unchanged": true
+        }
+      ],
+      "immutablePassed": true,
+      "targetSha256": "fc81387ad50f5bc8c919fc5a8a6909514d6b36ced47ad9bb451c95ecff3b9b33",
+      "report": {
+        "taskId": "T6",
+        "runId": "R13",
+        "status": "completed",
+        "actions": [
+          "Read assigned AGENTS.md and TASK.json.",
+          "Read worker/index.js.",
+          "Updated only worker/index.js to validate optional noteSuccess before persistence, recompute computedDifferenceVsNote, remove spoofed derived values for legacy reports, and retain scientificallyVerified=false.",
+          "Ran prescribed acceptance suite and wrote REPORT.json."
+        ],
+        "commands": [
+          "Get-Content AGENTS.md; Get-Content TASK.json",
+          "Get-Content worker/index.js",
+          "node acceptance.mjs"
+        ],
+        "errors": [],
+        "corrections": [],
+        "acceptanceAttempts": [
+          {
+            "command": "node acceptance.mjs",
+            "exitCode": 0,
+            "passed": 12,
+            "failed": 0
+          }
+        ],
+        "toolCalls": 5,
+        "toolCallCounting": "Three exec_command calls and two apply_patch calls, including report creation; four functions.exec orchestration calls.",
+        "memoryUsed": false,
+        "outsideDirectoryAccess": [],
+        "limitations": [
+          "Validation is based on the prescribed local acceptance suite; no external services were accessed."
+        ]
+      },
+      "observedReportModifiedAt": "2026-10-15T07:53:48.154Z"
+    },
+    {
+      "taskId": "T1",
+      "condition": "note",
+      "runId": "R14",
+      "acceptanceSha256": "6f60aec87a618000ee45ddff9dd8186f1e1882879f5f19735d922b545d4228dd",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nPrevious real work is available as a plain note in NOTE.md. Read if useful.\nTask: {\"id\":\"T1\",\"target\":\"web/core.mjs\",\"title\":\"Filtros de consulta de historial\",\"requirement\":\"Extend query(repo, options) with headsOnly=false, includeDemo=true, validity='' (one VALIDITY value or empty). headsOnly returns only unique current ref heads; includeDemo=false excludes demo experiences; validity filters by exact value. Preserve all existing filters and defaults, preserve repository. Invalid validity must throw.\"}",
+      "target": "web/core.mjs",
+      "immutableChecks": [
+        {
+          "path": "web/dce-adapter.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "worker/index.js",
+          "unchanged": true
+        },
+        {
+          "path": "scripts/build-worker.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/dce-adapter.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/public-api.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/routing.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "package.json",
+          "unchanged": true
+        },
+        {
+          "path": "web/index.html",
+          "unchanged": true
+        },
+        {
+          "path": ".openai/hosting.json",
+          "unchanged": true
+        },
+        {
+          "path": "public/pilot.json",
+          "unchanged": true
+        },
+        {
+          "path": "fixture.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "public/consumer-memory.json",
+          "unchanged": true
+        },
+        {
+          "path": "acceptance.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "AGENTS.md",
+          "unchanged": true
+        },
+        {
+          "path": "NOTE.md",
+          "unchanged": true
+        }
+      ],
+      "immutablePassed": true,
+      "targetSha256": "dfc57ce17939fa21a90eed8d2001811baf7da653d03ce83f9ff192dd29e93014",
+      "report": {
+        "run": "R14",
+        "task": "T1",
+        "status": "completed",
+        "actions": [
+          "Read AGENTS.md and TASK.json inside R14.",
+          "Read web/core.mjs, acceptance.mjs and NOTE.md inside R14.",
+          "Extended query options with headsOnly=false, includeDemo=true and validity=''; validated validity before filtering, selected current reference heads using a Set, and combined the new filters with all existing filters.",
+          "Ran node acceptance.mjs successfully: 12 passed, 0 failed; repository immutability assertion passed.",
+          "Wrote REPORT.json."
+        ],
+        "commands": [
+          "Get-Content -LiteralPath AGENTS.md; Get-Content -LiteralPath TASK.json",
+          "Get-Content -LiteralPath web/core.mjs; Get-Content -LiteralPath acceptance.mjs; Get-Content -LiteralPath NOTE.md",
+          "node acceptance.mjs",
+          "Set-Content -LiteralPath REPORT.json -Encoding utf8"
+        ],
+        "errors": [],
+        "corrections": [],
+        "acceptanceAttempts": 1,
+        "acceptanceResult": {
+          "exitCode": 0,
+          "passed": 12,
+          "failed": 0
+        },
+        "toolCalls": 4,
+        "nestedToolCalls": 5,
+        "memoryUsed": {
+          "read": true,
+          "source": "NOTE.md",
+          "application": "The note described direct in-process testing and rebuilding the worker. Used the prescribed acceptance runner, which performs the build before importing suites."
+        },
+        "limitations": [
+          "Verification was limited to the prescribed acceptance suite.",
+          "The acceptance command rebuilt generated worker output as part of its prescribed execution."
+        ],
+        "outsideDirectoryAccess": false
+      },
+      "observedReportModifiedAt": "2026-10-15T07:53:55.852Z"
+    },
+    {
+      "taskId": "T4",
+      "condition": "none",
+      "runId": "R15",
+      "acceptanceSha256": "7f966bb1de5b4d79816a9ac4074bee5e8f4637bedc3d7a7f8918f25ecbd3aafb",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nNo previous work experiences are supplied.\nTask: {\"id\":\"T4\",\"target\":\"worker/index.js\",\"title\":\"Filtros del registro externo\",\"requirement\":\"GET /api/experiences accepts optional domain (exact string) and outcome (one of success/failure/partial/incomplete). Filter returned items by payload.domain and payload.outcome.status, combining both with AND, when payload came from DB as JSON string. Empty omitted filters preserve behavior; invalid nonempty outcome returns 400. No writes or quota consumption on GET. Operate on existing up-to-50 retrieved records; no pagination claim.\"}",
+      "target": "worker/index.js",
+      "immutableChecks": [
+        {
+          "path": "web/core.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "web/dce-adapter.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "scripts/build-worker.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/dce-adapter.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/public-api.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/routing.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "package.json",
+          "unchanged": true
+        },
+        {
+          "path": "web/index.html",
+          "unchanged": true
+        },
+        {
+          "path": ".openai/hosting.json",
+          "unchanged": true
+        },
+        {
+          "path": "public/pilot.json",
+          "unchanged": true
+        },
+        {
+          "path": "fixture.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "public/consumer-memory.json",
+          "unchanged": true
+        },
+        {
+          "path": "acceptance.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "AGENTS.md",
+          "unchanged": true
+        }
+      ],
+      "immutablePassed": true,
+      "targetSha256": "354f63134984366d2ff946bb02ffafce27d4c94bc1418d73e36256ba9abfc6e8",
+      "report": {
+        "run": "R15",
+        "task": "T4",
+        "observedActions": [
+          "Read assigned AGENTS.md and TASK.json.",
+          "Read worker/index.js.",
+          "Updated worker/index.js to validate nonempty outcome filters, parse stored payload JSON, and combine exact domain and outcome filters with AND over the existing limited query results.",
+          "Executed node acceptance.mjs: exit code 0; 12 tests passed, including T4 filters public GET without side effects.",
+          "Wrote REPORT.json."
+        ],
+        "commands": [
+          "Get-Content AGENTS.md; Get-Content TASK.json",
+          "Get-Content worker/index.js",
+          "node acceptance.mjs"
+        ],
+        "errors": [],
+        "corrections": [],
+        "acceptanceAttempts": 1,
+        "toolCalls": 4,
+        "memoryUsed": false,
+        "limitations": [
+          "Filtering operates only on the existing up-to-50 retrieved rows; no pagination was added."
+        ],
+        "outsideDirectoryAccess": false
+      },
+      "observedReportModifiedAt": "2026-10-15T07:53:52.376Z"
+    },
+    {
+      "taskId": "T5",
+      "condition": "none",
+      "runId": "R16",
+      "acceptanceSha256": "041b80da0861af215f55599e565b2f364591f24e871c493fc89a9ff52433fac0",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nNo previous work experiences are supplied.\nTask: {\"id\":\"T5\",\"target\":\"worker/index.js\",\"title\":\"Comprobaciones HTTP sin cuerpos\",\"requirement\":\"Support HEAD for embedded static assets (including /), /.well-known/dxp.json, and /api/evaluation. Match GET status and headers but return no body; never write DB or consume intake quota. Unknown HEAD path must match GET 404 with empty body. Existing POST ingestion must still work.\"}",
+      "target": "worker/index.js",
+      "immutableChecks": [
+        {
+          "path": "web/core.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "web/dce-adapter.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "scripts/build-worker.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/dce-adapter.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/public-api.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/routing.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "package.json",
+          "unchanged": true
+        },
+        {
+          "path": "web/index.html",
+          "unchanged": true
+        },
+        {
+          "path": ".openai/hosting.json",
+          "unchanged": true
+        },
+        {
+          "path": "public/pilot.json",
+          "unchanged": true
+        },
+        {
+          "path": "fixture.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "public/consumer-memory.json",
+          "unchanged": true
+        },
+        {
+          "path": "acceptance.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "AGENTS.md",
+          "unchanged": true
+        }
+      ],
+      "immutablePassed": true,
+      "targetSha256": "8dafca4f029ed9466a07fcd531d8b5d7d72ee412e0a64e91a6c3e133995926d1",
+      "report": {
+        "taskId": "T5",
+        "run": "R16",
+        "observedActions": [
+          "Read local AGENTS.md and TASK.json.",
+          "Read worker/index.js and acceptance.mjs.",
+          "Updated only worker/index.js: HEAD reuses GET routing and strips response bodies while preserving status, status text and headers; fetch error responses also omit HEAD bodies.",
+          "Executed node acceptance.mjs: all 12 tests passed, including HEAD metadata/body checks and POST persistence checks.",
+          "Wrote REPORT.json."
+        ],
+        "commands": [
+          "Get-Content AGENTS.md; Get-Content TASK.json",
+          "Get-Content worker/index.js; Get-Content acceptance.mjs",
+          "node acceptance.mjs"
+        ],
+        "errors": [],
+        "corrections": [],
+        "acceptanceAttempts": 1,
+        "toolCalls": 5,
+        "orchestrationCalls": 4,
+        "memoryUsed": false,
+        "accessOutsideAssignedDirectory": false,
+        "limitations": [
+          "HEAD evaluation performs the same read-only database queries as GET; acceptance was executed once."
+        ]
+      },
+      "observedReportModifiedAt": "2026-10-15T07:54:09.327Z"
+    },
+    {
+      "taskId": "T6",
+      "condition": "none",
+      "runId": "R17",
+      "acceptanceSha256": "10ece05631e4dcab3e3dfddd5aa8d6d99c6fe724ea3d31f5662c7cb1bad77aca",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nNo previous work experiences are supplied.\nTask: {\"id\":\"T6\",\"target\":\"worker/index.js\",\"title\":\"Informes con control de nota equivalente\",\"requirement\":\"POST /api/experiments optionally accepts noteSuccess. If present, require integer 0..sampleSize, recompute computedDifferenceVsNote=(dxpSuccess-noteSuccess)/sampleSize ignoring submitted derived value, preserve scientificallyVerified=false. Legacy two-arm reports without noteSuccess remain accepted and must omit computedDifferenceVsNote even if client spoofs it. Reject null, strings, negative, noninteger and out-of-range noteSuccess with 400 before storing.\"}",
+      "target": "worker/index.js",
+      "immutableChecks": [
+        {
+          "path": "web/core.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "web/dce-adapter.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "scripts/build-worker.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/dce-adapter.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/public-api.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/routing.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "package.json",
+          "unchanged": true
+        },
+        {
+          "path": "web/index.html",
+          "unchanged": true
+        },
+        {
+          "path": ".openai/hosting.json",
+          "unchanged": true
+        },
+        {
+          "path": "public/pilot.json",
+          "unchanged": true
+        },
+        {
+          "path": "fixture.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "public/consumer-memory.json",
+          "unchanged": true
+        },
+        {
+          "path": "acceptance.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "AGENTS.md",
+          "unchanged": true
+        }
+      ],
+      "immutablePassed": true,
+      "targetSha256": "aeb9994f08c6865e13f70188945da2de59826db9ef5cc711c5321f98beeca8e8",
+      "report": {
+        "run": "R17",
+        "task": "T6",
+        "status": "completed",
+        "actions": [
+          "Read assigned AGENTS.md and TASK.json.",
+          "Read worker/index.js.",
+          "Updated only worker/index.js to validate optional noteSuccess before database operations, recompute its difference, strip spoofed legacy derived values, and retain scientificallyVerified=false.",
+          "Ran prescribed acceptance check and wrote REPORT.json."
+        ],
+        "commands": [
+          "Get-Content AGENTS.md; Get-Content TASK.json",
+          "Get-Content worker/index.js",
+          "node acceptance.mjs"
+        ],
+        "errors": [],
+        "corrections": [],
+        "acceptanceAttempts": [
+          {
+            "attempt": 1,
+            "command": "node acceptance.mjs",
+            "exitCode": 0,
+            "tests": 12,
+            "passed": 12,
+            "failed": 0
+          }
+        ],
+        "toolCalls": {
+          "functionsExec": 4,
+          "execCommand": 3,
+          "applyPatch": 2
+        },
+        "memoryUsed": false,
+        "accessOutsideAssignedDirectory": false,
+        "limitations": [
+          "Verification was limited to the prescribed local acceptance suite; no external services were accessed."
+        ]
+      },
+      "observedReportModifiedAt": "2026-10-15T07:54:12.339Z"
+    },
+    {
+      "taskId": "T1",
+      "condition": "none",
+      "runId": "R18",
+      "acceptanceSha256": "6f60aec87a618000ee45ddff9dd8186f1e1882879f5f19735d922b545d4228dd",
+      "instructions": "Independent coding run with no conversation history. Work ONLY inside your assigned directory. Do not inspect parent/siblings, other agents, internet, accounts, Library, personal context or unrelated tools. Do not spawn agents. Use only functions.exec with exec_command/apply_patch for local reads, edits and checks. Do not publish or access external services. Edit ONLY the target source file in TASK.json. Tests, fixtures, memory, TASK.json, AGENTS.md immutable. Run node acceptance.mjs, no dependency installation. Budget: max 20 tool calls, 8 minutes wall time, two acceptance executions (one correction allowed after first). End by writing REPORT.json: observed actions/commands, errors, corrections, acceptanceAttempts, self-reported toolCalls, memoryUsed and limitations. REPORT.json is the only additional writable file. Concise public decision summaries, no private reasoning. Coordinator independently evaluates your code. Report any access outside your directory.\nNo previous work experiences are supplied.\nTask: {\"id\":\"T1\",\"target\":\"web/core.mjs\",\"title\":\"Filtros de consulta de historial\",\"requirement\":\"Extend query(repo, options) with headsOnly=false, includeDemo=true, validity='' (one VALIDITY value or empty). headsOnly returns only unique current ref heads; includeDemo=false excludes demo experiences; validity filters by exact value. Preserve all existing filters and defaults, preserve repository. Invalid validity must throw.\"}",
+      "target": "web/core.mjs",
+      "immutableChecks": [
+        {
+          "path": "web/dce-adapter.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "worker/index.js",
+          "unchanged": true
+        },
+        {
+          "path": "scripts/build-worker.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/dce-adapter.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/public-api.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "tests/routing.test.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "package.json",
+          "unchanged": true
+        },
+        {
+          "path": "web/index.html",
+          "unchanged": true
+        },
+        {
+          "path": ".openai/hosting.json",
+          "unchanged": true
+        },
+        {
+          "path": "public/pilot.json",
+          "unchanged": true
+        },
+        {
+          "path": "fixture.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "public/consumer-memory.json",
+          "unchanged": true
+        },
+        {
+          "path": "acceptance.mjs",
+          "unchanged": true
+        },
+        {
+          "path": "AGENTS.md",
+          "unchanged": true
+        }
+      ],
+      "immutablePassed": true,
+      "targetSha256": "dfc57ce17939fa21a90eed8d2001811baf7da653d03ce83f9ff192dd29e93014",
+      "report": {
+        "taskId": "T1",
+        "status": "completed",
+        "summary": "Extended query with headsOnly, includeDemo and validated exact validity filtering while preserving existing defaults, filters and repository data.",
+        "observedActions": [
+          "Read assigned AGENTS.md and TASK.json.",
+          "Read web/core.mjs and acceptance.mjs.",
+          "Modified only query in web/core.mjs.",
+          "Ran node acceptance.mjs: exit 0, all 12 tests passed.",
+          "Wrote REPORT.json."
+        ],
+        "commands": [
+          "Get-Content AGENTS.md; Get-Content TASK.json",
+          "Get-Content web/core.mjs; Get-Content acceptance.mjs",
+          "node acceptance.mjs"
+        ],
+        "errors": [],
+        "corrections": [],
+        "acceptanceAttempts": 1,
+        "toolCalls": {
+          "functions.exec": 4,
+          "exec_command": 4,
+          "apply_patch": 1
+        },
+        "memoryUsed": false,
+        "outsideDirectoryAccess": false,
+        "limitations": [
+          "Verification limited to the prescribed acceptance suite."
+        ]
+      },
+      "observedReportModifiedAt": "2026-10-15T07:54:13.309Z"
+    }
+  ]
+}

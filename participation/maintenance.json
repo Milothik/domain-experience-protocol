@@ -1,0 +1,7 @@
+{
+  "task": "P06",
+  "mainFixedAfterProtocolFreeze": true,
+  "baselineUnchanged": true,
+  "heldOut": false,
+  "meaning": "Engineering maintenance checked with frozen acceptance logic, not an agent-comparison execution."
+}

@@ -1,0 +1,11 @@
+{
+  "taskId": "model-route-20261016",
+  "title": "Verify supported headless model execution before any new allocation",
+  "goal": "Test a documented noninteractive Gemini CLI route using existing account access, with tools denied and an arithmetic-only response",
+  "observation": "Installed Gemini CLI 0.39.1 exposes prompt/model/output and policy flags; old browser comparisons have no attested weights.",
+  "prediction": "One bounded invocation will either return visible output and telemetry or a retained infrastructure failure; no scientific trial will be inferred.",
+  "control": "No code execution, model tools denied by policy, isolated temporary workspace, no credential changes or purchases.",
+  "usedExperienceCommits": [
+    "sha256:bb48348b271b467eb6d597624788801a562089007602d2b7f2298f907d5e7f3d"
+  ]
+}

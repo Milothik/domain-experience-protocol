@@ -1,0 +1,30 @@
+{
+  "taskId": "T3",
+  "run": "R06",
+  "status": "completed",
+  "changes": [
+    "Added includeHypotheses=false to contextPacket options.",
+    "Excluded hypothesis lessons by default; opt-in preserves all existing eligibility and scope filters."
+  ],
+  "observedActions": [
+    "Read AGENTS.md and TASK.json within assigned directory.",
+    "Read web/core.mjs and acceptance.mjs.",
+    "Patched only web/core.mjs.",
+    "Executed node acceptance.mjs: exit 0, 12 tests passed.",
+    "Wrote REPORT.json."
+  ],
+  "commands": [
+    "Get-Content AGENTS.md; Get-Content TASK.json",
+    "Get-Content web/core.mjs; Get-Content acceptance.mjs",
+    "node acceptance.mjs"
+  ],
+  "errors": [],
+  "corrections": [],
+  "acceptanceAttempts": 1,
+  "toolCalls": 5,
+  "memoryUsed": false,
+  "outsideDirectoryAccess": false,
+  "limitations": [
+    "Validation limited to prescribed acceptance suite; its build step generated dist output."
+  ]
+}

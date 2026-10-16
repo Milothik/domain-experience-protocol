@@ -1,0 +1,8 @@
+{
+  "taskId": "campaign-producer-20261015",
+  "title": "Preparar comprobaciones portables y corregir rutas de admisión",
+  "goal": "Resolver dos problemas observados antes de congelar experiencias para tareas nuevas.",
+  "observation": "node --test falla con spawn EPERM; el worker admite prefijos arbitrarios de /api/experiences.",
+  "prediction": "Un lanzador sin subprocesos y rutas explícitas permitirán verificar el código y rechazar recursos inexistentes.",
+  "control": "Pruebas existentes y pruebas de rutas desconocidas; trabajo de ingeniería, no comparación de agentes."
+}
